@@ -7,3 +7,11 @@ function obtenerAlmacenamientoLocal(llave){
     const datos = JSON.parse(localStorage.getItem(llave))
     return datos
 }
+
+let productos = obtenerAlmacenamientoLocal('productos') || [];
+
+/* Añadir un producto */
+const añadirProducto = document.getElementById('productoAñadir')
+const añadirValor = document.getElementById('valorAñadir')
+const añadirExistencia = document.getElementById('existenciaAñadir')
+const añadirImagen = document.getElementById('ImagenAñadir')
