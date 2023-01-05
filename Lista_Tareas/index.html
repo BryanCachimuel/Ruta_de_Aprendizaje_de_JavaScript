@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/publico/estilos.css">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+
+    <div class="datos">
+        <p id="total">Total: 5</p>
+        <p id="completadas">Completadas: 2</p>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="contenedor">
+
+        <form id="formulario" class="formulario">
+            <h4>Agregar Tareas</h4>
+            <input type="text" id="tarea">
+            <input type="submit" value="Agregar">
+        </form>
+
+        <div class="tareas">
+            <div class="item-tarea">
+                <p>Aprender React</p>
+                <div class="botones">
+                    <button class="eliminar">X</button>
+                    <button class="completada">?</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/publico/app.js"></script>
+</body>
+</html>
