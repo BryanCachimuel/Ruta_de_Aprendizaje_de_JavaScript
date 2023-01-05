@@ -58,6 +58,48 @@ document.getElementById("botonAñadir").addEventListener("click", function(even)
         }, 1500)
     }
 
-    guardarAlmacenamientoLocal('productos', productos)
- 
+    guardarAlmacenamientoLocal('productos', productos) 
+})
+
+/* Editar un producto */
+const productoEd = document.getElementById('productoEditar')
+const atributoEd = document.getElementById('atributoEditar')
+const nuevoAtributoEd = document.getElementById('nuevoAtributo')
+
+document.getElementById("botonEditar").addEventListener("click", function(event){
+    event.preventDefault()
+    let productoEditar = productoEd.value
+    let atributoEditar = atributoEd.value
+    let nuevoAtributo = nuevoAtributoEd.value
+
+    let van = false
+
+    if(productoEditar == '' || atributoEditar == '' || nuevoAtributo == ''){
+        mensaje.classList.add('llenarCampos')
+        setTimeout(() => {
+            mensaje.classList.remove('llenarCampos')
+        }, 2500)
+    }else{
+        for(let i = 0; i < productos.length; i++){
+            if(productos[i].nombre == productoEditar){
+                productos[i][atributoEditar] = nuevoAtributo
+                van = true
+            }
+        }
+
+        if(van == true){
+            mensaje.classList.add('realizado')
+            setTimeout(() => {
+                mensaje.classList.remove('realizado')
+                window.location.reload()
+            }, 1500)
+        }else{
+            mensaje.classList.add('noExisteError')
+            setTimeout(() => {
+                mensaje.classList.remove('noExisteError')
+            }, 2500)
+        }
+
+        guardarAlmacenamientoLocal('productos', productos)
+    }
 })
