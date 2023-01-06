@@ -69,6 +69,15 @@ function mostrarHTML(){
         
         task.appendChild(itemTarea)
     })
+
+    // mostrar el total de tareas completadas
+    const totalTareas = tareas.length;
+    total.textContent = `Total de Tareas: ${totalTareas}`;
+
+    // mostrar tareas completadas
+    const tareasCompletadas = tareas.filter( item => item.estado === true ).length;
+    completadas.textContent = `Tareas Completadas = ${tareasCompletadas}`;
+
 }
 
 /* eliminar tarea */
