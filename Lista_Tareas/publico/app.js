@@ -7,6 +7,7 @@ let tareas = [];
 /* Eventos */
 (() => {
     formulario.addEventListener("submit", validarFormulario);
+    task.addEventListener("click", eliminarTarea);
 })()
 
 /* Funciones */
@@ -45,6 +46,7 @@ function mostrarHTML(){
     if(tareas.length < 1){
         const mensaje = document.createElement("h5");
         mensaje.textContent = "~ SIN TAREAS ~";
+        return
     }
 
     tareas.forEach( (item) => {
@@ -60,4 +62,15 @@ function mostrarHTML(){
         
         task.appendChild(itemTarea)
     })
+}
+
+/* eliminar tarea */
+function eliminarTarea(e){
+    if(e.target.classList.contains("eliminar")){
+        const tareaID = Number(e.target.getAttribute("data-id"));
+        // eliminar tarea
+        const nuevaTarea = tareas.filter( (item) => item.id !== tareaID );
+        tareas = nuevaTarea;
+        mostrarHTML();
+    }
 }
