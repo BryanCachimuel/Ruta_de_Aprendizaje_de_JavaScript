@@ -2,12 +2,15 @@
 const formulario = document.querySelector("#formulario");
 const tituloForm = document.querySelector("#titulo-formulario");
 const task = document.querySelector(".tareas");
+const total = document.querySelector("#total");
+const completadas = document.querySelector("#completadas");
 let tareas = [];
 
 /* Eventos */
 (() => {
     formulario.addEventListener("submit", validarFormulario);
     task.addEventListener("click", eliminarTarea);
+    task.addEventListener("click", tareaCompletada);
 })()
 
 /* Funciones */
@@ -49,11 +52,15 @@ function mostrarHTML(){
         return
     }
 
-    tareas.forEach( (item) => {
+    tareas.forEach((item) => {
         const itemTarea = document.createElement("div");
         itemTarea.classList.add("item-tarea");
         itemTarea.innerHTML = `
-            <p>${item.tarea}</p>
+            ${item.estado ? (
+                `<p class="completa">${item.tarea}</p>`
+            ) : (
+                `<p>${item.tarea}</p>`
+            )}
             <div class="botones">
                 <button data-id="${item.id}" class="eliminar">X</button>
                 <button data-id="${item.id}" class="completada">?</button>
@@ -70,6 +77,26 @@ function eliminarTarea(e){
         const tareaID = Number(e.target.getAttribute("data-id"));
         // eliminar tarea
         const nuevaTarea = tareas.filter( (item) => item.id !== tareaID );
+        tareas = nuevaTarea;
+        mostrarHTML();
+    }
+}
+
+
+/* seleccionar las tareas completadas */
+function tareaCompletada(e){
+    if(e.target.classList.contains("completada")){
+        const tareaID = Number(e.target.getAttribute("data-id"));
+        // dar como completada la tarea
+        const nuevaTarea = tareas.map( (item) => {
+            if(item.id === tareaID){
+                item.estado = !item.estado
+                return item;
+            }else{
+                return item;
+            }
+        })
+
         tareas = nuevaTarea;
         mostrarHTML();
     }
