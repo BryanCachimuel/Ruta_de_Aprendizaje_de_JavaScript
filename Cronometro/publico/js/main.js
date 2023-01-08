@@ -28,3 +28,26 @@ const resetearCronometro = () => {
 const aniadirPunto = () => {
 
 }
+
+cronometro_opciones.addEventListener('click', (e) => {
+    switch (e.target.id) {
+        case 'cronometro-iniciar':
+        if(contador === null){
+            iniciarCronometro()
+        }else{
+            pararCronometro()
+        }
+        break;
+
+        case 'cronometro-reiniciar':
+        resetearCronometro()
+        break;
+
+        case 'cronometro-anotar':
+        aniadirPunto()
+        break;
+    
+        default:
+        break;
+    }
+})
