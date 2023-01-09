@@ -56,8 +56,13 @@ const resetearCronometro = () => {
     cronometro_score.innerHTML = ''
 }
 
-const aniadirPunto = () => {
-
+const aniadirPunto = (tiempo = '0:00') => {
+    cantPoints++
+    if(cantPoints <= 3){
+        cronometro_score.innerHTML += `<p>${tiempo}</p>`
+    }else{
+        pararCronometro()
+    }
 }
 
 cronometro_opciones.addEventListener('click', (e) => {
@@ -75,10 +80,7 @@ cronometro_opciones.addEventListener('click', (e) => {
         break;
 
         case 'cronometro-anotar':
-        aniadirPunto()
-        break;
-    
-        default:
+        aniadirPunto(`${min === 0 ? '' : min + ':'} ${seg} : ${cseg}`)
         break;
     }
 })
