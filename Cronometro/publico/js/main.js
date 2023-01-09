@@ -45,7 +45,15 @@ const pararCronometro = () => {
 }
 
 const resetearCronometro = () => {
-
+    pararCronometro()
+    min = 0
+    cseg = 0
+    seg = 0
+    cantPoints = 0
+    cronometro_pantalla.children[0].innerHTML = 0
+    cronometro_pantalla.children[2].innerHTML = 0
+    cronometro_pantalla.children[3].innerHTML = 0
+    cronometro_score.innerHTML = ''
 }
 
 const aniadirPunto = () => {
