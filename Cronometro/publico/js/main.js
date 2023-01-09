@@ -4,17 +4,35 @@ const cronometro_opciones = document.getElementById('cronometro-opciones')
 const cronometro_border = document.getElementById('cronometro-border')
 const cronometro_score = document.getElementById('cronometro-score')
 
+let min = 0
 let cseg = 0
 let seg = 0
 let contador = null
 let cantPoints = 0
 
 const conseguirContador = () => {
-
+    return setInterval(function(){
+        cseg++
+        if(min >= 60 && seg >= 60 && cseg >= 100){
+            clearInterval(contador)
+        }else if(cseg === 100){
+            seg++
+            cseg = 0
+            if(seg === 60){
+                min++
+                seg = 0
+                cronometro_pantalla.children[0].innerHTML = min
+                cronometro_pantalla.children[2].innerHTML = 0
+            }else{
+                cronometro_pantalla.children[2].innerHTML = seg
+            }
+        }
+        cronometro_pantalla.children[3].innerHTML = cseg
+    },10)
 }
 
 const iniciarCronometro = () => {
-
+    contador = conseguirContador()
 }
 
 const pararCronometro = () => {
