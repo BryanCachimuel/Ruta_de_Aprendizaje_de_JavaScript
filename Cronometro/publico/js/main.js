@@ -33,10 +33,15 @@ const conseguirContador = () => {
 
 const iniciarCronometro = () => {
     contador = conseguirContador()
+    cronometro_opciones.children[1].innerHTML = '⏸'
+    cronometro_border.classList.add('rotar')
 }
 
 const pararCronometro = () => {
-
+    clearInterval(contador)
+    contador = null
+    cronometro_opciones.children[1].innerHTML = '▶'
+    cronometro_border.classList.remove('rotar')
 }
 
 const resetearCronometro = () => {
