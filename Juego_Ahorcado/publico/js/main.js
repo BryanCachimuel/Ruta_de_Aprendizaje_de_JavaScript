@@ -4,7 +4,7 @@ const usedLettersElement = document.getElementById('usedLetters');
 
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
-ctx.canvas.width = 0;
+ctx.canvas.width  = 0;
 ctx.canvas.height = 0;
 
 /* valores para ir dibujando las partes del dibujo del ahorcado */
@@ -22,3 +22,33 @@ let selectedWord;
 let usedLetters;
 let mistakes;
 let hits;
+
+const selectRandomWord = () => {
+    let word = words[Math.floor((Math.random() * words.length))].toUpperCase();
+    selectedWord = word.split('');
+}
+
+const drawHangMan = () => {
+    ctx.canvas.width  = 120;
+    ctx.canvas.height = 160;
+    ctx.scale(20, 20);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#d95d39';
+    ctx.fillRect(0, 7, 4, 1);
+    ctx.fillRect(1, 0, 1, 8);
+    ctx.fillRect(2, 0, 3, 1);
+    ctx.fillRect(4, 1, 1, 1);
+}
+
+const startGame = () => {
+    /* mandamos a llamar a todas las variables para el juego */
+    usedLetters = [];
+    mistakes = 0;
+    hits = 0;
+    wordContainer.innerHTML = '';
+    usedLettersElement.innerHTML = '';
+    startButton.style.display = 'none';
+    drawHangMan();
+}
+
+startButton.addEventListener('click', startGame);
