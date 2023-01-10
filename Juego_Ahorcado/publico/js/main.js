@@ -23,10 +23,20 @@ let usedLetters;
 let mistakes;
 let hits;
 
+const drawWord = () => {
+    selectedWord.forEach(letter => {
+        const leeterElement = document.createElement('span');
+        leeterElement.innerHTML = letter.toUpperCase();
+        leeterElement.classList.add('letter');
+        leeterElement.classList.add('hidden');
+        wordContainer.appendChild(leeterElement);
+    });
+};
+
 const selectRandomWord = () => {
     let word = words[Math.floor((Math.random() * words.length))].toUpperCase();
     selectedWord = word.split('');
-}
+};
 
 const drawHangMan = () => {
     ctx.canvas.width  = 120;
@@ -38,7 +48,7 @@ const drawHangMan = () => {
     ctx.fillRect(1, 0, 1, 8);
     ctx.fillRect(2, 0, 3, 1);
     ctx.fillRect(4, 1, 1, 1);
-}
+};
 
 const startGame = () => {
     /* mandamos a llamar a todas las variables para el juego */
@@ -49,6 +59,9 @@ const startGame = () => {
     usedLettersElement.innerHTML = '';
     startButton.style.display = 'none';
     drawHangMan();
-}
+    selectRandomWord();
+    drawWord();
+    document.addEventListener('keydown', letterEvent);
+};
 
 startButton.addEventListener('click', startGame);
