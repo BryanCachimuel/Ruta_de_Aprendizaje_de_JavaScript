@@ -23,7 +23,16 @@ let usedLetters;
 let mistakes;
 let hits;
 
-
+const correctLetter = letter => {
+    const { children } = wordContainer;
+    for(let i = 0; i < children.length; i++){
+        if(children[i].innerHTML === letter){
+            children[i].classList.toggle('hidden');
+            hits++;
+        }
+    }
+    if(hits === selectedWord.length) endGame();
+}
 
 const letterInput = letter => {
     if(selectedWord.includes(letter)){
