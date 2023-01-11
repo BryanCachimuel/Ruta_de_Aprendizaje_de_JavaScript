@@ -23,6 +23,18 @@ let usedLetters;
 let mistakes;
 let hits;
 
+
+
+const letterInput = letter => {
+    if(selectedWord.includes(letter)){
+        correctLetter(letter);
+    }else{
+        wrongLetter();
+    }
+    addLetter(letter);
+    usedLetters.push(letter);
+};
+
 const letterEvent = event => {
     let newLetter = event.key.toUpperCase();
     if(newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)){
