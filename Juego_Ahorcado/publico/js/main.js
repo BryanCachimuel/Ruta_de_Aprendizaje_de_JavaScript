@@ -23,7 +23,10 @@ let usedLetters;
 let mistakes;
 let hits;
 
-
+const addBodyPart = bodyPart => {
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(...bodyPart);
+}
 
 const wrongLetter = () => {
     addBodyPart(bodyParts[mistakes]);
