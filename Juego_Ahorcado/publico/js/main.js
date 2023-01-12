@@ -23,6 +23,14 @@ let usedLetters;
 let mistakes;
 let hits;
 
+
+
+const wrongLetter = () => {
+    addBodyPart(bodyParts[mistakes]);
+    mistakes++;
+    if(mistakes === bodyParts.length) endGame();
+}
+
 const endGame = () => {
     document.removeEventListener('keydown', letterEvent);
     startButton.style.display = 'block';
