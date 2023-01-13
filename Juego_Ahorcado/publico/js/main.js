@@ -32,7 +32,7 @@ const addLetter = letter => {
 const addBodyPart = bodyPart => {
     ctx.fillStyle = '#fff';
     ctx.fillRect(...bodyPart);
-}
+};
 
 const wrongLetter = () => {
     addBodyPart(bodyParts[mistakes]);
@@ -46,9 +46,9 @@ const endGame = () => {
 }
 
 const correctLetter = letter => {
-    const { children } = wordContainer;
-    for(let i = 0; i < children.length; i++){
-        if(children[i].innerHTML === letter){
+    const { children } =  wordContainer;
+    for(let i = 0; i < children.length; i++) {
+        if(children[i].innerHTML === letter) {
             children[i].classList.toggle('hidden');
             hits++;
         }
@@ -57,9 +57,9 @@ const correctLetter = letter => {
 }
 
 const letterInput = letter => {
-    if(selectedWord.includes(letter)){
+    if(selectedWord.includes(letter)) {
         correctLetter(letter);
-    }else{
+    } else {
         wrongLetter();
     }
     addLetter(letter);
@@ -68,18 +68,18 @@ const letterInput = letter => {
 
 const letterEvent = event => {
     let newLetter = event.key.toUpperCase();
-    if(newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)){
+    if(newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
         letterInput(newLetter);
-    }
+    };
 };
 
 const drawWord = () => {
     selectedWord.forEach(letter => {
-        const leeterElement = document.createElement('span');
-        leeterElement.innerHTML = letter.toUpperCase();
-        leeterElement.classList.add('letter');
-        leeterElement.classList.add('hidden');
-        wordContainer.appendChild(leeterElement);
+        const letterElement = document.createElement('span');
+        letterElement.innerHTML = letter.toUpperCase();
+        letterElement.classList.add('letter');
+        letterElement.classList.add('hidden');
+        wordContainer.appendChild(letterElement);
     });
 };
 
@@ -101,7 +101,6 @@ const drawHangMan = () => {
 };
 
 const startGame = () => {
-    /* mandamos a llamar a todas las variables para el juego */
     usedLetters = [];
     mistakes = 0;
     hits = 0;
