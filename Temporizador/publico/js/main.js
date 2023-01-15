@@ -2,8 +2,9 @@ let tiempo = 10
 let contador = 0
 let contando = false
 
-function temporizar(){
+suspender()
 
+function temporizar(){
     let temporizando = tiempo - contador
     contando = temporizando > 0
 
@@ -12,14 +13,23 @@ function temporizar(){
     }else{
         select_id("atras").innerHTML = temporizando
     }
-    style("moneda").transform = `rotateY(${180*contador}deg)`
+    style("moneda").transform = `rotateY(${180 * contador}deg)`
     if(contando){
         contador++
         setTimeout(() => {
             temporizar()
         }, 1000);
+    }else{
+        suspender()
     }
 }
+
+function suspender() {
+    contador = 0
+    select_id("frente").innerHTML = `<i class="fas fa-stopwatch"></i>`
+    select_id("atras").innerHTML = `<i class="fas fa-stopwatch"></i>`
+}
+
 
 async function tomarTiempo(){
     const {value: tiempo_input} = await swal.fire({
@@ -38,7 +48,7 @@ async function tomarTiempo(){
 }
 
 function select_id(id){
-    return document.getElementById("frente")
+    return document.getElementById(id)
 }
 
 function style(id){
