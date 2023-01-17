@@ -47,3 +47,13 @@ body{
     text-align: center;
     background: rgba(0, 0, 0, .5);
 }
+
+.reloj .caja-segundos{
+    display: inline-block;
+}
+
+.reloj .segundos,
+.reloj .ampm{
+    font-size: 2rem;
+    display: block;
+}
