@@ -10,6 +10,18 @@
         let dia = fecha.getDate();
         let mes = fecha.getMonth();
         let year = fecha.getFullYear();
+
+        let parrafo_horas =  document.getElementById('horas');
+        let pAMPM = document.getElementById('ampm');
+        let pMinutos = document.getElementById('minutos');
+        let pSegundos = document.getElementById('segundos');
+        let pDiaSemana = document.getElementById('diaSemana');
+        let pDia = document.getElementById('dia');
+        let pMes = document.getElementById('mes');
+        let pYear = document.getElementById('year');
+
+        
+       
     };
 
     actualizarHora();
