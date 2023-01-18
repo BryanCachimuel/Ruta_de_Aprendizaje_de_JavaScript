@@ -58,4 +58,6 @@
 
     actualizarHora();
 
+    let intervalo = setInterval(actualizarHora, 1000);
+
 }())
