@@ -20,7 +20,15 @@
         let pMes = document.getElementById('mes');
         let pYear = document.getElementById('year');
 
-        
+        let semana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+        pDiaSemana.textContent = semana[diaSemana];
+
+        pDia.textContent = dia;
+
+        let meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+        pMes.textContent = meses[mes];
+
+        pYear.textContent = year;
        
     };
 
