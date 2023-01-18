@@ -2,7 +2,7 @@
     
     let actualizarHora = function(){
         let fecha = new Date();
-        let horas = fecha.getHours;
+        let horas = fecha.getHours();
         let ampm;
         let minutos = fecha.getMinutes();
         let segundos = fecha.getSeconds();
@@ -11,7 +11,7 @@
         let mes = fecha.getMonth();
         let year = fecha.getFullYear();
 
-        let parrafo_horas =  document.getElementById('horas');
+        let pHoras =  document.getElementById('horas');
         let pAMPM = document.getElementById('ampm');
         let pMinutos = document.getElementById('minutos');
         let pSegundos = document.getElementById('segundos');
@@ -38,8 +38,21 @@
         }
 
         if(horas == 0){
-            horas == 12;
+            horas = 12;
         }
+
+        pHoras.textContent = horas;
+        pAMPM.textContent = ampm;
+
+        if(minutos < 10){
+            minutos = "0" + minutos;
+        }
+        if(segundos < 10){
+            segundos = "0" + segundos;
+        }
+
+        pMinutos.textContent = minutos;
+        pSegundos.textContent = segundos;
        
     };
 
