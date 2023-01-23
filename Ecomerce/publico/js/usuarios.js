@@ -25,3 +25,42 @@ const x = document.getElementById('x');
 /* variables que se van a utilizar en el proyecto */
 let lista = []
 let valorTotal = 0
+
+/* scroll para la página web */
+window.addEventListener("scroll", function(){
+    if(contenedor.getBoundingClientRect().top < 10){
+        header.classList.add("scroll")
+    }else{
+        header.classList.remove("scroll")
+    }
+})
+
+window.addEventListener("load", () => {
+    visualizarProductos();
+    contenedorCompra.classList.add("none")
+})
+
+function visualizarProductos(){
+    contenedor.innerHTML = ""
+    for(let i = 0; i < productos.length; i++){
+        if(productos[i].existencia > 0){
+            contenedor.innerHTML += `<div>
+                                        <img src="${productos[i].urlImagen}">
+                                        <div class="informacion">
+                                            <p>${productos[i].nombre}</p>
+                                            <p class="precio">$${productos[i].valor}</p>
+                                            <button onclick=comprar(${i})>Comprar</button>
+                                        </div>
+                                    </div>`
+        }else{
+            contenedor.innerHTML += `<div>
+                                        <img src="${productos[i].urlImagen}">
+                                        <div class="informacion">
+                                            <p>${productos[i].nombre}</p>
+                                            <p class="precio">$${productos[i].valor}</p>
+                                            <p class="soldOut">Sold Out</p>
+                                        </div>
+                                     </div>`
+        }
+    }
+}
