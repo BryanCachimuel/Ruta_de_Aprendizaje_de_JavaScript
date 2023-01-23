@@ -201,3 +201,64 @@ header{
     flex-direction: row;
     align-items: center;
 }
+
+.productosCompra img{
+    width: 25px;
+    height: auto;
+    margin-right:10px;
+    border-bottom: none ;
+    cursor: pointer;
+}
+
+.total{
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 150px;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.total span{
+    font-weight: 300;
+}
+
+.contenedorCompra > button{
+    z-index: 1;
+    background-color: #263143;
+    width: 300px;
+    height: 45px;
+    border-radius: 10px ;
+    border: none;
+
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.contenedorCompra > button:hover{
+    background-color: white;
+    color: black;
+}
+
+.none>div,
+.none button, 
+.none p{
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+    border: 0px;
+}
+
+.soldOut{
+    background-color: red;
+    padding: 7px 10px;
+    border-radius: 10px;
+}
+.botonTrash{
+    background-color: rgba(0, 0, 0, 0);
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
