@@ -64,3 +64,27 @@ function visualizarProductos(){
         }
     }
 }
+
+function comprar(indice){
+    lista.push({nombre: productos[indice].nombre,
+                precio: productos[indice].valor
+              })
+    
+    let van = true
+    let i = 0
+
+    while(van == true){
+        if(productos[i].nombre == productos[indice].nombre){
+            productos[i].existencia -= 1
+            if(productos.existencia == 0){
+                visualizarProductos()
+            }
+            van = false
+        }
+        guardarAlmacenamientoLocal("productos", productos)
+        i += 1
+    }
+    numero.innerHTML = lista.length
+    numero.classList.add("diseñoNumero")
+    return lista
+}
