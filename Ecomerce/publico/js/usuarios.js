@@ -90,3 +90,24 @@ function mostrarElementosLista() {
     }
     total.innerHTML = `<p>Valor Total</p> <p><span>$${valortotal}</span></p>`
 }
+
+function eliminar(indice){
+    let van = true
+    let i = 0
+    while (van == true) {
+        if (productos[i].nombre == lista[indice].nombre) {
+            productos[i].existencia += 1
+            lista.splice(indice, 1)
+            van = false
+        }
+        i += 1
+    }
+    guardarAlmacenamientoLocal("productos", productos)
+
+    numero.innerHTML = lista.length
+    if (lista.length == 0){
+        numero.classList.remove("diseñoNumero")
+    }
+    visualizarProductos()
+    mostrarElementosLista()
+}
