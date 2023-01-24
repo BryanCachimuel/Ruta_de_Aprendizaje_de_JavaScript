@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,25 +15,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
     <header id="header">
         <h1>Carrito de Compras en Línea</h1>
         <div>
-            <img src="../publico/imagen/carrito-de-compras.png" class="carrito">
+            <img id="carrito" class="carrito" src="../publico/imagen/carrito-de-compras.png">
             <div id="numero"></div>
-        </div>      
+        </div>
     </header>
 
     <main>
-        <div class="contenedor" id="contenedor"></div>
+        <div id="contenedor" class="contenedor"> </div>
     </main>
-
-    <div class="contenedorCompra">
+    
+    <div id="contenedorCompra">
         <div class="informacionCompra" id="informacionCompra">
             <h2>Cesta</h2>
             <p class="x" id="x">x</p>
         </div>
+
         <div class="productosCompra" id="productosCompra"></div>
         <div class="total" id="total"></div>
         <button>Finalizar Compra</button>
@@ -40,4 +42,5 @@
 
     <script src="../publico/js/usuarios.js"></script>
 </body>
+
 </html>
