@@ -111,3 +111,10 @@ function eliminar(indice){
     visualizarProductos()
     mostrarElementosLista()
 }
+
+x.addEventListener("click", function(){
+    body.style.overflow = "auto"
+    contenedorCompra.classList.add('none')
+    contenedorCompra.classList.remove('contenedorCompra')
+    informacionCompra.classList.remove('informacionCompra')
+})
