@@ -97,7 +97,6 @@ header{
     font-weight: 300;
     cursor: pointer;
 }
-
 .informacion button:hover{
     background-color: #2D4263;
 }
