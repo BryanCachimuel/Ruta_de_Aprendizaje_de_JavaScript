@@ -128,3 +128,29 @@ document.getElementById("botonEliminar").addEventListener("click", function (eve
     }
     guardarAlmacenamientoLocal('productos', productos);
 })
+
+/* mostrar productos */
+window.addEventListener("load", () => {
+    const productoEd = document.getElementById('productoEditar')
+    const productoEl = document.getElementById('productoEliminar')
+    for(let i = 0; i < productos.length; i++){
+        productoEd.innerHTML += `<option>${productos[i].nombre}</option>`
+        productoEl.innerHTML += `<option>${productos[i].nombre}</option>` 
+    }
+    Object.keys(productos[0]).forEach(element => {
+        atributoEd.innerHTML += `<option>${element}</option>`
+    });
+
+    let mostrarProductos = document.getElementById('mostrarProductos')
+    mostrarProductos.innerHTML = ''
+    for(let i = 0; i < productos.length; i++){
+        mostrarProductos.innerHTML += `<div class="contenedorProductos">
+                                            <img src="${productos[i].urlImagen}">
+                                            <div class="informacion">
+                                                <p>${productos[i].nombre}</p>
+                                                <p class="precio"><span>Precio: ${productos[i].valor}$</span></p> 
+                                                <p>Existencia: ${productos[i].existencia}</p>
+                                            </div>
+                                       </div>`
+    }
+})
