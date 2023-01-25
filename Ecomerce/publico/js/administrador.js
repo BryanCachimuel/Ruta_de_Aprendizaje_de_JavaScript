@@ -98,3 +98,33 @@ document.getElementById("botonEditar").addEventListener("click", function(event)
         guardarAlmacenamientoLocal('productos', productos)
     }
 })
+
+/* constante para eliminar */
+const productoE = document.getElementById('productoEliminar')
+
+document.getElementById("botonEliminar").addEventListener("click", function (event) {
+    event.preventDefault()
+    let productoEliminar = productoE.value
+    
+    let van = false
+
+    for (let i = 0; i < productos.length; i++) {
+        if (productos[i].nombre == productoEliminar) {
+            productos.splice(i, 1)
+            van = true
+        }
+    }
+
+    if (van == false) {
+        mensaje.classList.add('noExsiteError')
+        setTimeout(() => { mensaje.classList.remove('noExsiteError') }, 2500);
+    }
+    else {
+        mensaje.classList.add('realizado')
+        setTimeout(() => {
+            mensaje.classList.remove('realizado')
+            window.location.reload()
+        }, 1500);
+    }
+    guardarAlmacenamientoLocal('productos', productos);
+})
