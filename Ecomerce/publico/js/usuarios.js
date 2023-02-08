@@ -78,7 +78,7 @@ carrito.addEventListener("click", function(){
     contenedorCompra.classList.remove('none')
     contenedorCompra.classList.add('contenedorCompra')
     informacionCompra.classList.add('informacionCompra')
-    mostrarElemtrosLista()
+    mostrarElementosLista()
 })
 
 function mostrarElementosLista() {
