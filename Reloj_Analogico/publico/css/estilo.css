@@ -94,5 +94,39 @@ body{
     border-radius: 6px 6px 0 0;
 }
 
+span{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 9%;
+    height: 4px;
+    z-index: 25px;
+    background: transparent;
+    transform-origin: left;
+    animation: animate 3s linear infinite;
+}
+
+span::after{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 25px;
+    border-radius: 50%;
+    background: #800080;
+    top: -6px;
+    right: -8px;
+    box-shadow: 0 0 20px #0000ff;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 
 
