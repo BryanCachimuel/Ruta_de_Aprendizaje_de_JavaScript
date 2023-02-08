@@ -20,10 +20,47 @@ body{
     align-items: center;
     background: url('https://i.postimg.cc/DzDTJzR1/80282419-a293a400-8711-11ea-81c7-1c44e2980db2.png');
     background-size: cover;
-    border: 16px solid #919241;
+    border: 16px solid #bdbd04;
     border-radius: 50%;
     box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
                              inset 0 -15px 15px rgba(255, 255, 255, 0.05),
                              0 15px 15px rgba(0, 0, 0, 0.3),
                              inset 0 15px 15px rgba(0, 0, 0, 0.3);
 }
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #bdbd04;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour, .clock .min, .clock .sec{
+    position: absolute;
+} 
+
+.clock .hour, .hr{
+    width: 160px;
+    height: 160px;
+}
+
+.clock .min, .mn{
+    width: 190px;
+    height: 190px;
+}
+
+.clock .sec, .sc{
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .mn, .sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
