@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .blender {
+    /* Posicionamiento */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    /* Estilos */
+    min-width: 700px;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/licuadoraApagada.png);
+  }
+  
+  .blender.active {
+    background-image: url(../img/licuadoraEncendida.gif);
+  }
+  
+  .blender-button {
+    /* Posicionamiento */
+    margin: 367px auto 0px;
+  
+    /* Estilos */
+    width: 30px;
+    height: 50px;
+    /* border: 1px solid red; */
+  }
