@@ -145,3 +145,31 @@ function revisarColisiones(){
     }
 
 }
+
+//funcion que termina el juego si la bola toca suelo.
+function gameOver(){
+    if(posicionActualBola[1] <= 0){
+        clearInterval(timerId)
+        document.removeEventListener('keydown',moverUsuario)
+    }
+}
+
+//Funcion de cambiar la dirección.
+function cambiarDireccion(){
+    if(xDireccionBola === 2 && yDireccionBola === 2){
+        yDireccionBola = -2
+        return
+    }
+    if(xDireccionBola === 2 && yDireccionBola === -2){
+        xDireccionBola = -2
+        return
+    }
+    if(xDireccionBola === -2 && yDireccionBola === -2){
+        yDireccionBola = 2
+        return
+    }
+    if(xDireccionBola === -2 && yDireccionBola === 2){
+        xDireccionBola = 2
+        return
+    }
+}
