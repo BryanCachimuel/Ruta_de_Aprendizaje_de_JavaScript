@@ -91,3 +91,57 @@ function moverUsuario(e){
 }
 //Añadir evento escuchador para el documento de
 document.addEventListener('keydown', moverUsuario)
+
+//dibujar la bolast
+function dibujarBola(){
+    bola.style.left = posicionActualBola[0]+ 'px'
+    bola.style.bottom = posicionActualBola[1]+ 'px'
+}
+//Añadir la bola al tablero
+const bola = document.createElement('div')
+bola.classList.add('bola')
+contenedor.appendChild(bola)
+dibujarBola()
+//Funcion que ejecuta el JUEGO
+function moverBola(){
+    posicionActualBola[0] += xDireccionBola
+    posicionActualBola[1] += yDireccionBola
+    dibujarBola()
+    revisarColisiones()
+    gameOver()
+    //Todas las funciones
+}
+
+//Intervalo que se ejecuta cada 20 milisegundos PRINCIPAL DE EL JUEGO
+timerId = setInterval(moverBola, 20)
+//Definir la funcion que revia las colisiones
+function revisarColisiones(){
+    //Colision con bloques
+    for (let i = 0; i < bloques.length; i++){
+        if( (posicionActualBola[0] > bloques[i].bottomLeft[0] && posicionActualBola[0] < bloques[i].bottomRigth[0]) &&
+            ((posicionActualBola[1]  + diametro) > bloques[i].bottomLeft[1] && posicionActualBola[1] < bloques[i].topLeft[1])
+        ){
+            const todosLosBloques = Array.from(document.querySelectorAll('.bloque'))
+            todosLosBloques[i].classList.remove('bloque')
+            bloques.splice(i,1)
+            cambiarDireccion()
+        }
+    }
+
+    //Colisiones con las paredes
+    if(
+        posicionActualBola[0] >= (anchoTablero - diametro) ||
+        posicionActualBola[1] >= (altoTablero - diametro) ||
+        posicionActualBola[0] <= 0 ||
+        posicionActualBola[1] <= 0
+    ){
+        cambiarDireccion()
+    }
+    //revision colision con usuario
+    if((posicionActualBola[0] > posicionActualUsuario[0] && posicionActualBola[0] < posicionActualUsuario[0] + anchoBloque) && 
+    (posicionActualBola[1] > posicionActualUsuario[1] && posicionActualBola[1] < posicionActualUsuario[1] + altoBloque)
+    ){
+        cambiarDireccion()
+    }
+
+}
