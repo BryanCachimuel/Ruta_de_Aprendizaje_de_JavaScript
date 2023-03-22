@@ -18,3 +18,21 @@
     font-size: 2rem;
     color: white;
 }
+
+button:active{
+    background-color: rgb(32, 89, 224);
+}
+.btn-grabar{
+    background-color: tomato;
+}
+input{
+    display: block;
+    width: 90%;
+    height: 2rem;
+    padding: 1rem 0rem;
+    border: 0;
+    border-bottom: 2px solid dodgerblue;
+    outline: 0;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
