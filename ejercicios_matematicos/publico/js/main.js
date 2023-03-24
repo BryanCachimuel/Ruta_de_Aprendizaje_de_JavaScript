@@ -55,3 +55,104 @@ function nuevoProducto() {
     //colocamos el curso en el input
     respuesta_usuario.focus();
 }
+
+//funcion resta
+function btnResta() {
+    //limpiamos el div contenedor de las correcciones
+    msj_correccion.innerHTML = "";
+    //agregamos la clase activa al boton suma y la quitamos del resto
+    activarBoton("resta");
+    operacion_actual = "-";
+    //asignamos la operacion suma a la etiqueta
+    operacion.innerHTML = " - ";
+    //generamos los numeros aletarios de la suma
+    nuevaResta();
+}
+
+function nuevaResta() {
+    //generamos dun numeros aletarios entre 5 y 10
+    n1 = parseInt(Math.random() * 5 + 5);
+    //generamos un numero aleatorio entre 0 y 5
+    n2 = parseInt(Math.random() * 5);
+    //asignamos los numeros a las etiquetas
+    num1.innerHTML = n1;
+    num2.innerHTML = n2;
+    //colocamos el curso en el input
+    respuesta_usuario.focus();
+}
+
+//funcion división
+function btnDivision() {
+    //limpiamos el div contenedor de las correcciones
+    msj_correccion.innerHTML = "";
+    //agregamos la clase activa al boton suma y la quitamos del resto
+    activarBoton("division");
+    operacion_actual = "/";
+    //asignamos la operacion suma a la etiqueta
+    operacion.innerHTML = " / ";
+    //generamos los numeros aletarios de la suma
+    nuevaDivision();
+}
+
+function nuevaDivision() {
+    //aqui voy a guardar los divisores del numero a dividr
+    let divisores = [];
+
+    //generamos un numero aletorio entre 1 y 10
+    n1 = parseInt(Math.random() * 9 + 1);
+
+    //encontramos los divisores del numero generado y lo guardamos en el arreglo
+    for (var i = 1; i <= n1; i++) {
+        if (n1 % i === 0) { //es divisor
+            divisores.push(i);
+        }
+    }
+
+    //seleccionamos un posiciòn aleatorio de los numeros que son divisores
+    let pos = parseInt(Math.random() * (divisores.length));
+
+    n2 = divisores[pos];
+    num1.innerHTML = n1;
+    num2.innerHTML = n2;
+    respuesta_usuario.focus();
+}
+
+//funcion que controla si la respuesta es correcta
+function corregir() {
+    //si el usuario no ha ingresado nada no continuo
+    if (respuesta_usuario.value == "") {
+        return;
+    }
+
+    let solucion;
+    //armo la operacion que se genero en una variable y veo cual es su reslutado
+    //En este caso el operador + es para concatener las cadenas
+    let operacion = n1 + operacion_actual + n2;
+    solucion = eval(operacion);
+
+    //creo un elemento i para agregar el icono de correcto o incorrecto
+    var i = document.createElement("i");
+    //controlo si coincide lo que el usuario respondio con la solucion
+    if (respuesta_usuario.value == solucion) {
+        i.className = "fa-regular fa-face-grin";
+    } else {
+        i.className = "fa-regular fa-face-frown";
+    }
+
+    //agrego el elemento al contenedor de las correciones
+    msj_correccion.appendChild(i);
+
+    //controlo que tipo de operacion estoy para genera una nueva operacion
+    if (operacion_actual == "+") {
+        nuevaSuma();
+    } else if (operacion_actual == "-") {
+        nuevaResta();
+    } else if (operacion_actual == "*") {
+        nuevoProducto();
+    } else if (operacion_actual == "/") {
+        nuevaDivision();
+    }
+
+    //limpio el input
+    respuesta_usuario.value = "";
+}
