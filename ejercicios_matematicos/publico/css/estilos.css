@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Patrick Hand';
+}
+
+body {
+    background-color: slategray;
+}
+
+.container {
+    max-width: 500px;
+    background: linear-gradient(#34c0d6, #d5f3f7);
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.container-operadores {
+    display: flex;
+    justify-content: center;
+}
+
+.container-operadores button {
+    border: none;
+    margin: 10px 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: .5s;
+}
