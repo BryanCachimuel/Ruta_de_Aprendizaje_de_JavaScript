@@ -31,3 +31,27 @@ function nuevaSuma() {
     //colocamos el curso en el input
     respuesta_usuario.focus();
 }
+
+//Funcion producto
+function btnProducto() {
+    //limpiamos el div contenedor de las correcciones
+    msj_correccion.innerHTML = "";
+    //agregamos la clase activa al boton producto y la quitamos del resto
+    activarBoton("producto");
+    operacion_actual = "*";
+    //asignamos la operacion suma a la etiqueta
+    operacion.innerHTML = " x ";
+    //generamos los numeros aletarios de la suma
+    nuevoProducto();
+}
+
+function nuevoProducto() {
+    //generamos dos numeros aletarios entre 0 y 9
+    n1 = parseInt(Math.random() * 10);
+    n2 = parseInt(Math.random() * 10);
+    //asignamos los numeros a las etiquetas
+    num1.innerHTML = n1;
+    num2.innerHTML = n2;
+    //colocamos el curso en el input
+    respuesta_usuario.focus();
+}
