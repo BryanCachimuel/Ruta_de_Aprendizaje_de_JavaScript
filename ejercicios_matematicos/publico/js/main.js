@@ -156,3 +156,22 @@ function corregir() {
     //limpio el input
     respuesta_usuario.value = "";
 }
+
+//agrego al input el evento onkeydown para detectar cuando se presiona Enter Y 
+//llamar directamente a la funcion corregir()
+respuesta_usuario.onkeydown = function(e) {
+    var ev = document.all ? window.event : e;
+    if (ev.keyCode == 13) {
+        corregir();
+    }
+}
+
+
+//Esta funcion la creamos luego, cuando tengamos listo los estilos
+function activarBoton(idBoton) {
+    document.getElementById("suma").className = "";
+    document.getElementById("resta").className = "";
+    document.getElementById("producto").className = "";
+    document.getElementById("division").className = "";
+    document.getElementById(idBoton).className = "activado";
+}
