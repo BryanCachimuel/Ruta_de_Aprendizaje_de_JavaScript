@@ -34,3 +34,21 @@ function copyPw(e){
         textArea.remove();
     }
 }
+
+
+function generatePw(e){
+    passwordAll = '';
+    if (upper.checked) {
+        passwordAll += getUpperCase();
+    }if (lower.checked) {
+        passwordAll += getLowerCase();
+    }if (number.checked) {
+        passwordAll += getNumberCase();
+    }if (symbol.checked) {
+        passwordAll += getSymbolCase();
+    }
+
+    if (upper.checked || lower.checked || number.checked || symbol.checked) {
+        completePw();
+    }
+}
