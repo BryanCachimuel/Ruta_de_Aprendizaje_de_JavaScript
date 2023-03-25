@@ -30,3 +30,43 @@
 .main-card input[type="range"]{
     width: 100%;
 }
+
+.input-copy .password{
+    /* border: solid 2px #228AF5; */
+    padding: 13px 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-bottom: 9px;
+    margin-top: 25px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+}
+.input-copy .password a img{
+    width: 22px;
+}
+
+.select-option {
+    margin-bottom: 5px;
+}
+.select-option label{
+    font-size: 17px;
+}
+
+.main-card .generate{
+    border: solid 2px aliceblue;
+    padding: 10px 23px;
+    color: #228AF5;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: aliceblue;
+    margin-top: 14px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.main-card .generate:hover {
+    background-color: #8cdfffe0;
+    color: #fff;
+}
