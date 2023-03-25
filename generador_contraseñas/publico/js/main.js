@@ -68,3 +68,17 @@ function completePw(){
     }
     textPw.innerHTML = passwordAll;
 }
+
+function getRandomNumber(max){
+    return Math.floor(Math.random() * max);
+}
+function getRandom(){
+    return Math.floor(Math.random() * 4);
+}
+
+function getUpperCase(){
+    return upperLetters[getRandomNumber(upperLetters.length)];
+}
+function getLowerCase(){
+    return lowerLetters[getRandomNumber(lowerLetters.length)];
+}
