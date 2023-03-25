@@ -52,3 +52,19 @@ function generatePw(e){
         completePw();
     }
 }
+
+function completePw(){
+    while (passwordAll.length < parseInt(displaySize.textContent)) {
+        const numberR = getRandom();
+        if (upper.checked && numberR === 0) {
+            passwordAll += getUpperCase();
+        }if (lower.checked && numberR === 1) {
+            passwordAll += getLowerCase();
+        }if (number.checked && numberR === 2) {
+            passwordAll += getNumberCase();
+        }if (symbol.checked && numberR === 3) {
+            passwordAll += getSymbolCase();
+        }
+    }
+    textPw.innerHTML = passwordAll;
+}
