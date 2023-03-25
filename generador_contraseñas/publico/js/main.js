@@ -82,3 +82,14 @@ function getUpperCase(){
 function getLowerCase(){
     return lowerLetters[getRandomNumber(lowerLetters.length)];
 }
+
+function getNumberCase(){
+    return numbers[getRandomNumber(numbers.length)];
+}
+function getSymbolCase(){
+    return symbols[getRandomNumber(symbols.length)];
+}
+
+function showVal(value){
+    displaySize.textContent = value;
+}
