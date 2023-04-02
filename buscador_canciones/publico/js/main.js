@@ -30,4 +30,26 @@ function callApiSong(artista, cancion){
             }
         })
         .catch(error => console.log(error));
+}   
+
+function mostrarLetra(lyrics){
+    sideLetters.innerHTML = "";
+    const title = document.createElement("h3");
+    title.innerText = `${cancion.value} de: ${artista.value}`;
+    sideLetters.appendChild(title);
+
+    const letra = document.createElement("p");
+    letra.innerText = lyrics;
+    sideLetters.appendChild(letra);
+}
+
+function mostrarError(mensaje){
+    const error = document.createElement("p");
+    error.classList.add("error-mensaje");
+    error.innerText = mensaje;
+
+    sideLeft.appendChild(error);
+    setTimeout(() => {
+        error.remove();
+    }, 2000);
 }
