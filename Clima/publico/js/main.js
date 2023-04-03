@@ -34,3 +34,22 @@ function callAPI(city, country){
             console.log(error);
         })
 }
+
+function showWeather(data){
+    const {name, main:{temp, temp_min, temp_max}, weather:[arr]} = data;
+
+    const degrees = kelvinToCentigrade(temp);
+    const min = kelvinToCentigrade(temp_min);
+    const max = kelvinToCentigrade(temp_max);
+
+    const content = document.createElement('div');
+    content.innerHTML = `
+        <h5>Clima en ${name}</h5>
+        <img src="https://openweathermap.org/img/wn/${arr.icon}@2x.png" alt="icon">
+        <h2>${degrees}°C</h2>
+        <p>Max: ${max}°C</p>
+        <p>Min: ${min}°C</p>
+    `;
+
+    result.appendChild(content);
+}
