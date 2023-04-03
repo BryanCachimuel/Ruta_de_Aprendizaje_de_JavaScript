@@ -65,3 +65,11 @@ function showError(message){
         alert.remove();
     }, 3000);
 }
+
+function kelvinToCentigrade(temp){
+    return parseInt(temp - 273.15);
+}
+
+function clearHTML(){
+    result.innerHTML = '';
+}
