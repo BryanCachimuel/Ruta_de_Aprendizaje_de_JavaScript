@@ -53,3 +53,15 @@ function showWeather(data){
 
     result.appendChild(content);
 }
+
+function showError(message){
+    //console.log(message);
+    const alert = document.createElement('p');
+    alert.classList.add('alert-message');
+    alert.innerHTML = message;
+
+    form.appendChild(alert);
+    setTimeout(() => {
+        alert.remove();
+    }, 3000);
+}
