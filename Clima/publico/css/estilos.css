@@ -40,3 +40,36 @@ form {
     display: flex;
     flex-direction: column;
 }
+form input[type="text"], form input[type="submit"], form select{
+    width: 100%;
+    margin: 0px 0 25px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+form input[type="submit"]{
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: #14d4a5;
+    border: 1px solid #14d4a5;
+    color: #fff;
+    font-weight: 600;
+    transition: width 1s;
+}
+form input[type="submit"]:hover{
+    width: 50%;
+}
+.alert-message {
+    margin: 24px 0 0;
+    color: red!important;
+}
