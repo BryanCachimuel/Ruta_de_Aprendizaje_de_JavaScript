@@ -19,3 +19,24 @@ body{
 .weather-content p{
     color: #cfcfd9;
 }
+.result{
+    margin-bottom: 8%;
+}
+.result p{
+    margin: 5px 0 5px;
+}
+.result h2{
+    font-size: 70px;
+    line-height: 70px;
+    margin: -10px 0 10px;
+    color: #fff;
+}
+.result h5{
+    font-size: 21px;
+    margin: 2px;
+    color: #fff;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
