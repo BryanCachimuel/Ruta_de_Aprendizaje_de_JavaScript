@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cotizador de Criptomonedas</title>
-    <link rel="stylesheet" href="./publico/css/estilos.css">
+    <link rel="stylesheet" href="./publico/css/estilos.css" />
     <script src="./publico/js/main.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <section class="main-section">
+      <h2>Cotizador de Criptomonedas</h2>
+      <div class="container">
+        <div class="image-side"></div>
+        <div class="form-side">
+          <form action="" id="form-search">
+            <select id="moneda" name="moneda">
+              <option value="">Elige tu moneda</option>
+              <option value="USD">Dolar Estadounidense</option>
+              <option value="MXN">Peso Mexicano</option>
+              <option value="GBP">Libras</option>
+              <option value="EUR">Euros</option>
+            </select>
+
+            <select id="criptomonedas" name="criptomoneda">
+              <option value="">Elige tu criptomoneda</option>
+            </select>
+
+            <input class="" type="submit" value="Cotizar" />
+            <div class="container-answer"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
