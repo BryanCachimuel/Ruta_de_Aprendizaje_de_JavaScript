@@ -76,3 +76,17 @@ function consultarCriptos(){
         })
         .catch(error => console.log(error))
 }
+
+function selectCriptos(criptos){
+    criptos.forEach(cripto => {
+        const {FullName, Name} = cripto.CoinInfo;
+        const option = document.createElement("option");
+        option.value = Name;
+        option.textContent = FullName;
+        criptomoneda.appendChild(option);
+    });
+}
+
+function clearHTML(){
+    containerAnswer.innerHTML = '';
+}
