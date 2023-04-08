@@ -51,3 +51,28 @@ function mostrarCotizacion(data){
     `;
     containerAnswer.appendChild(answer);
 }
+
+function showError(mensaje){
+    const error = document.createElement('p');
+    error.classList.add("error");
+    error.textContent = mensaje;
+    formContainer.appendChild(error);
+    setTimeout(() => {
+        error.remove()
+    }, 3000);
+}
+
+function getValue(e){
+    objBusqueda[e.target.name] = e.target.value;
+}
+
+function consultarCriptos(){
+    const url = 'https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD';
+
+    fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(respuestaJson => {
+            selectCriptos(respuestaJson.Data);
+        })
+        .catch(error => console.log(error))
+}
