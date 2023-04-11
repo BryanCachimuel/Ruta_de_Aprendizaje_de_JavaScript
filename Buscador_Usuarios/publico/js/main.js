@@ -49,3 +49,16 @@ function mostrarRepos(repos){
             reposContainer.appendChild(link);
         });
 }
+
+function mostrarError(mensaje){
+    const mensajeNuevo = "Warning: " + mensaje;
+    const error = document.createElement("h5");
+    error.innerText = mensajeNuevo;
+    error.style.color = "red";
+    mainContainer.appendChild(error);
+    setTimeout(() => error.remove(), 3000);
+}
+
+function clearHTML(){
+    containerSection.innerHTML = "";
+}
