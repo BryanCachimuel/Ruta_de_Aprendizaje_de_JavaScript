@@ -30,3 +30,36 @@ body{
     border-radius: 50%;
     border: 5px solid #4d4d4d;
 }
+
+.row-right {
+    width: 75%;
+}
+.stats-user{
+    display: flex;
+    gap: 15px;
+}
+.stats-user span{
+    font-weight: 700;
+}
+.link-repos {
+    margin-bottom: 4%;
+}
+.link-repos a{
+    margin-right: 10px;
+    background-color: #4d4d4d;
+    padding: 1px 6px 5px;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 7px;
+    display: inline-block;
+}
+.link-repos a:hover{
+    background-color: #3a3a3a;
+}
+.search-section {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 4%;
+}
