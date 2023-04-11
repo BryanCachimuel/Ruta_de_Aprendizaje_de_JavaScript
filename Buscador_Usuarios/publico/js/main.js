@@ -28,12 +28,24 @@ async function callApiUser(user){
         }
         const dataUser = await data[0].json();
         const dataRepo = await data[1].json();
-        //console.log(dataUser);
-        //console.log(dataRepo);
+        
         mostrarData(dataUser);
         mostrarRepos(dataRepo);
     } catch (error) {
         console.log(error);
     }
+}
 
+function mostrarRepos(repos){
+    const reposContainer = document.querySelector(".link-repos");
+    repos
+        .sort((a, b) => b.stargazers_count - a.stargazers_count)
+        .slice(0, 10)
+        .forEach(element => {
+            const link = document.createElement("a");
+            link.innerText = element.name;
+            link.href = element.html_url;
+            link.target = "_blank";
+            reposContainer.appendChild(link);
+        });
 }
