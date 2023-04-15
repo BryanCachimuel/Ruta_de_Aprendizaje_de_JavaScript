@@ -18,3 +18,25 @@ body {
 .max-view-height {
     height: 100vh;
 }
+
+flex-direction-column {
+    flex-direction: column;
+}
+
+#container-tacita {
+    width: 50%;
+}
+
+#container-tacita > video {
+    width: 100%;
+}
+
+.display-none {
+    display: none;
+}
+
+#container-botones-tacita {
+    padding: 10px 0;
+    width: 50%;
+    justify-content: space-around;
+}
