@@ -28,11 +28,19 @@ window.onload = () => {
             resetear(videoTacitaHumeando);
 
             videoTacitaTomando.onended = () => {
-                mostra(videoTacita);
+                mostrar(videoTacita);
                 ocultar(videoTacitaTomando);
                 resetear(videoTacitaTomando);
                 estadoTacita = 'vacia';
             }
         }
     }
+}
+
+const ocultar = (video) => {
+    video.classList.add('display-none');
+}
+
+const mostrar = (video) => {
+    video.classList.remove('display-none');
 }
