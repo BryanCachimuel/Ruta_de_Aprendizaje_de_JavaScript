@@ -16,4 +16,23 @@ window.onload = () => {
             }
         }
     }
+
+    let botonTomar = document.getElementById('boton-tomar');
+    let videoTacitaTomando = document.getElementById('tacita-tomando');
+
+    botonTomar.onclick = () => {
+        if(estadoTacita == "llena"){
+            ocultar(videoTacitaHumeando);
+            mostrar(videoTacitaTomando);
+            reproducir(videoTacitaTomando);
+            resetear(videoTacitaHumeando);
+
+            videoTacitaTomando.onended = () => {
+                mostra(videoTacita);
+                ocultar(videoTacitaTomando);
+                resetear(videoTacitaTomando);
+                estadoTacita = 'vacia';
+            }
+        }
+    }
 }
