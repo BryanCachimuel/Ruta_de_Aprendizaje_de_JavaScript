@@ -44,3 +44,15 @@ const ocultar = (video) => {
 const mostrar = (video) => {
     video.classList.remove('display-none');
 }
+
+const reproducir = (video, loopear) => {
+    if(loopear == 'loopear'){
+        video.loop = true;
+    }
+    video.play();
+}
+
+const resetear = (video) => {
+    video.pause();
+    video.currentTime = 0;
+}
