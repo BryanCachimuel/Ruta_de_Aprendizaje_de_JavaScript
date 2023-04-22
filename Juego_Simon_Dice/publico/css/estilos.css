@@ -1,0 +1,20 @@
+body{
+    display: inline-block;
+    place-items: center;
+    width: 100%;
+    font-family: 'Merriweather', serif;
+}
+
+.simon{
+    position: relative;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.buttonContainer{
+    display: inline-grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    transform: rotate(45deg);
+}
