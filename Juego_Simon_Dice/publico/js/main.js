@@ -80,4 +80,30 @@ class Simon {
             this.showSequence();
         }
     }
+
+    showSequence(){
+        this.blockedButtons = true;
+        let sequenceIndex = 0;
+        let timer = setInterval(() => {
+            const button = this.buttons[this.sequence[sequenceIndex]];
+            this.buttonSounds[this.sequence[sequenceIndex]].play();
+            this.toggleButtonStyle(button)
+            setTimeout(() => this.toggleButtonStyle(button), this.speed / 2)
+            sequenceIndex++;
+            if(sequenceIndex > this.round){
+                this.blockedButtons = false;
+                clearInterval(timer);
+            }
+        }, this.speed);
+    }
+
+    toggleButtonStyle(button) {
+        button.classList.toggle('active');
+    }
+
+    gameLost() {
+        this.errorSound.play();
+        this.display.startButton.disabled = false; 
+        this.blockedButtons = true;
+    }
 }
