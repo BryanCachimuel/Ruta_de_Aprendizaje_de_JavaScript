@@ -18,3 +18,35 @@ body{
     grid-template-columns: auto auto;
     transform: rotate(45deg);
 }
+
+.square{
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.square:active,
+.active{
+    filter: brightness(125%);
+}
+
+.red{
+    background-color: #EE6352;
+}
+
+.blue{
+    background-color: #08B2E3;
+}
+
+.green{
+    background-color: #57A773;
+}
+
+.yellow{
+    background-color: #FFDF64;
+}
+
+.title{
+    width: min-content;
+}
