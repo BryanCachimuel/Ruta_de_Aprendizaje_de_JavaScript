@@ -48,4 +48,36 @@ class Simon {
     createSequence(){
         return Array.from({length: this.totalRounds}, () => this.getRandomColor());
     }
+
+    getRandomColor(){
+        return Math.floor(Math.random() * 4);
+    }
+
+    buttonClick(value) {
+        !this.blockedButtons && this.validateChosenColor(value);
+    }
+
+    validateChosenColor(value){
+        if(this.sequence[this.userPosition] === value){
+            this.buttonSounds[value].play();
+            if(this.round === this.userPosition){
+                this.updateRound(this.round + 1);
+                this.speed /= 1.02;
+                this.isGameOver();
+            }else{
+                this.userPosition++;
+            }
+        }else{
+            this.gameLost();
+        }
+    }
+
+    isGameOver(){
+        if(this.round === this.totalRounds){
+            this.gameWon();
+        }else{
+            this.userPosition = 0;
+            this.showSequence();
+        }
+    }
 }
