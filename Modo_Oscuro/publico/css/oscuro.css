@@ -22,7 +22,7 @@
 .switchDark::after{
     display: block;
     background: #fffbf5;
-    width: 18.rem;
+    width: 1.8rem;
     height: 1.8rem;
     position: absolute;
     top: 0;
