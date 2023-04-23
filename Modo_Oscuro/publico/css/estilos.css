@@ -42,3 +42,57 @@ li{
 li:hover{
     color: rgba(0, 153, 255,1);
 }
+
+header{
+    position: absolute;
+    width: 400px;
+    top: 35%;
+}
+
+h1{
+    line-height: 75px;
+    font-weight: 500;
+    font-size: 64px;
+    font-style: normal;
+}
+
+header p{
+    width: 757px;
+    height: 70px;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 21px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+header button{
+    background-color: rgba(0, 153, 255,1) ;
+    width: 150px;
+    height: 40px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 28px;
+    font-style: normal;
+    color: #fff;
+    transition: 0.4s ease 0s;
+}
+
+header button:hover{
+    box-shadow: 1px 1px 7px #333;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+}
+
+.ilustracion{
+    position: absolute;
+    width: 632px;
+    height: 436px;
+    right: 0;
+    transform: translateY(30px);
+}
