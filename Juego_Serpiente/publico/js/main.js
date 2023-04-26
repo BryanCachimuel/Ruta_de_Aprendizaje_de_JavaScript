@@ -27,3 +27,23 @@ let direction;
 let boardSquares;
 let emptySquares;
 let moveInterval;
+
+const drawSnake = () => {
+    snake.forEach( square => drawSquare(square, 'snakeSquare'));
+}
+
+
+const drawSquare = (square, type) => {
+    const [ row, column ] = square.split('');
+    boardSquares[row][column] = squareTypes[type];
+    const squareElement = document.getElementById(square);
+    squareElement.setAttribute('class', `square ${type}`);
+
+    if(type === 'emptySquare') {
+        emptySquares.push(square);
+    } else {
+        if(emptySquares.indexOf(square) !== -1) {
+            emptySquares.splice(emptySquares.indexOf(square), 1);
+        }
+    }
+}
