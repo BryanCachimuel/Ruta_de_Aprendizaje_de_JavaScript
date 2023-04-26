@@ -1,6 +1,6 @@
 const alfabeto = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 const inputOriginal = document.getElementById('input-original');
-const cifrado = document.getElementById('cifrado');
+const cifrador = document.getElementById('cifrador');
 const resultado = document.getElementById('resultado');
 const rango = document.getElementById('rango');
 
@@ -17,18 +17,20 @@ const printChar = (currentLetterIndex, wordArray) => {
     animateChar(spanChar)
         .then( () => {
             const charSinCodificar = wordArray[currentLetterIndex];
-            spanChar.innerHTML = alfabeto.includes(charSinCodificar) ? alfabeto[(alfabeto.indexOf(charSinCodificar) + parseInt(rango.value)) % alfabeto.length] : charSinCodificar
-            printChar(currentLetterIndex + 1, wordArray)
+            spanChar.innerHTML = alfabeto.includes(charSinCodificar) ? 
+                alfabeto[(alfabeto.indexOf(charSinCodificar) + parseInt(rango.value)) % alfabeto.length] : 
+                charSinCodificar
+            printChar(currentLetterIndex + 1, wordArray);
         });
 }
 
-const animateChar = (spanChar) => {
-    let cambiosLetra = 0;
+const animateChar = spanChar => {
+    let cambiosDeLetra = 0;
     return new Promise(resolve => {
         const intervalo = setInterval(() => {
             spanChar.innerHTML = alfabeto[Math.floor(Math.random() * alfabeto.length)];
-            cambiosLetra++;
-            if(cambiosLetra === 3){
+            cambiosDeLetra++;
+            if(cambiosDeLetra === 3) {
                 clearInterval(intervalo);
                 resolve();
             }
@@ -36,10 +38,10 @@ const animateChar = (spanChar) => {
     });
 }
 
-const submit = (e) => {
+const submit = e => {
     e.preventDefault();
     resultado.innerHTML = '';
-    shifMessage();
+    shifMessage()
 }
 
-cifrado.onsubmit = submit;
+cifrador.onsubmit = submit;
