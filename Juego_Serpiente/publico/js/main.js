@@ -137,3 +137,16 @@ const setGame = () => {
     emptySquares = [];
     createBoard();
 }
+
+const startGame = () => {
+    setGame();
+    gameOverSign.style.display = 'none';
+    startButton.disabled = true;
+    drawSnake();
+    updateScore();
+    createRandomFood();
+    document.addEventListener('keydown', directionEvent);
+    moveInterval = setInterval( () => moveSnake(), gameSpeed);
+}
+
+startButton.addEventListener('click', startGame);
