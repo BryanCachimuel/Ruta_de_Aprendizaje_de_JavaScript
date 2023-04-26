@@ -104,3 +104,12 @@ const directionEvent = key => {
             break;
     }
 }
+
+const createRandomFood = () => {
+    const randomEmptySquare = emptySquares[Math.floor(Math.random() * emptySquares.length)];
+    drawSquare(randomEmptySquare, 'foodSquare');
+}
+
+const updateScore = () => {
+    scoreBoard.innerText = score;
+}
