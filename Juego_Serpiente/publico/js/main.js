@@ -12,7 +12,6 @@ const squareTypes = {
     snakeSquare: 1,
     foodSquare: 2
 };
-
 const directions = {
     ArrowUp: -10,
     ArrowDown: 10,
