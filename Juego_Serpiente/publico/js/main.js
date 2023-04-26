@@ -77,3 +77,30 @@ const addFood = () => {
     updateScore();
     createRandomFood();
 }
+
+const gameOver = () => {
+    gameOverSign.style.display = 'block';
+    clearInterval(moveInterval)
+    startButton.disabled = false;
+}
+
+const setDirection = newDirection => {
+    direction = newDirection;
+}
+
+const directionEvent = key => {
+    switch (key.code) {
+        case 'ArrowUp':
+            direction != 'ArrowDown' && setDirection(key.code)
+            break;
+        case 'ArrowDown':
+            direction != 'ArrowUp' && setDirection(key.code)
+            break;
+        case 'ArrowLeft':
+            direction != 'ArrowRight' && setDirection(key.code)
+            break;
+        case 'ArrowRight':
+            direction != 'ArrowLeft' && setDirection(key.code)
+            break;
+    }
+}
