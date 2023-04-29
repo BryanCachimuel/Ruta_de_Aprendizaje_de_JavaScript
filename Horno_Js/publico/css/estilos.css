@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+}
+
+.max-view-height {
+    height: 100vh;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.hidden{
+    opacity: 0%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
