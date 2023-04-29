@@ -26,3 +26,39 @@ body {
     justify-content: center;
     border: 1px solid black;
 }
+
+#container-horno {
+    position: relative;
+    width: 25%;
+    background-image: url(../img/horno.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#container-horno > video {
+    margin-top: 4px;
+    width: 100%;
+}
+
+#perilla-horno {
+    position: absolute;
+    top: 10.7%;
+    left: 18.5%;
+    width: 7%;
+    height: 6.3%;
+    background-image: url(../img/perilla.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#puerta-horno{
+    position: absolute;
+    top: 23%;
+    left: 8%;
+    width: 84%;
+    height: 54%;
+    /* background-color: red; */
+    opacity: 25%;
+}
