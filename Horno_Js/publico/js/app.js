@@ -16,5 +16,32 @@ window.onload = () => {
         }
     }
 
-    
+    function avanzarAnimacion(){
+        console.log(estadoHorno);
+        switch(estadoHorno){
+            case 'apagado':
+                reproducirSonido('puerta', false);
+                bloquearPuerta(true);
+                mostrarVideo();
+                reproducirVideo('horno-abriendo-puerta');
+                cuandoTerminaAvanzarA('cocinando');
+                break;
+            
+            case 'cocinando':
+                reproducirSonido('horno-cocinando');
+                reproducirSonido('timer', true);
+                rotarPerrilla(20);
+                cuandoTerminaAvanzarA('tarta-lista');
+                break;
+            
+            case 'tarta-lista':
+                detenerSonido();
+                bloquearPuerta(false);
+                reproducirVideo('horno-tarta-lista');
+                reproducirSonido('campanita', false);
+                loopear(10000);
+                cuandoTerminaAvanzarA('tarta-quemandose');
+                break;
+        }
+    }
 }
