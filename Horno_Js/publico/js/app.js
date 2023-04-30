@@ -134,4 +134,37 @@ window.onload = () => {
             cambiarTemperatura(e);
         }
     }
+
+    function cambiarTemperatura(e){
+        if (e.deltaY < 0 && videoHornoActual.playbackRate < MAX_PLAYBACK_RATE) {
+            rotarPerilla('derecha');
+            videoHornoActual.playbackRate = videoHornoActual.playbackRate + 0.5;
+        } else if (e.deltaY > 0 && videoHornoActual.playbackRate > MIN_PLAYBACK_RATE) {
+            rotarPerilla('izquierda');
+            videoHornoActual.playbackRate = videoHornoActual.playbackRate - 0.5;
+        }
+    }
+
+    function rotarPerrilla(direccion){
+        if(direccion === 'derecha'){
+            rotacionPerilla = rotacionPerilla + 2.5;
+        }else if(direccion === 'izquierda'){
+            rotacionPerilla = rotacionPerilla - 2.5;
+        }else{
+            rotacionPerilla = direccion;
+        }
+        perillaHorno.style.transform = `rotate(${rotacionPerilla}deg)`;
+    }
+
+    let sonido;
+
+    function reproducirSonido(nombreSonido, loopearSonido){
+        sonido = new Audio(`../tools/audio/${nombreSonido}.mp3`);
+        sonido.play();
+        sonido.loop = loopearSonido;
+    }
+
+    function detenerSonido(){
+        sonido.pause();
+    }
 }
