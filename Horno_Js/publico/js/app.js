@@ -74,4 +74,19 @@ window.onload = () => {
                 break;
         }
     }
+
+    function cuandoTerminaAvanzarA(estado){
+        videoHornoActual.onended = () => {
+            actualizarEstadoA(estado);
+            avanzarAnimacion();
+        }
+    }
+
+    function actualizarEstadoA(estado){
+        estadoHorno = estado;
+    }
+
+    function bloquearPuerta(traba){
+        puertaBloqueada = traba;
+    }
 }
