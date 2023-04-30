@@ -42,6 +42,36 @@ window.onload = () => {
                 loopear(10000);
                 cuandoTerminaAvanzarA('tarta-quemandose');
                 break;
+            
+            case 'tarta-quemandose' :
+                detenerSonido();
+                bloquearPuerta(true);
+                reproducirVideo('horno-tarta-quemandose');
+                cuandoTerminaAvanzarA('tarta-quemada');
+                break;
+    
+            case 'tarta-quemada' :
+                bloquearPuerta(false);
+                reproducirVideo('horno-tarta-quemada');
+                loopear()
+                break;
+            
+            case 'retirar-lista':
+                reproducirSonido('puerta-con-tarta', false);
+                bloquearPuerta(true);
+                reproducirVideo('horno-retirar-lista');
+                reiniciar();
+                break;
+    
+            case 'retirar-quemada':
+                reproducirSonido('puerta-con-tarta', false);
+                bloquearPuerta(true);
+                reproducirVideo('horno-retirar-quemada');
+                reiniciar();
+                break;
+    
+            default:
+                break;
         }
     }
 }
