@@ -107,4 +107,31 @@ window.onload = () => {
     function desLoopear(){
         videoHornoActual.loop = false;
     }
+
+    function reiniciar(){
+        desLoopear();
+        videoHornoActual.onended = () => {
+            actualizarEstadoA('apagado');
+            ocultarVideo();
+            bloquearPuerta(false);
+            rotarPerilla(0);
+        }
+    }
+
+    function mostrarVideo(){
+        videoHornoActual.classList.remove('hidden');
+    }
+
+    function ocultarVideo(){
+        videoHornoActual.classList.add('hidden');
+    }
+
+    const MAX_PLAYBACK_RATE = 16, MIN_PLAYBACK_RATE = 1;
+    let perillaHorno = document.getElementById('perilla-horno'), rotacionPerilla = 0;
+
+    perillaHorno.onmousewheel = (e) => {
+        if(estadoHorno == 'cocinando' || estadoHorno == 'tarta-lista'){
+            cambiarTemperatura(e);
+        }
+    }
 }
