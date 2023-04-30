@@ -89,4 +89,22 @@ window.onload = () => {
     function bloquearPuerta(traba){
         puertaBloqueada = traba;
     }
+
+    function reproducirVideo(nombreVideo){
+        videoHornoActual.src = `../tools/video/${nombreVideo}.webm`;
+        videoHornoActual.play();
+    }
+
+    function loopear(time){
+        videoHornoActual.loop = true;
+        if(time != undefined){
+            setTimeout(() => {
+                desLoopear();
+            }, 10000);
+        }
+    }
+
+    function desLoopear(){
+        videoHornoActual.loop = false;
+    }
 }
