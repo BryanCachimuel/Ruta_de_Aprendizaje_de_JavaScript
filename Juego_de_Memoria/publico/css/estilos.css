@@ -38,3 +38,25 @@ figure::after {
     background: rgba(255, 255, 255, 0);
     transition: 0.3s all ease;
 }
+
+figure:hover:after {
+    background: rgba(255, 255, 255, 0.137);
+}
+
+figure.opened {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+figure .back {
+    display: block;
+    backface-visibility: hidden;
+}
+
+figure .searched-image {
+    position: absolute;
+    top: 0;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    height: 100%;
+    overflow: hidden;
+}
