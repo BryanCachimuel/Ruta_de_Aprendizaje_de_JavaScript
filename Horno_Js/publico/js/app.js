@@ -114,7 +114,7 @@ window.onload = () => {
             actualizarEstadoA('apagado');
             ocultarVideo();
             bloquearPuerta(false);
-            rotarPerilla(0);
+            rotarPerrilla(0);
         }
     }
 
@@ -127,7 +127,7 @@ window.onload = () => {
     }
 
     const MAX_PLAYBACK_RATE = 16, MIN_PLAYBACK_RATE = 1;
-    let perillaHorno = document.getElementById('perilla-horno'), rotacionPerilla = 0;
+    let perillaHorno = document.getElementById('perilla-horno'), rotarPerrilla = 0;
 
     perillaHorno.onmousewheel = (e) => {
         if(estadoHorno == 'cocinando' || estadoHorno == 'tarta-lista'){
@@ -137,23 +137,23 @@ window.onload = () => {
 
     function cambiarTemperatura(e){
         if (e.deltaY < 0 && videoHornoActual.playbackRate < MAX_PLAYBACK_RATE) {
-            rotarPerilla('derecha');
+            rotarPerrilla('derecha');
             videoHornoActual.playbackRate = videoHornoActual.playbackRate + 0.5;
         } else if (e.deltaY > 0 && videoHornoActual.playbackRate > MIN_PLAYBACK_RATE) {
-            rotarPerilla('izquierda');
+            rotarPerrilla('izquierda');
             videoHornoActual.playbackRate = videoHornoActual.playbackRate - 0.5;
         }
     }
 
     function rotarPerrilla(direccion){
         if(direccion === 'derecha'){
-            rotacionPerilla = rotacionPerilla + 2.5;
+            rotarPerrilla = rotarPerrilla + 2.5;
         }else if(direccion === 'izquierda'){
-            rotacionPerilla = rotacionPerilla - 2.5;
+            rotarPerrilla = rotarPerrilla - 2.5;
         }else{
-            rotacionPerilla = direccion;
+            rotarPerrilla = direccion;
         }
-        perillaHorno.style.transform = `rotate(${rotacionPerilla}deg)`;
+        perillaHorno.style.transform = `rotate(${rotarPerrilla}deg)`;
     }
 
     let sonido;
