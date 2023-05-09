@@ -43,4 +43,18 @@ class Memorama {
             this.closeCards();
         }, 10000);
     }
+
+    closeCards() {
+        this.cards.forEach(card => card.classList.remove("opened"));
+        this.addClickEvents();
+        this.canPlay = true;
+    }
+
+    addClickEvents() {
+        this.cards.forEach(_this => _this.addEventListener("click", this.flipCard.bind(this)));
+    }
+
+    removeClickEvents() {
+        this.cards.forEach(_this => _this.removeEventListener("click", this.flipCard));
+    }
 }
