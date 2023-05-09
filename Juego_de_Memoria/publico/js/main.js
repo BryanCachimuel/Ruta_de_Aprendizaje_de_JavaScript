@@ -81,4 +81,27 @@ class Memorama {
         }
     }
 
+    resetOpenedCards() {
+        const firstOpened = document.querySelector(`.board-game figure.opened[data-image='${this.card1}']`);
+        const secondOpened = document.querySelector(`.board-game figure.opened[data-image='${this.card2}']`);
+        firstOpened.classList.remove("opened");
+        secondOpened.classList.remove("opened");
+
+        this.card1 = null;
+        this.card2 = null;
+        this.canPlay = true;
+    }
+
+    checkIfWon() {
+        this.foundPairs++;
+        this.card1 = null;
+        this.card2 = null;
+        this.canPlay = true;
+
+        if (this.maxPairNumber == this.foundPairs) {
+            alert("¡Ganaste!");
+            this.setNewGame(); 
+        }
+    }
+
 }
