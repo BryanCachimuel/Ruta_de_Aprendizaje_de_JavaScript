@@ -57,4 +57,28 @@ class Memorama {
     removeClickEvents() {
         this.cards.forEach(_this => _this.removeEventListener("click", this.flipCard));
     }
+
+    flipCard(e) {
+        const clickedCard = e.target;
+        if (this.canPlay && !clickedCard.classList.contains("opened")) { 
+            clickedCard.classList.add("opened");
+            this.checkPair( clickedCard.dataset.image );
+        }
+    }
+
+    checkPair(image) {
+        if (!this.card1) this.card1 = image;
+        else this.card2 = image;
+        if (this.card1 && this.card2) { 
+            if (this.card1 == this.card2) {
+                this.canPlay = false;
+                setTimeout(this.checkIfWon.bind(this), 300)  
+            }
+            else {
+                this.canPlay = false;
+                setTimeout(this.resetOpenedCards.bind(this), 800)
+            }
+        }
+    }
+
 }
