@@ -25,4 +25,22 @@ class Memorama {
         this.orderForThisRound = this.availableImages.concat(this.availableImages);
         this.orderForThisRound.sort( () => Math.random() - 0.5 );
     }
+
+    setImagesInCards() {
+        for (const key in this.cards) {  
+            const card = this.cards[key];
+            const image = this.orderForThisRound[key];
+            const imgLabel = card.children[1].children[0];
+
+            card.dataset.image = image;
+            imgLabel.src = `https://randomfox.ca/images/${image}.jpg`;
+        }
+    }
+
+    openCards() {
+        this.cards.forEach(card => card.classList.add("opened"));
+        setTimeout(() => {
+            this.closeCards();
+        }, 10000);
+    }
 }
