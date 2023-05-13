@@ -1,0 +1,19 @@
+.container{
+    width: 900px;
+    height: 100vh;
+    margin:2rem auto;
+}
+.contenedor{
+    width:570px;
+    height:300px;
+    position: relative;
+    border:1px solid tomato;
+    margin:3rem auto;
+}
+.bloque{
+    
+    height:20px;
+    width:100px;
+    background-color:dodgerblue;
+    position:absolute;
+}
