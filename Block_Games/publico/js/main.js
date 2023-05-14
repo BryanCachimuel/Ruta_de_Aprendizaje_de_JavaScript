@@ -44,4 +44,22 @@ const bloques  = [
     new Bloque(230, 190),
     new Bloque(340, 190),
     new Bloque(450, 190),
-]
+]       
+
+function addBloques(){
+    for(let i = 0; i < bloques.length; i++){
+        const bloque = document.createElement('div')
+        bloque.classList.add('bloque')
+        bloque.style.left = bloques[i].bottomLeft[0] + 'px'
+        bloque.style.bottom = bloques[i].bottomLeft[1] + 'px'
+        contenedor.appendChild(bloque)   
+    }
+}
+//Añadir los bloques al juego
+addBloques()
+
+//Definir Usuario
+function dibujarUsuario(){
+    usuario.style.left = posicionActualUsuario[0] + 'px'
+    usuario.style.bottom = posicionActualUsuario[1] + 'px'
+}
