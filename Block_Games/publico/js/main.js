@@ -5,19 +5,22 @@ const anchoTablero = 570
 const altoBloque = 20
 const anchoBloque = 100
 
-
+//definir posicion Usuario
 const posicionInicialUsuario = [230,10]
 let posicionActualUsuario = posicionInicialUsuario
 
+//Definir posicion de la bola
 const posicionInicialBola = [270,40]
 let posicionActualBola = posicionInicialBola
 
+//definicion particularidad de la bola
 let xDireccionBola = 2
 let yDireccionBola = 2
 let diametro = 20
 
+//definir timer
 let timerID
-
+//Definicion de la clase bloque
 class Bloque{
     constructor(ejeX, ejeY){
         this.bottomLeft = [ejeX, ejeY]
@@ -27,7 +30,7 @@ class Bloque{
 
     }
 }
-
+//Definir todos los bloques que
 const bloques  = [
     new Bloque(10, 250),
     new Bloque(120, 250),
@@ -44,8 +47,9 @@ const bloques  = [
     new Bloque(230, 190),
     new Bloque(340, 190),
     new Bloque(450, 190),
-]       
+]
 
+//Funcion añadir bloques que
 function addBloques(){
     for(let i = 0; i < bloques.length; i++){
         const bloque = document.createElement('div')
@@ -55,6 +59,7 @@ function addBloques(){
         contenedor.appendChild(bloque)   
     }
 }
+
 //Añadir los bloques al juego
 addBloques()
 
@@ -69,7 +74,6 @@ const usuario = document.createElement('div')
 usuario.classList.add('usuario')
 contenedor.appendChild(usuario)
 dibujarUsuario()
-
 //Mover al usuario por el tablero
 function moverUsuario(e){
     switch(e.key){
@@ -111,10 +115,12 @@ function moverBola(){
     dibujarBola()
     revisarColisiones()
     gameOver()
- 
+    //Todas las funciones
 }
+
 //Intervalo que se ejecuta cada 20 milisegundos PRINCIPAL DE EL JUEGO
 timerId = setInterval(moverBola, 20)
+//Definir la funcion que revia las colisiones
 
 function revisarColisiones(){
     //Colision con bloques
@@ -145,4 +151,31 @@ function revisarColisiones(){
         cambiarDireccion()
     }
 
+}
+//funcion que termina el juego si la bola toca suelo.
+function gameOver(){
+    if(posicionActualBola[1] <= 0){
+        clearInterval(timerId)
+        document.removeEventListener('keydown',moverUsuario)
+    }
+}
+
+//Funcion de cambiar la dirección.
+function cambiarDireccion(){
+    if(xDireccionBola === 2 && yDireccionBola === 2){
+        yDireccionBola = -2
+        return
+    }
+    if(xDireccionBola === 2 && yDireccionBola === -2){
+        xDireccionBola = -2
+        return
+    }
+    if(xDireccionBola === -2 && yDireccionBola === -2){
+        yDireccionBola = 2
+        return
+    }
+    if(xDireccionBola === -2 && yDireccionBola === 2){
+        xDireccionBola = 2
+        return
+    }
 }
