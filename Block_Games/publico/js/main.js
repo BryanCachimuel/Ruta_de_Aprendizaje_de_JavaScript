@@ -90,3 +90,28 @@ function moverUsuario(e){
 
 //Añadir evento escuchador para el documento de
 document.addEventListener('keydown', moverUsuario)
+
+//dibujar la bolast
+function dibujarBola(){
+    bola.style.left = posicionActualBola[0]+ 'px'
+    bola.style.bottom = posicionActualBola[1]+ 'px'
+}
+
+//Añadir la bola al tablero
+const bola = document.createElement('div')
+bola.classList.add('bola')
+contenedor.appendChild(bola)
+
+dibujarBola()
+
+//Funcion que ejecuta el JUEGO
+function moverBola(){
+    posicionActualBola[0] += xDireccionBola
+    posicionActualBola[1] += yDireccionBola
+    dibujarBola()
+    revisarColisiones()
+    gameOver()
+ 
+}
+//Intervalo que se ejecuta cada 20 milisegundos PRINCIPAL DE EL JUEGO
+timerId = setInterval(moverBola, 20)
