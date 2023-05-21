@@ -1,0 +1,39 @@
+:root{
+    --color-primario: rgb(28, 0, 34);
+    --line-style: 10px solid var(--color-primario);
+    --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: rgb(214, 214, 214);
+    user-select: none;
+}
+
+h1{
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 4rem;
+    color: var(--color-primario);
+}
+
+#contenedorGrilla{
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    justify-content: center;
+}
+
+.cuadrado{
+    color: var(--color-primario);
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 8rem;
+    transition: 50ms ease-in-out;
+}
+
+.arriba{
+    border-bottom: var(--line-style);
+}
