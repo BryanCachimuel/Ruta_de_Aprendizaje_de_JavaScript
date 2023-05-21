@@ -58,3 +58,16 @@ function revisarSiHayGanador(){
     if(tablero.includes("")) return false;
     return "empate";
 }
+
+// Marco las posiciones ganadoras y muestro el modal de victoria
+function ganar(posicionesGanadoras){
+    console.log(posicionesGanadoras)
+    posicionesGanadoras.forEach(posicion => cuadrados[posicion].classList.toggle("ganador",true));
+    mostrarModal("Ganador jugador " + (estadoJuego === "P1" ? "2" : "1"));
+}
+
+function mostrarModal(texto){
+    textoModal.innerText = texto;
+    modal.showModal();
+    estadoJuego = "PAUSA";
+}
