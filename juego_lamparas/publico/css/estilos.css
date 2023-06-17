@@ -57,3 +57,33 @@ body{
 .l2{
     background: linear-gradient(rgba(242,191,38,1), rgba(255,255,255,.2));
 }
+
+.texto{
+    position: absolute;
+    bottom: -9px;
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    color: rgb(35,35,35);
+    letter-spacing: 3px;
+}
+
+.t0{
+    text-shadow: -2px -2px 10px #f2682a;
+    color: #fff;
+}
+
+.t1{
+    text-shadow: -2px -2px 10px #30aadb;
+    color: #fff;
+}
+
+.t2{
+    text-shadow: -2px -2px 10px #f2bf26;
+    color: #fff;
+}
+
+input{
+    accent-color: rgb(2,248,2);
+    cursor: pointer;
+}
