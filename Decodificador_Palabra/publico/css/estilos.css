@@ -28,3 +28,37 @@ h2{
     max-width: 500px;
     margin: auto;
 }
+
+.contenedor .fila{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.contenedor .fila .palabra{
+    width: 45%;
+    color:#ff6961;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    border: 2px solid #3b31ac;
+}
+
+.contenedor input{
+    width: 45%;
+    text-align: center;
+    color:#000;
+    font-size: 25px;
+    border-radius: 30px;
+    border: 2px solid #3b31ac;
+    outline: none;
+    background:#1b1634;
+    color: #ff6961;
+}
+
+.correcta{
+    color: #2fff00 !important;
+    transition: .5s;
+}
