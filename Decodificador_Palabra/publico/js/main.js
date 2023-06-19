@@ -86,3 +86,19 @@ function corregir(i){
         document.getElementById(i).className = "";
     }
 }
+
+let btnCraeado = false;
+function controlarFin(){
+    let total = document.getElementsByClassName("correcta").length;
+    if(total==cantidadPalabras && btnCraeado==false){
+        let button = document.createElement("button");
+        button.textContent = "Siguiente";
+        button.setAttribute("onclick", "siguiente()");
+        document.querySelector("#contenedor").appendChild(button);
+        btnCraeado=true;
+        
+        //desbloqueamos el nivel
+        let niveles = document.getElementsByClassName("nivel");
+        niveles[pos].classList = "nivel completado";
+    }
+}
