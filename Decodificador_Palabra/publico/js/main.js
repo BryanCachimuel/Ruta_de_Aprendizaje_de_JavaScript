@@ -48,3 +48,41 @@ function desordenarPalabras(){
         }
     }
 }
+
+//Función para agregar las palabra y el input 
+function agregarPalabra(){
+    let h2 = document.createElement("h2");
+    h2.textContent = categorias[pos];
+    document.querySelector("#contenedor").appendChild(h2);
+    for(var i = 0; i < desordenadas.length;i++){
+        let div = document.createElement("div");
+        div.className = "fila";
+        let palabra = document.createElement("div")
+        palabra.textContent = desordenadas[i];
+        palabra.className = "palabra";
+        div.appendChild(palabra);
+        let input = document.createElement("input");
+        input.id = i;
+
+        input.setAttribute("onkeyup", "corregir("+i+")");
+        div.appendChild(input);
+        document.querySelector("#contenedor").appendChild(div);
+    }
+}
+
+desordenarPalabras();
+agregarPalabra();
+efectoNivel();
+
+function corregir(i){
+    p = document.getElementById(i).value;
+    if(p==""){
+        return;
+    }
+    if(p==palabras[i]){
+        document.getElementById(i).className = "correcta";
+        controlarFin();
+    }else{
+        document.getElementById(i).className = "";
+    }
+}
