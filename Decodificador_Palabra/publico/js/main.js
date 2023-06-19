@@ -102,3 +102,24 @@ function controlarFin(){
         niveles[pos].classList = "nivel completado";
     }
 }
+
+function siguiente(){
+    palabras.length = 0;
+    desordenadas.length = 0;
+    document.querySelector("#contenedor").textContent = "";
+    pos++;
+    //controlo si terminó el juego
+    if(pos<bd.length){
+        btnCraeado = false;
+        agregarPalabras(bd[pos]);
+        desordenarPalabras();
+        efectoNivel();
+        agregarPalabra();
+    }else{
+        let h2 = document.createElement("h2");
+        h2.textContent = "JUEGO FINALIZADO!! MUY BIEN!!";
+        document.querySelector("#contenedor").appendChild(h2);
+    }
+
+}
+
