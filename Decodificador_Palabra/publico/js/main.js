@@ -120,6 +120,12 @@ function siguiente(){
         h2.textContent = "JUEGO FINALIZADO!! MUY BIEN!!";
         document.querySelector("#contenedor").appendChild(h2);
     }
+}
+
+//agrego el borde con efecto al nivel actual
+function efectoNivel(){
+    let niveles = document.getElementsByClassName("nivel");
+    niveles[pos].style.boxShadow = "0px 0px 7px 5px green";
 
 }
 
