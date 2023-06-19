@@ -18,3 +18,33 @@ let desordenadas = [];
 
 //mantiene el nivel actual
 let pos = 0;
+
+//tomo una cagegoría y selección 5 palabras random para jugar
+function agregarPalabras(categoria){
+    for(i=0;i<cantidadPalabras;i++){
+        let x = Math.floor(Math.random() * categoria.length);
+        palabras.push(categoria[x]);
+        categoria.splice(x,1);
+    }   
+}
+agregarPalabras(bd[pos]);
+
+//Función para desordenar las palabras - quedan guardadas en :desordendadas
+function desordenarPalabras(){
+    for(var i=0;i<palabras.length;i++){
+        let palabra = palabras[i];
+        palabra = palabra.split('');
+    
+        let palabraDesordenada;
+        palabraDesordenada = palabra.sort(function(){return Math.random() - 0.5});
+    
+        palabraDesordenada = palabraDesordenada.toString();
+        palabraDesordenada = palabraDesordenada.replace(/,/g,"");
+    
+        if(palabraDesordenada == palabras[i]){
+            i = i - 1;
+        }else{
+            desordenadas.push(palabraDesordenada);
+        }
+    }
+}
