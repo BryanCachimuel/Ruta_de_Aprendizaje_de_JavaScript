@@ -58,3 +58,58 @@ footer{
 .btn:hover{
     transform: scale(1.1);
 }
+
+/* PANTALLA juego */
+#pantalla-juego{
+    display: none;
+}
+
+.pantalla-juego{
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.pantalla-juego img{
+    max-width: 400px;
+    width: 100%;
+}
+
+.opciones{
+    max-width: 400px;
+    margin: auto;
+}
+
+.opcion{
+    display: flex;
+    position: relative;
+    align-items: center;
+    max-width: 400px;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+.opcion .letra{
+    background-color: #580078;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 35px;
+    border: 5px solid #fff;
+    position: relative;
+}
+
+.opcion .nombre{
+    background: #fff;
+    width: 100%;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 30px;
+    z-index: -2;
+    border-radius: 0 20px 20px 0;
+    padding: 7px 0 7px 30px;
+}
