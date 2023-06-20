@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Mochiy Pop One';
+}
+body{
+    background: url(img/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+h1{
+    width: fit-content;
+    background-color: #fff;
+    margin: 40px auto;
+    border-radius: 60px;
+    box-shadow: 5px 5px 0 #000;
+    padding: 20px 30px;
+}
