@@ -113,3 +113,25 @@ footer{
     border-radius: 0 20px 20px 0;
     padding: 7px 0 7px 30px;
 }
+
+/* clases que se aplicará cuando haya acertada la opcion  */
+.opcion .nombreAcertada{
+    background-color: yellowgreen;
+    color: #fff;
+}
+
+.opcion .letraAcertada{
+    background-color: yellowgreen;
+    color: #fff ;
+}
+
+/* clases que se aplicaran cuando se equivoque en la opcion elegida */
+.opcion .nombreNoAcertada{
+    background-color: darkred;
+    color: #fff;
+}
+
+.opcion .letraNoAcertada{
+    background-color: darkred;
+    color: #fff;
+}
