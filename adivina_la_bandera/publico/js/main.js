@@ -39,3 +39,31 @@ function cargarBandera() {
     document.getElementById("n2").innerHTML = opciones[posActual][2];
   }
 }
+
+function limpiarOpciones() {
+  document.getElementById("n0").className = "nombre";
+  document.getElementById("n1").className = "nombre";
+  document.getElementById("n2").className = "nombre";
+
+  document.getElementById("l0").className = "letra";
+  document.getElementById("l1").className = "letra";
+  document.getElementById("l2").className = "letra";
+}
+
+function comprobarRespuesta(opElegida) {
+  if (opElegida == correcta[posActual]) {
+    //acertó
+    document.getElementById("n" + opElegida).className = "nombre nombreAcertada";
+    document.getElementById("l" + opElegida).className = "letra letraAcertada";
+    cantidadAcertadas++;
+  } else {
+    document.getElementById("n" + opElegida).className = "nombre nombreNoAcertada";
+    document.getElementById("l" + opElegida).className = "letra letraNoAcertada";
+    //opcion que era correcta
+    document.getElementById("n" + correcta[posActual]).className = "nombre nombreAcertada";
+    document.getElementById("l" + correcta[posActual]).className = "letra letraAcertada";
+  }
+  posActual++;
+
+  setTimeout(cargarBandera, 1000);
+}
