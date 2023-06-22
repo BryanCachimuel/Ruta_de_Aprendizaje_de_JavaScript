@@ -33,7 +33,7 @@ function cargarBandera() {
   } else {
     limpiarOpciones();
 
-    document.getElementById("imgBandera").src = "img/" + banderas[posActual];
+    document.getElementById("imgBandera").src = "../img/" + banderas[posActual];
     document.getElementById("n0").innerHTML = opciones[posActual][0];
     document.getElementById("n1").innerHTML = opciones[posActual][1];
     document.getElementById("n2").innerHTML = opciones[posActual][2];
@@ -66,4 +66,19 @@ function comprobarRespuesta(opElegida) {
   posActual++;
 
   setTimeout(cargarBandera, 1000);
+}
+
+function terminarJuego(){ 
+    document.getElementById("pantalla-juego").style.display = "none";
+    document.getElementById("pantalla-final").style.display = "block";
+    //agreamos los resultados
+    document.getElementById("numCorrectas").innerHTML = cantidadAcertadas;
+    document.getElementById("numIncorrectas").innerHTML = banderas.length - cantidadAcertadas;
+}
+
+function volverAlInicio(){
+    //ocultamos las pantallas y activamos la inicial
+    document.getElementById("pantalla-final").style.display = "none";
+    document.getElementById("pantalla-inicial").style.display = "block";
+    document.getElementById("pantalla-juego").style.display = "none";
 }
