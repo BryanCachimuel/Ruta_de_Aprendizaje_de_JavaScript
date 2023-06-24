@@ -115,3 +115,8 @@ document.addEventListener("keydown", event => {
         }
     }
 });
+
+//Funcion que me determina si un caracter es una letra
+function isLetter(str) {
+    return str.length === 1 && str.match(/[a-z]/i);
+}
