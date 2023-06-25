@@ -103,3 +103,36 @@ body{
     bottom: 25px;
     background-color: #fff;
 }
+
+.contendor-pregunta #pregunta{
+    margin: 0;
+    font-weight: normal;
+}
+
+.contendor-pregunta input{
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+    width: 60%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    border: 2px solid #ccc;
+}
+.botones{
+    margin-bottom: 20px;
+}
+
+button{
+    background-color: #c466fc;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0 20px;
+    border-radius: 30px;
+    border-bottom: 4px solid #4b0872 ;
+}
