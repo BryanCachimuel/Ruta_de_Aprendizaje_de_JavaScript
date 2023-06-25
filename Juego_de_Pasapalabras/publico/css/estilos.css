@@ -66,3 +66,40 @@ body{
     cursor: pointer;
     text-transform: uppercase;
 }
+
+.pregunta-actual{
+    background-color: #000;
+    color: #fff;
+}
+
+.bien-respondida{
+    background-color: #3edbbb;
+    color: #fff;
+}
+
+.mal-respondida{
+    background-color:#fb797b;
+    color: #fff;
+}
+
+.contendor-pregunta{
+    background:rgba(255, 255, 255, 0.7);
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.contendor-pregunta #letra-pregunta{
+    border: 2px solid #000 ;
+    display: inline-block;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 15px;
+    font-size: 30px;
+    position: relative;
+    bottom: 25px;
+    background-color: #fff;
+}
