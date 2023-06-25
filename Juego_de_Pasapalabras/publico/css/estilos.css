@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Rajdhani';
+    background: url(img/fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#pantalla-inicial{
+    display: block;
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    background:rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border: 2px solid #000;
+    border-radius: 20px; 
+}
+
+#pantalla-inicial h1{
+    font-family: 'Rammetto One';
+    font-size: 50px;
+    color:#5972d9;
+}
+
+#pantalla-juego{
+    display: none;
+}
