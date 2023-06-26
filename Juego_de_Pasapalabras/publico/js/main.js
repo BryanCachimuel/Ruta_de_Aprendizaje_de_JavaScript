@@ -141,3 +141,31 @@ respuesta.addEventListener("keyup", function(event) {
   }
 });
 
+//Función que controla la respuesta
+function controlarRespuesta(txtRespuesta){
+  if(txtRespuesta == bd_juego[numPreguntaActual].respuesta){
+    cantidadAcertadas++;
+    //actualizo el estado de las pregunta actual a 1, indicando que ya esta respondida
+    estadoPreguntas[numPreguntaActual] = 1;
+    var letra =  bd_juego[numPreguntaActual].id;
+    document.getElementById(letra).classList.remove("pregunta-actual");
+    document.getElementById(letra).classList.add("bien-respondida");
+  }else{
+    estadoPreguntas[numPreguntaActual] = 1;
+    var letra =  bd_juego[numPreguntaActual].id;
+    document.getElementById(letra).classList.remove("pregunta-actual");
+    document.getElementById(letra).classList.add("mal-respondida");
+  }
+  respuesta.value="";
+  cargarPregunta();
+}
+
+//botón para pasar de pregunta sin contestar
+var pasar = document.getElementById("pasar");
+pasar.addEventListener("click", function(event) {
+  var letra =  bd_juego[numPreguntaActual].id;
+  document.getElementById(letra).classList.remove("pregunta-actual");
+  cargarPregunta();
+});
+
+
