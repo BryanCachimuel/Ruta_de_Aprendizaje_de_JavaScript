@@ -125,6 +125,19 @@ function cargarPregunta(){
     clearInterval(countdown);
     mostrarPantallaFinal();
   }
-
 }
+
+//detecto cada vez que hay un cambio de tecla en el input
+var respuesta = document.getElementById("respuesta");
+respuesta.addEventListener("keyup", function(event) {
+  //detecto si la tecla presionada es ENTER
+  if (event.keyCode === 13) {
+    if(respuesta.value==""){
+      alert("Debe ingresar un valor!!");
+      return;
+    }
+    var txtRespuesta = respuesta.value;
+    controlarRespuesta(txtRespuesta.toLowerCase());
+  }
+});
 
