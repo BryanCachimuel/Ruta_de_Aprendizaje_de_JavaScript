@@ -62,3 +62,26 @@ const bd_juego = [
     respuesta: "java",
   },
 ];
+
+//preguntas que ya han sido contestadas. Si estan en 0 no han sido contestadas
+var estadoPreguntas = [0,0,0,0,0,0,0,0,0,0]
+var cantidadAcertadas = 0;
+
+//variable que mantiene el número de pregunta actual
+var numPreguntaActual = -1;
+
+// Obtener el elemento del cronómetro
+const timer = document.getElementById("tiempo");
+
+// Establecer el tiempo inicial en 60 segundos
+let timeLeft = TIEMPO_DEL_JUEGO;
+var countdown;
+
+//boton comenzar
+var comenzar = document.getElementById("comenzar");
+comenzar.addEventListener("click", function(event) {
+  document.getElementById("pantalla-inicial").style.display = "none";
+  document.getElementById("pantalla-juego").style.display = "block";
+  largarTiempo();
+  cargarPregunta();
+});
