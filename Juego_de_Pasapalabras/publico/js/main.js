@@ -168,4 +168,18 @@ pasar.addEventListener("click", function(event) {
   cargarPregunta();
 });
 
+// Crear la función que se encargará de actualizar el cronómetro cada segundo
+function largarTiempo(){
+  countdown = setInterval(() => {
+    timeLeft--;
+    // Actualizar el texto del cronómetro con el tiempo restante
+    timer.innerText = timeLeft;
+    // Si el tiempo llega a 0, detener el cronómetro
+    if (timeLeft < 0) {
+      clearInterval(countdown);
+      mostrarPantallaFinal();
+    }
+  }, 1000);
+}
+
 
