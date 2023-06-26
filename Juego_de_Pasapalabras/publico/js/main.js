@@ -101,3 +101,30 @@ for (let i = 1; i <= TOTAL_PREGUNTAS; i++) {
   circle.style.left = `${x}px`;
   circle.style.top = `${y}px`;
 }
+
+//Función que carga la pregunta
+function cargarPregunta(){
+  numPreguntaActual++;
+  //controlo si he llegado al final de las preguntas, para comenzar de nuevo
+  if(numPreguntaActual>=TOTAL_PREGUNTAS){
+    numPreguntaActual=0;
+  }
+  if(estadoPreguntas.indexOf(0)>=0){ //Controlo que todavía hallan preguntas por contestar
+    while(estadoPreguntas[numPreguntaActual]==1){
+      numPreguntaActual++;
+      if(numPreguntaActual>=TOTAL_PREGUNTAS){
+        numPreguntaActual=0;
+      }
+    }
+    document.getElementById("letra-pregunta").textContent = bd_juego[numPreguntaActual].id
+    document.getElementById("pregunta").textContent = bd_juego[numPreguntaActual].pregunta
+    var letra =  bd_juego[numPreguntaActual].id;
+    document.getElementById(letra).classList.add("pregunta-actual");
+  }
+  else{
+    clearInterval(countdown);
+    mostrarPantallaFinal();
+  }
+
+}
+
