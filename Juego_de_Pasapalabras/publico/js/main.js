@@ -182,4 +182,34 @@ function largarTiempo(){
   }, 1000);
 }
 
+//muestro la pantlla final
+function mostrarPantallaFinal(){
+  document.getElementById("acertadas").textContent = cantidadAcertadas;
+  document.getElementById("score").textContent = (cantidadAcertadas*100)/10 + "% de acierto";
+  document.getElementById("pantalla-juego").style.display =  "none";
+  document.getElementById("pantalla-final").style.display =  "block";
+}
+
+//boton para recomenzar el juego
+var recomenzar = document.getElementById("recomenzar");
+recomenzar.addEventListener("click", function(event) {
+  numPreguntaActual = -1;
+  timeLeft = TIEMPO_DEL_JUEGO;
+  timer.innerText = timeLeft;
+  cantidadAcertadas = 0;
+  estadoPreguntas = [0,0,0,0,0,0,0,0,0,0];
+
+  //quito las clases de los circulos
+  var circulos = document.getElementsByClassName("circle");
+  for(i=0;i<circulos.length;i++){
+    circulos[i].classList.remove("bien-respondida");
+    circulos[i].classList.remove("mal-respondida");
+  }
+
+  document.getElementById("pantalla-final").style.display = "none";
+  document.getElementById("pantalla-juego").style.display = "block";
+  largarTiempo();
+  cargarPregunta();
+});
+
 
