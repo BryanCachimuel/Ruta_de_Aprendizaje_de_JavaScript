@@ -1,9 +1,11 @@
 body{
     font-family: 'Verdana';
 }
+
 h1{
     text-align: center;
 }
+
 span{
     display: inline-block;
     background-color: #ccc;
@@ -13,4 +15,24 @@ span{
     border-radius: 6px;
     cursor: pointer;
     line-height: 20px;
+}
+
+.texto{
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: rgb(244, 244, 244);;
+}
+
+.texto p{
+    line-height: 28px;
+}
+
+.opciones{
+    background-color: rgb(244, 244, 244);
+    max-width: 500px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    min-height: 40px;
 }
