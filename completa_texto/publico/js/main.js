@@ -12,7 +12,7 @@ let txtResultado = document.getElementById("resultado");
 //Arreglo que contiene el orden de las palabras que el usuario va eligiendo. Tambien me sirve para saber las posiciones disponibles
 let posDisponible = ["", "", "", "", "", "", ""];
 
-//Función que agrega las opciones 
+//Agrega las opciones 
 function agregarOpciones(){
     palabras_juego.forEach(element => {
         let div = document.createElement("div");
@@ -24,7 +24,7 @@ function agregarOpciones(){
 }
 agregarOpciones();
 
-//agrego el método remove onclick a cada elemento span del texto
+//Agregar el método remove onclick a cada elemento span del texto
 function agregarEliminarAspan(){
     var spans = document.getElementsByTagName("span");
     for(let i=0; i < spans.length; i++){
@@ -33,7 +33,7 @@ function agregarEliminarAspan(){
 }
 agregarEliminarAspan();
 
-//funcion que coloca el texto de la opcion elegida en el span correspondiente
+//Coloca el texto de la opcion elegida en el span correspondiente
 function completar(palabra){
     let posLibre = posDisponible.indexOf("");
     document.getElementById(posLibre).innerHTML = palabra.innerHTML;
@@ -41,7 +41,7 @@ function completar(palabra){
     contenedorOpciones.removeChild(palabra);
 }
 
-//Función que elimina una palabra del texto y la pone de nuevo en opciones
+//Elimina una palabra del texto y la pone de nuevo en opciones
 function remove(palabra){
     if(palabra.innerHTML!=""){
         let div = document.createElement("div");
@@ -58,5 +58,30 @@ function remove(palabra){
         txtResultado.innerHTML = "";
     }
 }
+
+//Comprueba si esta correcto
+comprobar.onclick = function(){
+    let posLibre = posDisponible.indexOf("");
+    let totalAciertos = 0;
+
+    if(posLibre==-1){
+        for(i=0; i <orden_correcto.length;i++){
+            if(orden_correcto[i]==posDisponible[i]){
+                document.getElementById(i).style.background = "#c0ff33";
+                totalAciertos++;
+            }else{
+                document.getElementById(i).style.background = "#fb4b4b";
+            }
+        }
+        if(totalAciertos==orden_correcto.length){
+            txtResultado.innerHTML = "Muy bien!!";
+        }else{
+            txtResultado.innerHTML = "Existen errores!!";
+        }
+    }else{
+        alert("Completa las palabras");
+    }
+}
+
 
 
