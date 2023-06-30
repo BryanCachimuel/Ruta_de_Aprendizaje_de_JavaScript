@@ -33,3 +33,30 @@ function agregarEliminarAspan(){
 }
 agregarEliminarAspan();
 
+//funcion que coloca el texto de la opcion elegida en el span correspondiente
+function completar(palabra){
+    let posLibre = posDisponible.indexOf("");
+    document.getElementById(posLibre).innerHTML = palabra.innerHTML;
+    posDisponible[posLibre] = palabra.innerHTML;
+    contenedorOpciones.removeChild(palabra);
+}
+
+//Función que elimina una palabra del texto y la pone de nuevo en opciones
+function remove(palabra){
+    if(palabra.innerHTML!=""){
+        let div = document.createElement("div");
+        div.className = "palabra";
+        div.innerHTML = palabra.innerHTML;
+        div.setAttribute("onclick", "completar(this)");
+        contenedorOpciones.appendChild(div);
+
+        palabra.innerHTML = "";
+        posDisponible[palabra.id] = "";
+
+        document.getElementById(palabra.id).style.background = "#ccc";
+
+        txtResultado.innerHTML = "";
+    }
+}
+
+
