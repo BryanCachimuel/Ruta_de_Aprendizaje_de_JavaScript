@@ -1,5 +1,5 @@
 //total preguntas del juego
-const TOTAL_PREGUNTAS = 10;
+const TOTAL_PREGUNTAS = 11;
 
 //tiempo del juego
 const TIEMPO_DEL_JUEGO = 60;
@@ -61,10 +61,16 @@ const bd_juego = [
       "Lenguaje de programación con el cual se diseño el sistema operativo Android",
     respuesta: "java",
   },
+  {
+    id: "K",
+    pregunta:
+      "Es una variante del Lenguaje de Programación Java pero para este caso sería para realizar aplicaciones moviles",
+    respuesta: "Kotlin",
+  },
 ];
 
 //preguntas que ya han sido contestadas. Si estan en 0 no han sido contestadas
-var estadoPreguntas = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var estadoPreguntas = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var cantidadAcertadas = 0;
 
 //variable que mantiene el número de pregunta actual
@@ -185,7 +191,7 @@ function largarTiempo(){
 //muestro la pantlla final
 function mostrarPantallaFinal(){
   document.getElementById("acertadas").textContent = cantidadAcertadas;
-  document.getElementById("score").textContent = (cantidadAcertadas*100)/10 + "% de acierto";
+  document.getElementById("score").textContent = (cantidadAcertadas*100)/11 + "% de acierto";
   document.getElementById("pantalla-juego").style.display =  "none";
   document.getElementById("pantalla-final").style.display =  "block";
 }
@@ -197,7 +203,7 @@ recomenzar.addEventListener("click", function(event) {
   timeLeft = TIEMPO_DEL_JUEGO;
   timer.innerText = timeLeft;
   cantidadAcertadas = 0;
-  estadoPreguntas = [0,0,0,0,0,0,0,0,0,0];
+  estadoPreguntas = [0,0,0,0,0,0,0,0,0,0,0];
 
   //quito las clases de los circulos
   var circulos = document.getElementsByClassName("circle");
