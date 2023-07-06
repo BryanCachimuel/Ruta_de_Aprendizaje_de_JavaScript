@@ -62,6 +62,10 @@ body{
     background: linear-gradient(rgb(96, 38, 242), rgba(255,255,255,.2));
 }
 
+.l4{
+    background: linear-gradient(rgb(242, 38, 41), rgba(255,255,255,.2));
+}
+
 .texto{
     position: absolute;
     bottom: -9px;
@@ -89,6 +93,11 @@ body{
 
 .t3{
     text-shadow: -2px -2px 10px #3e26f2;
+    color: #fff;
+}
+
+.t4{
+    text-shadow: -2px -2px 10px #f22641;
     color: #fff;
 }
 
