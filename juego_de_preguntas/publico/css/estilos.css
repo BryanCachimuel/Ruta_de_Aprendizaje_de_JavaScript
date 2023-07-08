@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap');
+
+*{
+    font-family: 'Nunito';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 20px;
+    background: #f0ebf8;
+    padding-bottom: 50px;
+}
+
+h1{
+    text-align: center;
+}
+
+#juego{
+    max-width: 800px;
+    margin: auto;
+}
+
+.contenedor-pregunta{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #fff;
+}
