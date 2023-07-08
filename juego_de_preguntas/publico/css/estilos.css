@@ -30,3 +30,38 @@ h1{
     margin-bottom: 20px;
     background: #fff;
 }
+
+label{
+    display: flex;
+    font-size: 22px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+input{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.correcta{
+    background-color: #a8f6eb;
+}
+
+.incorrecta{
+    background-color: #ff6666;
+}
+
+.acierto{
+    font-size: 20px;
+    background-color: yellowgreen;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    margin-left: 15px;
+}
