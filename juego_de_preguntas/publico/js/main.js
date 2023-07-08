@@ -88,3 +88,30 @@ let respuestas = [];
 let cantiCorrectas = 0;
 //pregunta acutal que debe ser cargada
 let numPregunta = 0;
+
+//Cargo una pregunta del JSON
+function cargarPreguntas(){
+    //tomo la pregunta actual de la bd
+    const pregunta = bd_juego[numPregunta];
+
+    const contenedor = document.createElement("div");
+    contenedor.className = "contenedor-pregunta";
+    contenedor.id = pregunta.id;
+    const h2 = document.createElement("h2");
+    h2.textContent = pregunta.id + 1 + " - " + pregunta.pregunta;
+    contenedor.appendChild(h2);
+    const opciones = document.createElement("div");
+
+    const label1 = crearLabel("0",pregunta.op0);
+    const label2 = crearLabel("1",pregunta.op1);
+    const label3 = crearLabel("2",pregunta.op2);
+
+    //agrego los labels al contendor de las opciones
+    opciones.appendChild(label1);
+    opciones.appendChild(label2);
+    opciones.appendChild(label3);
+
+    //agrego las opciones al contenedor principal
+    contenedor.appendChild(opciones);
+    document.getElementById("juego").appendChild(contenedor);
+}
