@@ -65,3 +65,33 @@ input{
     border: 2px solid #000;
     margin-left: 15px;
 }
+
+.no-acierto{
+    font-size: 20px;
+    background-color: darkred;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    margin-left: 15px;
+}
+
+button{
+    width: fit-content;
+    display: block;
+    margin: auto;
+    border: none;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.resultado{
+    text-align: center;
+}
