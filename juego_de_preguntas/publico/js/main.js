@@ -48,4 +48,43 @@ const bd_juego = [
         op2:"Eufrates",
         correcta:"0"
     },
+    {
+        id:6,
+        pregunta:"¿Cuál es la capital de la India?",
+        op0:"Chennai",
+        op1:"Bombay",
+        op2:"Nueva Delhi",
+        correcta:"2"
+    },
+    {
+        id:7,
+        pregunta:"¿Qué continente se encuentra en los 4 hemisferios?",
+        op0:"Africa",
+        op1:"Europa",
+        op2:"Ninguno",
+        correcta:"0"
+    },
+    {
+        id:8,
+        pregunta:"¿Cuál es la capital de Egipto?",
+        op0:"Alejandría",
+        op1:"El Cairo",
+        op2:"Menfis",
+        correcta:"1"
+    },
+    {
+        id:9,
+        pregunta:"¿Dónde se encuentra el estrecho de Magallanes?",
+        op0:"Parte sur de america del Norte",
+        op1:"En Europa",
+        op2:"Parte su de Sudamérica",
+        correcta:"2"
+    }
 ]
+
+//para guardar las respuestas elegidas
+let respuestas = [];
+//cantidad correctas
+let cantiCorrectas = 0;
+//pregunta acutal que debe ser cargada
+let numPregunta = 0;
