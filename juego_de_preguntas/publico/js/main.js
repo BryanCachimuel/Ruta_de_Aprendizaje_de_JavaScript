@@ -136,36 +136,49 @@ function crearLabel(num, txtOpcion) {
 }
 
 //Mediante un for cargo todas las preguntas del JSON
-for(i=0;i < bd_juego.length;i++){
+for (i = 0; i < bd_juego.length; i++) {
   cargarPreguntas();
   numPregunta++;
 }
 
 //Función que carga la opción elegida en el arreglo respuestas.
-function seleccionar(pos, opElegida){
+function seleccionar(pos, opElegida) {
   respuestas[pos] = opElegida;
 }
 
 //botón corregir
 let corregir = document.getElementById("corregir");
-corregir.onclick = function(){
-    //recorro el arreglo que tiene las respuestas y comparo
-    for(i=0;i<bd_juego.length;i++){
-        //cargo la pregunta
-        const pregunta = bd_juego[i];
-        if(pregunta.correcta == respuestas[i]){ 
-            cantiCorrectas++;
-            let idCorreccion = "p" + i + pregunta.correcta;
-            document.getElementById(i).className = "contenedor-pregunta correcta";
-            document.getElementById(idCorreccion).innerHTML = "&check;";
-            document.getElementById(idCorreccion).className = "acierto";
-        }else{
-            let id = "p" + i + respuestas[i];
-            let idCorreccion = "p" + i + pregunta.correcta;
-            document.getElementById(i).className = "contenedor-pregunta incorrecta";
-            document.getElementById(id).innerHTML = "&#x2715;";
-            document.getElementById(id).className = "no-acierto";
-            document.getElementById(idCorreccion).innerHTML = "&check;";
-            document.getElementById(idCorreccion).className = "acierto";
-        }
+corregir.onclick = function () {
+  //recorro el arreglo que tiene las respuestas y comparo
+  for (i = 0; i < bd_juego.length; i++) {
+    //cargo la pregunta
+    const pregunta = bd_juego[i];
+    if (pregunta.correcta == respuestas[i]) {
+      cantiCorrectas++;
+      let idCorreccion = "p" + i + pregunta.correcta;
+      document.getElementById(i).className = "contenedor-pregunta correcta";
+      document.getElementById(idCorreccion).innerHTML = "&check;";
+      document.getElementById(idCorreccion).className = "acierto";
+    } else {
+      let id = "p" + i + respuestas[i];
+      let idCorreccion = "p" + i + pregunta.correcta;
+      document.getElementById(i).className = "contenedor-pregunta incorrecta";
+      document.getElementById(id).innerHTML = "&#x2715;";
+      document.getElementById(id).className = "no-acierto";
+      document.getElementById(idCorreccion).innerHTML = "&check;";
+      document.getElementById(idCorreccion).className = "acierto";
     }
+  }
+  //desabilitamos todos los inputs
+  let inputs = document.getElementsByTagName("input");
+  for (i = 0; i < inputs.length; i++) {
+    inputs[i].disabled = true;
+  }
+  //hacemos un scroll hacia arriba
+  window.scrollTo(0, 0);
+  h2 = document.createElement("h2");
+  h2.className = "resultado";
+  h2.textContent =
+    cantiCorrectas + " CORRECTAS - " + (10 - cantiCorrectas) + " INCORRECTAS";
+  document.getElementById("juego").appendChild(h2);
+};
