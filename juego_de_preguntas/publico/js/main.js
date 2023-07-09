@@ -134,3 +134,9 @@ function crearLabel(num, txtOpcion) {
 
   return label;
 }
+
+//Mediante un for cargo todas las preguntas del JSON
+for(i=0;i < bd_juego.length;i++){
+  cargarPreguntas();
+  numPregunta++;
+}
