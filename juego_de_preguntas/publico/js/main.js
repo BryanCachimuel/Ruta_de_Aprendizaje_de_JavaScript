@@ -140,3 +140,8 @@ for(i=0;i < bd_juego.length;i++){
   cargarPreguntas();
   numPregunta++;
 }
+
+//Función que carga la opción elegida en el arreglo respuestas.
+function seleccionar(pos, opElegida){
+  respuestas[pos] = opElegida;
+}
