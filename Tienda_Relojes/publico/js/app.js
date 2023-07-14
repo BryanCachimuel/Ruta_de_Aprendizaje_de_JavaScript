@@ -110,3 +110,26 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
     // se actualiza el total
     actualizarTotalCarrito();
 }
+
+//se agrega la función sumarCantidad la misma que se encarga de aumentar en uno la cantidad del elemento seleccionado
+function sumarCantidad(event){
+    var buttonClicked = event.target;
+    var selector = buttonClicked.parentElement;
+    console.log(selector.getElementsByClassName('carrito-item-cantidad')[0].value);
+    var cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
+    cantidadActual++;
+    selector.getElementsByClassName('carrito-item-cantidad')[0].value = cantidadActual;
+    actualizarTotalCarrito();
+}
+//se agrega la función restarCantidad la misma que se encarga de restar en uno la cantidad del elemento seleccionado
+function restarCantidad(event){
+    var buttonClicked = event.target;
+    var selector = buttonClicked.parentElement;
+    console.log(selector.getElementsByClassName('carrito-item-cantidad')[0].value);
+    var cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
+    cantidadActual--;
+    if(cantidadActual>=1){
+        selector.getElementsByClassName('carrito-item-cantidad')[0].value = cantidadActual;
+        actualizarTotalCarrito();
+    }
+}
