@@ -61,3 +61,52 @@ function agregarAlCarritoClicked(event){
     agregarItemAlCarrito(titulo, precio, imagenSrc);
     hacerVisibleCarrito();
 }
+
+// se crea la función que agrega un producto al carrito
+function agregarItemAlCarrito(titulo, precio, imagenSrc){
+    var item = document.createElement('div');
+    item.classList.add = ('item');
+    var itemsCarrito = document.getElementsByClassName('carrito-items')[0];
+
+    //controlamos que el producto que intenta ingresar no se encuentre en el carrito
+    var nombresItemsCarrito = itemsCarrito.getElementsByClassName('carrito-item-titulo');
+    for(var i=0;i < nombresItemsCarrito.length;i++){
+        if(nombresItemsCarrito[i].innerText==titulo){
+            alert("El producto ya se encuentra en el carrito");
+            return;
+        }
+    }
+    var itemCarritoContenido = `
+        <div class="carrito-item">
+            <img src="${imagenSrc}" width="80px" alt="">
+            <div class="carrito-item-detalles">
+                <span class="carrito-item-titulo">${titulo}</span>
+                <div class="selector-cantidad">
+                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                    <i class="fa-solid fa-plus sumar-cantidad"></i>
+                </div>
+                <span class="carrito-item-precio">${precio}</span>
+            </div>
+            <button class="btn-eliminar">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </div>
+    `
+    item.innerHTML = itemCarritoContenido;
+    itemsCarrito.append(item);
+
+    //se agrega la funcionalidad eliminar al nuevo producto
+     item.getElementsByClassName('btn-eliminar')[0].addEventListener('click', eliminarItemCarrito);
+
+    //se agrega la funcionalidad restar cantidad del nuevo producto
+    var botonRestarCantidad = item.getElementsByClassName('restar-cantidad')[0];
+    botonRestarCantidad.addEventListener('click',restarCantidad);
+
+    //se agrega la funcionalidad sumar cantidad del nuevo producto
+    var botonSumarCantidad = item.getElementsByClassName('sumar-cantidad')[0];
+    botonSumarCantidad.addEventListener('click',sumarCantidad);
+
+    // se actualiza el total
+    actualizarTotalCarrito();
+}
