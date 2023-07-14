@@ -144,3 +144,17 @@ function eliminarItemCarrito(event){
     //la siguiente funciòn controla si hay elementos en el carrito. Si no hay elimino el carrito
     ocultarCarrito();
 }
+
+//se agrega la función encargada de controlar si hay elementos en el carrito
+function ocultarCarrito(){
+    var carritoItems = document.getElementsByClassName('carrito-items')[0];
+    if(carritoItems.childElementCount==0){
+        var carrito = document.getElementsByClassName('carrito')[0];
+        carrito.style.marginRight = '-100%';
+        carrito.style.opacity = '0';
+        carritoVisible = false;
+    
+        var items =document.getElementsByClassName('contenedor-items')[0];
+        items.style.width = '100%';
+    }
+}
