@@ -133,3 +133,14 @@ function restarCantidad(event){
         actualizarTotalCarrito();
     }
 }
+
+//se agrega la función eliminarItemCarrito el cual se encarga de eliminar el producto seleccionado del carrito
+function eliminarItemCarrito(event){
+    var buttonClicked = event.target;
+    buttonClicked.parentElement.parentElement.remove();
+    //Actualizamos el total del carrito
+    actualizarTotalCarrito();
+
+    //la siguiente funciòn controla si hay elementos en el carrito. Si no hay elimino el carrito
+    ocultarCarrito();
+}
