@@ -145,7 +145,7 @@ function eliminarItemCarrito(event){
     ocultarCarrito();
 }
 
-//se agrega la función encargada de controlar si hay elementos en el carrito
+//se agrega la función encargada de controlar si hay elementos en el carrito, si no hay oculto el carrito.
 function ocultarCarrito(){
     var carritoItems = document.getElementsByClassName('carrito-items')[0];
     if(carritoItems.childElementCount==0){
@@ -157,4 +157,24 @@ function ocultarCarrito(){
         var items =document.getElementsByClassName('contenedor-items')[0];
         items.style.width = '100%';
     }
+}
+
+//se agrega la función para actualizar el total de Carrito
+function actualizarTotalCarrito(){
+    var carritoContenedor = document.getElementsByClassName('carrito')[0];
+    var carritoItems = carritoContenedor.getElementsByClassName('carrito-item');
+    var total = 0;
+    //recorremos cada elemento del carrito para actualizar el total
+    for(var i=0; i< carritoItems.length;i++){
+        var item = carritoItems[i];
+        var precioElemento = item.getElementsByClassName('carrito-item-precio')[0];
+        var precio = parseFloat(precioElemento.innerText.replace('$','').replace('.',''));
+        var cantidadItem = item.getElementsByClassName('carrito-item-cantidad')[0];
+        console.log(precio);
+        var cantidad = cantidadItem.value;
+        total = total + (precio * cantidad);
+    }
+    total = Math.round(total * 100)/100;
+
+    document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
 }
