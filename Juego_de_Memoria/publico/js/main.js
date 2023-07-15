@@ -1,4 +1,6 @@
+/* creando la clase controladora para el juego */
 class Memorama {
+    /* determinando el constructor donde se encuentran las variables principales del ejercicio */
     constructor(){
         this.canPlay = false;
 
@@ -14,6 +16,7 @@ class Memorama {
         this.startGame();
     }
 
+    /* iniciando las funciones que se desarrollaran más adelante */
     startGame(){
         this.foundPairs = 0;
         this.setNewOrder();
@@ -21,11 +24,13 @@ class Memorama {
         this.openCards();
     }
 
+    /* determinando una nueva orden que de al juego */
     setNewOrder(){
         this.orderForThisRound = this.availableImages.concat(this.availableImages);
         this.orderForThisRound.sort( () => Math.random() - 0.5 );
     }
 
+    /* controlando las imagenes para que aparezcan en un orden diferente cada vez que se inicie el juego */
     setImagesInCards() {
         for (const key in this.cards) {  
             const card = this.cards[key];
@@ -37,6 +42,7 @@ class Memorama {
         }
     }
 
+    /* se revelan las cartas una vez se de click sobre la imagen seleccionada */
     openCards() {
         this.cards.forEach(card => card.classList.add("opened"));
         setTimeout(() => {
