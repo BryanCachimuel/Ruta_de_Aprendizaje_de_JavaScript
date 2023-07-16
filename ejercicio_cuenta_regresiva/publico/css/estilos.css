@@ -63,3 +63,34 @@ h1{
     margin-bottom: 20px;
     font-size: 1.5rem;
 }
+
+.form-not{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notify input[type="email"],
+.notify input[type="submit"]{
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+.notify input[type="email"]{
+    width: 100%;
+    max-width: 400px;
+    margin-left: 30px;
+    padding: 15px 10px;
+    background-color: #313131;
+    color: #a49fa1;
+}
+
+.notify input[type="submit"]{
+    padding: 13px 35px;
+    background-color: #ed5a51;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-right: 30px;
+}
