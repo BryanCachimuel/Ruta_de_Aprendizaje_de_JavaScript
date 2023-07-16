@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat' sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #272727;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ed5a51;
+}
+
+.back{
+    margin-bottom: 20px;
+    color: #a49fa1;
+}
+
+.countdown{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
