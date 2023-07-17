@@ -56,6 +56,17 @@ h1{
     font-weight: 300;
 }
 
+.boton{
+    border-radius: 5px;
+    padding: 12px 25px;
+    background-color: #ed5a51;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
 .notify h2{
     color: #a49fa1;
     text-align: center;
