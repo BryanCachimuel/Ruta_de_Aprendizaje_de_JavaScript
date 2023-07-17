@@ -15,25 +15,43 @@
   <body>
     <h1>PRÓXIMO LANZAMIENTO...</h1>
     <p class="back">Regresamos en...</p>
+
     <div class="countdown">
       <div>
-        <p id="days">09</p>
+        <input type="text" id="mes">
+        <span>mes</span>
+      </div>
+      <div>
+        <input type="text" id="dia">
+        <span>dia</span>
+      </div>
+      <div>
+        <input type="text" id="anio">
+        <span>año</span>
+      </div>
+    </div>
+
+    <button class="boton" onclick="calcular()">Calcular</button>
+
+    <div class="countdown">
+      <div>
+        <p id="days"></p>
         <span>días</span>
       </div>
       <div>
-        <p id="hours">23</p>
+        <p id="hours"></p>
         <span>horas</span>
       </div>
       <div>
-        <p id="min">50</p>
+        <p id="min"></p>
         <span>minutos</span>
       </div>
       <div>
-        <p id="sec">50</p>
+        <p id="sec"></p>
         <span>segundos</span>
       </div>
     </div>
-    <div class="notify">
+    <!--<div class="notify">
       <h2>RECIBIR NOTIFICACIONES</h2>
       <form class="form-not">
         <input
@@ -44,7 +62,7 @@
         />
         <input type="submit" value="Ir" />
       </form>
-    </div>
+    </div>-->
     <script src="publico/js/app.js"></script>
   </body>
 </html>
