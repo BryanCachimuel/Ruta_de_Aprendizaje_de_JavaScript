@@ -36,3 +36,9 @@ const calcular = () => {
     if (seconds < 10) segundos.innerHTML = "0" + seconds;
   }, 1000);
 }
+
+const limpiar = () => {
+  document.getElementById("anio").value = "";
+  document.getElementById("mes").value = "";
+  document.getElementById("dia").value = "";
+}
