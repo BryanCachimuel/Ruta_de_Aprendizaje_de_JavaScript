@@ -44,3 +44,17 @@ btnTijeras.addEventListener('click', function(){
     opcionJugador = "Tijeras";
     opPc();
 });
+
+function opPc(){
+    let aleatorio = nAleatorio();
+
+    if(aleatorio == 0){
+        opcionPc = "Piedra";
+    }else if(aleatorio == 1){
+        opcionPc = "Papel";
+    }else if(aleatorio == 2){
+        opcionPc = "Tijeras"
+    };
+
+    batalla();
+}
