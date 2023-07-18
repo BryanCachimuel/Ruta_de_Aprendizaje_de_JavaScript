@@ -26,6 +26,21 @@ const imagenes = [
     }
 ];
 
-function iniciaer(){
+function iniciar(){
     seccionBatalla.style.display = 'none';
 }
+
+btnPiedra.addEventListener('click', function(){
+    opcionJugador = "Piedra";
+    opPc();
+});
+
+btnPapel.addEventListener('click', function(){
+    opcionJugador = "Papel";
+    opPc();
+});
+
+btnTijeras.addEventListener('click', function(){
+    opcionJugador = "Tijeras";
+    opPc();
+});
