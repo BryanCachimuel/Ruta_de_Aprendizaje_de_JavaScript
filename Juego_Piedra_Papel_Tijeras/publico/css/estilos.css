@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
+*{
+    background-color: #b6d6d6;
+}
+
 body{
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
@@ -11,7 +15,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #ff0000;
+    border: 2px solid #0062ff;
     padding: 30px;
     border-radius: 20px;
 }
@@ -22,4 +26,19 @@ body{
 
 .text-mensajes{
     font-size: 45px;
+}
+
+.img-batalla{
+    border-radius: 50%;
+}
+
+.btn-ataques{
+    width: 200px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.btn-ataques:hover{
+    border: 2px solid #0062ff;
+    margin: 18px;
 }
