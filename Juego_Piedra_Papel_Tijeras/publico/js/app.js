@@ -10,3 +10,22 @@ let opcionJugador;
 let opcionPc;
 let imgJugador;
 let imgPc;
+
+const imagenes = [
+    {
+        name: "Piedra",
+        url: "./img/Piedra.png"
+    },
+    {
+        name: "Papel",
+        url: "./img/Papel.png"
+    },
+    {
+        name: "Tijeras",
+        url: "./img/Tijeras.png"
+    }
+];
+
+function iniciaer(){
+    seccionBatalla.style.display = 'none';
+}
