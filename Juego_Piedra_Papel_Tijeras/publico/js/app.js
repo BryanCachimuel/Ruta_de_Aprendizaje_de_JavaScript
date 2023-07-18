@@ -74,3 +74,8 @@ function batalla(){
 
     addImagenes();
 }
+
+function nAleatorio(){
+    let aleatorioEscogido = Math.floor(Math.random() * 3);
+    return aleatorioEscogido;
+}
