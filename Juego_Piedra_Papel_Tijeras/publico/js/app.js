@@ -58,3 +58,19 @@ function opPc(){
 
     batalla();
 }
+
+function batalla(){
+    if(opcionJugador == opcionPc){
+        msjBatalla.innerHTML = "Empate";
+    }else if(opcionJugador == "Piedra" && opcionPc == "Tijeras"){
+        msjBatalla.innerHTML = "Ganaste :)";
+    }else if(opcionJugador == "Papel" && opcionPc == "Piedra"){
+        msjBatalla.innerHTML = "Ganaste :)";
+    }else if(opcionJugador == "Tijeras" && opcionPc == "Papel"){
+        msjBatalla.innerHTML = "Ganaste :)";
+    }else{
+        msjBatalla.innerHTML = "Perdiste :(";
+    }
+
+    addImagenes();
+}
