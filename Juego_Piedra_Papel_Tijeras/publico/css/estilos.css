@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campo-batalla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ff0000;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.caja-batalla{
+    margin: 25px;
+}
+
+.text-mensajes{
+    font-size: 45px;
+}
