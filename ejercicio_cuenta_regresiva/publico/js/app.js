@@ -3,9 +3,9 @@ const horas = document.getElementById("hours");
 const minutos = document.getElementById("min");
 const segundos = document.getElementById("sec");
 
-const aa = document.getElementById("anio").value;
+const aa = parseInt(document.getElementById("anio").value);
 const mm = document.getElementById("mes").value;
-const dd = document.getElementById("dia").value;
+const dd = parseInt(document.getElementById("dia").value);
 
 //const navidad = new Date("December 25, 2023 00:00:00");
 const navidad = new Date(`${mm} ${dd}, ${aa} 00:00:00`);
@@ -42,3 +42,4 @@ const limpiar = () => {
   document.getElementById("mes").value = "";
   document.getElementById("dia").value = "";
 }
+
