@@ -1,7 +1,7 @@
 const seccionBatalla = document.getElementById("campo-batalla");
 const msjBatalla = document.getElementById("msj-batalla");
 const imgAtaqueJugador = document.getElementById("img-ataque-jugador");
-const imgAtaquePC = document.getElementById("img-ataque-pc");
+const imgAtaquePc = document.getElementById("img-ataque-pc");
 const btnPiedra = document.getElementById("btn-piedra");
 const btnPapel = document.getElementById("btn-papel");
 const btnTijeras = document.getElementById("btn-tijeras");
@@ -12,70 +12,89 @@ let imgJugador;
 let imgPc;
 
 const imagenes = [
-    {
-        name: "Piedra",
-        url: "./img/Piedra.png"
-    },
-    {
-        name: "Papel",
-        url: "./img/Papel.png"
-    },
-    {
-        name: "Tijeras",
-        url: "./img/Tijeras.png"
-    }
+  {
+    name: "Piedra",
+    url: "./publico/img/Piedra.png",
+  },
+  {
+    name: "Papel",
+    url: "./publico/img/Papel.png",
+  },
+  {
+    name: "Tijeras",
+    url: "./publico/img/Tijeras.png",
+  },
 ];
 
-function iniciar(){
-    seccionBatalla.style.display = 'none';
+function iniciar() {
+  seccionBatalla.style.display = "none";
 }
 
-btnPiedra.addEventListener('click', function(){
-    opcionJugador = "Piedra";
-    opPc();
+btnPiedra.addEventListener("click", function () {
+  opcionJugador = "Piedra";
+  opPc();
 });
 
-btnPapel.addEventListener('click', function(){
-    opcionJugador = "Papel";
-    opPc();
+btnPapel.addEventListener("click", function () {
+  opcionJugador = "Papel";
+  opPc();
 });
 
-btnTijeras.addEventListener('click', function(){
-    opcionJugador = "Tijeras";
-    opPc();
+btnTijeras.addEventListener("click", function () {
+  opcionJugador = "Tijeras";
+  opPc();
 });
 
-function opPc(){
-    let aleatorio = nAleatorio();
+function opPc() {
+  var aleaorio = nAleatorio();
 
-    if(aleatorio == 0){
-        opcionPc = "Piedra";
-    }else if(aleatorio == 1){
-        opcionPc = "Papel";
-    }else if(aleatorio == 2){
-        opcionPc = "Tijeras"
-    };
+  if (aleaorio == 0) {
+    opcionPc = "Piedra";
+  } else if (aleaorio == 1) {
+    opcionPc = "Papel";
+  } else if (aleaorio == 2) {
+    opcionPc = "Tijeras";
+  }
 
-    batalla();
+  batalla();
 }
 
-function batalla(){
-    if(opcionJugador == opcionPc){
-        msjBatalla.innerHTML = "Empate";
-    }else if(opcionJugador == "Piedra" && opcionPc == "Tijeras"){
-        msjBatalla.innerHTML = "Ganaste :)";
-    }else if(opcionJugador == "Papel" && opcionPc == "Piedra"){
-        msjBatalla.innerHTML = "Ganaste :)";
-    }else if(opcionJugador == "Tijeras" && opcionPc == "Papel"){
-        msjBatalla.innerHTML = "Ganaste :)";
-    }else{
-        msjBatalla.innerHTML = "Perdiste :(";
+function batalla() {
+  if (opcionJugador == opcionPc) {
+    msjBatalla.innerHTML = "Empate";
+  } else if (opcionJugador == "Piedra" && opcionPc == "Tijeras") {
+    msjBatalla.innerHTML = "Ganaste!";
+  } else if (opcionJugador == "Papel" && opcionPc == "Piedra") {
+    msjBatalla.innerHTML = "Ganaste!";
+  } else if (opcionJugador == "Tijeras" && opcionPc == "Papel") {
+    msjBatalla.innerHTML = "Ganaste!";
+  } else {
+    msjBatalla.innerHTML = "Perdiste :(";
+  }
+
+  addImagenes();
+}
+
+function nAleatorio() {
+  let n = Math.floor(Math.random() * 3);
+  return n;
+}
+
+function addImagenes() {
+  for (let i = 0; i < imagenes.length; i++) {
+    if (opcionJugador == imagenes[i].name) {
+      imgJugador = imagenes[i].url;
+      var inserta = `<img class="img-batalla" src=${imgJugador} alt="">`;
+      imgAtaqueJugador.innerHTML = inserta;
     }
 
-    addImagenes();
+    if (opcionPc == imagenes[i].name) {
+      imgPc = imagenes[i].url;
+      var inserta = `<img class="img-batalla" src=${imgPc} alt="">`;
+      imgAtaquePc.innerHTML = inserta;
+    }
+  }
+  seccionBatalla.style.display = "flex";
 }
 
-function nAleatorio(){
-    let aleatorioEscogido = Math.floor(Math.random() * 3);
-    return aleatorioEscogido;
-}
+window.addEventListener("load", iniciar);
