@@ -13,6 +13,7 @@ body{
     height: 100vh;
     background-color: #272727;
     text-align: center;
+    border: 10px solid #ed5a51;
 }
 
 h1{
