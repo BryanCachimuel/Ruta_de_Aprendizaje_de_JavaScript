@@ -61,13 +61,13 @@ function opPc() {
 
 function batalla() {
   if (opcionJugador == opcionPc) {
-    msjBatalla.innerHTML = "Empate";
+    msjBatalla.innerHTML = "Empaste :|";
   } else if (opcionJugador == "Piedra" && opcionPc == "Tijeras") {
-    msjBatalla.innerHTML = "Ganaste!";
+    msjBatalla.innerHTML = "Ganaste :)";
   } else if (opcionJugador == "Papel" && opcionPc == "Piedra") {
-    msjBatalla.innerHTML = "Ganaste!";
+    msjBatalla.innerHTML = "Ganaste :)";
   } else if (opcionJugador == "Tijeras" && opcionPc == "Papel") {
-    msjBatalla.innerHTML = "Ganaste!";
+    msjBatalla.innerHTML = "Ganaste :)";
   } else {
     msjBatalla.innerHTML = "Perdiste :(";
   }
