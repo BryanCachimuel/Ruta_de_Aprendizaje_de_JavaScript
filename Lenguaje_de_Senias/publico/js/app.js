@@ -177,3 +177,14 @@ btnTraducir.addEventListener('click', function(){
     btnTraducir.classList.add('is-active');
 });
 
+/* proceso de interacción del boton Acerca de */
+btnAcerca.addEventListener('click', function(){
+    seccionAcerca.style.display = 'flex';
+    btnAcerca.classList.add('is-active');
+    seccionTraducir.style.display = 'none';
+    btnTraducir.classList.remove('is-active');
+});
+
+/* si se carga el contenido se procede a llamar a la función iniciar */
+window.addEventListener('load', iniciar);
+
