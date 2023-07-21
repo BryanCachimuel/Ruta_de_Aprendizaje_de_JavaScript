@@ -109,3 +109,53 @@ const array = [
         'imagen': './img/Z.PNG'
     }
 ];
+
+/* constantes globales utilizadas dentro del ejercicio */
+const seccionTraducir = document.getElementById('sec-traducir');
+const seccionAcerca = document.getElementById('sec-acerca-de');
+const btnTraducir = document.getElementById('btn-traducir');
+const btnAcerca = document.getElementById('btn-acerca');
+const btnTraducirName = document.getElementById('btn-traducir-ya');
+const contenedorTraslate = document.getElementById('contenedor-traslate');
+const InputAccion = document.getElementById('input-traducir');
+const btnReset = document.getElementById('btn-reset');
+
+
+let nombre;
+let opcionImagen;
+let remover;
+
+//evento para escuchar cuando se hace cick en el boton traducir
+btnTraducirName.addEventListener('click', traduccion);
+
+//función que cumple el proceso de traducción
+function traduccion(){
+    //se obtiene el valor del input y se lo guarda en la variable nombre
+    nombre = document.getElementById('input-traducir').value;
+
+    if(nombre == ""){
+        alert("Ingresa tu nombre!")
+    }else{
+        //se descompone el nombre por letras
+        for(let i=0;i<nombre.length;i++){
+            let descomposicion = nombre[i];
+            //recorreo el arreglo para hacer la validación
+            for(let j=0;j<array.length;j++){
+                //compará el nombre con las letras del arreglo
+                if(descomposicion.toUpperCase() == array[j].case){
+                    //se crea la etiqueta de la imagen correspondiente
+                    opcionImagen =  `
+                        <img class="remove" src="${array[j].imagen}" alt="${array[j].name}">
+                    `;
+
+                    contenedorTraslate.innerHTML += opcionImagen;
+                    btnTraducirName.disabled = true;
+                    InputAccion.disabled = true;
+                    btnReset.style.display = 'flex';
+                }
+            }
+        }
+    }
+    btnReset.addEventListener('click', reseteo);
+};
+
