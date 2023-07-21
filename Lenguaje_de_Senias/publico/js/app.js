@@ -169,3 +169,11 @@ function iniciar(){
     btnReset.style.display = 'none';
 }
 
+/* proceso del boton traducir */
+btnTraducir.addEventListener('click', function(){
+    seccionAcerca.style.display = 'none';
+    btnAcerca.classList.remove('is-active');
+    seccionTraducir.style.display = 'flex';
+    btnTraducir.classList.add('is-active');
+});
+
