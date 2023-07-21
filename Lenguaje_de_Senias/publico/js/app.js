@@ -157,5 +157,15 @@ function traduccion(){
         }
     }
     btnReset.addEventListener('click', reseteo);
-};
+}
+
+function reseteo(){
+    location.reload();
+}
+
+function iniciar(){
+    seccionAcerca.style.display = 'none';
+    btnTraducir.classList.add('is-active');
+    btnReset.style.display = 'none';
+}
 
