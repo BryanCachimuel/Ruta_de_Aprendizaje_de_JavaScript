@@ -45,3 +45,20 @@ const renderPokemonData = data => {
     renderPokemonTypes(types);
     renderPokemonStats(stats);
 }
+
+const setCardColor = types => {
+    const colorOne = typeColors[types[0].type.name];
+    const colorTwo = types[1] ? typeColors[types[1].type.name] : typeColors.default;
+    pokeImg.style.background =  `radial-gradient(${colorTwo} 33%, ${colorOne} 33%)`;
+    pokeImg.style.backgroundSize = ' 5px 5px';
+}
+
+const renderPokemonTypes = types => {
+    pokeTypes.innerHTML = '';
+    types.forEach(type => {
+        const typeTextElement = document.createElement("div");
+        typeTextElement.style.color = typeColors[type.type.name];
+        typeTextElement.textContent = type.type.name;
+        pokeTypes.appendChild(typeTextElement);
+    });
+}
