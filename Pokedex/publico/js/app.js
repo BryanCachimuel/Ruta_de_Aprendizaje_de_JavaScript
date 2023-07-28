@@ -25,3 +25,23 @@ const typeColors = {
     fighting: '#2F2F2F',
     default: '#2A1A1F',
 };
+
+const searchPokemon = event => {
+    event.preventDefault();
+    const {value} = event.target.pokemon;
+    fetch(`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}`)
+        .then(data => data.json())
+        .then(Response => renderPokemonData(response))
+        .catch(err => renderNotFound())
+}
+
+const renderPokemonData = data => {
+    const sprite =  data.sprites.front_default;
+    const { stats, types } = data;
+    pokeName.textContent = data.name;
+    pokeImg.setAttribute('src', sprite);
+    pokeId.textContent = `Nº ${data.id}`;
+    setCardColor(types);
+    renderPokemonTypes(types);
+    renderPokemonStats(stats);
+}
