@@ -1,0 +1,23 @@
+form{
+    width: 200px;
+    margin: 20px auto;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+}
+
+.poke-card{
+    position: relative;
+    height: fit-content;
+    font-family: 'Roboto Mono', monospace;
+    max-width: 300px;
+    border-radius: 4px;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #000000;
+}
