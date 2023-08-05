@@ -1,4 +1,4 @@
-let game = function () {
+var game = (function () {
   let time = 50;
   let movement = 20;
   let movementBar = 20;
@@ -9,14 +9,14 @@ let game = function () {
   let player2;
 
   function start() {
-    Infinity();
+    init();
     controlGame = setInterval(play, time);
   }
 
   function init() {
     ball.style.left = 0;
     ball.state = 1;
-    ball.direction = 1; // right 1, left 2
+    ball.direction = 1;
     player1 = new Object();
     player2 = new Object();
     player1.keyPress = false;
@@ -50,19 +50,19 @@ let game = function () {
   function moveBall() {
     checkStateBall();
     switch (ball.state) {
-      case 1:
+      case 1: 
         ball.style.left = ball.offsetLeft + movement + "px";
         ball.style.top = ball.offsetTop + movement + "px";
         break;
-      case 2:
+      case 2: 
         ball.style.left = ball.offsetLeft + movement + "px";
         ball.style.top = ball.offsetTop - movement + "px";
         break;
-      case 3:
+      case 3: 
         ball.style.left = ball.offsetLeft - movement + "px";
         ball.style.top = ball.offsetTop + movement + "px";
         break;
-      case 4:
+      case 4: 
         ball.style.left = ball.offsetLeft - movement + "px";
         ball.style.top = ball.offsetTop - movement + "px";
         break;
@@ -125,4 +125,27 @@ let game = function () {
         bar2.style.top = bar2.offsetTop + movementBar + "px";
     }
   }
-};
+
+  document.onkeydown = function (e) {
+    e = e || window.event;
+    switch (e.keyCode) {
+      case 81: 
+      case 65: 
+        player1.keyCode = e.keyCode;
+        player1.keyPress = true;
+        break;
+      case 79: 
+      case 76: 
+        player2.keyCode = e.keyCode;
+        player2.keyPress = true;
+        break;
+    }
+  };
+
+  document.onkeyup = function (e) {
+    if (e.keyCode == 81 || e.keyCode == 65) player1.keyPress = false;
+    if (e.keyCode == 79 || e.keyCode == 76) player2.keyPress = false;
+  };
+
+  start();
+})();
