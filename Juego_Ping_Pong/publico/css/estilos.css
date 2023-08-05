@@ -20,3 +20,21 @@ body, html{
     background: #000;
     border: 2px solid #fff;
 }
+
+#bar1{
+    top: 20px;
+    float: left;
+    position: absolute;
+}
+
+#bar2{
+    top: 20px;
+    right: 0px;
+    position: absolute;
+}
+
+#line{
+    width: 50%;
+    border-right: #fff dashed 5px;
+    height: 100%;
+}
