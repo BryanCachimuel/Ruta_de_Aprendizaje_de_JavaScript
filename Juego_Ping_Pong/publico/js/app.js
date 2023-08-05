@@ -88,4 +88,41 @@ let game = function () {
       else if (ball.offsetTop <= 0) ball.state = 3;
     }
   }
+
+  function collidePlayer1() {
+    if (
+      ball.offsetLeft <= bar1.clientWidth &&
+      ball.offsetTop >= bar1.offsetTop &&
+      ball.offsetTop <= bar1.offsetTop + bar1.clientHeight
+    ) {
+      return true;
+    }
+
+    return false;
+  }
+  function collidePlayer2() {
+    if (
+      ball.offsetLeft >= width - bar2.clientWidth &&
+      ball.offsetTop >= bar2.offsetTop &&
+      ball.offsetTop <= bar2.offsetTop + bar2.clientHeight
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  function moveBar() {
+    if (player1.keyPress) {
+      if (player1.keyCode == 81 && bar1.offsetTop >= 0)
+        bar1.style.top = bar1.offsetTop - movementBar + "px";
+      if (player1.keyCode == 65 && bar1.offsetTop + bar1.clientHeight <= height)
+        bar1.style.top = bar1.offsetTop + movementBar + "px";
+    }
+    if (player2.keyPress) {
+      if (player2.keyCode == 79 && bar2.offsetTop >= 0)
+        bar2.style.top = bar2.offsetTop - movementBar + "px";
+      if (player2.keyCode == 76 && bar2.offsetTop + bar2.clientHeight <= height)
+        bar2.style.top = bar2.offsetTop + movementBar + "px";
+    }
+  }
 };
