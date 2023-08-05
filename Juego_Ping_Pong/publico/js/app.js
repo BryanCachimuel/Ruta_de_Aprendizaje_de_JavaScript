@@ -46,4 +46,26 @@ let game = function () {
       console.log("punto player 2");
     }
   }
+
+  function moveBall() {
+    checkStateBall();
+    switch (ball.state) {
+      case 1:
+        ball.style.left = ball.offsetLeft + movement + "px";
+        ball.style.top = ball.offsetTop + movement + "px";
+        break;
+      case 2:
+        ball.style.left = ball.offsetLeft + movement + "px";
+        ball.style.top = ball.offsetTop - movement + "px";
+        break;
+      case 3:
+        ball.style.left = ball.offsetLeft - movement + "px";
+        ball.style.top = ball.offsetTop + movement + "px";
+        break;
+      case 4:
+        ball.style.left = ball.offsetLeft - movement + "px";
+        ball.style.top = ball.offsetTop - movement + "px";
+        break;
+    }
+  }
 };
