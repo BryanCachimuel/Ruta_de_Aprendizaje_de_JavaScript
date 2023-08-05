@@ -68,4 +68,24 @@ let game = function () {
         break;
     }
   }
+
+  function checkStateBall() {
+    if (collidePlayer2()) {
+      ball.direction = 2;
+      if (ball.state == 1) ball.state = 3;
+      if (ball.state == 2) ball.state = 4;
+    } else if (collidePlayer1()) {
+      ball.direction = 1;
+      if (ball.state == 3) ball.state = 1;
+      if (ball.state == 4) ball.state = 2;
+    }
+
+    if (ball.direction === 1) {
+      if (ball.offsetTop >= height) ball.state = 2;
+      else if (ball.offsetTop <= 0) ball.state = 1;
+    } else {
+      if (ball.offsetTop >= height) ball.state = 4;
+      else if (ball.offsetTop <= 0) ball.state = 3;
+    }
+  }
 };
