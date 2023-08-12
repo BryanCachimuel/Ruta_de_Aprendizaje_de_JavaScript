@@ -12,7 +12,7 @@ let year = document.getElementById("year");
 let prevMonthDOM = document.getElementById("prev-month");
 let nextMonthDOM = document.getElementById("next-month");
 
-prevMonthDOM.addEventListener("click", () => lasMonth());
+prevMonthDOM.addEventListener("click", () => lastMonth());
 nextMonthDOM.addEventListener("click", () => nextMonth());
 
 const writeMonth = (month) => {
