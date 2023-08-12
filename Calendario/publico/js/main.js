@@ -51,3 +51,23 @@ const startDay = () => {
   return ((start.getDay()-1) === -1) ? 6 : start.getDay()-1;
 }
 
+const lastMonth = () => {
+  if(monthNumber !== 0){
+      monthNumber--;
+  }else{
+      monthNumber = 11;
+      currentYear--;
+  }
+  setNewDate();
+}
+
+const nextMonth = () => {
+  if(monthNumber !== 11){
+      monthNumber++;
+  }else{
+      monthNumber = 0;
+      currentYear++;
+  }
+  setNewDate();
+}
+
