@@ -71,3 +71,13 @@ const nextMonth = () => {
   setNewDate();
 }
 
+const setNewDate = () => {
+  currentDate.setFullYear(currentYear,monthNumber,currentDay);
+  month.textContent = monthNames[monthNumber];
+  year.textContent = currentYear.toString();
+  dates.textContent = '';
+  writeMonth(monthNumber);
+}
+
+writeMonth(monthNumber);
+
