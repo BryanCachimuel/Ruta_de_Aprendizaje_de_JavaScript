@@ -34,3 +34,11 @@ const agregarDato = () => {
     dato.appendChild(inputValor);
     document.getElementById("datos").appendChild(dato);
 }
+
+/* función para cargar el gráfico de Google */
+const cargarGrafico = () => {
+    google.charts.load('current', {
+        'packages':['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+}
