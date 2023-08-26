@@ -1,20 +1,20 @@
-*{
+* {
     box-sizing: border-box;
     background-color: #eee;
 }
 
-body{
+body {
     background-color: #eee;
 }
 
-.left{
+.left {
     max-width: 500px;
     border: 1px solid #000;
     padding: 20px;
     float: left;
 }
 
-select{
+select {
     display: inline-block;
     margin-bottom: 20px;
     padding: 5px;
@@ -22,32 +22,30 @@ select{
     width: 100%;
 }
 
-input{
+input {
     display: inline-block;
     border: none;
     border-bottom: 1px solid #88d498;
     margin-bottom: 10px;
     width: 100%;
-    padding:  5px;
+    padding: 5px;
     outline: none;
 }
 
-#titulo{
+#titulo {
     font-weight: bold;
 }
 
-.dato
-.serie{
+.dato .serie {
     width: 70%;
     margin-right: 15px;
 }
 
-.dato
-.valor{
+.dato .valor {
     width: 20%;
 }
 
-.agregar{
+.agregar {
     display: inline-block;
     height: 30px;
     width: 30px;
@@ -60,7 +58,7 @@ input{
     cursor: pointer;
 }
 
-.crear-grafico{
+.crear-grafico {
     float: right;
     background-color: #18936f;
     border: none;
@@ -70,7 +68,7 @@ input{
     cursor: pointer;
 }
 
-.rigth{
+.right {
     float: left;
     border: 1px solid #000;
     max-width: 605px;
