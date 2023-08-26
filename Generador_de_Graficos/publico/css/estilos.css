@@ -31,3 +31,48 @@ input{
     padding:  5px;
     outline: none;
 }
+
+#titulo{
+    font-weight: bold;
+}
+
+.dato
+.serie{
+    width: 70%;
+    margin-right: 15px;
+}
+
+.dato
+.valor{
+    width: 20%;
+}
+
+.agregar{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: #18936f;
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.crear-grafico{
+    float: right;
+    background-color: #18936f;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.rigth{
+    float: left;
+    border: 1px solid #000;
+    max-width: 605px;
+    margin-left: 15px;
+}
