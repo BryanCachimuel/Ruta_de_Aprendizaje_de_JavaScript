@@ -1,0 +1,35 @@
+.contenedor {
+    max-width: 500px;
+    margin: auto;
+    background-color: #ddd;
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.fila {
+    margin: 15px 0;
+}
+
+select{
+    font-size: 20px;
+    border: none;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.resultado {
+    width: 100%;
+    margin: 10px 0;
+    background-color: #000;
+    color: red;
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+input {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
