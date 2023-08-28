@@ -31,14 +31,34 @@ function convertir(){
         txtResultado.innerHTML = numero + " " + "Kilometro/s equivalen a: " + resultado +" "+ "Kilometro/s";
     }
 
+    if(unidad1.value == "Kilometro" && unidad2.value == "Hectometro"){
+        resultado = numero * 10;
+        txtResultado.innerHTML = numero + " " + "Kilometro/s equivalen a: " + resultado +" "+ "Hectometro/s";
+    }
+
+    if(unidad1.value == "Kilometro" && unidad2.value == "Decametro"){
+        resultado = numero * 100;
+        txtResultado.innerHTML = numero + " " + "Kilometro/s equivalen a: " + resultado +" "+ "Decametro/s";
+    }
+
     if(unidad1.value == "Kilometro" && unidad2.value == "Metro"){
         resultado = numero * 1000;
         txtResultado.innerHTML = numero + " " + "Kilometro/s equivalen a: " + resultado +" "+ "Metro/s";
     }
 
+    if(unidad1.value == "Kilometro" && unidad2.value == "Decimetro"){
+        resultado = numero * 10000;
+        txtResultado.innerHTML = numero + " " + "Kilometro/s equivalen a: " + resultado +" "+ "Decimetro/s";
+    }
+
     if(unidad1.value == "Kilometro" && unidad2.value == "Centimetro"){
         resultado = numero * 100000;
         txtResultado.innerHTML = numero + " " + "Kilometro/s equivalen a: " + resultado +" "+ "Centimetro/s";
+    }
+
+    if(unidad1.value == "Kilometro" && unidad2.value == "Milimetro"){
+        resultado = numero * 1000000;
+        txtResultado.innerHTML = numero + " " + "Kilometro/s equivalen a: " + resultado +" "+ "Milimetro/s";
     }
 
     /* tranformación de los Metros */
