@@ -61,6 +61,42 @@ function convertir(){
         txtResultado.innerHTML = numero + " " + "Kilometro/s equivalen a: " + resultado +" "+ "Milimetro/s";
     }
 
+    /* transformación de los hectometros */
+    if(unidad1.value == "Hectometro" && unidad2.value == "Kilometro"){
+        resultado = numero / 10;
+        txtResultado.innerHTML = numero + " " + "Hectometro/s equivalen a: " + resultado +" "+ "Kilometro/s";
+    } 
+
+    if(unidad1.value == "Hectometro" && unidad2.value == "Hectometro"){
+        resultado = numero * 1;
+        txtResultado.innerHTML = numero + " " + "Hectometro/s equivalen a: " + resultado +" "+ "Hectometro/s";
+    }
+
+    if(unidad1.value == "Hectometro" && unidad2.value == "Decametro"){
+        resultado = numero * 10;
+        txtResultado.innerHTML = numero + " " + "Hectometro/s equivalen a: " + resultado +" "+ "Decametro/s";
+    }
+
+    if(unidad1.value == "Hectometro" && unidad2.value == "Metro"){
+        resultado = numero * 100;
+        txtResultado.innerHTML = numero + " " + "Hectometro/s equivalen a: " + resultado +" "+ "Metro/s";
+    }
+
+    if(unidad1.value == "Hectometro" && unidad2.value == "Decimetro"){
+        resultado = numero * 1000;
+        txtResultado.innerHTML = numero + " " + "Hectometro/s equivalen a: " + resultado +" "+ "Decimetro/s";
+    }
+
+    if(unidad1.value == "Hectometro" && unidad2.value == "Centimetro"){
+        resultado = numero * 10000;
+        txtResultado.innerHTML = numero + " " + "Hectometro/s equivalen a: " + resultado +" "+ "Centimetro/s";
+    }
+
+    if(unidad1.value == "Hectometro" && unidad2.value == "Milimetro"){
+        resultado = numero * 100000;
+        txtResultado.innerHTML = numero + " " + "Hectometro/s equivalen a: " + resultado +" "+ "Milimetro/s";
+    }
+
     /* tranformación de los Metros */
     if(unidad1.value == "Metro" && unidad2.value == "Kilometro"){
         resultado = numero / 1;
