@@ -6,5 +6,18 @@ class ProgressBar {
         this.setValue(valorInicial);
     }
 
+    setValue(nuevoValor){
+        if(nuevoValor < 0){
+            nuevoValor = 0;
+        }
+
+        if(nuevoValor > 100){
+            nuevoValor = 100;
+        }
+
+        this.value = nuevoValor;
+        this.update();
+    }
+
 }
 
