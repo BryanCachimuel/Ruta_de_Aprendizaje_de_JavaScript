@@ -19,5 +19,13 @@ class ProgressBar {
         this.update();
     }
 
+    update(){
+        const porcentaje = this.value + '%';
+
+        this.fillElem.style.width = porcentaje;
+        this.valueElem.textContent = porcentaje;
+    }
 }
+
+const valorPorcentaje = new ProgressBar(document.querySelector('.progress-bar'), 40);
 
