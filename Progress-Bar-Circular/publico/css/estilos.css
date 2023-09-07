@@ -57,3 +57,35 @@ body{
     color: #00a6ff;
     margin: 20px 0;
 }
+
+.btn{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #00a6ff;
+    border-radius: 10px 10px 0 0;
+    outline: none;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #00a6ff;
+}
+
+button{
+    border-radius: 0 0 10px 10px;
+    outline: none;
+    background: #00a6ff;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+}
+
+button:active{
+    color: #000000;
+}
