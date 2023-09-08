@@ -12,3 +12,22 @@ body{
     height: 30px;
     width: 300px;
 }
+
+.progress-done{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: repeating-linear-gradient(to left, #0546e0, #1172f9, #4892f9);
+    box-shadow: 0 5px 5px -6px #0546e0, 0 3px 7px #1172f9;
+    border-radius: 20px;
+    color: #fff;
+    height: 100%;
+    width: 0;
+    transition: 1s ease 0.3s;
+}
+
+.inputContainer{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
