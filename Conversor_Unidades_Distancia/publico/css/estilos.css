@@ -9,14 +9,14 @@
 }
 
 .fila {
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 select{
     font-size: 20px;
     border: none;
     padding: 5px;
-    border-radius: 30px;
+    border-radius: 60px;
 }
 
 .resultado {
