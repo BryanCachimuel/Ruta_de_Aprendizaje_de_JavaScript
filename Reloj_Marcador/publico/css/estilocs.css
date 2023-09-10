@@ -18,3 +18,21 @@ body{
     display: flex;
 }
 
+.clock{
+    position: relative;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.clock :is(.hr, .mn, .sc){
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.clock .text{
+    font-size: 35px;
+}
