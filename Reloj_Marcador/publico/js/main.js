@@ -16,3 +16,20 @@ let sc;
 
 setInterval(clock, 1000);
 
+function clock(){
+    let dt = new Date();
+    hr = dt.getHours();
+    mn = dt.getMinutes();
+    sc = dt.getSeconds();
+    //console.log(hr, mn, sc)
+
+    indicador(hr, mn, sc);
+
+    hr < 10 ? (hr = "0" + hr) : hr;
+    mn < 10 ? (mn = "0" + mn) : mn;
+    sc < 10 ? (sc = "0" + sc) : sc;
+
+    horas.innerHTML = hr;
+    minutos.innerHTML = mn;
+    segundos.innerHTML = sc
+}
