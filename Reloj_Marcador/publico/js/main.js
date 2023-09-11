@@ -33,3 +33,18 @@ function clock(){
     minutos.innerHTML = mn;
     segundos.innerHTML = sc
 }
+
+function indicador(hr, mn, sc){
+    let horas, minutos, segundos;
+    horas = hr * 7.5;
+    minutos = mn * 3;
+    segundos = sc * 3;
+
+    horasIndicador.style.background = `conic-gradient(var(--color) ${horas}deg , #555 0deg)`;
+    minutosIndicador.style.background = `conic-gradient(var(--color) ${minutos}deg , #555 0deg)`;
+    segundosIndicador.style.background = `conic-gradient(var(--color) ${segundos}deg , #555 0deg)`;
+
+    horasIndicadorBC.style.transform = `rotate(${horas}deg)`;
+    minutosIndicadorBC.style.transform = `rotate(${minutos}deg)`;
+    segundosIndicadorBC.style.transform = `rotate(${segundos}deg)`;
+} 
