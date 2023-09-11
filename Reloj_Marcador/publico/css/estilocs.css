@@ -69,3 +69,37 @@ body{
     z-index: 1;
     transform: rotate(90deg);
 }
+
+.bcindicador{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 50%;
+    z-index: 2;
+    transform: rotate(95deg);
+}
+
+.bcindicador::after{
+    position: absolute;
+    top: -5px;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--color);
+    box-shadow: 0 0 5px var(--color);
+}
+
+.bcindicador::before{
+    position: absolute;
+    top: 15px;
+    content: '';
+    width: 5px;
+    height: 25px;
+    background: var(--color);
+    box-shadow: 0 0 5px var(--color);
+    border-radius: 5px;
+}
