@@ -27,3 +27,17 @@ function moveToRight(){
     slider.style.transform = `translate(-${operacion}%)`;
     slider.style.transition = "all ease .6s"
 }
+
+function moveToLeft(){
+    counter--;
+    if (counter < 0 ) {
+        counter = sliderSection.length-1;
+        operacion = widthImg * (sliderSection.length-1)
+        slider.style.transform = `translate(-${operacion}%)`;
+        slider.style.transition = "none";
+        return;
+    } 
+    operacion = operacion - widthImg;
+    slider.style.transform = `translate(-${operacion}%)`;
+    slider.style.transition = "all ease .6s"
+}
