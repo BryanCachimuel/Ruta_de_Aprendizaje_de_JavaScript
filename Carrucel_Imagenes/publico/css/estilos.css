@@ -42,6 +42,33 @@ body{
     border-radius: 15px;
 }
 
+.btn-left, 
+.btn-right{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0, -50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover{
+    border-color: #333333d4;
+    color: #fff;
+}
+
 .btn-left {
     left: 10px;
+}
+
+.btn-right{
+    right: 10px;
 }
