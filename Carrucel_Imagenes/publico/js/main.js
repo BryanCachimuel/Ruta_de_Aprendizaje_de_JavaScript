@@ -14,3 +14,16 @@ let operacion = 0;
 let counter = 0;
 let widthImg  = 100 / sliderSection.length;
 
+function moveToRight(){
+    if(counter >= sliderSection.length-1){
+        counter = 0;
+        operacion = 0;
+        slider.style.transform = `translate(-${operacion}%)`;
+        slider.style.transition = "none";
+        return;
+    }
+    counter++;
+    operacion = operacion + widthImg;
+    slider.style.transform = `translate(-${operacion}%)`;
+    slider.style.transition = "all ease .6s"
+}
