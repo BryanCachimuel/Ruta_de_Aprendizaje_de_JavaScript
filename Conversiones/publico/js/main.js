@@ -8,3 +8,8 @@ let resultadoBinario;
 let cociente;
 let residuo;
 
+boton.addEventListener('click', ()=>{
+    validarEntrada();
+    resultadoBinario = convertirDecimalABinario();
+    salida.value = invertirCadena(resultadoBinario);
+});
