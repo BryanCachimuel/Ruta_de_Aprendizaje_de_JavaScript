@@ -56,3 +56,30 @@
     top: 20px;
     left: 96px;
 }
+
+.titulo_salida{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.boton{
+    margin-top: 25px;
+    display: inline;
+    text-align: center;
+    width: 200px;
+    height: 45px;
+    position: relative;
+    left: 50px;
+    outline: none;
+    border-radius: 20px;
+    border: 4px solid #dc3714;
+    color: #fff;
+    background-color: #e9320b;
+}
+
+.boton:hover{
+    border-radius: 20px;
+    border: 4px solid #dc3714;
+    color: #dc3714;
+    background-color: #fff;
+}
