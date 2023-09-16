@@ -14,6 +14,14 @@ body{
     padding: 20px;
 }
 
+.titulo{
+    position: relative;
+    color: #fff;
+    margin-right: 100px;
+    font-style: italic;
+    font-size: 50px;
+}
+
 .container-carousel{
     position: relative;
     width: 500px;
