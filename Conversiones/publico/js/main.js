@@ -33,3 +33,7 @@ const convertirDecimalABinario = () => {
     return numeroSalida;
 }
 
+const invertirCadena = (cadenaTexto) => {
+    let cadenaResuelta = cadenaTexto.split("").reverse().join("");
+    return cadenaResuelta;
+}
