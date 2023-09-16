@@ -13,3 +13,9 @@ boton.addEventListener('click', ()=>{
     resultadoBinario = convertirDecimalABinario();
     salida.value = invertirCadena(resultadoBinario);
 });
+
+const validarEntrada = () => {
+    (entrada.value === "") ? alert('Ingrese Datos') : console.log('Proceso realizado con Exito');
+}
+
+
