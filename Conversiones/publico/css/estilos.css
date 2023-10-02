@@ -13,7 +13,6 @@
 .contenedor{
     width: 500px;
     height: 400px;
-    background-color: #fff;
     margin: 80px auto;
     border-radius: 20px;
     border: 4px solid #dc3714;
@@ -75,6 +74,7 @@
     border: 4px solid #dc3714;
     color: #fff;
     background-color: #e9320b;
+    cursor: pointer;
 }
 
 .boton:hover{
