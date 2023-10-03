@@ -15,3 +15,22 @@ main{
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
 }
 
+input{
+    border-width: 2px;
+    border-style: solid;
+    width: 300px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+input:focus{
+    outline: none;
+    border-color: #11998e;
+}
+
+small{
+    color: #686868;
+    font-size: 12px;
+}
