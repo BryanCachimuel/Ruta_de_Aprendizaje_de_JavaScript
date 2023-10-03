@@ -1,0 +1,17 @@
+body{
+    background: linear-gradient(to right, #11998e, #38ef7d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+main{
+    padding: 50px 30px;
+    border-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
