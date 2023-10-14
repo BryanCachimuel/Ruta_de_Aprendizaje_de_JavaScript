@@ -23,10 +23,12 @@ body{
 }
 
 @keyframes animate{
-    0%{
+    0%
+    {
         transform: rotateX(-20deg) rotateY(360deg);
     }
-    100%{
+    100%
+    {
         transform: rotateX(-20deg) rotateY(0deg);
     }
 }
@@ -39,7 +41,7 @@ body{
 
 .box div.block span{
     position: absolute;
-    left: calc(50% -100%);
+    left: calc(50% -100px);
     width: 200px;
     height: 100px;
     background: #444;
@@ -55,7 +57,7 @@ body{
 .box div.text span{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,4 +70,35 @@ body{
     line-height: 1em;
     -webkit-text-stroke: 3px #000;
     transform-style: preserve-3d;
+}
+
+.box div.text span:nth-child(1){
+    font-size: 6em;
+}
+
+.box div.text span::before{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 7px;
+    transform-origin: bottom;
+    transform: rotateX(-90deg);
+    color: rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke: 0px #000;
+    filter: blur(5px);
+}
+
+.box div.text span::after{
+    content: '';
+    position: absolute;
+    top: 100px;
+    width: 360px;
+    height: 60px;
+    background: #444;
+    transform: rotateX(-90deg);
+    transition: 0.5s;
+}
+
+.box:hover div.text span::after{
+    background: #f00;
+    filter: drop-shadow(0 0 50px #f00);
 }
