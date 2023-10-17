@@ -21,8 +21,10 @@ body{
     background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
     color: #fff;
     display: grid;
-    grid-template-rows: max-content 1fr;
-    grid-template-areas: "nav" "content";
+    grid-template-rows:max-content 1fr;
+    grid-template-areas: 
+    "nav"
+    "content";
     min-height: 100vh;
 }
 
@@ -36,8 +38,15 @@ body{
     height: 90px;
 }
 
+.nav__list{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+}
+
 .nav__link{
-    color: #fff;
+    color:#fff;
     text-decoration: none;
 }
 
@@ -52,4 +61,53 @@ body{
 
 .nav__icon{
     width: 30px;
+}
+
+/* Hero main */
+
+.hero__main{
+    grid-area: content;
+    display: grid;
+    gap: 2em;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 180px; 
+    align-items: center;
+}
+
+.hero__waves{
+    grid-area: content;
+    align-self: end;
+}
+
+.hero__title{
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+}
+
+.hero__subtitle{
+    margin-top:1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.hero__cta{
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 60px;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 500;
+    transition: background-color .3s;
+}
+
+.hero__cta:hover{
+    background-color: #fff;
+    color: #1e3c72;
+}
+
+.hero__img{
+    width: 100%;
 }
