@@ -180,3 +180,37 @@ body{
     color: #F26250;
     background-color: #fff;
 }
+
+@media (max-width:800px) {
+    .nav__list{
+        display: none;
+    }
+
+    .nav__menu{
+        display: block;
+    }
+
+    .hero__main{
+        grid-template-columns: 1fr;
+        grid-template-rows:max-content max-content ;
+        text-align: center;
+    }
+
+    .hero__picture{
+        grid-row: 1/2;
+    }
+
+    .hero__img{
+        max-width: 500px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .modal__container{
+        padding: 2em 1.5em;
+    }
+
+    .modal__title{
+        font-size: 2rem;
+    }
+}
