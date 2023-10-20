@@ -57,11 +57,12 @@ body{
     inset: 0;
     background: #484f59;
     border-radius: 100px;
+    z-index: 1000;
 }
 
 .container .cloud .drop{
     position: absolute;
-    top: 0;
+    top: 40px;
     background: #05a2eb;
     width: 2px;
     height: 10px;
@@ -80,6 +81,6 @@ body{
         transform: translateY(360px) scaleY(0.2);
     }
     100%{
-        transform: translateY(360px) scaleY(0.2) scaleX(15);
+        transform: translateY(360px) scaleY(0) scaleX(15);
     }
 }
