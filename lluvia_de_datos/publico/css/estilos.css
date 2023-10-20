@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root{
+    --clr: #0f0;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -17,8 +21,44 @@ body{
 
 .container{
     position: relative;
+    top: 100px;
     height: 400px;
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.container .cloud{
+    position: relative;
+    width: 100px;
+    height: 300px;
+    z-index: 100;
+    filter: drop-shadow(0 0 35px var(--clr));
+}
+
+.container .cloud h2{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: #000;
+    font-size: 2em;
+    z-index: 1000;
+    font-weight: 400;
+    padding: 0 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background: var(--clr);
+}
+
+.container .cloud h2::before{
+    content: '';
+    position: absolute;
+    top: -115px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100px;
+    width: 120%;
+    height: 100px;
+    background: var(--clr);
 }
