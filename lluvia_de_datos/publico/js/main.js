@@ -23,3 +23,7 @@ function rain(){
         cloud.removeChild('drop');
     }, 2000);
 }
+
+setInterval(function() {
+    rain()
+}, 20);
