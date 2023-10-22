@@ -1,3 +1,9 @@
+function randomText(){
+    let text = ("!@#$%^&*()_+");
+    letters = text[Math.floor(Math.random() * text.length)];
+    return letters;
+}
+
 function rain(){
     let cloud = document.querySelector('.cloud');
     let e = document.createElement('div');
