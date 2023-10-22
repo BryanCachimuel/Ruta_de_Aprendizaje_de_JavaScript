@@ -40,8 +40,7 @@ body{
 
 .container .cloud{
     position: relative;
-    width: 100px;
-    height: 300px;
+    width: 300px;
     z-index: 100;
     filter: drop-shadow(0 0 35px var(--clr));
 }
@@ -83,4 +82,41 @@ body{
     border-radius: 50%;
     background: var(--clr);
     box-shadow: 120px -30px 0 40px var(--clr);
+}
+
+.container .cloud .drop{
+    position: absolute;
+    top: 60px;
+    height: 20px;
+    line-height: 20px;
+    color: var(--clr);
+    transform-origin: bottom;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) scaleY(0);
+        transform-origin: top;
+    }
+    10%{
+        transform: translateY(0) scaleY(0.25);
+        transform-origin: top;
+    }
+    20%{
+        transform: translateY(0) scaleY(1);
+    }
+    70%{
+        transform: translateY(300px) scaleY(1);
+        transform-origin: bottom;
+    }
+    80%{
+        transform: translateY(300px) scaleY(1);
+        transform-origin: bottom;
+    }
+    100%{
+        transform: translateY(300px) scaleY(0);
+        transform-origin: bottom;
+        text-shadow: -180px 0 0 var(--clr),180px 0 0 var(--clr);
+    }
 }
