@@ -1,0 +1,29 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #DCDFD9;
+    font-family: 'Readex Pro', sans-serif;
+	color: #1b3231;
+}
+
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 35vh;
+	font-size: 36px;
+	text-transform: uppercase;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 100px auto;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
