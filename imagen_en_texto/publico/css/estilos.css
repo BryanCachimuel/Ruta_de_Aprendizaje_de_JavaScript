@@ -16,3 +16,18 @@ body{
     display: flex;
     align-items: center;
 }
+
+.texto{
+    width: 100%;
+    color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 300px;
+    font-weight: bold;
+    background-image: url('../img/binario.jpg');
+    background-size: cover;
+    background-position-y: 700px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
