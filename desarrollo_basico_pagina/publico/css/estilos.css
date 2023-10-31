@@ -114,3 +114,33 @@ section{
     justify-content: space-between;
     align-items: center;
 }
+
+#home .fila .der .contacto button{
+    border: none;
+    background-color: #ff7f4d;
+    color: #fff;
+    font-weight: bold;
+    padding: 3px 10px;
+    font-size: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+ }
+
+ #home .fila .der .contacto button:hover{
+     background-color: #f5500e;
+ }
+
+ #home .fila .der .contacto .redes a{
+     color: #fff;
+     text-decoration: none;
+     display: inline-block;
+     margin: 0 7px;
+ }
+
+ #home .fila .der .contacto .redes a:hover{
+     color: #f5500e;
+ }
+ 
+ #home .fila .der .contacto p{
+     font-size: 12px;
+ }
