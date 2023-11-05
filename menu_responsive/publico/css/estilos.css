@@ -60,5 +60,15 @@ nav{
     transition: 0.3s;
 }
 
+.enlaces-menu li a{
+    text-decoration:none;
+    font-size: 1.8rem;
+    color:#f3f3f3;
+    font-weight:600;
+}
+.enlaces-menu li:hover{
+    background-color:rgb(62, 130, 197);
+}
+
 
   
