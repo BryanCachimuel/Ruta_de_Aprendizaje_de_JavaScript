@@ -22,6 +22,7 @@ body{
     width: 120px;
     height: 25px;
 }
+
 nav{
     display: flex;
     align-items: center;
@@ -29,5 +30,35 @@ nav{
     min-height: 8vh;
     background-color: #294674;
 }
+
+.ham{
+    display:none;
+    background-color:transparent;
+    cursor: pointer;
+    border:none;
+    margin:0;
+    padding:0;
+    }
+    
+.ham span{
+    background-color: #f3f3f3;
+    display:block;
+    height:3px;
+    width: 28px;
+    margin:10px auto;
+    border-radius:2px;    
+}
+
+.enlaces-menu{
+      display:flex;
+      padding:0;
+}
+
+.enlaces-menu li{
+    padding: 0 40px;
+    list-style-type: none;
+    transition: 0.3s;
+}
+
 
   
