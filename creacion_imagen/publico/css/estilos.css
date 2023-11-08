@@ -61,3 +61,30 @@ body{
     align-items: center;
 }
 
+.bottom_part::before{
+    content: "";
+    width: 16rem;
+    height: 16rem;
+    position: absolute;
+    bottom: 5rem;
+    background: #ff0000;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 10px 10px #11111136;
+    filter: blur(30px);
+    animation: Animate 1s linear infinite;
+}
+
+@keyframes Animate {
+    from{
+        width: 16rem;
+        height: 16rem;
+    }
+    50%{
+        width: 12rem;
+        height: 12rem;
+    }
+    to{
+        width: 16rem;
+        height: 16rem;
+    }
+}
