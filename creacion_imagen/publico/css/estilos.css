@@ -33,3 +33,31 @@ body{
     filter: drop-shadow(0px 5px 10px #ff0000);
     animation: rotar 7s linear infinite;
 }
+
+.logo:hover{
+    cursor: pointer;
+}
+
+@keyframes rotar {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(-360deg);
+    }
+}
+
+.bottom_part{
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    bottom: -94px;
+    background: #242424;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 10px 10px #11111136;
+    transform: rotateX(90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
