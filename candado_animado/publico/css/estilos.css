@@ -82,3 +82,75 @@ body{
     top: 0;
     left: 74px;
 }
+
+.line:nth-child(40):before,
+.line:nth-child(5):before,
+.line:nth-child(10):before,
+.line:nth-child(15):before,
+.line:nth-child(20):before,
+.line:nth-child(25):before,
+.line:nth-child(30):before,
+.line:nth-child(35):before
+{
+    height: 18px;
+}
+
+.number{
+    position: absolute;
+    width: 20px;
+    height: 14px;
+    top: 68px;
+    left: 65px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 14px;
+    text-align: center;
+    color: white;
+}
+
+.number-0{
+    transform: rotate(0deg) translateY(-40px);
+}
+
+.number-5{
+    transform: rotate(45deg) translateY(-40px);
+}
+
+.number-10{
+    transform: rotate(90deg) translateY(-40px);
+}
+
+.number-15{
+    transform: rotate(135deg) translateY(-40px);
+}
+
+.number-20{
+    transform: rotate(180deg) translateY(-40px);
+}
+
+.number-25{
+    transform: rotate(225deg) translateY(-40px);
+}
+
+.number-30{
+    transform: rotate(270deg) translateY(-40px);
+}
+
+.number-35{
+    transform: rotate(315deg) translateY(-40px);
+}
+
+.knob{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 55px;
+    left: 55px;
+    background-color: #e7ece0;
+    border-radius: 50%;
+    box-shadow: inset 2px 4px 1px rgba(255, 255, 255, 0.815), inset -1px -2px 1px rgba(0, 0, 0, 0.199) ;
+}
+
+.lock:hover .ring{
+    transform: rotate(360deg) ;
+}
