@@ -93,7 +93,7 @@ body{
     width: 256px;
     height: 198px;
     background: url(../img/linterna_verde.jpg);
-    background-position: center;
+    background-position: add ;
     background-size: cover;
     position: absolute;
     top: -10px;
