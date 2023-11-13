@@ -139,3 +139,68 @@ body{
         border-width: 1px;
     }
 }
+
+.ellipse-6 {
+    animation: ellipse-6 5s ease-in-out infinite;
+}
+
+
+@keyframes ellipse-6 {
+    0% {
+        transform: rotate(50deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(310deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
+
+.ellipse-7 {
+    animation: ellipse-7 5s ease-in-out infinite;
+}
+
+@keyframes ellipse-7 {
+    0% {
+        transform: rotate(60deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(300deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
+
+.ellipse-8 {
+    animation: ellipse-8 5s ease-in-out infinite;
+}
+
+
+@keyframes ellipse-8 {
+    0% {
+        transform: rotate(70deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(290deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
