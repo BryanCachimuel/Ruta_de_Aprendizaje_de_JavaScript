@@ -55,8 +55,7 @@ body{
 .ellipse-2 {
     animation: ellipse-2 5s ease-in-out infinite;
 }
-  
-  
+    
 @keyframes ellipse-2 {
     0% {
       transform: rotate(10deg);
@@ -77,7 +76,6 @@ body{
 .ellipse-3 {
     animation: ellipse-3 5s ease-in-out infinite;
 }
-
 
 @keyframes ellipse-3 {
     0% {
@@ -100,7 +98,6 @@ body{
     animation: ellipse-4 5s ease-in-out infinite;
 }
 
-
 @keyframes ellipse-4 {
     0% {
         transform: rotate(30deg);
@@ -122,7 +119,6 @@ body{
     animation: ellipse-5 5s ease-in-out infinite;
 }
 
-
 @keyframes ellipse-5 {
     0% {
         transform: rotate(40deg);
@@ -143,7 +139,6 @@ body{
 .ellipse-6 {
     animation: ellipse-6 5s ease-in-out infinite;
 }
-
 
 @keyframes ellipse-6 {
     0% {
@@ -187,7 +182,6 @@ body{
     animation: ellipse-8 5s ease-in-out infinite;
 }
 
-
 @keyframes ellipse-8 {
     0% {
         transform: rotate(70deg);
@@ -209,7 +203,6 @@ body{
     animation: ellipse-9 5s ease-in-out infinite;
 }
 
-
 @keyframes ellipse-9 {
     0% {
         transform: rotate(80deg);
@@ -230,7 +223,6 @@ body{
 .ellipse-10 {
     animation: ellipse-10 5s ease-in-out infinite;
 }
-
 
 @keyframes ellipse-10 {
     0% {
@@ -274,7 +266,6 @@ body{
     animation: ellipse-12 5s ease-in-out infinite;
 }
 
-
 @keyframes ellipse-12 {
     0% {
         transform: rotate(110deg);
@@ -295,7 +286,6 @@ body{
 .ellipse-13 {
     animation: ellipse-13 5s ease-in-out infinite;
 }
-
 
 @keyframes ellipse-13 {
     0% {
@@ -380,7 +370,6 @@ body{
 .ellipse-17 {
     animation: ellipse-17 5s ease-in-out infinite;
 }
-
 
 @keyframes ellipse-17 {
     0% {
