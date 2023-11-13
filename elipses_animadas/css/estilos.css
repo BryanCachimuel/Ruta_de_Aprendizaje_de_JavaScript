@@ -204,3 +204,69 @@ body{
         border-width: 1px;
     }
 }
+
+.ellipse-9 {
+    animation: ellipse-9 5s ease-in-out infinite;
+}
+
+
+@keyframes ellipse-9 {
+    0% {
+        transform: rotate(80deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(280deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
+
+.ellipse-10 {
+    animation: ellipse-10 5s ease-in-out infinite;
+}
+
+
+@keyframes ellipse-10 {
+    0% {
+        transform: rotate(90deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(270deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
+
+.ellipse-11 {
+    animation: ellipse-11 5s ease-in-out infinite;
+}
+
+
+@keyframes ellipse-11 {
+    0% {
+        transform: rotate(100deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(260deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
