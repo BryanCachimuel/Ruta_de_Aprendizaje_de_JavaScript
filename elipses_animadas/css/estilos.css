@@ -33,3 +33,43 @@ body{
 .ellipse-1{
     animation: ellipse-1 5s ease-in-out infinite;
 }
+
+@keyframes ellipse-1 {
+    0% {
+      transform: rotate(0deg);
+      border-radius: 50%;
+      border-width: 1px;
+    }
+    
+    50% {
+      transform: rotate(0) scaleX(3.3333333333);
+      border-radius: 0%;
+    }
+    100% {
+      transform: rotate(360deg);
+      border-radius: 50%;
+      border-width: 1px;
+    }
+  }
+
+  .ellipse-2 {
+            animation: ellipse-2 5s ease-in-out infinite;
+  }
+  
+  
+  @keyframes ellipse-2 {
+    0% {
+      transform: rotate(10deg);
+      border-radius: 50%;
+      border-width: 1px;
+    }
+    50% {
+      transform: rotate(0) scaleX(3.3333333333);
+      border-radius: 0%;
+    }
+    100% {
+      transform: rotate(350deg);
+      border-radius: 50%;
+      border-width: 1px;
+    }
+  }
