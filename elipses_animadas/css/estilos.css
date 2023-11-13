@@ -1,0 +1,35 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #1f91dd;
+}
+
+.form{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50px;
+    left: 50px;
+}
+
+.ellipse{
+    position: absolute;
+    top: 0;
+    left: 105px;
+    width: 90px;
+    height: 300px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.ellipse-1{
+    animation: ellipse-1 5s ease-in-out infinite;
+}
