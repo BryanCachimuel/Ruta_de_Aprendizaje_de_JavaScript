@@ -318,7 +318,6 @@ body{
     animation: ellipse-14 5s ease-in-out infinite;
 }
 
-
 @keyframes ellipse-14 {
     0% {
         transform: rotate(130deg);
@@ -335,3 +334,89 @@ body{
         border-width: 1px;
     }
 }
+
+.ellipse-15 {
+    animation: ellipse-15 5s ease-in-out infinite;
+}
+
+@keyframes ellipse-15 {
+    0% {
+        transform: rotate(140deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(220deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
+
+.ellipse-16 {
+    animation: ellipse-16 5s ease-in-out infinite;
+}
+
+@keyframes ellipse-16 {
+    0% {
+        transform: rotate(150deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(210deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
+
+.ellipse-17 {
+    animation: ellipse-17 5s ease-in-out infinite;
+}
+
+
+@keyframes ellipse-17 {
+    0% {
+        transform: rotate(160deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(200deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
+
+.ellipse-18 {
+    animation: ellipse-18 5s ease-in-out infinite;
+}
+
+@keyframes ellipse-18 {
+    0% {
+        transform: rotate(170deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(190deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
+
