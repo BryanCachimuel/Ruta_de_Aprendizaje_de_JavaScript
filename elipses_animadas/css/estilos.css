@@ -253,7 +253,6 @@ body{
     animation: ellipse-11 5s ease-in-out infinite;
 }
 
-
 @keyframes ellipse-11 {
     0% {
         transform: rotate(100deg);
@@ -266,6 +265,72 @@ body{
     }
     100% {
         transform: rotate(260deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
+
+.ellipse-12 {
+    animation: ellipse-12 5s ease-in-out infinite;
+}
+
+
+@keyframes ellipse-12 {
+    0% {
+        transform: rotate(110deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(250deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
+
+.ellipse-13 {
+    animation: ellipse-13 5s ease-in-out infinite;
+}
+
+
+@keyframes ellipse-13 {
+    0% {
+        transform: rotate(120deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(240deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+}
+
+.ellipse-14 {
+    animation: ellipse-14 5s ease-in-out infinite;
+}
+
+
+@keyframes ellipse-14 {
+    0% {
+        transform: rotate(130deg);
+        border-radius: 50%;
+        border-width: 1px;
+    }
+    50% {
+        transform: rotate(0) scaleX(3.3333333333);
+        border-radius: 0%;
+    }
+    100% {
+        transform: rotate(230deg);
         border-radius: 50%;
         border-width: 1px;
     }
