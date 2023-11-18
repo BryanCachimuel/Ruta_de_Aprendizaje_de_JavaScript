@@ -20,3 +20,27 @@ body{
   animation: ball 7s ease-in-out infinite;
   transform-style: preserve-3d;
 }
+
+.ball-big .plane {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+  
+  .ball-big .plane-1 {
+    transform: rotateX(0deg);
+  }
+  
+  .ball-big .plane-2 {
+    transform: rotateX(30deg);
+  }
+  
+  .ball-big .plane-3 {
+    transform: rotateX(60deg);
+  }
+  
