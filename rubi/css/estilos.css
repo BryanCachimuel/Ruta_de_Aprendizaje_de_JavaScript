@@ -112,3 +112,26 @@ body{
     animation: flash 3s linear infinite both;
     box-shadow: 0 0 5px 0 #FFDFDF;
 }
+
+.top-right-right {
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 32px 42px 22px;
+    border-color: transparent transparent #B90B0C transparent;
+}
+  
+  
+@keyframes flash {
+    0% {
+      transform: rotate(-44deg) translateX(-30px);
+    }
+    10%, 100% {
+      transform: rotate(-44deg) translateX(30px);
+    }
+}
+  
