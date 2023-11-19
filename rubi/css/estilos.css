@@ -76,3 +76,39 @@ body{
     left: 32px;
     background: #DC2323;
 }
+
+.top-middle {
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 54px;
+    border-style: solid;
+    border-width: 0 42px 42px 42px;
+    border-color: transparent transparent #BC0E0E transparent;
+}
+
+.top-right {
+    position: absolute;
+    z-index: 1;
+    width: 64px;
+    height: 42px;
+    top: 0;
+    right: 32px;
+    background: #F58181;
+    overflow: hidden;
+}
+
+  
+.flash {
+    position: absolute;
+    width: 4px;
+    height: 80px;
+    top: -40px;
+    left: 30px;
+    background: #FFDFDF;
+    transform: rotate(-44deg) translateX(-30px);
+    animation: flash 3s linear infinite both;
+    box-shadow: 0 0 5px 0 #FFDFDF;
+}
