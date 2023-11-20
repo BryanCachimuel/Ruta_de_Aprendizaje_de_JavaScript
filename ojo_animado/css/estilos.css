@@ -72,3 +72,42 @@ body{
     transform: rotate(180deg) translateY(-60px);
     animation: lid-bottom 5s ease-in-out infinite;
 }
+
+.container:hover .lid-top {
+    transform: translateY(0);
+}
+
+.container:hover .lid-bottom {
+    transform: rotate(180deg) translateY(0);
+}
+
+@keyframes lid-top {
+    0%, 10%, 18%, 26%, 34%, 48%, 56%, 76%, 84% {
+      transform: translateY(-60px);
+    }
+    14%, 30%, 52%, 80% {
+      transform: translateY(0);
+    }
+}
+ 
+@keyframes lid-bottom {
+    0%, 10%, 18%, 26%, 34%, 48%, 56%, 76%, 84% {
+      transform: rotate(180deg) translateY(-60px);
+    }
+    14%, 30%, 52%, 80% {
+      transform: rotate(180deg) translateY(0);
+    }
+}
+ 
+@keyframes ball {
+    0%, 14%, 56% {
+      transform: rotate(-45deg) translateX(0);
+    }
+    18%, 30% {
+      transform: rotate(-45deg) translate(-25px, 5px) scale(0.9);
+    }
+    34%, 52% {
+      transform: rotate(-45deg) translate(25px, 10px) scale(0.9);
+    }
+}
+  
