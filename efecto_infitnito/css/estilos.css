@@ -38,3 +38,36 @@ section{
     width: 100%;
     transform: rotate(calc(3deg * var(--esfera)));
 }
+
+.esfera::before{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    right: 0;
+    top: calc(50% - 7.5px);
+    box-shadow: 0 0 10px yellow;
+    transform: scale(0);
+    animation: Animate 7.952s linear infinite;
+    animation-delay: calc(0.033s * var(--esfera));
+}
+
+@keyframes Animate {
+    0%{
+        transform: scale(1);
+    }
+    50%,100%{
+        transform: scale(0);
+    }
+}
+
+.circulo:nth-child(2){
+    transform: rotate(-180deg);
+}
+
+
+.circulo:nth-child(2) .esfera::before{
+    animation-delay: calc(-0.033s * var(--esfera));
+}
