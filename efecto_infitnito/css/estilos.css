@@ -20,3 +20,21 @@ section{
         filter: hue-rotate(360deg);
     }
 }
+
+.container{
+    display: flex;
+}
+
+.circulo{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 -7.5px;
+}
+
+.esfera{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(calc(3deg * var(--esfera)));
+}
