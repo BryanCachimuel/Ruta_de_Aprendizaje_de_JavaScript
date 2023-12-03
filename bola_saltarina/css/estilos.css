@@ -1,0 +1,21 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #9b59b6;
+}
+
+.floor{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 130px;
+    background-color: #48627c;
+}
