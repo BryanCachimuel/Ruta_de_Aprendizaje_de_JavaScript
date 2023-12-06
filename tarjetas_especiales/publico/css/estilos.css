@@ -8,8 +8,17 @@ body{
     background: linear-gradient(153deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
 
+.titulo{
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 10px;
+    color: #ffff00;
+    font-family: 'Lucida Sans Unicode';
+}
+
 .container{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
