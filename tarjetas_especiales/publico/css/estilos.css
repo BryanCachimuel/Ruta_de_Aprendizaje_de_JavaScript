@@ -46,3 +46,22 @@ body{
     text-align: center;
     transition: 400ms ease-in-out;
 }
+
+.card:hover{
+    height: 400px;
+}
+
+.card:hover .imagen{
+    transform: translateY(-120px);
+}
+
+.card:hover .text_container{
+    transform: translateY(80px);
+}
+
+@media (max-width:800px){
+    .container{
+        display: grid;
+        margin-top: 10px;
+    }
+}
