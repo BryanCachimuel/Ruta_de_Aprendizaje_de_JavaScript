@@ -284,6 +284,49 @@ img {
     border-radius: 3px;
     animation: cloud 0.8s linear 1s infinite;
 }
+
+.cloud-7 {
+    position: absolute;
+    right: -25px;
+    top: 118px;
+    height: 3px;
+    width: 20px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: cloud 0.8s linear 0.7s infinite;
+}
+  
+.cloud-8 {
+    position: absolute;
+    right: -25px;
+    top: 132px;
+    height: 3px;
+    width: 14.4px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: cloud 0.7s linear 1s infinite;
+}
+  
+.cloud-9 {
+    position: absolute;
+    right: -25px;
+    top: 146px;
+    height: 3px;
+    width: 17px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: cloud 0.8s linear 0.4s infinite;
+}
+  
+@keyframes cloud {
+    0% {
+      transform: translate3d(0, 0, 0) scaleX(1);
+    }
+    100% {
+      transform: translate3d(-210px, 0, 0) scaleX(0.8);
+    }
+}
+
   
   
   
