@@ -105,9 +105,9 @@ body{
     background: #4B4841;
     border-radius: 3px;
     animation: street 1s linear 0.7s infinite;
-  }
+}
   
-  .stripe-4 {
+.stripe-4 {
     position: absolute;
     right: -25px;
     top: 0;
@@ -116,9 +116,9 @@ body{
     background: #4B4841;
     border-radius: 3px;
     animation: street 0.9s linear 0.3s infinite;
-  }
+}
   
-  .stripe-5 {
+.stripe-5 {
     position: absolute;
     right: -25px;
     top: 0;
@@ -127,9 +127,9 @@ body{
     background: #4B4841;
     border-radius: 3px;
     animation: street 0.9s linear 0.2s infinite;
-  }
+}
   
-  .stripe-6 {
+.stripe-6 {
     position: absolute;
     right: -25px;
     top: 0;
@@ -138,4 +138,48 @@ body{
     background: #4B4841;
     border-radius: 3px;
     animation: street 1s linear 1s infinite;
-  }
+}
+
+.stripe-7 {
+    position: absolute;
+    right: -25px;
+    top: 0;
+    height: 3px;
+    width: 16px;
+    background: #4B4841;
+    border-radius: 3px;
+    -webkit-animation: street 0.9s linear 0.1s infinite;
+            animation: street 0.9s linear 0.1s infinite;
+}
+
+.stripe-8 {
+    position: absolute;
+    right: -25px;
+    top: 0;
+    height: 3px;
+    width: 18px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: street 1s linear 0.9s infinite;
+}
+  
+.stripe-9 {
+    position: absolute;
+    right: -25px;
+    top: 0;
+    height: 3px;
+    width: 20px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: street 0.9s linear 0.3s infinite;
+}
+  
+@keyframes street {
+    0% {
+      transform: translate3d(0, 0, 0) scaleX(1);
+    }
+    100% {
+      transform: translate3d(-210px, 0, 0) scaleX(0.8);
+    }
+}
+  
