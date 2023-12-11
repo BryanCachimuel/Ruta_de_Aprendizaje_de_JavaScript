@@ -182,4 +182,52 @@ body{
       transform: translate3d(-210px, 0, 0) scaleX(0.8);
     }
 }
+
+.card 
+.back {
+    transform: rotateX(180deg);
+}
+
+.card 
+.back 
+img {
+    position: relative;
+    z-index: 1;
+    top: 57px;
+    animation: helicopter 1.5s ease-in-out infinite;
+    animation-fill-mode: both;
+}
+  
+.card
+.back 
+.sky {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    bottom: 0;
+    width: 160px;
+    overflow: hidden;
+}
+
+@keyframes helicopter {
+    0%, 
+    100% {
+      transform: translate3d(0, -5px, 0);
+    }
+    50% {
+      transform: translate3d(0, 5px, 0);
+    }
+}
+
+.cloud-1 {
+    position: absolute;
+    right: -25px;
+    top: 34px;
+    height: 3px;
+    width: 13.4px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: cloud 0.8s linear 0.3s infinite;
+  }
+  
   
