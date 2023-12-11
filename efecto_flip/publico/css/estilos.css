@@ -48,3 +48,50 @@ body{
     overflow: hidden;
     text-align: center;
 }
+
+.card
+.front{
+    z-index: 2;
+    transform: rotateX(0);
+}
+
+@keyframes bike{
+    0%, 
+    100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.03);
+    }
+}
+
+.street{
+    position: absolute;
+    top: 127px;
+    left: 80px;
+    width: 160px;
+    height: 3px;
+    overflow: hidden;
+}
+
+.stripe-1{
+    position: absolute;
+    right: -25px;
+    top: 0;
+    height: 3px;
+    width: 4px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: street 0.9s linear 0.4s infinite;
+}
+
+.stripe-2{
+    position: absolute;
+    right: -25px;
+    top: 0;
+    height: 3px;
+    width: 6px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: street 1s linear 0.8s infinite;
+}
