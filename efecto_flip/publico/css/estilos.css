@@ -95,3 +95,47 @@ body{
     border-radius: 3px;
     animation: street 1s linear 0.8s infinite;
 }
+
+.stripe-3 {
+    position: absolute;
+    right: -25px;
+    top: 0;
+    height: 3px;
+    width: 8px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: street 1s linear 0.7s infinite;
+  }
+  
+  .stripe-4 {
+    position: absolute;
+    right: -25px;
+    top: 0;
+    height: 3px;
+    width: 10px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: street 0.9s linear 0.3s infinite;
+  }
+  
+  .stripe-5 {
+    position: absolute;
+    right: -25px;
+    top: 0;
+    height: 3px;
+    width: 12px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: street 0.9s linear 0.2s infinite;
+  }
+  
+  .stripe-6 {
+    position: absolute;
+    right: -25px;
+    top: 0;
+    height: 3px;
+    width: 14px;
+    background: #4B4841;
+    border-radius: 3px;
+    animation: street 1s linear 1s infinite;
+  }
