@@ -1,9 +1,9 @@
 body{
-    font-family: 'Roboto', serif;
-    background: #a599ff;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: #0e76dd;
 }
 
-h1{
+.titulo{
     text-align: center;
     margin: 2rem;
     color: #fff;
