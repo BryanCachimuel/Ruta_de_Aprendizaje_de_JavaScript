@@ -3,6 +3,7 @@ body {
     place-items: center;
     width: 100%;
     font-family: 'Merriweather', serif;
+    background-color: #527eee;
 }
 
 .simon {
@@ -32,19 +33,19 @@ body {
 }
 
 .red {
-    background-color: #EE6352;
+    background-color: #e72309;
 }
 
 .blue {
-    background-color: #08B2E3;
+    background-color: #09c4f8;
 }
 
 .green {
-    background-color: #57A773;
+    background-color: #2bc761;
 }
 
 .yellow {
-    background-color: #FFDF64;
+    background-color: #f2ff64;
 }
 
 #startButton {
