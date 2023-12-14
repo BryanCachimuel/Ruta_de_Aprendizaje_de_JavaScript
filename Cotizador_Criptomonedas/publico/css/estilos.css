@@ -2,19 +2,22 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: #1c95e6;
 } 
 
 .main-section{
     text-align: center;
-    margin: 9% auto 0;
+    margin: 5% auto 0;
     width: 60%;
     padding: 29px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: #ada2a2;
 }
 
 .main-section h2{
     text-transform: uppercase;
-    color: #736c6c;
+    color: #1c95e6;
+    font-weight: bold;
 }
 
 .container{
