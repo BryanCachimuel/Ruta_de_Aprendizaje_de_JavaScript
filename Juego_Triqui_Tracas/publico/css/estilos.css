@@ -5,15 +5,17 @@
 }
 
 body{
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(17, 110, 240);
     user-select: none;
 }
 
-h1{
+.titulo{
     text-align: center;
     font-family: var(--font-family);
     font-size: 3rem;
     color: var(--color-primario);
+    font-weight: bold;
+    color: #ff0000;
 }
 
 #contenedorGrilla{
@@ -66,9 +68,25 @@ dialog::backdrop{
 dialog h2{
     font-family: var(--font-family);
     font-size: xx-large;
+    font-weight: bold;
+    font-size: 50px;
+    color: #ffff00;
 }
 
 dialog button{
     font-size: large;
     padding: 1rem;
+    border: 2px solid #f5deb3;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #0000ff;
+}
+
+dialog button:hover{
+    font-size: large;
+    padding: 1rem;
+    border: 2px solid #0000ff;
+    border-radius: 10px;
+    color: #000000;
+    background: #ffffff;
 }
