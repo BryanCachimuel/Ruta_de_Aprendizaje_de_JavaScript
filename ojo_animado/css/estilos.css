@@ -4,6 +4,13 @@ body{
     place-items: center;
 }
 
+.titulo{
+  margin-top: 20px;
+  font-size: 45px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
 .container{
     position: relative;
     width: 400px;
