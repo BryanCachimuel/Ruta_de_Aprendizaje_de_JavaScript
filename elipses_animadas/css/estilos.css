@@ -1,7 +1,16 @@
 body{
-    height: 100vh;
+    height: 90vh;
     display: grid;
     place-items: center;
+    background-color: rgb(102, 0, 255);
+}
+
+.titulo{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1f91dd;
 }
 
 .container{
