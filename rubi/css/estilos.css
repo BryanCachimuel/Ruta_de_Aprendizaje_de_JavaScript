@@ -2,12 +2,13 @@ body{
     height: 100vh;
     display: grid;
     place-items: center;
+    background-color: #0cc7f1;
 }
 
 .container {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     background: #FFC902;
     display: grid;
     place-items: center;
