@@ -12,6 +12,14 @@ section{
     animation: ColorAnimate 8s linear infinite;
 }
 
+.efecto{
+    font-weight: bold;
+    font-size: 40px;
+    color: #ffff00;
+    margin-right: 30px;
+    text-transform: uppercase;
+}
+
 @keyframes ColorAnimate{
     0%{
         filter: hue-rotate(0deg);
