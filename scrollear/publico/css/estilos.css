@@ -5,7 +5,7 @@
 }
 
 body {
-	background: #DCDFD9;
+	background: #e9de5c;
     font-family: 'Readex Pro', sans-serif;
 	color: #1b3231;
 }
@@ -17,6 +17,8 @@ body {
 	min-height: 35vh;
 	font-size: 36px;
 	text-transform: uppercase;
+	color: #07837d;
+	font-weight: bold;
 }
 
 .container {
