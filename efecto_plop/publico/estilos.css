@@ -96,3 +96,50 @@ body{
         transform: translateX(180px);
     }
 }
+
+/* animaciones edges */
+.elements{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 185px;
+    left: 185px;
+}
+
+.square{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    left: 5px;
+}
+
+.square.small{
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left: 10px;
+}
+
+.square .big{
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 0px;
+}
+
+ .c1{
+    background-color: #f39c12;
+ }
+
+ .c2{
+    background-color: #e67e22;
+ }
+
+ .square1{
+    animation: square1 1.5s ease-out infinite alternate;
+ }
+
+ .square2{
+    animation: square2 1.5s ease-out infinite alternate;
+ }
