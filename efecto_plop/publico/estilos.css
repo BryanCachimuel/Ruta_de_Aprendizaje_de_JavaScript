@@ -51,3 +51,48 @@ body{
     border-color:  transparent #2b82bb  transparent transparent ;
     animation: edge-r 1.5s ease-out infinite alternate;
 }
+
+.edge.b{
+    top: 0;
+    left: 0;
+    border-width: 80px 80px 80px 80px;
+    border-color:  transparent  transparent #2578ae transparent ;
+    animation: edge-b 1.5s ease-out infinite alternate;
+}
+
+/* animaciones edges */
+@keyframes edge-t{
+    0%,20%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-180px);
+    }
+}
+
+@keyframes edge-b{
+    0%,20%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(180px);
+    }
+}
+
+@keyframes edge-l{
+    0%,20%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateX(-180px);
+    }
+}
+
+@keyframes edge-r{
+    0%,20%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateX(180px);
+    }
+}
