@@ -193,3 +193,19 @@ body{
     left: 0;
 }
 
+.circle.c1{
+    border-color: #f39c12;
+}
+
+.circle.c3{
+    border-color: #1abc9c;
+}
+
+.circle1{
+    animation: circle1 1.5s ease-out infinite alternate;
+}
+
+.circle2{
+    animation: circle2 1.5s ease-out infinite alternate;
+}
+
