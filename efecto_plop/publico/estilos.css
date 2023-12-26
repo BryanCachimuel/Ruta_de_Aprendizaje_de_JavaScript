@@ -209,3 +209,22 @@ body{
     animation: circle2 1.5s ease-out infinite alternate;
 }
 
+@keyframes circle1{
+    0%,20%{
+        transform:  scale(0) translate(0) rotate(0);
+    }
+    100%{
+        transform:  scale(1) translate(-66px, 132px) ;
+    }
+}
+ 
+
+@keyframes circle2{
+    0%,20%{
+        transform:  scale(0) translate(0) rotate(0);
+    }
+    100%{
+        transform:  scale(1) translate(15px, 80px) ;
+    }
+}
+
