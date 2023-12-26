@@ -143,3 +143,22 @@ body{
  .square2{
     animation: square2 1.5s ease-out infinite alternate;
  }
+
+  /* Animacion square */
+ @keyframes square1 {
+    0%,20%{
+        transform:  scale(0) translate(0) rotate(0);
+    }
+    100%{
+        transform:  scale(1) translate(66px, 78px) rotate(110deg);
+    }
+ }
+
+ @keyframes square2 {
+    0%,20%{
+        transform:  scale(0) translate(0) rotate(0);
+    }
+    100%{
+        transform:  scale(1) translate(46px, -141px) rotate(170deg);
+    }
+ }
