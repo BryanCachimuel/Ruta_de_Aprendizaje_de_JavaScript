@@ -69,3 +69,9 @@ formBusqueda.addEventListener("submit", (e) => {
 })
 
 
+mostrarMas.addEventListener("clcik", () => {
+    page++;
+    buscarImagenes();
+})
+
+
