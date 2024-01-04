@@ -30,3 +30,18 @@ async function buscarImagenes(){
    
 }
 
+/*
+    agrego funcionalidad para cuando se presione enter 
+    o se haga click en el boton buscar
+*/
+formBusqueda.addEventListener("submit", (e) => {
+
+    /* evito que se recargue la página */
+    e.preventDefault();
+    page = 1;
+
+    /* llamo a la función */
+    buscarImagenes();
+})
+
+
