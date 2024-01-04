@@ -27,7 +27,31 @@ async function buscarImagenes(){
 
     console.log(data);
 
-   
+    /* 
+        se controla si es la primera vez que se busco. Si es así se 
+        limpia el contenedor
+     */
+        if(page === 1){
+            resultadoBusqueda.innerHTML = "";
+        }
+    
+        /*  coloco los resultados de la busqueda en el contenedor */
+        const resultados = data.results;
+        
+        /* por cada resultado armo un enlace a y adentro le agrego la imagen */
+        resultados.map((result) => {
+            const imagen = document.createElement("img");
+            imagen.src = result.urls.small;
+            const imagenLink = document.createElement("a");
+            imagenLink.href = result.links.html;
+            imagenLink.target = "_blank";
+    
+            /* agrego el elemento */
+            imagenLink.appendChild(imagen);
+            resultadoBusqueda.appendChild(imagenLink);
+    
+            mostrarMas.style.display = "block";
+        })
 }
 
 /*
