@@ -11,3 +11,22 @@ let keyword = "";
 let page = 1;
 
 const accessKey = "4RPJjJ4cvxukR5cs35bG1-p7NxJRYbUzDH75X2gzOg0";
+
+/* función que trae los resultados de las imagenes */
+async function buscarImagenes(){
+
+    /* tomo el valor que es ingresado por el usuario */
+    keyword = cajaBusqueda.value;
+
+    /* se arma la url */
+    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`;
+
+    /* realizo la busqueda */
+    const response = await fetch(url);
+    const data = await response.json();
+
+    console.log(data);
+
+   
+}
+
