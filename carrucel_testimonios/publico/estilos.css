@@ -21,3 +21,46 @@ body{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+.author{
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+#prevBtn{
+    height: 40px;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #0000ff;
+    color: #ffffff;
+    border-radius: 5px;  
+    font-size: 18px;
+}
+
+#nextBtn{
+    height: 40px;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 5px; 
+    font-size: 18px; 
+}
+
+#prevBtn:hover{
+    background-color: #ffffff;
+    color: #0000ff;
+    border: 1px solid #0000ff;
+}
+
+#nextBtn:hover{
+    background-color: #ffffff;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
