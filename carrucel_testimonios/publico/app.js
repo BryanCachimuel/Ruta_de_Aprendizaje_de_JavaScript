@@ -5,6 +5,15 @@ $(document).ready(function(){
 
     showTestimonial(currentIndex);
 
+    $("#prevBtn").on("click", function(){
+        currentIndex = (currentIndex - 1 + totaltestimonial) % totaltestimonial;
+        showTestimonial(currentIndex);
+    });
+
+    $("#nextBtn").on("click", function(){
+        currentIndex = (currentIndex + 1) % totaltestimonial;
+        showTestimonial(currentIndex);
+    });
 
     function showTestimonial(index){
         testimonial.hide();
