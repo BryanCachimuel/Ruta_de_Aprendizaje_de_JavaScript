@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes de Computadora</title>
+    <link rel="stylesheet" href="publico/estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="publico/app.js"></script>
+</head>
+<body>
+    <div class="app">
+        <h1>Simulador de Componentes de Computadoras</h1>
+        <div class="catalogo">
+            <h2>Componentes de Computadoras</h2>
+            <ul>
+                <li data-producto="1" data-precio="125">Monitor de 21 Pulgadas <button class="agregar"></button></li>
+                <li data-producto="2" data-precio="450">CPU Core i7 103445U <button class="agregar"></button></li>
+                <li data-producto="3" data-precio="290">Impresora Titanta Continua <button class="agregar"></button></li>
+            </ul>
+        </div>
+
+        <div id="carrito">
+            <h2>Carrito de Compras Simulado</h2>
+            <ul>
+                <!-- Aquí se agregan los productos dinamicamente -->
+            </ul>
+            <p>Total: $<span id="total">0</span></p>
+        </div>
+    </div>
+</body>
+</html>
