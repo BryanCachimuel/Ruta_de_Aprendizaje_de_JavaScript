@@ -8,4 +8,11 @@ $(document).ready(function(){
         calcularTotal();
     });
 
+    /* función para agregar un producto */
+    function agregarAlCarrito(producto, precio){
+        let nuevoItem = $("<li>").data("producto", producto).data("precio", precio);
+        nuevoItem.append('<span>Producto ' + producto + '</span>');
+        nuevoItem.append('<button class="eliminar">Eliminar</button>');
+        $("#carrito ul").append(nuevoItem);
+    }
 });
