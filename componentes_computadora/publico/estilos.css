@@ -1,0 +1,25 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+li{
+    margin-bottom: 5px;
+}
+
+.agregar{
+    padding: 5px;
+    width: 70px;
+    background-color: #0000ff;
+    color: #ffffff;
+    border: 1px solid #0000ff;
+    border-radius: 3px;
+}
+
+.agregar:hover{
+    background-color: white;
+    color: #0000ff;
+    border: 1px solid blue;
+}
