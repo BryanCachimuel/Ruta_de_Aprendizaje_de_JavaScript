@@ -8,6 +8,12 @@ $(document).ready(function(){
         calcularTotal();
     });
 
+    /* manejar el click en el boton de eliminar un producto */
+    $("#carrito").on("click", ".eliminar", function(){
+        $(this).closest("li").remove();
+        calcularTotal();
+    });
+
     /* función para agregar un producto */
     function agregarAlCarrito(producto, precio){
         let nuevoItem = $("<li>").data("producto", producto).data("precio", precio);
