@@ -8,7 +8,7 @@ $(document).ready(function(){
         calcularTotal();
     });
 
-    /* manejar el click en el boton de eliminar un producto */
+     /* manejar el click en el boton de eliminar un producto */
     $("#carrito").on("click", ".eliminar", function(){
         $(this).closest("li").remove();
         calcularTotal();
@@ -22,11 +22,13 @@ $(document).ready(function(){
         $("#carrito ul").append(nuevoItem);
     }
 
+
+
     /* función para calcular el total de los productos agregados al carrito de compras */
     function calcularTotal(){
         let total = 0;
         $("#carrito ul li").each(function(){
-            total += $>(this).data("precio");
+            total += $(this).data("precio");
         });
         $("#total").text(total);
     }
