@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body{
@@ -54,6 +55,18 @@ body{
     width: 200px;
     text-align: center;
     transition: 400ms ease-in-out;
+}
+
+#anime_titulo{
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#anime_subtitulos{
+    color: #0000ff;
+    font-size: 17px;
 }
 
 .card:hover{
