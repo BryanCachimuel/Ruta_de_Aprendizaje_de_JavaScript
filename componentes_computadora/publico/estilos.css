@@ -5,6 +5,25 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 
+.app{
+    background: rgb(47, 141, 255);
+    width: 1400px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.titulo{
+   color: #ffffff;
+   text-align: center;
+   font-size: 40px;
+}
+
+.subtitulo{
+    color: #ffff00;
+    margin-left: 50px;
+}
+
 li{
     margin-bottom: 5px;
 }
@@ -16,10 +35,35 @@ li{
     color: #ffffff;
     border: 1px solid #0000ff;
     border-radius: 3px;
+    margin-left: 500px;
 }
 
 .agregar:hover{
     background-color: white;
     color: #0000ff;
-    border: 1px solid blue;
+    border: 1px solid #0000ff;
+}
+
+ul li{
+    background-color: #cfc9c9;
+    list-style: none;
+    width: 1200px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.eliminar{
+    padding: 5px;
+    width: 70px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: 1px solid #ff0000;
+    border-radius: 3px;
+    margin-left: 500px;
+}
+
+.eliminar:hover{
+    background-color: white;
+    color: #ff0000;
+    border: 1px solid #ff0000;
 }
