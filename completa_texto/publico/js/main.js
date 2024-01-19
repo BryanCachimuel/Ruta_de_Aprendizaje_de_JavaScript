@@ -1,8 +1,8 @@
 //arreglo que contiene el orden correcto de las palabras
-let orden_correcto = ['pasear', 'oveja', 'río', 'agua', 'vecina', 'agradeció', 'pastando'];
+let orden_correcto = ['pasear', 'oveja', 'río', 'agua', 'vecina', 'agradeción', 'pastando'];
 
 //Palabras desordenadas para mostrar en opciones
-let palabras_juego = ['agua', 'vecina', 'pasear', 'pastando', 'oveja', 'agradeció', 'río'];
+let palabras_juego = ['agua', 'vecina', 'pasear', 'pastando', 'oveja', 'agradeción', 'río'];
 
 //contenedr de las opciones
 let contenedorOpciones = document.getElementById("opciones");
