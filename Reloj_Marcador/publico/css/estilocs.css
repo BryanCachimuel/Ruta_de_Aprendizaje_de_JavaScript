@@ -13,6 +13,14 @@ body{
     background: #333;
 }
 
+.titulo{
+    margin-right: 250px;
+    margin-bottom: 50px;
+    font-size: 60px;
+    font-family: Impact, Haettenschweiler, sans-serif;
+    color: #00f7ff;
+}
+
 .container{
     position: relative;
     display: flex;
@@ -35,6 +43,24 @@ body{
 
 .clock .text{
     font-size: 35px;
+}
+
+.text-horas{
+    color: #ffe600;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.text-minutos{
+    color: #00f7ff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.text-segundos{
+    color: #ff0000;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .indicador{
