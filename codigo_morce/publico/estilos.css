@@ -40,11 +40,45 @@ body{
     cursor: pointer;
   }
   
-  .trigger:hover {
+.trigger:hover {
     background: #999;
-  }
+}
   
-  #label-0 {
+#label-0 {
     clear: both;
-  }
+}
+
+.light {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -120px;
+    left: 185px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 15px 0 #fff;
+    opacity: 0;
+    animation: none;
+}
   
+#morse-a:checked ~ .light {
+            animation: short-a-1 1s 0s, long-a-2 1s 1s;
+}
+  
+@keyframes short-a-1 {
+    0%, 40%, 60%, 100% {
+        opacity: 0;
+    }
+    41%, 59% {
+        opacity: 1;
+    }
+}
+  
+@keyframes long-a-2 {
+    0%, 15%, 85%, 100% {
+        opacity: 0;
+    }
+    16%, 84% {
+        opacity: 1;
+    }
+}
