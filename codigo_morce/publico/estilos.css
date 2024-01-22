@@ -1,0 +1,27 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #333;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.radio {
+  display: none;
+}
+
+.triggers {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  border-top: 2px solid #888;
+  padding: 5px 0;
+}
