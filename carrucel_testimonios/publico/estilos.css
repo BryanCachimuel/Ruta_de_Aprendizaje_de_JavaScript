@@ -5,6 +5,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #009dfff5;
 }
 
 .testimonial-container{
@@ -12,13 +13,22 @@ body{
     margin: 20px auto;
     overflow: hidden;
     position: relative;
+    margin-top: 60px;
+}
+
+.tituto-testimonio{
+    text-align: center;
+    color: #0000ff;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 .testimonial{
     display: none;
     text-align: center;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 5px;
 }
 
@@ -26,6 +36,10 @@ body{
     display: block;
     margin-top: 10px;
     font-style: italic;
+}
+
+.testimonial-container-button{
+    margin-top: 40px;
 }
 
 #prevBtn{
@@ -38,6 +52,7 @@ body{
     color: #ffffff;
     border-radius: 5px;  
     font-size: 18px;
+    border: 2px solid #0000ff;
 }
 
 #nextBtn{
@@ -50,17 +65,18 @@ body{
     color: #ffffff;
     border-radius: 5px; 
     font-size: 18px; 
+    border: 2px solid #ff0000;
 }
 
 #prevBtn:hover{
     background-color: #ffffff;
     color: #0000ff;
-    border: 1px solid #0000ff;
+    border: 2px solid #0000ff;
 }
 
 #nextBtn:hover{
     background-color: #ffffff;
     color: #ff0000;
-    border: 1px solid #ff0000;
+    border: 2px solid #ff0000;
 }
 
