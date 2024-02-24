@@ -8,7 +8,7 @@
 }
 
 body{
-    background: linear-gradient(#3b1d65,#210d26);
+    background: linear-gradient(#0965e5,#9d0ed1);
     color: #fff;
     height: 100vh;
 }
@@ -23,6 +23,7 @@ header{
 }
 
 header .logo h1{
+    font-size: 40px;
     letter-spacing: 5px;
 }
 
@@ -142,5 +143,5 @@ section{
  }
  
  #home .fila .der .contacto p{
-     font-size: 12px;
+     font-size: 35px;
  }
