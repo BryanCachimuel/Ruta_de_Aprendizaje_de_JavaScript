@@ -12,7 +12,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
 }
 
 .max-view-height {
@@ -24,11 +23,13 @@ flex-direction-column {
 }
 
 #container-tacita {
-    width: 50%;
+    width: 400px;
 }
 
 #container-tacita > video {
-    width: 100%;
+    width: 400px;
+    height: 400px;
+    margin-right: -1000px;
 }
 
 .display-none {
@@ -36,6 +37,8 @@ flex-direction-column {
 }
 
 #container-botones-tacita {
+    margin-top: 400px;
+    margin-right: 500px;
     padding: 10px 0;
     width: 50%;
     justify-content: space-around;
