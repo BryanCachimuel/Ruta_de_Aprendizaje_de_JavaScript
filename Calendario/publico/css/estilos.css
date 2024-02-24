@@ -4,15 +4,17 @@
 }
 
 body{
-    background: -webkit-gradient(linear, left top, right top, from(mediumpurple), to(lightsalmon));
-    background: -webkit-linear-gradient(left, mediumpurple, lightsalmon);
-    background: -o-linear-gradient(left, mediumpurple, lightsalmon);
-    background: linear-gradient(to right, mediumpurple, lightsalmon);
+    background: -webkit-gradient(linear, left top, right top, from(rgb(15, 64, 221)), to(rgb(124, 255, 122)));
+    background: -webkit-linear-gradient(left, rgb(8, 105, 224), rgb(124, 255, 122));
+    background: -o-linear-gradient(left, rgb(8, 105, 224), rgb(124, 255, 122));
+    background: linear-gradient(to right, rgb(8, 105, 224), rgb(124, 255, 122));
 }
 
 .title{
     text-align: center;
-    color: #444;
+    color: #ec0a0a;
+    font-weight: 3800;
+    font-size: 45px;
 }
 
 .calendar{
