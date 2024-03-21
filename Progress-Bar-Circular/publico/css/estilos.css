@@ -24,6 +24,14 @@ body{
     border-radius: 20px;
 }
 
+.progress_titulo{
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgb(0, 166, 255);
+    text-transform: uppercase;
+}
+
 .progress-circular{
     position: relative;
     width: 250px;
