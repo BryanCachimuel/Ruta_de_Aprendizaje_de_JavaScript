@@ -71,7 +71,7 @@ span{
 
 .span4{
     clip-path: polygon(71% 0, 100% 18%, 50% 50%); 
-    background-color: #ffff00;
+    background-color: darkgrey;
 }
 
 .span5{
@@ -90,7 +90,7 @@ span{
 }
 
 .box2 .span1{
-    background: #333;
+    background: darkgreen;
 }
 
 .font{
@@ -119,5 +119,63 @@ span{
     top: 18%;
     right: 34%;
     transform: rotate(-90deg);
+    text-align: center;
+}
+
+.box1 .span4 h5{
+    position: absolute;
+    top: 23%;
+    right: 18%;
+    transform: rotate(-40deg);
+    text-align: center;
+}
+
+.box1 .span5 h5{
+    position: absolute;
+    top: 40%;
+    right: 6%;
+    transform: rotate(-15deg);
+    text-align: center;
+}
+
+.box2 .span1 h5{
+    font-size: 30px;
+    position: absolute;
+    top: 37%;
+    right: 68%;
+    transform: rotate(200deg);
+    text-align: center;
+}
+
+.box2 .span2 h5{
+    position: absolute;
+    top: 28%;
+    right: 54%;
+    transform: rotate(-130deg);
+    text-align: center;
+}
+
+.box2 .span3 h5{
+    position: absolute;
+    top: 15%;
+    right: 40%;
+    transform: rotate(270deg);
+    text-align: center;
+}
+
+.box2 .span4 h5{
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    transform: rotate(310deg);
+    text-align: center;
+}
+
+.box2 .span5 h5{
+    font-size: 20px;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    transform: rotate(-20deg);
     text-align: center;
 }
