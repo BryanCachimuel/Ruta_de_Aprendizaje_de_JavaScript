@@ -32,7 +32,7 @@ function spin(){
     let Camara = shuffle([]);
     let Sillon = shuffle([]);*/
 
-    let resultados = shuffle([
+    let results = shuffle([
         Tv[0],
         Laptop[0],
         Cocina[0],
@@ -41,4 +41,28 @@ function spin(){
         Calefactor[0],
         Monitor[0],
     ]);
+
+    if(Tv.includes(results[0])) SelectItem = "TV Smart TV 34";
+    if(Laptop.includes(results[0])) SelectItem = "Laptop Asus Rock";
+    if(Cocina.includes(results[0])) SelectItem = "Cocina 6 Quemadores";
+    if(Refrigeradora.includes(results[0])) SelectItem = "Refrigeradora";
+    if(Play.includes(results[0])) SelectItem = "Play Station 4 Slim";
+    if(Calefactor.includes(results[0])) SelectItem = "Calefactor";
+    if(Monitor.includes(results[0])) SelectItem = "Monitor LG 19'";
+
+    box.style.setProperty("transition","all ease 5s");
+    box.style.transform = "rotate(" + results[0] + " deg)";
+    element.classList.remove("animate");
+    setTimeout(function(){
+        element.classList.add("animate");
+    },5000);
+
+    setTimeout(function(){
+
+    })
+
+    setTimeout(function(){
+        box.style.setProperty("transition","initial");
+        box.style.transform = "rotate(90deg)";
+    },6000);
 }
