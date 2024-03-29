@@ -1,17 +1,16 @@
-const d = document;
+function shuffle(array){
+    
+    let currentIndex = array.length,
+    randomIndex;
 
-export default function sorteo(btn, selector){
-
-    const obtenerGanador = (selector) => {
-        
+    while(0 !== currentIndex){
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [
+            array[currentIndex],
+            array[currentIndex],
+        ];
     }
-
-    d.addEventListener("click", e => {
-        if(e.target.matches(btn)){
-            let resultado = obtenerGanador(selector);
-            alert(resultado);
-            console.log(resultado);
-        }
-    });
+    return array;
 
 }
