@@ -58,8 +58,16 @@ function spin(){
     },5000);
 
     setTimeout(function(){
-
-    })
+        applause.play();
+        Swal.fire({
+            title: "Felicitaciones",
+            html: "Tu Ganaste" + SelectItem + " | " + "<a href='#' style='text-decoration=none;color:blue'>Clain Now</a>",
+            imageUrl: "./assets/logo.png",
+            imageWidth: 200,
+            imageHeight: 200,
+            imageAlt: "Custom image"
+          });
+    },5500)
 
     setTimeout(function(){
         box.style.setProperty("transition","initial");
