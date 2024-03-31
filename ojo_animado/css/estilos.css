@@ -5,7 +5,9 @@ body{
 }
 
 .titulo{
-  margin-top: 20px;
+  color: #158dc1;
+  text-transform: uppercase;
+  margin-top: -70px;
   font-size: 45px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
@@ -48,7 +50,7 @@ body{
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #617983;
+    background: #158dc1;
     top: 37px;
     left: 37px;
 }
