@@ -2,11 +2,20 @@ const monto = document.getElementById('monto');
 const tiempo = document.getElementById('tiempo');
 const interes = document.getElementById('interes');
 const btnCalcular = document.getElementById('btnCalcular');
+const btnLimpiar = document.getElementById('btnLimpiar');
 const llenarTabla = document.querySelector('#lista-tabla tbody');
+let inputs = document.getElementsByTagName('input');
 
 btnCalcular.addEventListener('click', () => {
     calcularCuota(monto.value, interes.value, tiempo.value);
 })
+
+btnLimpiar.onclick = (e) => {
+    e.preventDefault();
+    for(let i = 0; i < inputs.length; i++){
+        inputs[i].value = '';
+    }
+}
 
 function calcularCuota(monto, interes, tiempo){
 
