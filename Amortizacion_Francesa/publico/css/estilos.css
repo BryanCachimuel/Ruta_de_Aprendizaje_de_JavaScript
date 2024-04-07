@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#contenedor{
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.titulo_calcular{
+    text-align: center;
+    color: #ff0000;
+    margin-bottom: 25px;
+}
