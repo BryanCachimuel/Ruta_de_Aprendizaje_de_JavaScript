@@ -103,10 +103,19 @@ body {
     font-weight: bold;
     color: #f8fafc;
     background-color: #16a34a;
+    border: 2px solid #16a34a;
     padding: 0.5rem 0;
-    border-radius: 3px;
+    border-radius: 7px;
     cursor: pointer;
     width: 100%;
+    transition: .5s;
+}
+
+#calculate:hover{
+    color: #f8fafc;
+    font-size: 1.25rem;
+    background-color: #18181b;
+    border: 2px solid #16a34a;
 }
 
 #result {
