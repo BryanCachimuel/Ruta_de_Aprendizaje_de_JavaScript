@@ -14,7 +14,8 @@ body{
     border: 20px solid #0062ff;
 }
 
-h1{
+.titulo{
+    text-decoration: none;
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 50px;
