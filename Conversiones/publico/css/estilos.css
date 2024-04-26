@@ -10,6 +10,12 @@
     margin-top: 80px;
 }
 
+.enlace{
+    text-decoration: none;
+    color: #dc3714;
+    font-size: 20px;
+}
+
 .contenedor{
     width: 500px;
     height: 400px;
@@ -65,8 +71,9 @@
     margin-top: 25px;
     display: inline;
     text-align: center;
-    width: 200px;
-    height: 45px;
+    width: 400px;
+    height: 60px;
+    font-size: 25px;
     position: relative;
     left: 50px;
     outline: none;
@@ -75,6 +82,7 @@
     color: #fff;
     background-color: #e9320b;
     cursor: pointer;
+    transition: .5s;
 }
 
 .boton:hover{
@@ -82,4 +90,5 @@
     border: 4px solid #dc3714;
     color: #dc3714;
     background-color: #fff;
+    transition: .5s;
 }
