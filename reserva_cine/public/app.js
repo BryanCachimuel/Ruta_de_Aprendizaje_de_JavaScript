@@ -10,6 +10,13 @@ let ticketPrice = +movieSelect.value;
 /* función para contar el total */
 function updateSelectedCount(){
     const selectedSeats = document.querySelectorAll('.row .seat.selected');
+    
+    const seatsIndex = [...selectedSeats].map(function(seat){
+        return [...seats].indexOf(seat);
+    })
+
+    localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
+    
     const selectedSeatsCount = selectedSeats.length;
     //console.log(selectedSeatsCount);
 
@@ -17,6 +24,13 @@ function updateSelectedCount(){
     count.innerHTML = selectedSeatsCount;
     total.innerHTML = selectedSeatsCount * ticketPrice;
 }
+
+/* evento para seleccionar una de las peliculas del select */
+movieSelect.addEventListener('change', e => {
+    ticketPrice = +e.target.value;
+    setMovieData(e.target.selectedIndex, e.target.value)
+    updateSelectedCount();
+})
 
 /* captuta el asiento seleccionado */
 container.addEventListener('click', (e) => {
