@@ -31,6 +31,12 @@ body{
     margin: 20px 0;
 }
 
+.title_panel{
+    text-transform: uppercase;
+    font-size: 27px;
+    color: #ffff00;
+}
+
 .movie-container select{
     background-color: #fff;
     border: 0;
