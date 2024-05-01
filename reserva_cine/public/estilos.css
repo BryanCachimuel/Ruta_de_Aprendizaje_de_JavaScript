@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color: #242333;
+    background-color: #28245f;
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -50,7 +50,7 @@ body{
 }
 
 .seat.selected{
-    background-color: #6fead6;
+    background-color: #02a702;
 }
 
 .seat.occupied{
