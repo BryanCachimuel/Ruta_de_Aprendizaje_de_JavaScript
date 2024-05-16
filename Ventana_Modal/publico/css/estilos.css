@@ -50,9 +50,14 @@ body{
     text-decoration: none;
 }
 
+.nav__link:hover{
+    color:#ffff00;
+    text-decoration: none;
+}
+
 .nav__logo{
-    font-size: 1.8rem;
-    font-weight: 300;
+    font-size: 1.9rem;
+    font-weight: bold;
 }
 
 .nav__menu{
@@ -95,17 +100,20 @@ body{
 .hero__cta{
     text-decoration: none;
     color: #fff;
+    font-size: 17px;
+    font-weight: bold;
     padding: 15px 60px;
     border: 1px solid;
     border-radius: 6px;
     display: inline-block;
     font-weight: 500;
-    transition: background-color .3s;
+    transition: background-color .9s;
 }
 
 .hero__cta:hover{
     background-color: #fff;
     color: #1e3c72;
+    transition: background-color .9s;
 }
 
 .hero__img{
@@ -153,11 +161,12 @@ body{
 
 .modal__title{
     font-size: 2.5rem;
-    color: #F26250;
+    color: #2a5298;
 }
 
 .modal__paragraph{
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .modal__img{
@@ -168,18 +177,20 @@ body{
 .modal__close{
     text-decoration: none;
     color: #fff;
-    background-color: #F26250;
+    font-size: 17px;
+    background-color: #1e3c72;
     padding: 1em 3em;
     border: 1px solid ;
     border-radius: 6px;
     display: inline-block;
     font-weight: 300;
-    transition: background-color .3s;
+    transition: background-color .9s;
 }
 
 .modal__close:hover{
-    color: #F26250;
+    color: #1e3c72;
     background-color: #fff;
+    border: 1px solid #1e3c72;
 }
 
 @media (max-width:800px) {
