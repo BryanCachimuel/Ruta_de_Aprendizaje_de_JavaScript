@@ -46,6 +46,10 @@ h1{
     border-right: none;
 }
 
+.countdown #mes{
+    padding: 10px;
+}
+
 .countdown div p{
     font-weight: 600;
     font-size: 3rem;
@@ -55,6 +59,16 @@ h1{
 .countdown div span{
     color: #a49fa1;
     font-weight: 300;
+}
+
+.countdown #dia{
+    padding: 10px;
+}
+
+.countdown input[type=number] { -moz-appearance:textfield; }
+           
+.countdown #anio{
+    padding: 10px;
 }
 
 .boton{
