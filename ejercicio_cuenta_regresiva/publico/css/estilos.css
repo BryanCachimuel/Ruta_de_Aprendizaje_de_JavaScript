@@ -71,15 +71,63 @@ h1{
     padding: 10px;
 }
 
-.boton{
+.boton-calcular{
     border-radius: 5px;
+    width: 125px;
     padding: 12px 25px;
-    background-color: #ed5a51;
+    background-color: #0000ff;
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
     margin-right: 30px;
     margin-bottom: 30px;
+    transition: .9s;
+}
+
+.boton-limpiar{
+    border-radius: 5px;
+    width: 125px;
+    padding: 12px 25px;
+    background-color: #ff2f00;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    transition: .9s;
+}
+
+.enlace-consulta{
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 125px;
+    padding: 12px 25px;
+    background-color: #008000;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    transition: .9s;
+}
+
+.boton-calcular:hover{
+    background-color: #fff;
+    color: #0000ff;
+    border: 2px solid #0000ff;
+}
+
+.boton-limpiar:hover{
+    background-color: #fff;
+    color: #ff2f00;
+    border: 2px solid #ff2f00;
+}
+
+.enlace-consulta:hover{
+    background-color: #fff;
+    color: #008000;
+    border: 1px solid #008000;
 }
 
 .notify h2{
