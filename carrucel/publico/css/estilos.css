@@ -3,7 +3,7 @@
 }
 
 body {
-	background: #1D1D1F;
+	background: #39393c;
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
 	min-height: 100vh;
@@ -33,7 +33,7 @@ body {
 }
 
 .contenido-principal__contenedor {
-	width: 50%;
+	width: 70%;
 }
 
 .contenido-principal__titulo {
@@ -119,4 +119,3 @@ body {
 		width: 100%;
 	}
 }
-
