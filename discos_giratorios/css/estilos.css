@@ -1,8 +1,10 @@
 body{
-    height: 90vh;
+    height: 93vh;
     display: grid;
     place-items: center;
     background-color: rgba(217, 255, 0, 0.418);
+    border: 15px outset #2662d3;
+    border-radius:25px;
 }
 
 .titulo{
@@ -16,7 +18,7 @@ body{
   position: relative;
   width: 500px;
   height: 500px;
-  background: #2662d3;
+  background: #267cd3;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -32,11 +34,11 @@ body{
 
 .ball-big .plane {
     position: absolute;
-    width: 390px;
-    height: 390px;
+    width: 200px;
+    height: 200px;
     top: 0;
     left: 0;
-    background: #f0089f;
+    background: #f00808ce;
     border-radius: 50%;
     opacity: 0.3;
 }
