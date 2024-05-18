@@ -23,9 +23,11 @@ body{
 
 select{
     font-size: 20px;
+    width: 170px;
     border: none;
-    padding: 5px;
+    padding: 15px;
     border-radius: 60px;
+    background-color: #fff;
 }
 
 .resultado {
@@ -42,3 +44,5 @@ input {
     font-size: 20px;
     text-align: center;
 }
+
+input[type=number] { -moz-appearance:textfield; }
