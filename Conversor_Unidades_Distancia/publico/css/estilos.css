@@ -1,5 +1,7 @@
 body{
-    background-color: rgba(137, 43, 226, 0.553);
+    height: 92vh;
+    background-color: #892be28d;
+    border: 20px solid #54069d;
 }
 
 .contenedor {
