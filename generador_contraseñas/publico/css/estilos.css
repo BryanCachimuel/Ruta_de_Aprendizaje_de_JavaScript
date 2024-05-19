@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
+body{
+    height: 92vh;
+    border: 20px solid #8cdfffe0;
+}
+
 .main-card{
     max-width: 360px;
     background-color: #8cdfffe0;
