@@ -10,6 +10,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: #091921;
+    border: 15px solid #bdbd04;
 }
 
 .clock{
