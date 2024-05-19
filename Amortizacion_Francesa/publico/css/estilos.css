@@ -4,7 +4,13 @@
     box-sizing: border-box;
 }
 
+body{
+    height: 100%;
+    border: 15px solid #0000ff;
+}
+
 #contenedor{
+    margin-top: 15px;
     padding: 20px;
 }
 
@@ -73,4 +79,8 @@
     background-color: #ffffff;
     color: #ff0000;
     transition: .5s;
+}
+
+#lista-tabla{
+    margin-top: 20px;
 }
