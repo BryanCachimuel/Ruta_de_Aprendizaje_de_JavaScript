@@ -6,10 +6,11 @@
 
 body{
     width: 100%;
-    min-height: 100vh;
-    display: grid;
+    min-height: 100vh;  
+    display: grid; 
     place-items: center;
-    background-color: #2aa5a5;
+    background-color: #2a97a5;
+    border: 20px solid #00ffe5;
 }
 
 .container{
@@ -48,13 +49,20 @@ body{
 
 .stick{
     width: 8px;
-    height: 280px;
+    height: 250px;
     background-color: rgb(0, 0, 0, 0.5);
+}
+
+.base{
+    width: 25px;
+    height: 75px;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 1px solid rgb(0, 0, 0, 0.5);
 }
 
 .floor{
     width: 300px;
-    height: 1px;
+    height: 8px;
     background-color: rgb(0, 0, 0, 0.5);
     box-shadow: 0 0 10px 1px #a5682a;
 }
