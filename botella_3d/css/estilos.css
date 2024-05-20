@@ -161,3 +161,45 @@ section{
 	animation-play-state: running;
 }
 
+@keyframes animateshadow{
+	0%{
+		left: 50%;
+		width: 260px;
+		height: 40px;
+		top: calc(50% + 150px);
+
+	}
+
+	25%{
+		left: 55%;
+		width: 265px;
+		height: 30px;
+		top: calc(50% + 130px);
+		
+	}50%{
+		left: 50%;
+		width: 260px;
+		height: 40px;
+		top: calc(50% + 150px);
+		
+	}75%{
+		left: 45%;
+		width: 265px;
+		height: 30px;
+		top: calc(50% + 130px);
+		
+	}100%{
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
