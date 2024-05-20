@@ -11,6 +11,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 25px solid #0000ff;
+    border-radius: 50%;
 }
 
 #title{
