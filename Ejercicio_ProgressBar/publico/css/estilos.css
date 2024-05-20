@@ -37,4 +37,17 @@ body{
     display: flex;
     width: 50%;
     justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+h3{
+    margin-bottom: 15px;
+}
+
+.input{
+    width: 200px;
+}
+
+.maxInput{
+    width: 200px;
 }
