@@ -15,6 +15,14 @@ section{
 
 }
 
+.botella{
+	margin-right: 110px;
+	animation: animate 5s linear infinite;
+	color: #15be05;
+	font-weight: bold;
+	font-size: 35px;
+}
+
 .bowl{
 	position: relative;
 	width: 300px;
