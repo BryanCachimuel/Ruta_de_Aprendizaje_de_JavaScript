@@ -46,9 +46,9 @@ function showWeather(data){
     content.innerHTML = `
         <h5>Clima en ${name}</h5>
         <img src="https://openweathermap.org/img/wn/${arr.icon}@2x.png" alt="icon">
-        <h2>${degrees}°C</h2>
-        <p>Max: ${max}°C</p>
-        <p>Min: ${min}°C</p>
+        <h4>${degrees}°C</h4>
+        <p>Max: ${max}°C  |  Min: ${min}°C </p>
+
     `;
 
     result.appendChild(content);
