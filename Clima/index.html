@@ -11,13 +11,12 @@
 <body>
     <section class="weather-content">
         <h1>Buscador del clima</h1>
-        <div class="result">
-            <p>Agrege cuidad y pais</p>
-        </div>
+        <div class="result"></div>
         <form action="" method="POST" class="get-weather">
-            <input type="text" name="city" id="city" placeholder="Write your city...">
+            <input type="text" name="city" id="city" placeholder="Escriba la ciudad...">
             <select name="" id="country">
-                <option disabled selected value="">Select the country</option>
+                <option disabled selected value="">Seleccione el País</option>
+                <option value="EC">Ecuador</option>
                 <option value="AR">Argentina</option>
                 <option value="CO">Colombia</option>
                 <option value="CR">Costa Rica</option>
@@ -26,7 +25,8 @@
                 <option value="MX">México</option>
                 <option value="PE">Perú</option>
             </select>
-            <input type="submit" name="" id="" value="Get Weather">
+            <input type="submit" value="Obtener Clima">
+            <a href="index.html" class="nueva_consulta">Consultar</a>
         </form>
     </section>
     
