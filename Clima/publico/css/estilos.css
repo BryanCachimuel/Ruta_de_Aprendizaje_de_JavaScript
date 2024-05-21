@@ -1,45 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 body{
     font-family: 'Montserrat', sans-serif;
+    height: 92vh;
+    border: 20px solid #00bfff;
 }
+
 .weather-content {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    max-width: 501px;
+    max-width: 401px;
     text-align: center;
     padding: 20px 20px 50px;
-    margin: 10% auto 0;
+    margin: 5% auto 0;
     background-color: #546785;
     border-radius: 9px;
 }
+
 .weather-content h1{
-    font-size: 34px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 5px;
     color: #FFF;
 }
+
 .weather-content p{
     color: #cfcfd9;
 }
+
 .result{
-    margin-bottom: 8%;
+    margin-bottom: 4%;
 }
+
 .result p{
     margin: 5px 0 5px;
 }
-.result h2{
-    font-size: 70px;
-    line-height: 70px;
+
+.result h4{
+    font-size: 40px;
+    line-height: 40px;
     margin: -10px 0 10px;
     color: #fff;
 }
+
 .result h5{
     font-size: 21px;
     margin: 2px;
     color: #fff;
 }
+
 form {
     display: flex;
     flex-direction: column;
 }
+
 form input[type="text"], form input[type="submit"], form select{
     width: 100%;
     margin: 0px 0 25px;
@@ -56,6 +68,7 @@ form input[type="text"], form input[type="submit"], form select{
     padding-bottom: 12px;
     font-family: 'Montserrat', sans-serif;
 }
+
 form input[type="submit"]{
     width: 100%;
     margin: 0 auto;
@@ -65,10 +78,33 @@ form input[type="submit"]{
     color: #fff;
     font-weight: 600;
     transition: width 1s;
+    margin-bottom: 25px;
 }
+
 form input[type="submit"]:hover{
     width: 50%;
 }
+
+.nueva_consulta{
+    text-decoration: none;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    height: 30px;
+    padding-top: 10px;
+    background-color: #00bfff;
+    border: 1px solid #00bfff;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 400;
+    transition: width 1s;
+}
+
+.nueva_consulta:hover{
+    width: 50%;
+    margin: auto;
+}
+
 .alert-message {
     margin: 24px 0 0;
     color: red!important;
