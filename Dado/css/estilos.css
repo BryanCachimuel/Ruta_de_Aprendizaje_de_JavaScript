@@ -109,3 +109,46 @@ body{
     right: 35px;
   }
   
+.container .cube .right span:nth-child(5),
+.container .cube .bottom span:nth-child(4){
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+}
+
+.container .cube .back pre{
+  font-size: 32px;
+  font-family: 'fontawesome';
+  margin: 0;
+}
+
+.container .cube .back .firstPre{
+  position: absolute;
+  top: 45px;
+  left: 26px;
+}
+
+.container .cube .back .secondPre{
+  position: absolute;
+  bottom: 45px;
+  right: 26px;
+}
+
+@keyframes animate {
+  25%{
+    transform: rotateX(45deg) rotateY(65deg) rotateZ(35deg);
+    top: 0%;
+  }
+  50%{
+    transform: rotateX(145deg) rotateY(165deg) rotateZ(135deg);
+    top: 30%;
+  }
+  75%{
+    transform: rotateX(276deg) rotateY(256deg) rotateZ(246deg);
+    top: 45%;
+  }
+  100%{
+    transform: rotateX(376deg) rotateY(356deg) rotateZ(346deg);
+    top: 60%;
+  }
+}
