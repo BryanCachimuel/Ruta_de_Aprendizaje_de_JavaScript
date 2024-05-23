@@ -19,7 +19,7 @@ body{
     cursor: pointer;
     transform: rotateX(135deg) rotateY(-217deg) rotateZ(-88deg);
   }
-  
+
   .container .cube div{
     position: absolute;
     box-sizing: border-box;
@@ -28,5 +28,44 @@ body{
     width: 100%;
     border:2px solid #eee;
     color: #fff;
+  }
+
+  .container .cube div span{
+    font-size: 32px;
+    font-family: 'fontawesome';
+  }
+
+  .container .cube .front{
+    background: #000;
+    transform: translateZ(100px);
+  }
+
+  .container .cube .back{
+    background: #000;
+    transform: translateZ(-100px) rotateY(180deg);
+  }
+
+  .container .cube .right{
+    background: #000;
+    transform-origin: top right;
+    transform: rotateY(-270deg) translateX(100px);
+  }
+
+  .container .cube .left{
+    background: #000;
+    transform-origin: center left;
+    transform: rotateY(270deg) translateX(-100px);
+  }
+
+  .container .cube .top{
+    background: #000;
+    transform-origin: top center;
+    transform: rotateX(-270deg) translateY(-100px);
+  }
+
+  .container .cube .bottom{
+    background: #000;
+    transform-origin: bottom center;
+    transform: rotateX(270deg) translateY(100px);
   }
   
