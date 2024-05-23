@@ -69,3 +69,43 @@ body{
     transform: rotateX(270deg) translateY(100px);
   }
   
+  container .cube .bottom{
+    background: #000;
+    transform-origin: bottom center;
+    transform: rotateX(270deg) translateY(100px);
+  }
+  
+  .container .cube .front span,
+  .container .cube .left span:nth-child(1),
+  .container .cube .right span:nth-child(1){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .container .cube .top span:nth-child(1),
+  .container .cube .left span:nth-child(2),
+  .container .cube .right span:nth-child(2),
+  .container .cube .bottom span:nth-child(1){
+    position: absolute;
+    top: 35px;
+    left: 35px;
+  }
+
+  .container .cube .top span:nth-child(2),
+  .container .cube .left span:nth-child(3),
+  .container .cube .right span:nth-child(3),
+  .container .cube .bottom span:nth-child(2){
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+  }
+
+  .container .cube .right span:nth-child(4),
+  .container .cube .bottom span:nth-child(3){
+    position: absolute;
+    top: 35px;
+    right: 35px;
+  }
+  
