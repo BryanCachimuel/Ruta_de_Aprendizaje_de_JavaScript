@@ -1,0 +1,32 @@
+body{
+    background: #f0f0f0;
+  }
+
+  .container{
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    font-family: 'fontawesome';
+    height: 100vh;
+  }
+
+  .container .cube{
+    position: relative;
+    left: 45%;
+    top: 40%;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transform: rotateX(135deg) rotateY(-217deg) rotateZ(-88deg);
+  }
+  
+  .container .cube div{
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    border:2px solid #eee;
+    color: #fff;
+  }
+  
