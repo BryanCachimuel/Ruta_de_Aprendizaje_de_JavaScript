@@ -7,6 +7,9 @@
 body{
     background-color: rgb(17, 110, 240);
     user-select: none;
+    height: 94vh;
+    border: 12px solid red;
+    border-radius: 50px;
 }
 
 .titulo{
