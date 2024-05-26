@@ -12,6 +12,11 @@ body{
     background: #222;
 }
 
+.titulo_centrado .titulo{
+    color: #fff;
+    font-size: 40px;
+}
+
 .light{
     position: relative;
     width: 500px;
@@ -19,6 +24,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 170px;
 }
 
 .box{
@@ -50,12 +56,12 @@ body{
 }
 
 .on .bulb{
-    box-shadow: 0 0 50px #fff,
-                0 0 100px #fff,
-                0 0 150px #fff,
-                0 0 200px #fff,
-                0 0 300px #fff,
-                0 0 350px #fff;
+    box-shadow: 0 0 50px #1bd1a7,
+                0 0 100px #1bd1a7,
+                0 0 150px #1bd1a7,
+                0 0 200px #1bd1a7,
+                0 0 300px #1bd1a7,
+                0 0 350px #1bd1a7;
 }
 
 .bulb::before{
@@ -79,14 +85,14 @@ body{
     transform: translate(-50%, -50%);
     width: 120px;
     height: 120px;
-    background: #fff;
+    background: #1bd1a7;
     border-radius: 50%;
     filter: blur(40px);
 }
 
 .on .bulb,
 .on .bulb::before{
-    background: #fff;
+    background: #1bd1a7;
 }
 
 .bulb span:nth-child(1){
@@ -114,11 +120,11 @@ body{
 }
 
 .on .bulb span:nth-child(1){
-    box-shadow: 20px 20px 0 10px #fff;
+    box-shadow: 20px 20px 0 10px #1bd1a7;
 }
 
 .on .bulb span:nth-child(2){
-    box-shadow: -20px 20px 0 10px #fff;
+    box-shadow: -20px 20px 0 10px #1bd1a7;
 }
 
 
