@@ -11,6 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     background: #333;
+    border: 20px ridge #7300ff;
 }
 
 .titulo{
