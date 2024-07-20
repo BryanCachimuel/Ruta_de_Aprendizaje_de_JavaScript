@@ -1,5 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
     background: #f0f0f0;
+    border: 20px outset gray;
+    height: 99vh;
   }
 
   .container{
