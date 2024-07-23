@@ -20,3 +20,14 @@ function calcularPromedioHabilidades(habilidades){
 
     return promedios;
 }
+
+function evaluarAptitud(nombresPokemon, promedios){
+    for(let i = 0; i < habilidades.length; i++){
+        if(promedios[i] >= 70){
+            console.log("El Pokemon " + nombresPokemon[i] + " supera el promedio con: " + promedios[i]);
+        }
+        else{
+            console.log("El Pokemon " + nombresPokemon[i] + " no supera el promedio con: " + promedios[i]);
+        }
+    }
+}
