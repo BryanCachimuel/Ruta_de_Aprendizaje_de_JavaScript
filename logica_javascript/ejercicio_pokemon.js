@@ -31,3 +31,6 @@ function evaluarAptitud(nombresPokemon, promedios){
         }
     }
 }
+
+let promedios = calcularPromedioHabilidades(habilidades);
+evaluarAptitud(promedios);
