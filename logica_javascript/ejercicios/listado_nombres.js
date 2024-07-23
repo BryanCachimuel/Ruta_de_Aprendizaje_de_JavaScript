@@ -10,6 +10,12 @@ function buscarNombre(listaNombre, nombreBuscar){
 }
 
 // Busqueda si está o no el nombre en el listado
-let estaEnListado = buscarNombre(listaNombre, nombreBuscar);
+let estaEnListado = buscarNombre(listadoNombres, nombreBuscar);
 
 // Informar por pantalla
+if(estaEnListado == true){
+    console.log("El nombre está en la lista");
+}
+else{
+    console.log("El nombre no está en la lista");
+}
