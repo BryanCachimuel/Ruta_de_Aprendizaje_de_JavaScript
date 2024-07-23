@@ -13,9 +13,13 @@ function buscarNombre(listaNombre, nombreBuscar){
 let estaEnListado = buscarNombre(listadoNombres, nombreBuscar);
 
 // Informar por pantalla
-if(estaEnListado == true){
-    console.log(`El nombre ${nombreBuscar} nombre está en la lista`);
+function informarPorPantalla(){
+    if(estaEnListado == true){
+        console.log(`El nombre ${nombreBuscar} si está en la lista`);
+    }
+    else{
+        console.log(`El nombre ${nombreBuscar} no está en la lista`);
+    }
 }
-else{
-    console.log(`El nombre ${nombreBuscar} no nombre está en la lista`);
-}
+
+informarPorPantalla();
