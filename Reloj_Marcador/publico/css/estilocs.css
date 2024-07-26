@@ -15,8 +15,9 @@ body{
 }
 
 .titulo{
-    margin-right: 250px;
-    margin-bottom: 50px;
+    position: absolute;
+    text-align: center;
+    margin-bottom: 400px;
     font-size: 60px;
     font-family: Impact, Haettenschweiler, sans-serif;
     color: #00f7ff;
