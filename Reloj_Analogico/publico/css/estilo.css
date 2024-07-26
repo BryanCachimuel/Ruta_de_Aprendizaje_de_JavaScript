@@ -13,6 +13,15 @@ body{
     border: 15px solid #bdbd04;
 }
 
+.reloj{
+    color: #bdbd04;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    margin-bottom: 450px;
+    font-size: 50px;
+}
+
 .clock{
     width: 350px;
     height: 350px;
