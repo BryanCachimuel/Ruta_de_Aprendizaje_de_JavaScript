@@ -62,6 +62,7 @@ button{
     display: block;
     width: fit-content;
     margin: auto;
+    margin-bottom: 25px;
     background-color:#02bfa4;
     border: 2px solid #02bfa4;
     border-radius: 20px;
