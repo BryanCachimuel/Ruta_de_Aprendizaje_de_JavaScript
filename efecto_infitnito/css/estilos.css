@@ -13,6 +13,8 @@ section{
 }
 
 .efecto{
+    position: absolute;
+    margin-bottom: 400px;
     font-weight: bold;
     font-size: 40px;
     color: #ffff00;
