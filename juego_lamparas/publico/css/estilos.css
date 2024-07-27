@@ -19,6 +19,13 @@ body{
     position: relative;
 }
 
+.base{
+    border: 15px solid #626262;
+    width: 60px;
+    height: 35px;
+    margin-left: 120px;
+}
+
 .cable{
     width: 2px;
     margin: auto;
