@@ -30,6 +30,16 @@ input{
     align-items: center;
 }
 
+.titulo{
+    position: absolute;
+    margin-bottom: 500px;
+    color: #ffff00;
+    font-weight: bold;
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
 .moneda,
 .lado{
     width: var(--lado);
