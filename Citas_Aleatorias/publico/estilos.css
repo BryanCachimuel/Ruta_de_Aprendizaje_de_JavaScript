@@ -44,3 +44,38 @@ body{
     text-align: center;
     font-family: 'Courgette', cursive;
 }
+
+#cita{
+    font-size: 32px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+}
+
+#autor{
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Courgette', cursive;
+}
+
+#boton-cambiar-cita{
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #0dacd4;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+#boton-cambiar-cita:hover{
+    background-color: #ffffff;
+    color: #0dacd4;
+}
