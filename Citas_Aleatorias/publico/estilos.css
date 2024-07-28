@@ -14,9 +14,33 @@ body{
     background: linear-gradient(to right, #2d8eb181, #254dc5);
 }
 
+/* Estilos para el contenedor */
+
 .contenido-centrado{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+
+.contenedor{
+    width: 80vw;
+    max-width: 600px;
+    min-height: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border: 5px solid #000000;
+    border-radius: 30px;
+}
+
+.contenedor-interno{
+    width: 80%;
+}
+
+/* Contenido */
+#titulo{
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Courgette', cursive;
 }
