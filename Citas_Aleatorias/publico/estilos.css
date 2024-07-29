@@ -65,10 +65,12 @@ body{
 }
 
 #boton-cambiar-cita{
+    margin-top: 35px;
     width: 180px;
     height: 50px;
     font-size: 20px;
     background-color: #0dacd4;
+    border: 1px solid #0dacd4;
     color: #ffffff;
     font-weight: bold;
     border-radius: 10px;
