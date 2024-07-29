@@ -12,6 +12,8 @@ body{
     height: 100vh;
     text-align: center;
     background: linear-gradient(to right, #2d8eb181, #254dc5);
+    border: 25px solid #0e374389;
+    border-radius: 10px;
 }
 
 /* Estilos para el contenedor */
