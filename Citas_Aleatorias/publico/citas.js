@@ -38,5 +38,13 @@ let citas = [
     {
       'autor': 'Mark Twain',
       'texto': 'Los dos días más importantes de tu vida son el día que naciste y el día que descubres por qué.'
+    },
+    {
+      'autor': 'Neil deGrasse Tyson',
+      'texto': 'Lo bueno de la ciencia es que es cierta independientemente de si crees o no en ella'
+    },
+    {
+      'autor': 'Isaac Asimov ',
+      'texto': 'El aspecto más triste de la vida es que la ciencia reúne el conocimiento más rápidamente que la sociedad la sabiduría'
     }
   ];s
