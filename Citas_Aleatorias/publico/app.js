@@ -13,5 +13,6 @@ function cambiarCita(){
     autorElem.innerHTML = citas[indiceAleatorio].autor;
 }
 
-
 cambiarCita();
+
+botonElem.addEventListener('click', cambiarCita);
