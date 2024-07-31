@@ -1,5 +1,5 @@
 // Areglo para los nombres
-let nombresPokemon = ['Charmander','Pikachu','Bulbasur','Squirtle','Ditto'];
+let nombresPokemon = ['Charmander','Pikachu','Bulbasur','Squirtle','Ditto','Charmeleon'];
 
 // Matriz para sus habilidades
 let habilidades = [
@@ -7,7 +7,8 @@ let habilidades = [
     [64,55,94], // Pikachu
     [80,70,64], // Bulbasur
     [85,90,70], // Squirtle
-    [40,66,57]  // Ditto
+    [40,66,57],  // Ditto
+    [95,71,75] // Charmeleon
 ];
 
 function calcularPromedioHabilidades(habilidades){
