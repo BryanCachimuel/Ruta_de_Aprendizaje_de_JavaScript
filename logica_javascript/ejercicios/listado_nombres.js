@@ -1,5 +1,5 @@
 // Lista de nombres fija
-let listadoNombres = ["Andrea","Gabriel","Adriana","Cristofer","Edgar"];
+let listadoNombres = ["Andrea","Gabriel","Adriana","Cristofer","Edgar", "Irene", "Daysi"];
 
 // Usuario puede ingresar un nombre por teclado.
 let nombreBuscar = prompt("Ingresé el nombre a buscar: ");
@@ -16,6 +16,9 @@ let estaEnListado = buscarNombre(listadoNombres, nombreBuscar);
 function informarPorPantalla(){
     if(estaEnListado == true){
         console.log(`El nombre ${nombreBuscar} si está en la lista`);
+    }
+    else if(estaEnListado == ''){
+        console.log('No a Ingresado ningun nombre');
     }
     else{
         console.log(`El nombre ${nombreBuscar} no está en la lista`);
