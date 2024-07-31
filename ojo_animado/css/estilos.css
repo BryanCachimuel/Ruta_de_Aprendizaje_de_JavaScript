@@ -5,9 +5,10 @@ body{
 }
 
 .titulo{
+  position: relative;
   color: #158dc1;
+  margin-bottom: 70px;
   text-transform: uppercase;
-  margin-top: -70px;
   font-size: 45px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
@@ -16,6 +17,7 @@ body{
 .container{
     position: relative;
     display: flex;
+    margin-top: -250px;
     width: 400px;
     height: 400px;
     overflow: hidden;
