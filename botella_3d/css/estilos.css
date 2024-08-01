@@ -6,6 +6,11 @@
 	box-sizing: border-box;
 }
 
+body{
+	height: 100vh;
+	border: 25px solid #15be05;
+}
+
 section{
 	display: flex;
 	justify-content: center;
