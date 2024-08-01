@@ -5,7 +5,9 @@
 }
 
 body{
+    height: 100%;
     background-color: rgb(161, 248, 248);
+    border: 15px solid #0000ff;
 }
 
 header{
@@ -80,6 +82,7 @@ header form button:hover{
     border: 0;
     width: fit-content;
     margin: auto;
+    margin-bottom: 25px;
     display: block;
     margin-top: 50px;
     background-color: #000;
