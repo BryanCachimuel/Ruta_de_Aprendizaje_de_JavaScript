@@ -1,11 +1,17 @@
-body{
-    font-family: 'Arial', sans-serif;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     background-color: #009dfff5;
+    border: 15px solid #ffff004c;
 }
 
 .testimonial-container{
@@ -23,6 +29,8 @@ body{
     font-weight: bold;
     font-size: 30px;
     text-transform: uppercase;
+    margin-bottom: 65px;
+    letter-spacing: 2px;
 }
 
 .testimonial{
@@ -31,7 +39,7 @@ body{
     padding: 20px;
     border: 4px solid #ccc;
     border-radius: 5px;
-    background-color: rgba(255, 255, 0, 0.299);
+    background-color: #ffff004c;
 }
 
 .author{
