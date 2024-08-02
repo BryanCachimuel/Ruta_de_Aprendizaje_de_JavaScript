@@ -1,7 +1,11 @@
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+   
 }
 
 .container{
@@ -13,8 +17,6 @@ body{
     background: #0766f4;
     font-family: cursive;
     color: #b9b9b9;
-    border: 15px solid #ffff00;
-    height: 60vh;
 }
 
 .cronometro-container{
