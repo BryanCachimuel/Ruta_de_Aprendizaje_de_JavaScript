@@ -1,11 +1,15 @@
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Frances', serif;
     color: #fff;
 }
 
 body{
-    margin: 0;
+    height: 100%;
     background-color: #224870;
+    border: 25px solid #00916c;
 }
 
 .container{
