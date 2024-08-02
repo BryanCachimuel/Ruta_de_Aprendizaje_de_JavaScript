@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Patrick Hand';
 }
@@ -10,13 +12,23 @@ body {
     border: 20px solid #34c0d6;
 }
 
+#titulo_operaciones{
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
 .container {
-    max-width: 500px;
+    max-width: 1000px;
     background: linear-gradient(#34c0d6, #d5f3f7);
     margin: auto;
-    margin-top: 170px;
+    margin-top: 70px;
     padding: 20px;
     text-align: center;
+    border-radius: 20px;
 }
 
 .container-operadores {
