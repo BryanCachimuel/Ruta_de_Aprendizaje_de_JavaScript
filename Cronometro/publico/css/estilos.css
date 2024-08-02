@@ -5,7 +5,16 @@
 }
 
 body{
-   
+   height: 100%;
+   border: 25px solid #e27575;
+   border-radius: 10px;
+}
+
+#titulo_cronometro{
+    margin-bottom: 100px;
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 3px;
 }
 
 .container{
