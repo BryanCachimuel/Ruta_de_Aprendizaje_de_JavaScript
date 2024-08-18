@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproducto de Música</title>
+    <link rel="stylesheet" href="public/estilos.css">
+</head>
+<body>
+    
+    <section class="reproducto-musica">
+        <h1>Título</h1>
+        <p>Nombre</p>
+        <audio id="cancion">
+            <source src="" type="audio/mpeg"/>
+        </audio>
+        <input type="range" value="0" id="progreso">
+        <div class="controles"> 
+            <button class="atras">
+                atras
+            </button>
+            <button class="boton-reproducir-pausa">
+                iniciar
+            </button>
+            <button class="adelante">
+                siguiente
+            </button>
+        </div>
+    </section>
+
+    <script src="public/app.js"></script>
+</body>
+</html>
