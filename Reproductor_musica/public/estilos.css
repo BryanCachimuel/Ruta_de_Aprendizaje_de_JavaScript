@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fjalla+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
+:root{
+    --blanco: rgba(228,228,228,1);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -36,4 +40,28 @@ body::before{
 body > * {
     position: relative;
     z-index: 2;
+}
+
+.reproductor-musica{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    width: 380px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: rgba(228,228,228,0.1);
+}  
+
+.reproductor-musica .titulo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.6;
+}
+
+.reproductor-musica .nombre{
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.6;
 }
