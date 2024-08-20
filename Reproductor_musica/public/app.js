@@ -40,6 +40,8 @@ function reproducirPausar(){
         iconoControl.classList.remove('bi-play-fill');
     }else{
         pausarCancion();
+        iconoControl.classList.add('bi-pause-fill');
+        iconoControl.classList.remove('bi-play-fill');
     }
 }
 
