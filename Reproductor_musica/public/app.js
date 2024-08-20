@@ -36,6 +36,8 @@ function reproducirPausar(){
     reproducirCancion();
     if(cancion.paused){
         reproducirCancion();
+        iconoControl.classList.add('bi-pause-fill');
+        iconoControl.classList.remove('bi-play-fill');
     }else{
         pausarCancion();
     }
@@ -43,6 +45,7 @@ function reproducirPausar(){
 
 function reproducirCancion(){
     cancion.play();
+
 }
 
 function pausarCancion(){
