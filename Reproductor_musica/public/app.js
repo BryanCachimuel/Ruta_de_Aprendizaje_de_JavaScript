@@ -32,4 +32,21 @@ function actualizarInformacion(){
     cancion = addEventListener('loadeddata', function(){});
 }
 
+function reproducirPausar(){
+    reproducirCancion();
+    if(cancion.paused){
+        reproducirCancion();
+    }else{
+        pausarCancion();
+    }
+}
+
+function reproducirCancion(){
+    cancion.play();
+}
+
+function pausarCancion(){
+    cancion.pause();
+}
+
 actualizarInfoCancion();
