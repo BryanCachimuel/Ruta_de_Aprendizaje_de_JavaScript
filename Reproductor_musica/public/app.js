@@ -36,22 +36,35 @@ function reproducirPausar(){
     reproducirCancion();
     if(cancion.paused){
         reproducirCancion();
-        iconoControl.classList.add('bi-pause-fill');
-        iconoControl.classList.remove('bi-play-fill');
     }else{
         pausarCancion();
-        iconoControl.classList.add('bi-pause-fill');
-        iconoControl.classList.remove('bi-play-fill');
     }
 }
 
 function reproducirCancion(){
     cancion.play();
-
+    iconoControl.classList.add('bi-pause-fill');
+    iconoControl.classList.remove('bi-play-fill');
 }
 
 function pausarCancion(){
     cancion.pause();
+    iconoControl.classList.add('bi-pause-fill');
+    iconoControl.classList.remove('bi-play-fill');
 }
+
+cancion.addEventListener('timeupdate', function(){
+    if(!cancion.paused){
+        progreso.value = cancion.currentTime;
+    }
+});
+
+progreso.addEventListener('input', function(){
+    cancion.currentTime = progreso.value;
+});
+
+progreso.addEventListener('change', function(){
+    reproducirCancion();
+});
 
 actualizarInfoCancion();
