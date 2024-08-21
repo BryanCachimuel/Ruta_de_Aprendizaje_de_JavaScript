@@ -67,4 +67,9 @@ progreso.addEventListener('change', function(){
     reproducirCancion();
 });
 
+botonAdelante.addEventListener('click',function(){
+    indiceCancionActual = (indiceCancionActual + 1) % canciones.length;
+    actualizarInfoCancion();
+});
+
 actualizarInfoCancion();
