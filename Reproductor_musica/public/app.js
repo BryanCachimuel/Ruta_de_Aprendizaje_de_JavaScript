@@ -32,6 +32,13 @@ function actualizarInformacion(){
     cancion = addEventListener('loadeddata', function(){});
 }
 
+cancion.addEventListener('loadedmetadata', function(){
+    progreso.max = cancion.duration;
+    progreso.value = cancion.currentTime;
+});
+
+botonReproducirPausar.addEventListener('click', reproducirPausar);
+
 function reproducirPausar(){
     reproducirCancion();
     if(cancion.paused){
