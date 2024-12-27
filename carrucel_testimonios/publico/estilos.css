@@ -37,7 +37,7 @@ body{
     display: none;
     text-align: center;
     padding: 20px;
-    border: 4px solid #ccc;
+    border: 10px solid #ccc;
     border-radius: 5px;
     background-color: #ffff004c;
 }
@@ -64,7 +64,7 @@ body{
     border-radius: 5px;  
     font-size: 18px;
     border: 2px solid #0000ff;
-    transition: .10s;
+    transition: .9s;
 }
 
 #nextBtn{
@@ -78,7 +78,7 @@ body{
     border-radius: 5px; 
     font-size: 18px; 
     border: 2px solid #ff0000;
-    transition: .10s;
+    transition: .9s;
 }
 
 #prevBtn:hover{
