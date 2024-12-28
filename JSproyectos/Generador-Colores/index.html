@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +8,27 @@
 </head>
 <body>
     <div class="container">
+
         <div id="colorDisplay" class="colorDisplay"></div>
+        
         <div class="sliders">
-            <label> :R
+            R: <label> 
                 <input type="range" min="0" max="255" id="rRanger">
             </label>
-
-            <label> :G
+            <br><br>
+            G: <label> 
                 <input type="range" min="0" max="255" id="gRanger">
             </label>
-
-            <label> :B
+            <br><br>
+            B: <label> 
                 <input type="range" min="0" max="255" id="bRanger">
             </label>
-
-            <p id="rgbValue">RGB(0,0,0)</p>
-
-            <button id="copyButton">Copiar</button>
         </div>
+
+        <p id="rgbValue">RGB(0,0,0)</p>
+
+        <button id="copyButton">Copiar</button>
+
     </div>
 
     <script src="script.js"></script>
