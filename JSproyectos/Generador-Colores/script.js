@@ -18,3 +18,16 @@ rRange.addEventListener("input", updateColor)
 gRange.addEventListener("input", updateColor)
 bRange.addEventListener("input", updateColor)
 
+const copyButton = document.getElementById("copyButton")
+
+copyButton.addEventListener(("click"), ()=> {
+    navigator.clipboard.writeText(rgbValue.textContent)
+    .then(() => {
+        alert('Color copiado al portapapeles')
+    })
+
+    .catch(err => {
+        console.log('Error al copiar el texto', err)
+        alert('No se pudo copiar el color')
+    })
+})
