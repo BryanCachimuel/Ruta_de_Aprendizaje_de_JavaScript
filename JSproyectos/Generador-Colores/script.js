@@ -3,3 +3,18 @@ const gRange = document.getElementById("gRanger")
 const bRange = document.getElementById("bRanger")
 const colorDisplay = document.getElementById("colorDisplay")
 const rgbValue = document.getElementById("rgbValue")
+
+function updateColor() {
+    const r = rRange.value;
+    const g = gRange.value;
+    const b = bRange.value;
+
+    const rgbStr = `RGB(${r}, ${g}, ${b})`;
+    colorDisplay.style.backgroundColor = rgbStr
+    rgbValue.textContent = rgbStr
+}
+
+rRange.addEventListener("input", updateColor)
+gRange.addEventListener("input", updateColor)
+bRange.addEventListener("input", updateColor)
+
