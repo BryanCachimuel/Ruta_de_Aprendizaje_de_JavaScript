@@ -1,0 +1,5 @@
+const rRange = document.getElementById("rRanger")
+const gRange = document.getElementById("gRanger")
+const bRange = document.getElementById("bRanger")
+const colorDisplay = document.getElementById("colorDisplay")
+const rgbValue = document.getElementById("rgbValue")
