@@ -15,9 +15,10 @@ body{
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
-h2{
+.titulo_reproductor{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 34px;
 }
 
 .upload{
@@ -28,4 +29,24 @@ h2{
 
 .upload input[type="file"]{
     display: none;
+}
+
+.upload label{
+    display: block;
+    background-color: #5a65ff;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.9s;
+}
+
+.upload label:hover{
+    background-color: white;
+    color: #5a65ff;
+    border: 1px solid #5a65ff;
+}
+
+audio{
+    width: 100%;
 }
