@@ -70,7 +70,7 @@ body{
 }
 
 .l4{
-    background: linear-gradient(rgb(242, 38, 41), rgba(255,255,255,.2));
+    background: linear-gradient(rgb(38, 48, 242), rgba(255,255,255,.2));
 }
 
 .texto{
@@ -105,7 +105,7 @@ body{
 }
 
 .t4{
-    text-shadow: -2px -2px 10px #f22641;
+    text-shadow: -2px -2px 10px #0000ff;
     color: #fff;
 }
 
