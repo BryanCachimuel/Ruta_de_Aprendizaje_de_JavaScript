@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Trebuchet MS', 'Lucida Grande', Arial, sans-serif;
+}
+
+body, .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    min-height: 100vh;
+    background: #4a98f7;
+}
+
+.wrapper{
+    width: 440px;
+    background: #fff;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 30px 30px 38px;
+}
+
+.wrapper img{
+    max-width: 103px;;
+}
