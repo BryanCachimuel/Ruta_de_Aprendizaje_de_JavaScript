@@ -6,7 +6,7 @@ function calcularAmor(){
         const hash = (nombre1 + nombre2).split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
         const amorPorcentaje = hash % 101
         document.getElementById("resultados").style.color = 'green'
-        document.getElementById("resultados").textContent = `${nombre1} tienes un ${amorPorcentaje}% de compatibilidad con ${nombre2}`
+        document.getElementById("resultados").textContent = `❤❤❤ ${nombre1} tienes un ${amorPorcentaje}% de compatibilidad con ${nombre2} ❤❤❤`
     }
     else{
         document.getElementById("resultados").style.color = 'red'
