@@ -19,4 +19,12 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 document.getElementById("searchInput").addEventListener("input", function (e) {
   const searchTerm = e.target.value.toLowerCase();
   const contacts = document.querySelectorAll("#contactList li");
+
+  contacts.forEach((contact) => {
+    if (contact.textContent.toLocaleLowerCase().includes(searchTerm)) {
+      contact.style.display = "";
+    } else {
+      contact.style.display = "none";
+    }
+  });
 });
