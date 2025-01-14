@@ -15,3 +15,8 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
   document.getElementById("contactList").appendChild(listItem);
 });
+
+document.getElementById("searchInput").addEventListener("input", function (e) {
+  const searchTerm = e.target.value.toLowerCase();
+  const contacts = document.querySelectorAll("#contactList li");
+});
