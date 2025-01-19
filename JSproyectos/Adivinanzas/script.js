@@ -26,3 +26,20 @@ function loadNewRiddle() {
 document.addEventListener("DOMContentLoaded", function () {
   loadNewRiddle();
 });
+
+function checkAnswer() {
+    const userAnswer = document.getElementById("answer-input").value.toLowerCase()
+
+    if(userAnswer === currentRiddle.answer) {
+        document.getElementById('result').innerText = '¡Correcto!'
+        document.getElementById('result').style.color = 'green'
+        correctAnswer++;
+        document.getElementById("correctCount").innerText = correctAnswer
+
+        loadNewRiddle()
+
+    } else {
+        document.getElementById('result').innerText = '¡Intentalo de nuevo!'
+        document.getElementById('result').style.color = 'red'
+    }
+}
