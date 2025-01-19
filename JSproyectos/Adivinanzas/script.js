@@ -21,7 +21,7 @@ const riddles = [
 
   {
     question: "Siempre va por la tierra sin ensuciarse. ¿Qué es?",
-    answer: "la sombra"
+    answer: "la sombra",
   },
 ];
 
@@ -43,6 +43,7 @@ function checkAnswer() {
     if(userAnswer === currentRiddle.answer) {
         document.getElementById('result').innerText = '¡Correcto!'
         document.getElementById('result').style.color = 'green'
+        document.getElementById('answer-input').value = ''
         correctAnswer++;
         document.getElementById("correctCount").innerText = correctAnswer
 
@@ -51,5 +52,6 @@ function checkAnswer() {
     } else {
         document.getElementById('result').innerText = '¡Intentalo de nuevo!'
         document.getElementById('result').style.color = 'red'
+        document.getElementById('answer-input').value = ''
     }
 }
