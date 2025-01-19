@@ -13,6 +13,16 @@ const riddles = [
     question: "¿Qué tiene llaves pero no abre puertas?",
     answer: "piano",
   },
+
+  {
+    question: "¿Cómo se denomina a un perro con fiebre?",
+    answer: "hot dog",
+  },
+
+  {
+    question: "Siempre va por la tierra sin ensuciarse. ¿Qué es?",
+    answer: "la sombra"
+  },
 ];
 
 let currentRiddle;
