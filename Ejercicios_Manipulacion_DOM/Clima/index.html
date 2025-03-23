@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+    <link rel="stylesheet" href="./publico/css/estilos.css">
+    <script src="./publico/js/main.js" defer></script>
+</head>
+<body>
+    <section class="weather-content">
+        <h1>Buscador del clima</h1>
+        <div class="result"></div>
+        <form action="" method="POST" class="get-weather">
+            <input type="text" name="city" id="city" placeholder="Escriba la ciudad...">
+            <select name="" id="country">
+                <option disabled selected value="">Seleccione el País</option>
+                <option value="EC">Ecuador</option>
+                <option value="AR">Argentina</option>
+                <option value="CO">Colombia</option>
+                <option value="CR">Costa Rica</option>
+                <option value="ES">España</option>
+                <option value="US">Estados Unidos</option>
+                <option value="MX">México</option>
+                <option value="PE">Perú</option>
+            </select>
+            <input type="submit" value="Obtener Clima">
+            <a href="index.html" class="nueva_consulta">Consultar</a>
+        </form>
+    </section>
+    
+</body>
+</html>

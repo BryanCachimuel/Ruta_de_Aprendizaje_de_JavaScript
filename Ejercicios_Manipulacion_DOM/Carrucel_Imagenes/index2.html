@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel / Slider con Glider.js</title>
+    <link rel="shortcut icon" href="publico2/img/icono.png"> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css"
+    />
+    <link rel="stylesheet" href="publico2/css/estilos.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <main class="contenido-principal">
+        <img
+          src="publico2/img/1.png"
+          alt="Dome of the German Bundestag"
+          class="contenido-principal__imagen"
+        />
+        <div class="contenido-principal__contenedor">
+          <h1 class="contenido-principal__titulo">
+            Edificaciones Expectaculares
+          </h1>
+          <p class="contenido-principal__resumen">
+            Estas edicaciones se encuentran en diferentes partes del mundo y en
+            paises de ensueño.
+          </p>
+          <p class="contenido-principal__resumen">
+            Las edificaciones se mostraran en el apartado inferior.
+          </p>
+        </div>
+      </main>
+
+      <div class="carousel">
+        <div class="carousel__contenedor">
+          <button aria-label="Anterior" class="carousel__anterior">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="carousel__lista">
+            <div class="carousel__elemento">
+              <img src="publico2/img/2.png" alt="Rock and Roll Hall of Fame" />
+              <p>Rock and Roll Hall of Fame</p>
+            </div>
+            <div class="carousel__elemento">
+              <img
+                src="publico2/img/3.png"
+                alt="Constitution Square - Tower I"
+              />
+              <p>Constitution Square - Tower I</p>
+            </div>
+            <div class="carousel__elemento">
+              <img src="publico2/img/4.png" alt="Empire State Building" />
+              <p>Empire State Building</p>
+            </div>
+            <div class="carousel__elemento">
+              <img src="publico2/img/5.png" alt="Harmony Tower" />
+              <p>Harmony Tower</p>
+            </div>
+
+            <div class="carousel__elemento">
+              <img src="publico2/img/6.png" alt="Empire State Building" />
+              <p>Empire State Building</p>
+            </div>
+            <div class="carousel__elemento">
+              <img src="publico2/img/7.png" alt="Harmony Tower" />
+              <p>Harmony Tower</p>
+            </div>
+            <div class="carousel__elemento">
+              <img src="publico2/img/8.png" alt="Empire State Building" />
+              <p>Empire State Building</p>
+            </div>
+            <div class="carousel__elemento">
+              <img src="publico2/img/9.png" alt="Harmony Tower" />
+              <p>Harmony Tower</p>
+            </div>
+          </div>
+
+          <button aria-label="Siguiente" class="carousel__siguiente">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div role="tablist" class="carousel__indicadores"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2c36e9b7b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="publico2/js/main.js"></script>
+  </body>
+</html>

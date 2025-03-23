@@ -1,0 +1,52 @@
+body{
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #282c36;
+    color: #ffffff;
+}
+
+#player{
+    padding: 30px;
+    background-color: #3f4652;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.titulo_reproductor{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 34px;
+}
+
+.upload{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.upload input[type="file"]{
+    display: none;
+}
+
+.upload label{
+    display: block;
+    background-color: #5a65ff;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.9s;
+}
+
+.upload label:hover{
+    background-color: white;
+    color: #5a65ff;
+    border: 1px solid #5a65ff;
+}
+
+audio{
+    width: 100%;
+}

@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: #009dfff5;
+    border: 15px solid #ffff004c;
+}
+
+.testimonial-container{
+    width: 60%;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: 60px;
+    transition: .10s;
+}
+
+.tituto-testimonio{
+    text-align: center;
+    color: #0000ff;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 65px;
+    letter-spacing: 2px;
+}
+
+.testimonial{
+    display: none;
+    text-align: center;
+    padding: 20px;
+    border: 10px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffff004c;
+}
+
+.author{
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.testimonial-container-button{
+    margin-top: 40px;
+}
+
+#prevBtn{
+    height: 50px;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #0000ff;
+    color: #ffffff;
+    border-radius: 5px;  
+    font-size: 18px;
+    border: 2px solid #0000ff;
+    transition: .9s;
+}
+
+#nextBtn{
+    height: 50px;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 5px; 
+    font-size: 18px; 
+    border: 2px solid #ff0000;
+    transition: .9s;
+}
+
+#prevBtn:hover{
+    background-color: #ffffff;
+    color: #0000ff;
+    border: 2px solid #0000ff;
+    transition: .10s;
+}
+
+#nextBtn:hover{
+    background-color: #ffffff;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    transition: .10s;
+}
+
