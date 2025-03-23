@@ -2,8 +2,9 @@
     Suma de dos números
 */
 
-let valorUno = 14;
-let valorDos = 20;
+let valorUno = prompt('Ingrese el valorUno: ');
+let valorDos = prompt('Ingrese el valorDos: ');
 
 let suma = Number(valorUno) + Number(valorDos);
-console.log(`La suma del valorUno: ${valorUno} + valorDos: ${valorDos} es: ${suma}`)
+
+document.writeln(`La suma del valorUno: ${valorUno} + valorDos: ${valorDos} es: ${suma}`)
