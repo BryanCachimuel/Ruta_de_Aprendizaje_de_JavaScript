@@ -81,10 +81,28 @@ let resultado7 = numero1 <= numero3
 let resultado8 = numero1 >= numero3
 let resultado9 = letras == letras2
 
-console.log(resultado)
+/*console.log(resultado)
 console.log(resultado2)
 console.log(resultado3)
 console.log(resultado4)
 console.log(resultado5)
 console.log(resultado6)
-console.log(resultado9)
+console.log(resultado9)*/
+
+/*
+    Operadores Lógicos
+*/
+
+let respuesta = 4 == 4 && 5 >= 1
+let respuesta2 = 10 != 10 && 5 <= 6
+
+let respuesta3 = 25 != 12 || 5 >= 15
+let respuesta4 = 17 > 20 || 5 == 15
+
+let negacion = !(5 == 5)
+
+console.log(respuesta)
+console.log(respuesta2)
+console.log(respuesta3)
+console.log(respuesta4)
+console.log(negacion)
