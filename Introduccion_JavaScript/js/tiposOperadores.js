@@ -101,8 +101,37 @@ let respuesta4 = 17 > 20 || 5 == 15
 
 let negacion = !(5 == 5)
 
-console.log(respuesta)
+/*console.log(respuesta)
 console.log(respuesta2)
 console.log(respuesta3)
 console.log(respuesta4)
-console.log(negacion)
+console.log(negacion)*/
+
+/*
+    Operadores de Incremento y Decremento
+*/
+
+let a = 0;
+a++;
+
+let b = 0;
+++b;
+
+a++;
+a++;
+a++;
+
+++b;
+++b;
+++b;
+
+console.log(a)
+console.log(b)
+
+let c = 10;
+--c;
+--c;
+--c;
+--c;
+
+console.log(c)
