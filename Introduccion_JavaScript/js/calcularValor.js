@@ -8,3 +8,11 @@ let valorTotal = total.toFixed(2)
 document.writeln("Precio sin IVA: ", valorProducto, "<br>")
 document.writeln("Valor IVA: ", iva, "<br>");
 document.writeln("Precio Total: ", valorTotal);
+
+document.writeln("<br><br>")
+
+document.writeln(`<pre>
+Precio sin IVA: $ ${valorProducto} <br>
+Valor IVA:      $ ${iva} <br>
+Precio Total:   $ ${valorTotal}
+</pre>`)
