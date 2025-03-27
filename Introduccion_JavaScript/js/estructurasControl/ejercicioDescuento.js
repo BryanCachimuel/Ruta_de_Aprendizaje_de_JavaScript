@@ -14,15 +14,29 @@
     importe a pagar 
 */
 
-let valorConsumo = 101;
+let valorConsumo = 200;
 let descuento = 0.1;
 let descuento2 = 0.2;
+let descuento3 = 0.3;
 let impuesto = 0.19;
 let ValorTotalSinDescuento = 0;
 let valorTotal = 0;
 let valorDescuento;
 
-if(valorConsumo > 100){
+
+if(valorConsumo >= 200){
+    impuesto = valorConsumo * impuesto
+    ValorTotalSinDescuento = valorConsumo + impuesto;
+    valorDescuento = ((valorConsumo + impuesto)*descuento3).toFixed(2)
+    valorTotal = ValorTotalSinDescuento - valorDescuento;
+    console.log(`Valores Obtenidos
+    ValorConsumo: ${valorConsumo}
+    Impuesto: ${impuesto}
+    ValorTotalSinDescuento = ${ValorTotalSinDescuento}
+    Monto del Descuento: ${valorDescuento}
+    Valor Total: ${valorTotal}`);
+}
+else if(valorConsumo >= 100){
     impuesto = valorConsumo * impuesto
     ValorTotalSinDescuento = valorConsumo + impuesto;
     valorDescuento = ((valorConsumo + impuesto)*descuento2).toFixed(2)
