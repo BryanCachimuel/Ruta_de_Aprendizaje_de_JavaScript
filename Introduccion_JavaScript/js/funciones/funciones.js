@@ -22,3 +22,16 @@ function sumar(valor1, valor2){
 }
 
 sumar(10,20);
+
+// funciones con retorno
+
+function datosPersonas(nombre, edad, telefono){
+    return `Datos Personas: 
+                Nombre: ${nombre}
+                Edad: ${edad}
+                Teléfono: ${telefono}`
+}
+
+let datos = datosPersonas('BLCL',30,'0987574126')
+
+console.log(datos)
