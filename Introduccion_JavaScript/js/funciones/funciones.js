@@ -60,3 +60,17 @@ function sumar(...args){
 
 let n = sumar(4,8,20,17,95,52,14);
 console.log('La suma es: ',n)
+
+/* Funciones Recursivas */
+function factorial(n){
+    console.log(n)
+
+    if(n > 1){
+        n = n * factorial(n - 1);
+        console.log(n);
+    }
+
+    return n;
+}
+
+factorial(5);
