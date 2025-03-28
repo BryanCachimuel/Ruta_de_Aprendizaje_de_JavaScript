@@ -74,3 +74,16 @@ function factorial(n){
 }
 
 factorial(5);
+
+/* Funciones Flecha */
+
+const restar = (a, b) => a - b;
+
+console.log(restar(25,16))
+
+const promedio = (a,b,c,d) => {
+    let promedio = (a + b + c + d)/4;
+    return promedio;
+}
+
+console.log(promedio(8,7,9,10))
