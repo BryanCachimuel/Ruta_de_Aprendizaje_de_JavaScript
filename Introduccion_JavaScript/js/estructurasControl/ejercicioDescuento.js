@@ -14,50 +14,50 @@
     importe a pagar 
 */
 
-let valorConsumo = 200;
+let valorConsumo = parseFloat(prompt('Ingrese el valor de consumo'));
 let descuento = 0.1;
 let descuento2 = 0.2;
 let descuento3 = 0.3;
 let impuesto = 0.19;
-let ValorTotalSinDescuento = 0;
 let valorTotal = 0;
+let valorSubtotal = 0;
 let valorDescuento;
 
 
 if(valorConsumo >= 200){
-    impuesto = valorConsumo * impuesto
-    ValorTotalSinDescuento = valorConsumo + impuesto;
-    valorDescuento = ((valorConsumo + impuesto)*descuento3).toFixed(2)
-    valorTotal = ValorTotalSinDescuento - valorDescuento;
+    valorDescuento = (valorConsumo * descuento3);
+    valorSubtotal = valorConsumo - valorDescuento;
+    impuesto = (valorSubtotal * impuesto).toFixed(2);
+    valorTotal = parseFloat(valorSubtotal) + parseFloat(impuesto);
     console.log(`Valores Obtenidos
     ValorConsumo: ${valorConsumo}
+    Descuento: ${descuento3 * 100}%
+    Monto con Descuento: ${valorSubtotal}
     Impuesto: ${impuesto}
-    ValorTotalSinDescuento = ${ValorTotalSinDescuento}
-    Monto del Descuento: ${valorDescuento}
     Valor Total: ${valorTotal}`);
 }
-else if(valorConsumo >= 100){
-    impuesto = valorConsumo * impuesto
-    ValorTotalSinDescuento = valorConsumo + impuesto;
-    valorDescuento = ((valorConsumo + impuesto)*descuento2).toFixed(2)
-    valorTotal = ValorTotalSinDescuento - valorDescuento;
+else if(valorConsumo >= 100.01){
+    valorDescuento = (valorConsumo * descuento2);
+    valorSubtotal = valorConsumo - valorDescuento;
+    impuesto = (valorSubtotal * impuesto).toFixed(2);
+    valorTotal = parseFloat(valorSubtotal) + parseFloat(impuesto);
     console.log(`Valores Obtenidos
     ValorConsumo: ${valorConsumo}
+    Descuento: ${descuento2 * 100}%
+    Monto con Descuento: ${valorSubtotal}
     Impuesto: ${impuesto}
-    ValorTotalSinDescuento = ${ValorTotalSinDescuento}
-    Monto del Descuento: ${valorDescuento}
     Valor Total: ${valorTotal}`);
 }
 else if(valorConsumo === 100){
-    impuesto = valorConsumo * impuesto
-    ValorTotalSinDescuento = valorConsumo + impuesto;
-    valorDescuento = ((valorConsumo + impuesto)*descuento).toFixed(2)
-    valorTotal = ValorTotalSinDescuento - valorDescuento;
+    valorDescuento = (valorConsumo * descuento);
+    valorSubtotal = valorConsumo - valorDescuento;
+    impuesto = (valorSubtotal * impuesto).toFixed(2);
+    valorTotal = parseFloat(valorSubtotal) + parseFloat(impuesto);
     console.log(`Valores Obtenidos
     ValorConsumo: ${valorConsumo}
+    Descuento: ${descuento * 100}%
+    Monto con Descuento: ${valorSubtotal}
     Impuesto: ${impuesto}
-    ValorTotalSinDescuento = ${ValorTotalSinDescuento}
-    Monto del Descuento: ${valorDescuento}
     Valor Total: ${valorTotal}`);
 }
 else{
