@@ -1,3 +1,5 @@
+
+let valorResultado = document.getElementById('result')
 /* calcular el perimetro */
 const calcularPerimetro = (lado) => lado * 4;
 
@@ -10,6 +12,13 @@ function calcularPerimetroCuadrado(){
     let valor = Number(inputSide.value);
 
     const resultado = `El perímetro del cuadrado es: ${calcularPerimetro(valor)} cm`
+    valorResultado.innerHTML = resultado
+}
 
-    document.getElementById('result').innerHTML = resultado
+function calcularAreaCuadrado(){
+    let inputSide = document.querySelector('#inputSide')
+    let valor = Number(inputSide.value);
+
+    const resultado = `El área del cuadrado es: ${calcularArea(valor)} cm^2`
+    valorResultado.innerHTML = resultado 
 }
