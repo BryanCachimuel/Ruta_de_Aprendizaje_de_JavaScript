@@ -11,9 +11,12 @@
 
 //let palabra = prompt('Ingrese una palabra para analizar');
 
-let palabra = 'sacar';
+let palabra = 'oso';
 
 function verificarPalabra(palabraAnalizar){
+    palabraAnalizar = palabraAnalizar.replace(' ','');
+    palabraAnalizar = palabraAnalizar.toLowerCase();
+
     let analisis = palabraAnalizar.split('');
     let revertir = analisis.reverse();
     let palabraJuntada = revertir.join('')
@@ -28,15 +31,3 @@ function verificarPalabra(palabraAnalizar){
 let resultado = verificarPalabra(palabra)
 
 console.log(resultado)
-
-
-/*
-    Practica 02: Primalidad
-
-    Crear un sistema que detecte si un numero es primo o no
-
-    Para solucionar este problema se requiere que el usuario ingres un numero por teclado
-    y el sistema detecte si es primo o no.
-
-    Un numero primo es aquel que se puede dividir solo dos veces por 1 y por sí misma.
-*/
