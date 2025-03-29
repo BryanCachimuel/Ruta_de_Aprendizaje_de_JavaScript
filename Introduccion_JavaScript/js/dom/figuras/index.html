@@ -20,26 +20,26 @@
 
     <!-- RESPUESTA  -->
     <div class="answer">
-        <p>El área de Cuadrado es: 45 cm</p>
+        <p id="result"></p>
     </div>
 
     <!-- SECCION DE CAJAS   -->
     <section class="figures">
         <div class="box">
             <div class="box-header">
-                <h2>Cuadrao</h2>
+                <h2>Cuadrado</h2>
             </div>
             <div class="box-main">
-                <p class="box-main__text">¿Cuanto mide Cada lado de tu cuadrado?</p>
+                <p class="box-main__text">¿Cuantó mide Cada lado de tu cuadrado?</p>
                 <input 
                     class="box-main__input" 
                     type="number" 
-                    name="side" 
-                    id="side"
+                    name="inputSide" 
+                    id="inputSide"
                     placeholder="Ingrese los lados"
                 >
-                <button class="box-main__btn" type="button">Perímetro</button>
-                <button class="box-main__btn" type="button">Área</button>
+                <button class="box-main__btn" type="button" onclick="calcularPerimetroCuadrado()">Perímetro</button>
+                <button class="box-main__btn" type="button" onclick="calcularAreaCuadrado()">Área</button>
             </div>
         </div>
 
@@ -111,5 +111,7 @@
             </div>
         </div>
     </section>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
