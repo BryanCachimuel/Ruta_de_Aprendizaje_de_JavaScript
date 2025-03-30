@@ -38,8 +38,11 @@
                     id="inputSide"
                     placeholder="Ingrese los lados"
                 >
+                <!-- forma de acceso a las funciones del patron modular
                 <button class="box-main__btn" type="button" onclick="miModulo.cperimetroCuadrado()">Perímetro</button>
-                <button class="box-main__btn" type="button" onclick="miModulo.careaCuadrado()">Área</button>
+                -->
+                <button class="box-main__btn" type="button" id="btnPerimetroCuadrado">Perímetro</button>
+                <button class="box-main__btn" type="button" id="btnAreaCuadrado">Área</button>
             </div>
         </div>
 
@@ -70,7 +73,7 @@
                     id="inputSide3"
                     placeholder="Ingrese lado 03"
                 >
-                <button class="box-main__btn" type="button" onclick="{miModulo.cperimetroTriangulo()}">Perímetro</button>
+                <button class="box-main__btn" type="button" id="btnPerimetroTriangulo">Perímetro</button>
 
                 <p class="box-main__text">¿Cuanto mide base y altura de tu Triangulo?</p>
                 <input 
@@ -88,7 +91,7 @@
                     placeholder="Ingrese Altura"
                 >
 
-                <button class="box-main__btn" type="button" onclick="{miModulo.carearTriangulo()}">Área</button>
+                <button class="box-main__btn" type="button" id="btnAreaTriangulo">Área</button>
             </div>
         </div>
 
@@ -105,14 +108,14 @@
                     id="inputSide6"
                     placeholder="Ingrese Radio"
                 >
-                <button class="box-main__btn" type="button" onclick="{miModulo.cdiametroCirculo()}">Diámetro</button>
-                <button class="box-main__btn" type="button" onclick="{miModulo.cperimetroCirculo()}">Perímetro</button>
-                <button class="box-main__btn" type="button" onclick="{miModulo.careaCirculo()}">Área</button>
+                <button class="box-main__btn" type="button" id="btnDiametroCirculo">Diámetro</button>
+                <button class="box-main__btn" type="button" id="btnPerimetroCirculo">Perímetro</button>
+                <button class="box-main__btn" type="button" id="btnAreaCirculo">Área</button>
             </div>
         </div>
-        <button class="btn-limpiar" type="button" onclick="{miModulo.climpiar()}">Limpiar Campos</button>
+        <button class="btn-limpiar" type="button" id="btnLimpiarCampos">Limpiar Campos</button>
     </section>
 
-    <script src="js/main.js"></script>
+    <script src="js/main2.js"></script>
 </body>
 </html>
