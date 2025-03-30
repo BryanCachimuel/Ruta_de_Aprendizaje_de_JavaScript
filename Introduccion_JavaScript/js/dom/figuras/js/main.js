@@ -44,8 +44,8 @@ function calcularAreaTriangulo(){
     let inputSide4 = Number(document.querySelector('#inputSide4').value);
     let inputSide5 = Number(document.querySelector('#inputSide5').value);
 
-    const resultado = `El área del triangulo es ${areaTriangulo(inputSide4, inputSide5)} cm^2`
-    valorResultado.innerHTML = resultado
+    const resultado = `El área del triangulo es ${areaTriangulo(inputSide4, inputSide5)} cm^2`;
+    valorResultado.innerHTML = resultado;
 }
 
 const diametroCirculo = (radio) => radio * 2;
@@ -53,3 +53,10 @@ const diametroCirculo = (radio) => radio * 2;
 const perimetroCirculo = (diametro) => diametro * Math.PI;
 
 const areaCirculo = (radios) => radios * Math.PI;
+
+function calcularDiametroCirculo(){
+    let inputSide6 = Number(document.querySelector('#inputSide6').value);
+
+    const resultado = `El diámetro del circulo es: ${diametroCirculo(inputSide6)} cm`;
+    valorResultado.innerHTML = resultado;
+}
