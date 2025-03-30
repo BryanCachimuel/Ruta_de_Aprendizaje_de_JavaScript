@@ -1,18 +1,22 @@
 
 let valorResultado = document.getElementById('result')
 
+/*
+    Cuadrado
+*/
+
 /* calcular el perimetro */
-const calcularPerimetro = (lado) => lado * 4;
+const perimetroCuadrado = (lado) => lado * 4;
 
 /* calcular el arear */
-const calcularArea =( lado) => lado * lado;
+const areaCuadrado =( lado) => lado * lado;
 
 /* para darle funcionalidad al boton perimetro del cuadradp*/
 function calcularPerimetroCuadrado(){
     let inputSide = document.querySelector('#inputSide')
     let valor = Number(inputSide.value);
 
-    const resultado = `El perímetro del cuadrado es: ${calcularPerimetro(valor)} cm`
+    const resultado = `El perímetro del cuadrado es: ${perimetroCuadrado(valor)} cm`
     valorResultado.innerHTML = resultado
 }
 
@@ -21,9 +25,13 @@ function calcularAreaCuadrado(){
     let inputSide = document.querySelector('#inputSide')
     let valor = Number(inputSide.value);
 
-    const resultado = `El área del cuadrado es: ${calcularArea(valor)} cm^2`
+    const resultado = `El área del cuadrado es: ${areaCuadrado(valor)} cm^2`
     valorResultado.innerHTML = resultado 
 }
+
+/*
+    Triángulo
+*/
 
 const perimetroTrianglo = (lado1, lado2, base) => lado1 + lado2 + base;
 
@@ -48,15 +56,42 @@ function calcularAreaTriangulo(){
     valorResultado.innerHTML = resultado;
 }
 
+/*
+    Círculo
+*/
+
 const diametroCirculo = (radio) => radio * 2;
 
-const perimetroCirculo = (diametro) => diametro * Math.PI;
+const perimetroCirculo = (radio) => diametroCirculo(radio) * Math.PI;
 
-const areaCirculo = (radios) => radios * Math.PI;
+const areaCirculo = (radio) => (radio * radio) * Math.PI;
 
+// para darle funcionalidad al boton para calcular el diámetro del circulo
 function calcularDiametroCirculo(){
     let inputSide6 = Number(document.querySelector('#inputSide6').value);
 
     const resultado = `El diámetro del circulo es: ${diametroCirculo(inputSide6)} cm`;
+    valorResultado.innerHTML = resultado;
+}
+
+// para darle funcionalidad al boton para calcular el diámetro del circulo
+function calcularperimetroCirculo(){
+    let inputSide6 = Number(document.querySelector('#inputSide6').value);
+
+    // resulado del calculo con 2 decimales
+    let transformandoResultado = perimetroCirculo(inputSide6).toFixed(2)
+
+    const resultado = `El peímetro del circulo es: ${transformandoResultado} cm`;
+    valorResultado.innerHTML = resultado;
+}
+
+// para darle funcionalidad al boton para calcular el área del circulo
+function calcularAreaCirculo(){
+    let inputSide6 = Number(document.querySelector('#inputSide6').value);
+
+    // resulado del calculo con 2 decimales
+    let transformandoResultado = areaCirculo(inputSide6).toFixed(2);
+
+    const resultado = `El área del circulo es: ${transformandoResultado} cm^2`;
     valorResultado.innerHTML = resultado;
 }
