@@ -117,6 +117,22 @@ body{
     background-color: #4c5580;
 }
 
+.btn-limpiar{
+    padding: 10px;
+    margin-left: 350px;
+    font-size: 18px;
+    width: 270px;
+    background-color:#253062;
+    color: #fff;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.btn-limpiar:hover{
+    background-color: #1b2550;
+    cursor: pointer;
+}
+
 /*Web Responsivo*/
 
 @media screen and (max-width:1021px){

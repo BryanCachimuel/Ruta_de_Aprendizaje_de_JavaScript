@@ -95,3 +95,13 @@ function calcularAreaCirculo(){
     const resultado = `El área del circulo es: ${transformandoResultado} cm^2`;
     valorResultado.innerHTML = resultado;
 }
+
+function limpiarCampos(){
+    let inputSide = document.querySelector('#inputSide').value = '';
+    let inputSide1 = document.querySelector('#inputSide1').value = '';
+    let inputSide2 = document.querySelector('#inputSide2').value = '';
+    let inputSide3 = document.querySelector('#inputSide3').value = '';
+    let inputSide4 = document.querySelector('#inputSide4').value = '';
+    let inputSide5 = document.querySelector('#inputSide5').value = '';
+    let inputSide6 = document.querySelector('#inputSide6').value = '';
+}
