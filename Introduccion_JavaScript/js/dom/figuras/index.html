@@ -76,19 +76,19 @@
                 <input 
                     class="box-main__input" 
                     type="number" 
-                    name="side" 
-                    id="side"
+                    name="inputSide4" 
+                    id="inputSide4"
                     placeholder="Ingrese Base"
                 >
                 <input 
                     class="box-main__input" 
                     type="number" 
-                    name="side" 
-                    id="side"
+                    name="inputSide5" 
+                    id="inputSide5"
                     placeholder="Ingrese Altura"
                 >
 
-                <button class="box-main__btn" type="button">Área</button>
+                <button class="box-main__btn" type="button" onclick="{calcularAreaTriangulo()}">Área</button>
             </div>
         </div>
 
@@ -101,13 +101,13 @@
                 <input 
                     class="box-main__input" 
                     type="number" 
-                    name="side" 
-                    id="side"
+                    name="inputSide6" 
+                    id="inputSide6"
                     placeholder="Ingrese Radio"
                 >
-                <button class="box-main__btn" type="button">Diámetro</button>
-                <button class="box-main__btn" type="button">Perímetro</button>
-                <button class="box-main__btn" type="button">Área</button>
+                <button class="box-main__btn" type="button" onclick="{calcularDiametroCirculo()}">Diámetro</button>
+                <button class="box-main__btn" type="button" onclick="{calcularperimetroCirculo()}">Perímetro</button>
+                <button class="box-main__btn" type="button" onclick="{calcularAreaCirculo()}">Área</button>
             </div>
         </div>
     </section>
