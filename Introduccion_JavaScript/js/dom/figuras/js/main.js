@@ -29,6 +29,7 @@ const perimetroTrianglo = (lado1, lado2, base) => lado1 + lado2 + base;
 
 const areaTriangulo = (base, altura) => (base * altura)/2;
 
+/* para darle funcionalidad al boton del perímetro del triangulo */
 function calcularPerimetroTriangulo(){
     let inputSide1 = Number(document.querySelector('#inputSide1').value);
     let inputSide2 = Number(document.querySelector('#inputSide2').value);
@@ -38,6 +39,7 @@ function calcularPerimetroTriangulo(){
     valorResultado.innerHTML = resultado
 }
 
+/* para darle funcionalidad al boton del área del triangulo */
 function calcularAreaTriangulo(){
     let inputSide4 = Number(document.querySelector('#inputSide4').value);
     let inputSide5 = Number(document.querySelector('#inputSide5').value);
@@ -45,3 +47,9 @@ function calcularAreaTriangulo(){
     const resultado = `El área del triangulo es ${areaTriangulo(inputSide4, inputSide5)} cm^2`
     valorResultado.innerHTML = resultado
 }
+
+const diametroCirculo = (radio) => radio * 2;
+
+const perimetroCirculo = (diametro) => diametro * Math.PI;
+
+const areaCirculo = (radios) => radios * Math.PI;
