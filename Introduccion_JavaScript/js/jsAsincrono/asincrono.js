@@ -39,4 +39,19 @@ const getUsuarios = () => {
     }, 1500);
 }
 
-getUsuarios()
+//getUsuarios()
+
+// Ejemplo de Promesas
+let promesa = new Promise((resolve, reject) => {
+    if (false) {
+        resolve('La operación fue exitosa')
+    } else {
+        reject('Hubo un error')
+    }
+});
+
+promesa.then(response => {
+    console.log('Response: ' + response)
+}).catch( error => {
+    console.log('Error: ' + error)
+})
