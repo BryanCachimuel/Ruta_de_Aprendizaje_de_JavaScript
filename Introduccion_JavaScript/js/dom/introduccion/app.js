@@ -15,11 +15,11 @@ document.querySelector('#caja1')
 document.getElementById('caja1')
 
 // Manipular un elemento mediante el uso de variables
-let caja1 = document.querySelector('#caja1')
+let caja1 = document.getElementById('caja1')
 
 // crear un elemento dentro de documento
 let btn = document.createElement('button')
-caja1.append(btn)
+caja1.appendChild(btn)
 btn.innerText = 'Boton'
 
 // agregar una clase al boton creado
