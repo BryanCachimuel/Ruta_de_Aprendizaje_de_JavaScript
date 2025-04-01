@@ -31,6 +31,11 @@ const getUsuarios = () => {
             console.log(`${id} - ${usuario.email} - ${usuario.nombre}`)
         }, 1500, userIDs[1]);
 
+        setTimeout((idPermiso) => {
+            const persomisos = ['admin','creador']
+            console.log(persomisos)
+        }, 1500, userIDs[2]);
+
     }, 1500);
 }
 
