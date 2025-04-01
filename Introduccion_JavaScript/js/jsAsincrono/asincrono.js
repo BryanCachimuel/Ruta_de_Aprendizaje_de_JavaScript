@@ -43,7 +43,7 @@ const getUsuarios = () => {
 
 // Ejemplo de Promesas
 let promesa = new Promise((resolve, reject) => {
-    if (false) {
+    if (true) {
         resolve('La operación fue exitosa')
     } else {
         reject('Hubo un error')
@@ -54,4 +54,18 @@ promesa.then(response => {
     console.log('Response: ' + response)
 }).catch( error => {
     console.log('Error: ' + error)
+})
+
+// Ejemplo 2
+let miPromesa = Promise.resolve('Comida');
+miPromesa.then(resp => console.log(resp))
+
+//Ejemplo 3
+let miPromesa2 = new Promise(function(resolve, reject){
+    setTimeout(() => resolve(4), 2000)
+})
+
+miPromesa2.then(resp => {
+    resp += 5;
+    console.log(resp)
 })
