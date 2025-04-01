@@ -41,6 +41,17 @@ const getUsuarios = () => {
 
 //getUsuarios()
 
+// De Callbacks a Promesas
+const getUsuariosIDs = new Promise((response, reject) => {
+    setTimeout(() => {
+        response([101, 102, 103, 104])
+    }, 1500)
+});
+
+getUsuariosIDs.then(IDs => {
+    console.log(IDs)
+})
+
 // Ejemplo de Promesas
 let promesa = new Promise((resolve, reject) => {
     if (true) {
