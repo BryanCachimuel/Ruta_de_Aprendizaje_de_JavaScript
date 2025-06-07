@@ -15,9 +15,10 @@ if(!exists) {
 } else {
     const cards = await page.$$eval(".videoCard", (results) =>
         results.map((element) => {
-            const img = element.querySelector("img").getAttribute("src");
-            const title = element.querySelector(".card-body .card-title").innerText;
-            return { img, title }
+            const img = element.querySelector("img")?.getAttribute("src");
+            const title = element.querySelector(".card-body .card-title")?.innerText;
+            const description = element.querySelector(".card-body .card-text")?.innerText;
+            return { img, title, description }
         })
     );
 
