@@ -10,4 +10,11 @@ function calculateBMI() {
         document.getElementById("result").style.color = '#eb0909'
         document.getElementById("result").textContent = `Introduce Valores Validos`
     }
+
+    borrarCampos()
+}
+
+function borrarCampos() {
+    document.getElementById("weight").value = ''
+    document.getElementById("height").value = ''
 }
