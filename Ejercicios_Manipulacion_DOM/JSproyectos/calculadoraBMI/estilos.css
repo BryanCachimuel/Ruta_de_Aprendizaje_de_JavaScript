@@ -43,3 +43,29 @@ body {
     font-size: 1rem;
     box-shadow: 0 10px 30px rgb(0, 0, 0, 0.1);
 }
+
+.button-calculate {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0854c7;
+    color: #fff;
+    border: 1px solid #0854c7;;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.button-calculate:hover {
+    background-color: #fff;
+    color: #0854c7;
+    border: 1px solid #0854c7;
+}
+
+#result {
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+}
