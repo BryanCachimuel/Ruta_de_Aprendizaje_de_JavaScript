@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
     <!-- Principal -->
-     
+     <main>
+        <!-- para la imagen -->
+        <section class="imagen">
+            <figure class="imagen-logo">
+                <img class="logo" src="publico/imagen/logo.png" alt="imagen-logo">
+            </figure>
+        </section>
 
+        <!-- para el generador -->
+        <section class="formulario">
+            <div class="contenedor">
+                <form>
+                    <h1 class="form-titulo">Generador de Contraseñas</h1>
+                    <div class="form-caracteres">
+                        <label for="cantidad" class="caracteres"><span><i class="fa-solid fa-asterisk"></i></span>
+                            Cantidad de Caracteres:
+                        </label>
+                        <input type="number" id="cantidad" class="cantidad" min="8" placeholder="Mínimo 8 caracteres">
+                    
+                        <div class="form-botones">
+                            <button type="button" id="btn-generar" class="btn-generar">Generar Contraseña</button>
+                            <button type="button" id="btn-limpiar" class="btn-limpiar">Limpiar Contraseña</button>
+                        </div>
+                    </div>
+
+                    <div class="form-contrasenia">
+                        <label for="contraseña"><span><i class="fa-solid fa-lock"></i></span>
+                            Contraseña Generada:
+                        </label>
+                        <input type="text" id="contraseña" class="contraseña" readonly placeholder="Contraseña">
+                        <button type="button" class="btn-copiar" onclick="copiarContrasenia()">Copiar Contraseña</button>
+
+                        <div id="alerta" class="alerta"></div>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+     </main>
 </body>
 </html>
