@@ -5,6 +5,8 @@
 :root {
     --White: #ffffff;
     --Blue-White: #039ffa;
+    --Grey-Black: #4d4e50;
+    --Gradient: linear-gradient(90deg, var(--Blue-White), var(--Grey-Black));
 }
 
 * {
@@ -19,4 +21,36 @@
 ::selection {
     background: var(--Blue-White);
     color: var(--White);
+}
+
+.body {
+    height: 100%;
+}
+
+/* sección principal */
+main {
+    display: flex;
+    flex-direction: column;
+    background: var(--White);
+}
+
+.imagen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--Gradient);
+}
+
+.imagen-logo {
+    background: transparent;
+}
+
+.logo {
+    background: transparent;
+    width: 75%;
 }
