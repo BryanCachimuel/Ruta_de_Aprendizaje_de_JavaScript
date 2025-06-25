@@ -1,0 +1,22 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Estilos globales */
+:root {
+    --White: #ffffff;
+    --Blue-White: #039ffa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--White);
+}
+
+/* cada que se selecciona con con el cursor cualquier elemento se cambia el color a tipo celeste */ 
+::selection {
+    background: var(--Blue-White);
+    color: var(--White);
+}
