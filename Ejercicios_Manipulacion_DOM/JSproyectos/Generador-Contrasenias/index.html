@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Contraseñas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="publico/css/estilos.css">
 </head>
 <body>
     
@@ -23,7 +24,7 @@
                 <form>
                     <h1 class="form-titulo">Generador de Contraseñas</h1>
                     <div class="form-caracteres">
-                        <label for="cantidad" class="caracteres"><span><i class="fa-solid fa-asterisk"></i></span>
+                        <label for="cantidad" class="caracteres"><span class="fal fa-asterisk"><i class="fa-solid fa-asterisk"></i></span>
                             Cantidad de Caracteres:
                         </label>
                         <input type="number" id="cantidad" class="cantidad" min="8" placeholder="Mínimo 8 caracteres">
@@ -35,7 +36,7 @@
                     </div>
 
                     <div class="form-contrasenia">
-                        <label for="contraseña"><span><i class="fa-solid fa-lock"></i></span>
+                        <label for="contraseña"><span class="fal fa-lock"><i class="fa-solid fa-lock"></i></span>
                             Contraseña Generada:
                         </label>
                         <input type="text" id="contraseña" class="contraseña" readonly placeholder="Contraseña">
@@ -48,5 +49,7 @@
             </div>
         </section>
      </main>
+
+     <script src="publico/js/main.js"></script>
 </body>
 </html>
