@@ -6,6 +6,9 @@
     --White: #ffffff;
     --Blue-White: #039ffa;
     --Grey-Black: #4d4e50;
+    --Greey: #f3f3f3;
+    --Rgba: rgba(94, 104, 121, 0.288);
+    --Black: #000000;
     --Gradient: linear-gradient(90deg, var(--Blue-White), var(--Grey-Black));
 }
 
@@ -54,3 +57,37 @@ main {
     background: transparent;
     width: 75%;
 }
+
+.formulario {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    background: var(--White);
+    border: 0.1px solid var(--Greey);
+    position: absolute;
+    right: 15%;
+    border-radius: 10px;
+    box-shadow: -1px -1px 1px var(--Greey), 2px 2px 5px var(--Rgba);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
+    width: 410px;
+    z-index: 900;
+}
+
+.form-titulo {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 28px;
+    text-align: center;
+    color: var(--Black);
+}
+
+
+
