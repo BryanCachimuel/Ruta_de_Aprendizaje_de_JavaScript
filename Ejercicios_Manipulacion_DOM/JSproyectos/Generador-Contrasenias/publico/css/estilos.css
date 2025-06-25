@@ -9,6 +9,10 @@
     --Greey: #f3f3f3;
     --Rgba: rgba(94, 104, 121, 0.288);
     --Black: #000000;
+    --Gray: #b9b9b9;
+    --Gree: #c6c6c6;
+    --Green: #4caf50;
+    --Red: #f44336;
     --Gradient: linear-gradient(90deg, var(--Blue-White), var(--Grey-Black));
 }
 
@@ -88,6 +92,58 @@ main {
     text-align: center;
     color: var(--Black);
 }
+
+.form-caracteres,
+.form-contrasenia {
+    color: var(--Black);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.fal {
+    color: var(--Gray);
+    position: absolute;
+    line-height: 112px;
+    width: 50px;
+    text-align: center;
+    background: transparent;
+}
+
+.cantidad,
+.contraseña {
+    border: 1px solid var(--Gree);
+    border-radius: 8px;
+    font-size: 15px;
+    height: 32px;
+    outline: none;
+    padding-left: 55px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.form-botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.alerta {
+    display: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.success {
+    border-color: var(--Green);
+    color: var(--White);
+}
+
+.error {
+    border-color: var(--Red);
+    color: var(--White);
+}
+
+
 
 
 
