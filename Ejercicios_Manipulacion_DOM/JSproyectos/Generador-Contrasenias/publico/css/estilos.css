@@ -242,7 +242,35 @@ main {
 }
 
 @media(max-width: 450px) {
-    
+    .imagen {
+        height: 70%;
+    }
+
+    .logo {
+        height: 60%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .contenedor {
+        width: 90%;
+        position: absolute;
+        left: 5%;
+        top: 45%;
+    }
+
+    .btn-generar,
+    .btn-limpiar,
+    .btn-copiar {
+        font-size: 11px;
+    }
+
+    .cantidad,
+    .contraseña {
+        font-size: 13px;
+    }
 }
 
 
