@@ -189,6 +189,46 @@ main {
     opacity: 0.9;
 }
 
+/* Media */
+@media(max-width: 1200px) {
+    .imagen {
+        width: 100%;
+        height: 70%;
+    }
+
+    .logo {
+        height: 80%;
+        width: 60%;
+        position: absolute;
+        top: -10%;
+        right: 20%;
+    }
+
+    .formulario {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .contenedor {
+        width: 90%;
+        position: absolute;
+        left: 4%;
+        top: 50%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+@media(max-width: 910px) {
+    
+}
+
+@media(max-width: 450px) {
+    
+}
+
 
 
 
