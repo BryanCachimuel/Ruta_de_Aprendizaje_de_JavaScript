@@ -13,3 +13,12 @@ ESPECIALES = "!@#$%^&*()"
 
 const caracteres = MAYUSCULAS + MINUSCULAS + NUMEROS + ESPECIALES
 
+// Asignar eventos
+btnGenerar.addEventListener("click", generarContrasenia);
+btnLimpiar.addEventListener("click", limpiarFormulario);
+
+function generarContrasenia(e) {
+    e.preventDefault();
+    const longitud = parseInt(cantidad.value);
+    
+}
