@@ -222,7 +222,23 @@ main {
 }
 
 @media(max-width: 910px) {
-    
+    .imagen {
+        height: 70%;
+    }
+
+    .logo {
+        height: 80%;
+        width: 80%;
+        position: absolute;
+        right: 10%;
+    }
+
+    .contenedor {
+        width: 90%;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+    }
 }
 
 @media(max-width: 450px) {
