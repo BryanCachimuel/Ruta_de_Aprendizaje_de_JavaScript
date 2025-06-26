@@ -13,6 +13,7 @@
     --Gree: #c6c6c6;
     --Green: #4caf50;
     --Red: #f44336;
+    --Grey-Medium: #ffffff73;
     --Gradient: linear-gradient(90deg, var(--Blue-White), var(--Grey-Black));
 }
 
@@ -143,6 +144,50 @@ main {
     color: var(--White);
 }
 
+.btn-copiar {
+    background: var(--Gradient);
+    border: none;
+    border-radius: 8px;
+    color: var(--White);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    height: 32px;
+    margin: 15px 0;
+    outline: none;
+    width: 100%;
+    box-shadow: -3px -3px 7px var(--Greey), 2px 2px 5px var(--Rgba);
+}
+
+.btn-generar,
+.btn-limpiar {
+    background: var(--Gradient);
+    border: none;
+    border-radius: 8px;
+    color: var(--White);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    height: 32px;
+    margin: 15px 0;
+    outline: none;
+    width: 49%;
+    box-shadow: -3px -3px 7px var(--Greey), 2px 2px 5px var(--Rgba);
+}
+
+.btn-generar:active,
+.btn-limpiar:active,
+.btn-copiar:active {
+    box-shadow: inset 2px 2px 5px var(--Grey-Black),
+    inset -5px -5px 10px var(--Grey-Medium);
+    color: var(--Gray);
+}
+
+.btn-generar:hover,
+.btn-limpiar:hover,
+.btn-copiar:hover {
+    opacity: 0.9;
+}
 
 
 
