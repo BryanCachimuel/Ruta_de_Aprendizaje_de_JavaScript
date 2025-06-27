@@ -28,3 +28,16 @@ function generarContrasenia(e) {
     contrasenia.value = password;
     validarContrasenia(password);
 }
+
+// función para determinar si la longitud ingresada es valida
+function longitudValida(logintud) {
+    if(isNaN(logintud) || logintud == "") {
+        mostrarAlerta("No ha ingresado un número de caracteres valido.", "error");
+        return false;
+    }
+    else if(isNaN(logintud) || logintud < 8) {
+        mostrarAlerta("La cantidad de caracteres debe ser mayor o igual a 8.", "error");
+        return false;
+    }
+    return true;
+}
