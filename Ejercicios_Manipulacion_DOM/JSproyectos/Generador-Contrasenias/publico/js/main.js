@@ -68,3 +68,14 @@ function limpiarFormulario(e) {
     cantidad.value = "";
     ocultarAlerta();
 }
+
+// función para copiar la contraseña al portapapeles
+function copiarContrasenia() {
+    if(!contrasenia.value) {
+        mostrarAlerta("No hay ninguna contraseña para pegar","error");
+        return;
+    }
+    contrasenia.select();
+    document.execCommand("copy");
+    mostrarAlerta("Contraseña copiada al portapapeles","success");
+}
