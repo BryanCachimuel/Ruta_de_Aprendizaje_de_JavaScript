@@ -30,14 +30,26 @@ function generarContrasenia(e) {
 }
 
 // función para determinar si la longitud ingresada es valida
-function longitudValida(logintud) {
-    if(isNaN(logintud) || logintud == "") {
-        mostrarAlerta("No ha ingresado un número de caracteres valido.", "error");
+function longitudValida(longitud) {
+    if (isNaN(longitud) || longitud == "") {
+        mostrarAlerta("No has ingresado un número de caracter valido.", "error");
         return false;
-    }
-    else if(isNaN(logintud) || logintud < 8) {
+    } else if (isNaN(longitud) || longitud < 8) {
         mostrarAlerta("La cantidad de caracteres debe ser mayor o igual a 8.", "error");
         return false;
     }
     return true;
+}
+
+// Mostrar alerta con mensaje y tipo
+function mostrarAlerta(mensaje, tipo) {
+    alerta.textContent = mensaje;
+    alerta.className = `alerta ${tipo}`;
+    alerta.style.display = "block";
+    setTimeout(ocultarAlerta, 5000);
+}
+
+// Ocultar alerta
+function ocultarAlerta() {
+    alerta.style.display = "none";
 }
