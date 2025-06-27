@@ -60,3 +60,11 @@ function validarContrasenia(password) {
     esFuerte ? mostrarAlerta("La contraseña es fuerte.", "success") 
              : mostrarAlerta("Contraseña debil. Incluye mayúsculas, minúsculas, números y caracteres especiales.","error");
 }
+
+// función para limpiar los campos
+function limpiarFormulario(e) {
+    e.preventDefault();
+    contrasenia.value = "";
+    cantidad.value = "";
+    ocultarAlerta();
+}
