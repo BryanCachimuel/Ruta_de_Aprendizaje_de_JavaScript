@@ -135,12 +135,12 @@ main {
 }
 
 .success {
-    border-color: var(--Green);
+    background-color: var(--Green);
     color: var(--White);
 }
 
 .error {
-    border-color: var(--Red);
+    background-color: var(--Red);
     color: var(--White);
 }
 
