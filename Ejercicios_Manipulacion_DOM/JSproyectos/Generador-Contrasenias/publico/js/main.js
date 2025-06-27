@@ -53,3 +53,10 @@ function mostrarAlerta(mensaje, tipo) {
 function ocultarAlerta() {
     alerta.style.display = "none";
 }
+
+// validar la fuerza de la contraseña
+function validarContrasenia(password) {
+    let esFuerte = /[A-Z]/.test(password) && /[a-z]/.test(password) && /[0-9]/.test(password) && /[!@#$%^&*()]/.test(password);
+    esFuerte ? mostrarAlerta("La contraseña es fuerte.", "success") 
+             : mostrarAlerta("Contraseña debil. Incluye mayúsculas, minúsculas, números y caracteres especiales.","error");
+}
