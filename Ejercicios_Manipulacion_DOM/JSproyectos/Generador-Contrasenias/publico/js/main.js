@@ -17,8 +17,14 @@ const caracteres = MAYUSCULAS + MINUSCULAS + NUMEROS + ESPECIALES
 btnGenerar.addEventListener("click", generarContrasenia);
 btnLimpiar.addEventListener("click", limpiarFormulario);
 
+// función para generar la contraseña
 function generarContrasenia(e) {
     e.preventDefault();
     const longitud = parseInt(cantidad.value);
     
+    if(!longitudValida(longitud)) return;
+
+    const password = Array.from({ length: longitud }, () => caracteres.charAt(Math.floor(Math.random() * caracteres.length))).join("");
+    contrasenia.value = password;
+    validarContrasenia(password);
 }
