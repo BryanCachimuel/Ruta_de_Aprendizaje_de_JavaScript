@@ -6,6 +6,7 @@
     --White: #fff;
     --Purple: #814096;
     --Pink: #f83292;
+    --Greey: #f3f3f3;
     --Gradient: linear-gradient(90deg, var(--Purple), var(--Pink));
 }
 
@@ -19,4 +20,30 @@
 ::selection {
     background: var(--Pink);
     color: var(--White);
+}
+
+/* sección principal */
+.contenedor {
+    width: 400px;
+    height: 95vh;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--White);
+    box-shadow: -1px -1px 20px var(--Greey);
+}
+
+form {
+    align-items: center;
+    background: var(--White);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.form-titulo {
+    font-size: 24px;
+    background: var(--White);
+    color: var(--Purple);
 }
