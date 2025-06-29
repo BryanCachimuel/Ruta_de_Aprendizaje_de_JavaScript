@@ -1,0 +1,22 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+
+/* Variables globales css */
+:root {
+    --White: #fff;
+    --Purple: #814096;
+    --Pink: #f83292;
+    --Gradient: linear-gradient(90deg, var(--Purple), var(--Pink));
+}
+
+/* Selector universal */
+* {
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive;
+    background: var(--Gradient);
+}
+
+::selection {
+    background: var(--Pink);
+    color: var(--White);
+}
