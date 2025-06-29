@@ -7,6 +7,7 @@
     --Purple: #814096;
     --Pink: #f83292;
     --Greey: #f3f3f3;
+    --Rgba: rgba(0,0,0,.1);
     --Gradient: linear-gradient(90deg, var(--Purple), var(--Pink));
 }
 
@@ -46,4 +47,36 @@ form {
     font-size: 24px;
     background: var(--White);
     color: var(--Purple);
+}
+
+.text-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--Pink);
+    border-radius: 5px;
+    background: var(--White);
+    font-size: 15px;
+    height: 32px;
+    font-weight: 500;
+    outline: none;
+}
+
+.text-input::placeholder {
+    color: var(--Purple);
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    background: var(--Gradient);
+    color: var(--White);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 1px 12px var(--Rgba);
+    transition: all .3s linear;
 }
