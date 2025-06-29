@@ -80,3 +80,27 @@ button {
     box-shadow: 0 1px 12px var(--Rgba);
     transition: all .3s linear;
 }
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.btn-descargar {
+    display: none;
+}
+
+canvas {
+    display: none;
+}
+
+img {
+    height: 180px;
+    border: none;
+}
+
+/* Media query */
+@media(max-width: 910px) {
+    .contenedor {
+        width: 100%;
+    }
+}
