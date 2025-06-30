@@ -98,6 +98,10 @@ img {
     border: none;
 }
 
+.qrcode {
+    background: var(--White);
+}
+
 /* Media query */
 @media(max-width: 910px) {
     .contenedor {
