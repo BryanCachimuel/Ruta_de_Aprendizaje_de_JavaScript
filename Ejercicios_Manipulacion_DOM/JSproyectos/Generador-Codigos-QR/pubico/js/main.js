@@ -47,3 +47,17 @@ function descargarCodigoQr() {
         link.click();
     }
 }
+
+function mostrarAviso(mensaje) {
+    aviso.style.color = "#f83292";
+    aviso.style.background = "none";
+    aviso.style.fontWeight = "800";
+    aviso.textContent = mensaje;
+    aviso.style.visibility = "visible";
+
+    setTimeout(() => {
+        aviso.style.display = "none";
+    }, 4000);
+ }
+
+ 
