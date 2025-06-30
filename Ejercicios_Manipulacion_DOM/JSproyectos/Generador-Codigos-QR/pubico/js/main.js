@@ -5,6 +5,8 @@ const contenedorQR = document.querySelector(".qrcode");
 const botonDescargar = document.querySelector(".btn-descargar");
 const aviso = document.querySelector(".text-aviso");
 
+let QR;
+
 /* Principal */
 botonGenerar.addEventListener("click", e => {
     e.preventDefault();
@@ -16,5 +18,22 @@ botonGenerar.addEventListener("click", e => {
         generarCodigoQr(texto);
         botonDescargar.style.display = "block";
     }
+});
 
-})
+botonDescargar.addEventListener("click", () => {
+    descargarCodigoQr();
+});
+
+function generarCodigoQr(texto) {
+    if(QR) {
+        QR.clear();
+    }
+
+    QR = new QRious({
+        value: texto,
+        size: 228
+    });
+
+    contenedorQR.innerHTML = "";
+    contenedorQR.appendChild(QR.image);
+}
