@@ -37,3 +37,13 @@ function generarCodigoQr(texto) {
     contenedorQR.innerHTML = "";
     contenedorQR.appendChild(QR.image);
 }
+
+function descargarCodigoQr() {
+    if(QR) {
+        const qrImageData = QR.toDataURL("image/png");
+        const link = document.createElement("a");
+        link.href = qrImageData;
+        link.download = "codigo_qr.png";
+        link.click();
+    }
+}
