@@ -43,6 +43,11 @@ form {
     height: 100%;
 }
 
+.imagen-logo {
+    width: 70px;
+    height: 80px;
+}
+
 .form-titulo {
     font-size: 24px;
     background: var(--White);
