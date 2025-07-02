@@ -68,6 +68,11 @@ body{
     z-index: 9;
 }
 
+.texto-aviso {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .text{
     font-size: 25px;
     font-weight: 600;
