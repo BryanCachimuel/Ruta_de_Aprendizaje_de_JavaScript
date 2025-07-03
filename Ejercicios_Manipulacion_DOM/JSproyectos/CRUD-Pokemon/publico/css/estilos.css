@@ -5,6 +5,7 @@
 :root {
     --table-background-color: #fff;
     --primary-color: #17a2b8;
+    --table-border-color: #dee2e6;
 }
 
 * {
@@ -23,4 +24,40 @@ body {
     padding: 20px;
     min-height: 100vh;
     overflow-y: auto;
+}
+
+/* Sección main */
+.table-content {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--table-background-color);
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.title {
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid var(--table-border-color);
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+th, td::first-letter {
+    text-transform: uppercase;
 }
