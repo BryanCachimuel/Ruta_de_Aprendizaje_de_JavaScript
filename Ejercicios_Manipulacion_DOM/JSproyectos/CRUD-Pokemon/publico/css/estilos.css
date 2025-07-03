@@ -13,6 +13,7 @@
     --accept-color: #007bff;
     --accept-hover-color: #0069d9;
     --cancel-color: #6c757d;
+    --cancel-hover-color: #5a6268;
 }
 
 * {
@@ -142,4 +143,37 @@ td img {
     background-color: var(--cancel-color);
     color: var(--table-background-color);
     display: none;
+}
+
+.btn-cancel:hover {
+    background-color: var(--cancel-hover-color);
+}
+
+.fa-solid {
+    margin: 0 8px;
+}
+
+/* Media Query */
+@media(max-width: 1200px) {
+    .table-content {
+        width: 90%;
+    }
+}
+
+@media(max-width: 910px) {
+    .table-content {
+        width: 100%;
+    }
+}
+
+@media(max-width: 549px) {
+    body {
+        width: auto;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .table-content {
+        width: min-content;
+    }
 }
