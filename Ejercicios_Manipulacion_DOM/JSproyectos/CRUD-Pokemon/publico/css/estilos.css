@@ -8,6 +8,11 @@
     --table-border-color: #dee2e6;
     --table-row-hover-color: #e2e6ea;
     --primary-hover-color: #138496;
+    --delete-color: #dc3545;
+    --delete-hover-color: #c82333;
+    --accept-color: #007bff;
+    --accept-hover-color: #0069d9;
+    --cancel-color: #6c757d;
 }
 
 * {
@@ -114,4 +119,27 @@ td img {
 
 .btn-edit:hover {
     background-color: var(--primary-hover-color);
+}
+
+.btn-delete {
+    background-color: var(--delete-color);
+}
+
+.btn-delete:hover {
+    background-color: var(--delete-hover-color);
+}
+
+.btn-accept {
+    background-color: var(--accept-color);
+    display: none;
+}
+
+.btn-accept:hover {
+    background-color: var(--accept-hover-color);
+}
+
+.btn-cancel {
+    background-color: var(--cancel-color);
+    color: var(--table-background-color);
+    display: none;
 }
