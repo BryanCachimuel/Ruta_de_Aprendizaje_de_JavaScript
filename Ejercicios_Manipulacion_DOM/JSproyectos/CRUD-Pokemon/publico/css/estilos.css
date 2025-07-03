@@ -1,0 +1,26 @@
+/* Fuente */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+/* Variables globales */
+:root {
+    --table-background-color: #fff;
+    --primary-color: #17a2b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "inter", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-y: auto;
+}
