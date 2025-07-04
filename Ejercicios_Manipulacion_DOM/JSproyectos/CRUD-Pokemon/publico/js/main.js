@@ -25,3 +25,24 @@ const fetchPokemonData = async (pokemonName) => {
         return null;
     }
 } 
+
+/* Agregar una nueva fila a la tabla */
+const addRowToTable = async (pokemonName) => {
+    const pokemonData = await fetchPokemonData(pokemonName);
+    if(!pokemonData) {
+        alert("Pokemon no encontrado. Verifica el nombre e intenta de nuevo");
+        return;
+    }
+
+    const tableBody = document.querySelector("#table-list tbody");
+    const { sprites, name, types } = pokemonData;
+
+    tableBody.insertAdjacentHTML("beforeend", `
+       <tr>
+            <td><img src="${sprites.front_default}" alt="${name}"></td>
+            <td>${name}</td>
+            <td>${types.map(t => t.type.name).join(", ")}</td>
+            ${colEditHtml}
+        </tr>
+    `);
+}
