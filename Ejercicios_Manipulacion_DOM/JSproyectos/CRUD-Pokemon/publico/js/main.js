@@ -41,7 +41,7 @@ const addRowToTable = async (pokemonName) => {
        <tr>
             <td><img src="${sprites.front_default}" alt="${name}"></td>
             <td>${name}</td>
-            <td>${types.map(t => t.type.name).join(", ")}</td>
+            <td>${types.map(t => t.type.name).join(",")}</td>
             ${colEditHtml}
         </tr>
     `);
@@ -50,6 +50,19 @@ const addRowToTable = async (pokemonName) => {
 /* Inicializar la tabla con algunos de los pokemones */
 const initializeTable = () => ["pikachu","charmander","bulbasaur","squirtle"].forEach(addRowToTable);
 
+/* Agregar un nuevo pokemon */
+const rowAddNew = async (tabId) => {
+    const pokemonName = prompt("Ingresa el nombre del pokemon:")
+
+    if(pokemonName && pokemonName.trim() !== "") {
+        await addRowToTable(pokemonName);
+        params.onAdd();
+    }else {
+        alert("Por favor, ingresa un nombre válido de pokemon");
+    }
+}
+
+/* Función principal para configurar la tabla como editable */
 const setEditable = (options) => {
     const defaults = {
         columnsEd: null,
@@ -61,9 +74,9 @@ const setEditable = (options) => {
     };
 
     params = { ...defaults, ...options };
-    colsEdit = params.columnsEd.split(", ").map(Number) || null;
+    colsEdit = params.columnsEd?.split(", ").map(Number) || null;
 
-    document.querySelectorAll("table-list tbody tr").forEach(row => {
+    document.querySelectorAll("#table-list tbody tr").forEach(row => {
         if(!row.querySelector('td[name = "buttons"]')) {
             row.insertAdjacentHTML("beforeend", colEditHtml);
         }
@@ -75,4 +88,12 @@ const setEditable = (options) => {
 /* Inicializar */
 document.addEventListener("DOMContentLoaded", () => {
     initializeTable();
+    setEditable({
+        columnsEd: "1,2",
+        addButton: document.getElementById("add"),
+        onEdit: () => {},
+        onBeforeDelete: () => {},
+        onDelete: () => {},
+        onAdd: () => {}
+    });
 });
