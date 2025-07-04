@@ -50,6 +50,28 @@ const addRowToTable = async (pokemonName) => {
 /* Inicializar la tabla con algunos de los pokemones */
 const initializeTable = () => ["pikachu","charmander","bulbasaur","squirtle"].forEach(addRowToTable);
 
+const setEditable = (options) => {
+    const defaults = {
+        columnsEd: null,
+        addButton: null,
+        onEdit: () => {},
+        onBeforeDelete: () => {},
+        onDelete: () => {},
+        onAdd: () => {}
+    };
+
+    params = { ...defaults, ...options };
+    colsEdit = params.columnsEd.split(", ").map(Number) || null;
+
+    document.querySelectorAll("table-list tbody tr").forEach(row => {
+        if(!row.querySelector('td[name = "buttons"]')) {
+            row.insertAdjacentHTML("beforeend", colEditHtml);
+        }
+    });
+
+    params.addButton?.addEventListener("click", () => rowAddNew("table-list"));
+};
+
 /* Inicializar */
 document.addEventListener("DOMContentLoaded", () => {
     initializeTable();
