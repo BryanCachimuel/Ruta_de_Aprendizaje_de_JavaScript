@@ -50,6 +50,17 @@ const addRowToTable = async (pokemonName) => {
 /* Inicializar la tabla con algunos de los pokemones */
 const initializeTable = () => ["pikachu","charmander","bulbasaur","squirtle"].forEach(addRowToTable);
 
+/* Cambiar el estado de una fila a modo de edición */
+const setEditMode = (button) => {
+    const buttons = button.closest("div.btn-group").querySelectorAll("button");
+    buttons.forEach(btn => btn.style.display = btn.id === "bAcep" || btn.id === "bCanc" ? "inline-block" : "none");
+    button.closest("tr").setAttribute("id", "editing");
+}
+
+/* Verificar si la columna es editable */
+const isEditable = (index) => !colsEdit || colsEdit.includes(index);
+
+/* Edición de una fila en una tabla */
 const rowEdit = (button) => {
     setEditMode(button);
     button.closest("tr").querySelectorAll('td:not([name="buttons"])').forEach(td => {
@@ -85,10 +96,10 @@ const setEditable = (options) => {
     };
 
     params = { ...defaults, ...options };
-    colsEdit = params.columnsEd?.split(", ").map(Number) || null;
+    colsEdit = params.columnsEd?.split(",").map(Number) || null;
 
     document.querySelectorAll("#table-list tbody tr").forEach(row => {
-        if(!row.querySelector('td[name = "buttons"]')) {
+        if(!row.querySelector('td[name="buttons"]')) {
             row.insertAdjacentHTML("beforeend", colEditHtml);
         }
     });
