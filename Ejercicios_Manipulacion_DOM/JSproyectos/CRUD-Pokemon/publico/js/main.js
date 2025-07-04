@@ -46,3 +46,11 @@ const addRowToTable = async (pokemonName) => {
         </tr>
     `);
 }
+
+/* Inicializar la tabla con algunos de los pokemones */
+const initializeTable = () => ["pikachu","charmander","bulbasaur","squirtle"].forEach(addRowToTable);
+
+/* Inicializar */
+document.addEventListener("DOMContentLoaded", () => {
+    initializeTable();
+});
