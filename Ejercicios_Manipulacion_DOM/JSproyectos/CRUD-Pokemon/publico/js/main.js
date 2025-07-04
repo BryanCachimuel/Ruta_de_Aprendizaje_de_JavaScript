@@ -14,3 +14,14 @@ const colEditHtml = `
         </div>
     </td>
 `;
+
+/* Llamada de la API */
+const fetchPokemonData = async (pokemonName) => {
+    try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`);
+        return response.ok ? await response.json() : console.warn("Pokemon no encontrado: ", pokemonName);
+    } catch (error) {
+        console.error("Error al buscar Pokemon: ", error);
+        return null;
+    }
+} 
