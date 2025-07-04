@@ -50,6 +50,17 @@ const addRowToTable = async (pokemonName) => {
 /* Inicializar la tabla con algunos de los pokemones */
 const initializeTable = () => ["pikachu","charmander","bulbasaur","squirtle"].forEach(addRowToTable);
 
+const rowEdit = (button) => {
+    setEditMode(button);
+    button.closest("tr").querySelectorAll('td:not([name="buttons"])').forEach(td => {
+        if(isEditable(td.cellIndex)) {
+            td.setAttribute("contenteditable", "true");
+            td.classList.add("cell-editing");
+            td.setAttribute("data-old", td.textContent);
+        }
+    });
+}
+
 /* Agregar un nuevo pokemon */
 const rowAddNew = async (tabId) => {
     const pokemonName = prompt("Ingresa el nombre del pokemon:")
