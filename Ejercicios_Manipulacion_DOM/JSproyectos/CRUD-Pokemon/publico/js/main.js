@@ -94,7 +94,13 @@ const rowAcep = async (button) => {
         typeCell.textContent = typeCell.getAttribute("data-old");
     }
 
+    row.querySelectorAll("td.cell-editing").forEach(td => {
+        td.removeAttribute("contenteditable");
+        td.classList.remove("cell-editing");
+    });
     
+    setNormalMode(button);
+    params.onEdit();
 }
 
 /* Agregar un nuevo pokemon */
