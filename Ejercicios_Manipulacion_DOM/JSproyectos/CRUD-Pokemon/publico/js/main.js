@@ -84,6 +84,15 @@ const rowAcep = async (button) => {
         nameCell.textContent = nameCell.getAttribute("data-old");
         return;
     }
+    
+    const pokemonData = await fetchPokemonData(pokemonName);
+    if(pokemonData) {
+        cells[0].innerHTML = `<img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}"></img>`;
+        typeCell.textContent = pokemonData.types.map(t => t.type.name).join(", ");
+    }else {
+        alert("Nombre de Pokemon incorrecto. Por favor, verifica el nombre e intenta de nuevo");
+        typeCell.textContent = typeCell.getAttribute("data-old");
+    }
 
     
 }
