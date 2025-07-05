@@ -9,7 +9,7 @@ const colEditHtml = `
         <div class="btn-group">
             <button id="bEdit" class="btn btn-edit" onClick="rowEdit(this);"><i class="fas fa-edit"></i></button>
             <button id="bElim" class="btn btn-delete" onClick="rowElim(this);"><i class="fas fa-trash"></i></button>
-            <button id="bAcep" class="btn btn-accept" onClick="rowAcept(this);"><i class="fas fa-check"></i></button>
+            <button id="bAcep" class="btn btn-accept" onClick="rowAcep(this);"><i class="fas fa-check"></i></button>
             <button id="bCanc" class="btn btn-cancel" onClick="rowCancel(this);"><i class="fas fa-times"></i></button>
         </div>
     </td>
@@ -72,13 +72,20 @@ const rowEdit = (button) => {
     });
 }
 
+/* Cambiar el estado de una fila a modo normal */
+const setNormalMode = (button) => {
+    const buttons = button.closest("div.btn-group").querySelectorAll("button");
+    buttons.forEach(btn => btn.style.display = btn.id === "bEdit" || btn.id === "bElim" ? "inline-block" : "none");
+    button.closest("tr").removeAttribute("id");
+}
+
 const rowAcep = async (button) => {
     const row = button.closest("tr");
     const cells = row.querySelectorAll("td");
     const nameCell = cells[1];
     const typeCell = cells[2];
 
-    const pokemonName = nameCell.textContent().trim().toLowerCase();
+    const pokemonName = nameCell.textContent.trim().toLowerCase();
     if(!pokemonName) {
         alert("El nombre del Pokemon no puede estar vacío. Por favor ingresa un nombre");
         nameCell.textContent = nameCell.getAttribute("data-old");
