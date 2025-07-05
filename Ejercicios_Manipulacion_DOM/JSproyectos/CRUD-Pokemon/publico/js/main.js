@@ -35,13 +35,14 @@ const addRowToTable = async (pokemonName) => {
     }
 
     const tableBody = document.querySelector("#table-list tbody");
-    const { sprites, name, types } = pokemonData;
+    const { sprites, name, types, weight } = pokemonData;
 
     tableBody.insertAdjacentHTML("beforeend", `
        <tr>
             <td><img src="${sprites.front_default}" alt="${name}"></td>
             <td>${name}</td>
             <td>${types.map(t => t.type.name).join(",")}</td>
+            <td>${weight}</td>
             ${colEditHtml}
         </tr>
     `);
