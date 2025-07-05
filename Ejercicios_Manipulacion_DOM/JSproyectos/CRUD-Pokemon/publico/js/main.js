@@ -91,6 +91,12 @@ const rowCancel = (button) => {
     setNormalMode(button);
 }
 
+/* Eliminar una fila de la tabla */
+const rowElim = (button) => {
+    button.closest("tr").remove();
+    params.onDelete();
+}
+
 /* Aceptar, editar y confirmar los cambios */
 const rowAcep = async (button) => {
     const row = button.closest("tr");
