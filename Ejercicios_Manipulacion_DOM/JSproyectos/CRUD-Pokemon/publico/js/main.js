@@ -72,6 +72,22 @@ const rowEdit = (button) => {
     });
 }
 
+const rowAcep = async (button) => {
+    const row = button.closest("tr");
+    const cells = row.querySelectorAll("td");
+    const nameCell = cells[1];
+    const typeCell = cells[2];
+
+    const pokemonName = nameCell.textContent().trim().toLowerCase();
+    if(!pokemonName) {
+        alert("El nombre del Pokemon no puede estar vacío. Por favor ingresa un nombre");
+        nameCell.textContent = nameCell.getAttribute("data-old");
+        return;
+    }
+
+    
+}
+
 /* Agregar un nuevo pokemon */
 const rowAddNew = async (tabId) => {
     const pokemonName = prompt("Ingresa el nombre del pokemon:")
