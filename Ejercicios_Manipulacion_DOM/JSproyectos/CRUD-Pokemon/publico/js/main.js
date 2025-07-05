@@ -79,6 +79,19 @@ const setNormalMode = (button) => {
     button.closest("tr").removeAttribute("id");
 }
 
+/* Cancelar la edición de una fila en la tabla */
+const rowCancel = (button) => {
+    const row = button.closest("tr");
+    row.querySelectorAll("td.cell-editing").forEach(td => {
+        td.textContent = td.getAttribute("data-old");
+        td.removeAttribute("contenteditable");
+        td.classList.remove("cell-editing");
+    });
+
+    setNormalMode(button);
+}
+
+/* Aceptar, editar y confirmar los cambios */
 const rowAcep = async (button) => {
     const row = button.closest("tr");
     const cells = row.querySelectorAll("td");
