@@ -127,3 +127,34 @@ main {
     height: 400px;
     position: relative;
 }
+
+/* Productos */
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.products .product {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%);
+}
+
+.products .product li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.products .product li:hover {
+    transform: translateY(-15px);
+}
