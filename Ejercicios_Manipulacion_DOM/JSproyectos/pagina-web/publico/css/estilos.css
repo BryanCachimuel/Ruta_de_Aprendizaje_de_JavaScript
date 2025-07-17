@@ -87,4 +87,29 @@ main {
     font-weight: 600;
 }
 
+.container .textBox h2 span {
+    color: var(--Pink);
+    font-size: 1.2em;
+    font-weight: 900;
+}
 
+.container .textBox p {
+    color: var(--Grey);
+}
+
+.container .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: var(--Pink);
+    color: var(--White);
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+
+.container .textBox a:hover {
+    transform: scale(1.1);
+}
