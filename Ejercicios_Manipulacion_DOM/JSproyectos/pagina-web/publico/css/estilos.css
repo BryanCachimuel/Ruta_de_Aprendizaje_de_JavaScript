@@ -15,3 +15,32 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+/* Encabezado */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header .logo {
+    position: relative;
+    max-width: 150px;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li a:hover {
+    color: var(--Orange);
+}
+
+
