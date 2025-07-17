@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page of Dunkin' Donuts</title>
+    <link rel="stylesheet" href="publico/css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+     <header>
+        <a href=""><img src="publico/images/logo.png" class="logo"></a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+            <li><a href="">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">What's New</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </header>
+    
+    <!-- Principal -->
+     <main>
+        <div class="circle"></div>
+
+        <!-- Contenido -->
+         <section class="container">
+            <div class="textBox">
+                <h2>America Eats a lot<br> of <span>DONUTS</span></h2>
+                <p>
+                    You can find the best donuts at Dunkin' Donuts, 
+                    so don't miss out because their flavor is unique. 
+                </p>
+                <a href="">Learn More</a>
+            </div>
+
+            <div class="imgBox">
+                <div id="three-container"></div>
+            </div>
+
+            <!-- Productos -->
+             <section class="products">
+                <ul class="product">
+                    <li><img src="publico/images/product1.png" onclick="imgSlider('publico/images/img1.png');changeCircleColor('#e60073')"></li>
+                    <li><img src="publico/images/product2.png" onclick="imgSlider('publico/images/img2.png');changeCircleColor('#654738')"></li>
+                    <li><img src="publico/images/product3.png" onclick="imgSlider('publico/images/img3.png');changeCircleColor('#f5c883')"></li>
+                </ul>
+                <ul class="networks">
+                    <li><a href=""><img src="publico/images/facebook.png"></a></li>
+                    <li><a href=""><img src="publico/images/twitter.png"></a></li>
+                    <li><a href=""><img src="publico/images/instagram.png"></a></li>
+                </ul>
+             </section>
+
+         </section>
+     </main>
+
+    <script src="publico/js/main.js"></script>
+</body>
+</html>
