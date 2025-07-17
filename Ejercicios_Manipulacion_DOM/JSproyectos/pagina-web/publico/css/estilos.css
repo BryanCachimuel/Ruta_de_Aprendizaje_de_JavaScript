@@ -39,6 +39,18 @@ header .navigation {
     display: flex;
 }
 
+header .navigation li {
+    list-style: none;
+}
+
+header .navigation li a {
+    display: inline-block;
+    color: var(--Grey);
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
 header .navigation li a:hover {
     color: var(--Orange);
 }
