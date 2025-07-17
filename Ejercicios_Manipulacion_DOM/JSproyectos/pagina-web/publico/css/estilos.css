@@ -113,3 +113,17 @@ main {
 .container .textBox a:hover {
     transform: scale(1.1);
 }
+
+.container .imgBox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 50px;
+    margin-top: 50px;
+}
+
+.container #three-container {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
