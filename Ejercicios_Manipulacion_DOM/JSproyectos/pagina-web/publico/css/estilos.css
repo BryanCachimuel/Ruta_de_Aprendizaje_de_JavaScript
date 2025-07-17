@@ -55,4 +55,36 @@ header .navigation li a:hover {
     color: var(--Orange);
 }
 
+/* Principal */
+main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--White);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .textBox {
+    position: relative;
+    max-width: 600px;
+}
+
+.container .textBox h2 {
+    color: var(--Grey);
+    font-size: 3.8em;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
 
