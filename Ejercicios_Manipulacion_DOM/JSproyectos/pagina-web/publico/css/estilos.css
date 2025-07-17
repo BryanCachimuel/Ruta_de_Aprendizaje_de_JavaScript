@@ -1,0 +1,17 @@
+/* Fuente */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* Estilos Globales */
+:root {
+    --Orange: #f5821f;
+    --Grey: #333;
+    --White: #fff;
+    --Pink: #e60073;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
