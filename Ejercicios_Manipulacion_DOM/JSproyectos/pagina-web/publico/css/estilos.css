@@ -195,3 +195,19 @@ main {
     background: var(--Pink);
     clip-path: circle(600px at right 800px);
 }
+
+/* Resposive */
+@media(max-width: 991px) {
+    header {
+        padding: 20px 30px;
+        height: 100px;
+    }
+
+    header .logo {
+        max-width: 60px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+}
