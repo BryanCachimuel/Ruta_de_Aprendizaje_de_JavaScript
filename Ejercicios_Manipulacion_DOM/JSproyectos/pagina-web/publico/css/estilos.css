@@ -224,7 +224,7 @@ main {
         z-index: 11;
     }
 
-    .toggle.activate {
+    .toggle .activate {
         position: fixed;
         right: 20px;
         background: url(../images/close.png);
@@ -245,5 +245,38 @@ main {
         flex-direction: column;
         background: var(--White);
         z-index: 10;
+    }
+
+    header .navigation li a {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 20px 20px 120px;
+    }
+
+    .container {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .container .textBox {
+        max-width: 100%;
+    }
+
+    .container .textBox h2 {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+
+    .container .imgBox {
+        max-width: 100%;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .container .imgBox img {
+        max-width: 300px;
     }
 }
