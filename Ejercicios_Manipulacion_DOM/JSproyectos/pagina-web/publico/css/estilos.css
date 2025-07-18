@@ -279,4 +279,32 @@ main {
     .container .imgBox img {
         max-width: 300px;
     }
+
+    .container #three-container {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container #three-container canvas {
+        max-width: 100%;
+    }
+
+    .circle {
+        clip-path: circle(400px at center bottom);
+    }
+
+    .products .product li img {
+        max-width: 40px;
+    }
+
+    .products .networks {
+        background: var(--Pink);
+        right: 0;
+        width: 50px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
 }
