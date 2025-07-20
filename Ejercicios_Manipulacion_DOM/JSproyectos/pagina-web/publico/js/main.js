@@ -65,3 +65,12 @@ window.imgSlider = function(imagePath) {
         material.needsUpdate = true;
     });
 };
+
+// Cambiar color del circulo
+window.changeCircleColor = color => document.querySelector(".circle").style.background = color;
+
+// Menu desplegable
+function toggleMenu() {
+    document.querySelector(".toggle").classList.toggle("active");
+    document.querySelector(".navigation").classList.toggle("active");
+}
