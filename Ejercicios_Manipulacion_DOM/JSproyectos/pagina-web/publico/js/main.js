@@ -8,3 +8,18 @@ const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setSize( container.clientWidth, container.clientHeight );
 renderer.setClearColor(0x000000, 0);
 container.appendChild(renderer.domElement);
+
+/* Ambiente de luz */
+scene.add(new THREE.AmbienteLight(0xffffff, 1));
+
+/* Cargador de texturas */
+const loader = new THREE.TextureLoader();
+const textures = [
+    "./images/img1.png",
+    "./images/img1.png",
+    "./images/img1.png",
+    "./images/img1.png",
+    "./images/img1.png",
+    "./images/img1.png",
+].map(path => loader.load(path));
+
