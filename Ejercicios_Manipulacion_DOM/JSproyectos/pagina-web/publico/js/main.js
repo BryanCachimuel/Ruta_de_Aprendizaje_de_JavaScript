@@ -37,3 +37,16 @@ const transparentMaterial = new THREE.MeshBasicMaterial({
     transparent: true,
     opacity: 0
 });
+
+/* Crear el cubo y asignar materiales */
+const cube = new THREE.Mesh(new THREE.BoxGeometry(4.3, 4.3, 4.3), [
+    ...materials.slice(0,3),
+    transparentMaterial,
+    ...materials.slice(3)
+]);
+scene.add(cube);
+
+/* Posición de la cámara */
+camera.position.z = 5;
+
+/* Animación de rotación solo en el eje z */
