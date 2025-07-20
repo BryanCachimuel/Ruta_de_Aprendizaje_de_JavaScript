@@ -9,10 +9,10 @@ renderer.setSize( container.clientWidth, container.clientHeight );
 renderer.setClearColor(0x000000, 0);
 container.appendChild(renderer.domElement);
 
-/* Ambiente de luz */
-scene.add(new THREE.AmbienteLight(0xffffff, 1));
+// Ambiente de Luz
+scene.add(new THREE.AmbientLight(0xffffff, 1));
 
-/* Cargador de texturas */
+// Cargador de texturas
 const loader = new THREE.TextureLoader();
 const textures = [
     "./images/img1.png",
@@ -20,33 +20,40 @@ const textures = [
     "./images/img1.png",
     "./images/img1.png",
     "./images/img1.png",
-    "./images/img1.png",
+    "./images/img1.png"
 ].map(path => loader.load(path));
 
-/* Crear Materiales */
+// Crear materiales
 const materials = textures.map(texture => new THREE.MeshBasicMaterial({
-    map: texture,
-    side: THREE.FrontSide,
-    transparent: true,
+    map: texture, 
+    side: THREE.FrontSide, 
+    transparent: true, 
     opacity: 1
 }));
 
-/* Material transparente para caras adicionales */
+// Material transparente para caras adicionales
 const transparentMaterial = new THREE.MeshBasicMaterial({
     color: 0x000000,
     transparent: true,
     opacity: 0
 });
 
-/* Crear el cubo y asignar materiales */
-const cube = new THREE.Mesh(new THREE.BoxGeometry(4.3, 4.3, 4.3), [
-    ...materials.slice(0,3),
-    transparentMaterial,
+// Crear el cubo y asignar materiales
+const cube = new THREE.Mesh(new THREE.BoxGeometry(4.3, 4.3, 4.3),[
+    ...materials.slice(0, 3), 
+    transparentMaterial, 
     ...materials.slice(3)
 ]);
 scene.add(cube);
 
-/* Posición de la cámara */
+// Posición de la cámara
 camera.position.z = 5;
 
-/* Animación de rotación solo en el eje z */
+// Animación de rotación solo en el eje z
+function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.z += 0.005;
+    renderer.render(scene, camera);
+};
+animate();
+
