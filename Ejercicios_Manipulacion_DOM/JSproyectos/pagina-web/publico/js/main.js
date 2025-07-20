@@ -57,3 +57,11 @@ function animate() {
 };
 animate();
 
+// Cambiar textura
+window.imgSlider = function(imagePath) {
+    const texture = loader.load(imagePath);
+    cube.material.forEach(material => {
+        material.map = texture;
+        material.needsUpdate = true;
+    });
+};
