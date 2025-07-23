@@ -1,5 +1,5 @@
 const loginForm = document.getElementById("login-form")
-const successMessage = document.getElementById("success-message");
+const successMessage = document.getElementById("success-message")
 
 loginForm.addEventListener("submit", function(e) {
     e.preventDefault()
@@ -9,7 +9,13 @@ loginForm.addEventListener("submit", function(e) {
     if (username === 'blcl' && password === '123456') {
         successMessage.style.display = "block"
         successMessage.textContent = 'Start Session is Correct'
+        limpiarCampos()
     } else {
         alert("User or Password incorrect")
     }
 })
+
+function limpiarCampos(){
+    const username = document.getElementById("username").value = ''
+    const password = document.getElementById("password").value = ''
+}
