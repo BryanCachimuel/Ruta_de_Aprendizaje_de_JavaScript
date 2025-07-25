@@ -93,3 +93,53 @@ ul, li {
 .grid button[type="submit"]:hover {
     background-color: #3377e3;
 }
+
+.grid .content-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b82f6;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+}
+
+.grid .content-list li div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.grid .content-list .check {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #30363e;
+    text-align: center;
+    line-height: 3.5rem;
+    border-radius: 50%;
+}
+
+.grid .content-list span {
+    display: none;
+}
+
+.grid .content-list li div:last-child {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.grid .content-list button[type="button"] {
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    background-color: #00ffff;
+    color: #30363e;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.grid .content-list button[type="button"]:last-child {
+    background-color: #ef4444;
+    color: #ffffff;
+}
