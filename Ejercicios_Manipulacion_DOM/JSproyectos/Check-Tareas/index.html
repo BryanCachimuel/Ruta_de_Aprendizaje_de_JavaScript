@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check List de Tareas</title>
+    <link rel="stylesheet" href="publico/css/style.css">
 </head>
 <body>
     
@@ -12,9 +13,11 @@
         <div class="grid">
             <div class="content-form">
                 <h2>Nueva Tarea</h2>
-                <label for="task">Nueva Tarea</label>
-                <input type="text" id="task" placeholder="Nueva Tarea">
-                <button type="submit">Agregar Tarea</button>
+                <form id="frmTask">
+                    <label for="task">Nueva Tarea</label>
+                    <input type="text" id="task" placeholder="Nueva Tarea">
+                    <button type="submit">Agregar Tarea</button>
+                </form>
             </div>
 
             <div class="content-list">
@@ -22,8 +25,8 @@
                 <ul>
                     <li>
                         <div>
-                            <p>✔</p>
-                            <p>Ir al Supermercado</p>
+                            <p class="check"><span>✔</span></p>
+                            <p class="task-text">Ir al Supermercado</p>
                         </div>
                         <div>
                             <button type="button">✔</button>
@@ -35,5 +38,6 @@
         </div>
     </div>
 
+    <script src="publico/js/main.js"></script>
 </body>
 </html>
