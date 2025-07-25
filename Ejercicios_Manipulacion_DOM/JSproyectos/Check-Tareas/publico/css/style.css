@@ -35,6 +35,7 @@ ul, li {
     display: grid;
     gap: 2rem;
 }
+
 @media (min-width: 992px) {
     .grid {
         grid-template-columns: auto 1fr;
@@ -57,4 +58,38 @@ ul, li {
     margin-bottom: .5rem;
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+.grid input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .4rem;
+    border: 1px solid transparent;
+    font-size: 1.6rem;
+    color: #30363e;
+}
+
+.grid input:focus {
+    outline: none;
+    border: 1px solid #3b82f6;
+    box-shadow: 0 0 6px #3b82f6;
+}
+
+.grid button[type="submit"] {
+    border: none;
+    background-color: #3b82f6;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .4rem;
+    margin-top: 2rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+.grid button[type="submit"]:hover {
+    background-color: #3377e3;
 }
