@@ -148,3 +148,37 @@ ul, li {
     background-color: #ef4444;
     color: #ffffff;
 }
+
+/* Alertas */
+.alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding: .8rem 4rem;
+    border-bottom-right-radius: .4rem;
+    border-bottom-left-radius: .4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+@keyframes alertDownSlide {
+    0%, 100% {
+        transform: translate(-50%, -100%);
+    }
+    20%, 80% {
+        transform: translate(-50%, 0);
+    }
+}
+
+.error {
+    background-color: #ef4444;
+    animation: alertDownSlide 4s ease-in-out forwards;
+}
+
+.success {
+    background-color: #22c55e;
+    animation: alertDownSlide 4s ease-in-out forwards;
+}
