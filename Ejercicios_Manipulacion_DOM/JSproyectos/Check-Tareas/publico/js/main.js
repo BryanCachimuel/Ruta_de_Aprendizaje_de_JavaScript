@@ -1,5 +1,6 @@
 const frmTask = document.querySelector("#frmTask");
 const inputTask = document.querySelector("#task");
+const contentList = document.querySelector("#contentList");
 
 let tasksList = [];
 
@@ -29,7 +30,35 @@ function newTask(e) {
 function printHtml() {
     tasksList.forEach(tasks => {
         const { id, task } = tasks;
-    })
+        const liTask = document.createElement('li');
+
+        const divText = document.createElement('div');
+        const pCheck = document.createElement('p');
+        pCheck.classList.add('check');
+
+        const pSpan = document.createElement('span');
+        pSpan.textContent = '✔';
+
+        const pText = document.createElement('p');
+        pText.textContent = task;
+
+        const divButtons = document.createElement('div');
+        const buttonCheck = document.createElement('button');
+        buttonCheck.type = 'button';
+        buttonCheck.textContent = '✔'; 
+
+        const buttonDestroy = document.createElement('button');
+        buttonDestroy.type = 'button';
+        buttonDestroy.textContent = 'X';
+
+        pCheck.appendChild(pSpan);
+        divText.append(pCheck, pText);
+        divButtons.append(buttonCheck, buttonDestroy);
+
+        liTask.append(divText, divButtons);
+
+        contentList.appendChild(liTask);
+    });
 }
 
 // Muestra una alerta
