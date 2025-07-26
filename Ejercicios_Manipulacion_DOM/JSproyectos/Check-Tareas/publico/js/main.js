@@ -1,11 +1,15 @@
 const frmTask = document.querySelector("#frmTask");
 const inputTask = document.querySelector("#task");
 const contentList = document.querySelector("#contentList");
+//modal
+const showModal = document.querySelector('#showModal');
+const btnNo = document.querySelector('#btnNo');
 
 let tasksList = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-    frmTask.addEventListener("submit", newTask)
+    frmTask.addEventListener("submit", newTask);
+    btnNo.addEventListener('click', cancelDeletion)
 });
 
 function newTask(e) {
@@ -52,6 +56,8 @@ function printHtml() {
         const buttonDestroy = document.createElement('button');
         buttonDestroy.type = 'button';
         buttonDestroy.textContent = 'X';
+        buttonDestroy.onclick = () => modalDeletion(id);
+
 
         pCheck.appendChild(pSpan);
         divText.append(pCheck, pText);
@@ -61,6 +67,11 @@ function printHtml() {
 
         contentList.appendChild(liTask);
     });
+}
+
+// Abre el modal de eliminación
+function modalDeletion(id) {
+    showModal.style.display = 'flex';
 }
 
 // Limpiar el HTML
