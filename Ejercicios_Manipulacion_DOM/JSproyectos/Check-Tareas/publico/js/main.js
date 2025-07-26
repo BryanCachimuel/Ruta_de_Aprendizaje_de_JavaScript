@@ -28,6 +28,7 @@ function newTask(e) {
 
 // Imprime el HTML
 function printHtml() {
+    cleanHTML();
     tasksList.forEach(tasks => {
         const { id, task } = tasks;
         const liTask = document.createElement('li');
@@ -40,6 +41,7 @@ function printHtml() {
         pSpan.textContent = '✔';
 
         const pText = document.createElement('p');
+        pText.classList.add('task-text');
         pText.textContent = task;
 
         const divButtons = document.createElement('div');
@@ -59,6 +61,13 @@ function printHtml() {
 
         contentList.appendChild(liTask);
     });
+}
+
+// Limpiar el HTML
+function cleanHTML() {
+    while(contentList.firstChild) {
+        contentList.removeChild(contentList.firstChild);
+    }
 }
 
 // Muestra una alerta
