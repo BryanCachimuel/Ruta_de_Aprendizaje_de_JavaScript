@@ -4,12 +4,14 @@ const contentList = document.querySelector("#contentList");
 //modal
 const showModal = document.querySelector('#showModal');
 const btnNo = document.querySelector('#btnNo');
+const btnSi = document.querySelector('#btnSi');
 
 let tasksList = [];
 
 document.addEventListener("DOMContentLoaded", () => {
     frmTask.addEventListener("submit", newTask);
-    btnNo.addEventListener('click', cancelDeletion)
+    btnNo.addEventListener('click', cancelDeletion);
+    btnSi.addEventListener('click', approvedDeletion);
 });
 
 function newTask(e) {
@@ -70,8 +72,23 @@ function printHtml() {
 }
 
 // Abre el modal de eliminación
-function modalDeletion(id) {
+function modalDeletion(taskId) {
     showModal.style.display = 'flex';
+    btnSi.dataset.taskId = taskId;
+}
+
+// Cancela la eliminación
+function cancelDeletion() {
+    showModal.style.display = 'none';
+}
+
+// Elimina una tarea
+function approvedDeletion() {
+    const taskId = parseInt(btnSi.dataset.taskId, 10);
+    tasksList = tasksList.filter(task => task.id !== taskId);
+    showModal.style.display = 'none';
+    showAlert('Tarea eliminada exitosamente','success');
+    printHtml();
 }
 
 // Limpiar el HTML
