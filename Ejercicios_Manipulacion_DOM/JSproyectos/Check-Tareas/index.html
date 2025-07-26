@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <div class="tasks">
+    <section class="tasks">
         <h1>Tareas</h1>
         <div class="grid">
             <div class="content-form">
@@ -22,18 +22,20 @@
 
             <div class="content-list">
                 <h2>Lista de Tareas</h2>
-                <ul>
-                    <li>
-                        <div>
-                            <p class="check"><span>✔</span></p>
-                            <p class="task-text">Ir al Supermercado</p>
-                        </div>
-                        <div>
-                            <button type="button">✔</button>
-                            <button type="button">X</button>
-                        </div>
-                    </li>
+                <ul id="contentList">
+                    
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="showModal">
+        <div class="modal-content">
+            <h3>Atención</h3>
+            <p>¿Está seguro de eliminar la tarea?</p>
+            <div>
+                <button type="button" id="btnSi">Si</button>
+                <button type="button" id="btnNo">No</button>
             </div>
         </div>
     </div>
