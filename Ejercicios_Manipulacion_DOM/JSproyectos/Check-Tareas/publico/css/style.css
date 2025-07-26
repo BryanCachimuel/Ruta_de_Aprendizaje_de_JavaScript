@@ -196,7 +196,7 @@ ul, li {
     width: 100%;
     height: 100%;
     background-color: rgb(0, 0, 0, 0.5);
-    display: flex;
+    display: none;
     justify-content: center;
     padding-top: 20rem;
     align-items: center;
@@ -208,6 +208,21 @@ ul, li {
     border-radius: 1rem;
     box-shadow: 0 5px 26px rgb(255, 255, 255, 0.5);
     text-align: center;
+    animation: slideDownModal .8s ease-in-out 1;
+}
+
+@keyframes slideDownModal {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
 }
 
 .modal-content h3 {
@@ -219,4 +234,23 @@ ul, li {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
+}
+
+.modal-content button {
+    border: none;
+    padding: .8rem;
+    background-color: #3377e3;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.7rem;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    filter: brightness(0.95);
+}
+
+.modal-content button:last-child {
+    background-color: #ef4444;
 }
