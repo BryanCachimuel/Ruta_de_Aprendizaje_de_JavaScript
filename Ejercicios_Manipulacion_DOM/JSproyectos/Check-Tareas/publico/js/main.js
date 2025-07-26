@@ -23,7 +23,7 @@ function newTask(e) {
         return;
     }
 
-    const taskObj = { task, id: Date.now() }
+    const taskObj = { task, id: Date.now(), completed: false }
     tasksList = [...tasksList, taskObj];
 
     frmTask.reset();
@@ -54,6 +54,7 @@ function printHtml() {
         const buttonCheck = document.createElement('button');
         buttonCheck.type = 'button';
         buttonCheck.textContent = '✔'; 
+        buttonCheck.onclick = (e) => completedTask(e, id);
 
         const buttonDestroy = document.createElement('button');
         buttonDestroy.type = 'button';
@@ -89,6 +90,20 @@ function approvedDeletion() {
     showModal.style.display = 'none';
     showAlert('Tarea eliminada exitosamente','success');
     printHtml();
+}
+
+// marcar una tarea como completada o no completada
+function completedTask(e, taskId) {
+    const taskItem = e.target.closest('li');
+    if(!taskItem) return;
+
+    const taskIndex = tasksList.findIndex(t => t.id === taskId);
+    if(taskIndex === -1) return;
+
+    const wasCompleted = tasksList[taskIndex].completed;
+    tasksList[taskIndex].completed = !wasCompleted;
+
+    updateTaskStyle(taskItem, tasksList[taskIndex].completed, true);
 }
 
 // Limpiar el HTML
