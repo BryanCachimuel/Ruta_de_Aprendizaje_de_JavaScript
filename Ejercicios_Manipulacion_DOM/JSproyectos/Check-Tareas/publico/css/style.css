@@ -147,6 +147,7 @@ ul, li {
     font-size: 1.8rem;
     border-radius: 50%;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .grid .content-list button[type="button"]:last-child {
@@ -167,7 +168,12 @@ ul, li {
     font-weight: bold;
     font-size: 1.5rem;
     color: #ffffff;
+    text-align: center;
+    line-height: 1.4;
+    width: 95%;
 }
+
+
 
 @keyframes alertDownSlide {
     0%, 100% {
