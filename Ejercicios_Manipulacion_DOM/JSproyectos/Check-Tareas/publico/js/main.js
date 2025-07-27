@@ -30,6 +30,12 @@ function newTask(e) {
     inputTask.focus();
     showAlert('Tarea Agregada exitosamente', 'success');
     printHtml();
+    saveTaskToLocalStorage();
+}
+
+// Guardar las tareas en local storage
+function saveTaskToLocalStorage() {
+    localStorage.setItem('tasks', JSON.stringify(tasksList));
 }
 
 // Imprime el HTML
