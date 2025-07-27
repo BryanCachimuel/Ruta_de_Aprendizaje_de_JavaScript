@@ -23,9 +23,28 @@ document.addEventListener("DOMContentLoaded", () => {
 function newTask(e) {
     e.preventDefault();
     const task = inputTask.value.trim();
+    const regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ0-9\s!¡¿?.,']+$/u;
+    const maxLenght = 80;
 
     if(task.length === 0) {
         showAlert('La tarea es requerida','error')
+        return;
+    }
+
+    if(!regex.test(task)) {
+        showAlert('Está ingresando caracteres no válidos','error');
+        return;
+    }
+
+    if(task.length > maxLenght) {
+        showAlert(`Sobrepaso los ${maxLenght} caracteres permitidos`,'error');
+        return;
+    }
+
+    if(tasksList.some(t => t.task === task)) {
+        showAlert('La tarea ya existe','error');
+        inputTask.value = '';
+        inputTask.focus();
         return;
     }
 
