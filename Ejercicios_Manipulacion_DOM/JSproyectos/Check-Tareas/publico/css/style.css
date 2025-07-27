@@ -173,7 +173,11 @@ ul, li {
     width: 95%;
 }
 
-
+@media(min-width: 576px) {
+    .alert {
+        width: auto;
+    }
+}
 
 @keyframes alertDownSlide {
     0%, 100% {
