@@ -106,6 +106,31 @@ function completedTask(e, taskId) {
     updateTaskStyle(taskItem, tasksList[taskIndex].completed, true);
 }
 
+function updateTaskStyle(taskItem, completed, userAction = false) {
+    const taskText = taskItem.querySelector('.task-text');
+    const taskCheck = taskItem.querySelector(".check span");
+
+    if(completed) {
+        taskItem.style.backgroundColor = '#6b6b6b';
+        taskText.style.textDecoration = 'line-through';
+        taskText.style.color = '#b2b2b2';
+        taskCheck.style.display = 'inline';
+
+        if(userAction) {
+            showAlert('La tarea fue marcada como completada','success');
+        }
+    } else {
+        taskItem.style.backgroundColor = '#3b82f6';
+        taskText.style.textDecoration = 'none';
+        taskText.style.color = '#ffffff';
+        taskCheck.style.display = 'none';
+
+        if(userAction) {
+            showAlert('La tarea fue marcada como no pendiente','success');
+        }
+    }
+}
+
 // Limpiar el HTML
 function cleanHTML() {
     while(contentList.firstChild) {
