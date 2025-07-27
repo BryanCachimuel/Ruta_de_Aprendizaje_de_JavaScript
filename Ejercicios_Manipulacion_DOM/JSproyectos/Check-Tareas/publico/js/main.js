@@ -12,6 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
     frmTask.addEventListener("submit", newTask);
     btnNo.addEventListener('click', cancelDeletion);
     btnSi.addEventListener('click', approvedDeletion);
+
+    const tasks = localStorage.getItem('tasks');
+    if(tasks) {
+        tasksList = JSON.parse(tasks);
+        printHtml();
+    }
 });
 
 function newTask(e) {
