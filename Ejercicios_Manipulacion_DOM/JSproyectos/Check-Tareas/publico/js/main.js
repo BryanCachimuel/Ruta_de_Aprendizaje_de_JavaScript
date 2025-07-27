@@ -48,7 +48,7 @@ function saveTaskToLocalStorage() {
 function printHtml() {
     cleanHTML();
     tasksList.forEach(tasks => {
-        const { id, task } = tasks;
+        const { id, task, completed } = tasks;
         const liTask = document.createElement('li');
 
         const divText = document.createElement('div');
@@ -81,6 +81,7 @@ function printHtml() {
         liTask.append(divText, divButtons);
 
         contentList.appendChild(liTask);
+        updateTaskStyle(liTask, completed);
     });
 }
 
@@ -101,6 +102,7 @@ function approvedDeletion() {
     tasksList = tasksList.filter(task => task.id !== taskId);
     showModal.style.display = 'none';
     showAlert('Tarea eliminada exitosamente','success');
+    saveTaskToLocalStorage();
     printHtml();
 }
 
@@ -116,6 +118,7 @@ function completedTask(e, taskId) {
     tasksList[taskIndex].completed = !wasCompleted;
 
     updateTaskStyle(taskItem, tasksList[taskIndex].completed, true);
+    saveTaskToLocalStorage();
 }
 
 function updateTaskStyle(taskItem, completed, userAction = false) {
