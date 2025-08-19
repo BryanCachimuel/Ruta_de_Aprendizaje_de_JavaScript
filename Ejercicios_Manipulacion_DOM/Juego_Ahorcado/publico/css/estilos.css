@@ -4,6 +4,12 @@ body {
     text-align: center;
 }
 
+#titulo {
+    color: #ff0000fb;
+    font-weight: bold;
+    font-size: 35px;
+}
+
 button {
     font-size: 20px;
 }
@@ -16,6 +22,10 @@ input {
 
 div {
     padding-bottom: 1em;
+}
+
+#resultado {
+    color: #25d4e0;
 }
 
 #volver {
