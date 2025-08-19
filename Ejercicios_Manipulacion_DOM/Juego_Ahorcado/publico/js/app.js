@@ -16,9 +16,21 @@ window.onload = function() {
     juego.p = palabras[Math.floor(Math.random()*palabras.length)].toUpperCase();
     generarLetras();
     generarPalabra(juego.p);
+
+    // activar barra de progreso
+    juego.id = setInterval(cuadro,1000);
 }
 
 // funciones
+function cuadro() {
+    if(juego.w >= 100) {
+        juegoTerminando(false);
+    }else {
+        juego.w += 2;
+        document.getElementById("barra").style.width = juego.w+"%";
+    }
+}
+
 function generarLetras() {
     let b,a;
     for(let i = 65; i < juego.letras+65; i++) {
@@ -72,6 +84,8 @@ function letra(e) {
 }
 
 function juegoTerminando(resultado) {
+    // terminar con el relog
+    clearInterval(juego.id);
     let m = document.getElementById("resultado");
     let v = document.getElementById("volver");
     if(resultado) {
@@ -88,4 +102,5 @@ function juegoTerminando(resultado) {
     // activamos el boton
     v.style.display = "block";
     v.addEventListener("click", (e)=>location.reload(true),false);
+    document.getElementById("progreso").style.display = "none";
 }
