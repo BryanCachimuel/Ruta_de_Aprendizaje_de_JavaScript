@@ -17,3 +17,32 @@ window.onload = function() {
     generarLetras();
     generarPalabra(juego.p);
 }
+
+// funciones
+function generarLetras() {
+    let b,a;
+    for(let i = 65; i < juego.letras+65; i++) {
+        b = document.createElement("button");
+        b.innerText = String.fromCharCode(i);
+        a = document.createAttribute("id");
+        a.value = "b"+i;
+        b.setAttributeNode(a);
+        b.addEventListener("click", letra, false);
+        document.getElementById("letras").appendChild(b);
+    }
+}
+
+function generarPalabra(palabra) {
+    let b, a;
+    for (let i = 0; i < palabra.length; i++) {
+        b = document.createElement("input");
+        a = document.createAttribute("disabled");
+        a.value = "disabled";
+        b.setAttributeNode(a);
+        document.getElementById("palabra").appendChild(b);
+    }
+}
+
+function letra(e) {
+
+}
