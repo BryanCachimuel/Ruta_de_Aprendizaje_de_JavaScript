@@ -50,7 +50,7 @@ function letra(e) {
     let acierto = false;
     let n = this.id.replace("b","");
     n = parseInt(n);
-    for(let i = 0; i < juego.length; i++) {
+    for(let i = 0; i < juego.p.length; i++) {
         if(n == juego.p[i].charCodeAt()) {
             document.getElementById("c"+i).value = juego.p[i];
             juego.buenas++;
@@ -72,5 +72,20 @@ function letra(e) {
 }
 
 function juegoTerminando(resultado) {
+    let m = document.getElementById("resultado");
+    let v = document.getElementById("volver");
+    if(resultado) {
+        m.innerText = "Muy Bien";
+    }else {
+        m.innerText = "La palabra es: " + juego.p;
+    }
 
+    // desactivar el teclado
+    for(let i = 65; i < juego.letras+65; i++) {
+        document.getElementById("b"+i).setAttribute("disabled", false);
+    }
+
+    // activamos el boton
+    v.style.display = "block";
+    v.addEventListener("click", (e)=>location.reload(true),false);
 }
