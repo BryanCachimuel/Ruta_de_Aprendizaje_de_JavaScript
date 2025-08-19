@@ -39,10 +39,38 @@ function generarPalabra(palabra) {
         a = document.createAttribute("disabled");
         a.value = "disabled";
         b.setAttributeNode(a);
+        a = document.createAttribute("id");
+        a.value = "c"+i;
+        b.setAttributeNode(a);
         document.getElementById("palabra").appendChild(b);
     }
 }
 
 function letra(e) {
+    let acierto = false;
+    let n = this.id.replace("b","");
+    n = parseInt(n);
+    for(let i = 0; i < juego.length; i++) {
+        if(n == juego.p[i].charCodeAt()) {
+            document.getElementById("c"+i).value = juego.p[i];
+            juego.buenas++;
+            acierto = true;
+        }
+    }
+    // desactivar la letra
+    this.setAttribute("disabled",false);
+    if(acierto == false) {
+        juego.malas++;
+        document.getElementById("imagen").innerHTML = "<img src='publico/imagenes/ahorcado"+juego.malas+".png'/>";
+    }
+    if(juego.buenas == juego.p.length) {
+        juegoTerminando(true);
+    }
+    if(juego.malas == juego.limite) {
+        juegoTerminando(false);
+    }
+}
+
+function juegoTerminando(resultado) {
 
 }
