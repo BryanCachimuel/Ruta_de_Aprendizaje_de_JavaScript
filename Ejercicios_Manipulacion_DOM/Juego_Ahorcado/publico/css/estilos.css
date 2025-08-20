@@ -18,6 +18,7 @@ input {
     font-size: 30px;
     width: 26px;
     font-family: 'Courier New', monospace;
+    background-color: #ddd;
 }
 
 div {
@@ -30,6 +31,20 @@ div {
 
 #volver {
     display: none;
+    margin: auto;
+    padding: 5px 10px;
+    background-color: #0fc1e0d5;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: .9s;
+}
+
+#volver:hover {
+    border: 1px solid #25d4e0;
+    background-color: #fff;
+    color: #25d4e0;
 }
 
 #progreso {
