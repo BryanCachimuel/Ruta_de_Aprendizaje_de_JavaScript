@@ -43,3 +43,15 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+h2, p {
+    text-align: center;
+    margin: 16px 0;
+}
+
+h2 {
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
