@@ -39,7 +39,7 @@ body {
     border-radius: 50%;
     background-color: #eee;
     border: 4px solid #fff;
-    background-image: url('../img/foto.jpg');
+    background-image: url('../img/foto.png');
     background-size: cover;
     background-position: center;
 }
@@ -71,3 +71,12 @@ strong {
     margin-bottom: 20px;
 }
 
+.social-links a {
+    columns: #555;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #6e8efb;
+}
