@@ -1,0 +1,19 @@
+body {
+    width: 580px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ddd;
+}
+
+.celda {
+    padding: 8px;
+    border: 1px solid #000000;
+    width: 20px;
+    float: left;
+    text-align: center;
+}
+
+#palabras {
+    text-align: center;
+    font-size: 2em;
+}
