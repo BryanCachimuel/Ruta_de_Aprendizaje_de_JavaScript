@@ -41,7 +41,17 @@ function crearTablero() {
 }
 
 function anexarPalabras() {
-
+    palabras = palabras.sort(() => Math.random() - 0.5);
+    for (let i = 0; i < game.numPalabras; i++) {
+        ok = anadirPalabra(palabras[i].toUpperCase());
+        if(ok) {
+            game.palabras.push({
+                palabra: palabras[i].toUpperCase();
+                posicion: ok,
+                encontrada: false
+            });
+        }
+    }
 }
 
 function completarTablero() {
