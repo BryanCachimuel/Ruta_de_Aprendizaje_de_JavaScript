@@ -46,12 +46,19 @@ function anexarPalabras() {
         ok = anadirPalabra(palabras[i].toUpperCase());
         if(ok) {
             game.palabras.push({
-                palabra: palabras[i].toUpperCase();
+                palabra: palabras[i].toUpperCase(),
                 posicion: ok,
                 encontrada: false
             });
         }
     }
+    console.log(game.palabras)
+}
+
+function anadirPalabra(palabra) {
+    let palabra_array = palabra.split("");
+    palabra_array = (Math.random()>0.5)?palabra_array:palabra_array.reverse();
+    return true;
 }
 
 function completarTablero() {
