@@ -11,3 +11,23 @@ window.onload = function() {
     encabezado();
 }
 
+/* funciones */
+function crearTablero() {
+    
+}
+
+function anexarPalabras() {
+    
+}
+
+function completarTablero() {
+    
+}
+
+function listarPalabras() {
+    
+}
+
+function encabezado() {
+
+}
