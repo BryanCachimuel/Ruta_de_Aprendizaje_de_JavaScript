@@ -58,10 +58,18 @@ function anexarPalabras() {
 function anadirPalabra(palabra) {
     let palabra_array = palabra.split("");
     palabra_array = (Math.random() > 0.5) ? palabra_array : palabra_array.reverse();
-    let pos = { col: 0, row: 0 };
-    pos.col = coordenada(palabra_array.length, game.c);
-    pos.row = Math.floor(Math.random() * game.r);
-    ok = verificarPalabraX(pos, palabra_array);
+    
+    let ok = false;
+    let tope = 300;
+
+    while(!ok && tope > 0) {
+        tope--;
+        let pos = { col: 0, row: 0 };
+        pos.col = coordenada(palabra_array.length, game.c);
+        pos.row = Math.floor(Math.random() * game.r);
+        ok = verificarPalabraX(pos, palabra_array);
+    }  
+    return ok;  
 }
 
 function verificarPalabraX(pos, palabra) {
@@ -83,7 +91,7 @@ function verificarPalabraX(pos, palabra) {
                posicion.push(inicio+i);
             }
         }
-        return ok;
+        return posicion;
     }
     return false;
 }
