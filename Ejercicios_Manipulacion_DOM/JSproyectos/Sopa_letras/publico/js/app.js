@@ -58,7 +58,13 @@ function anexarPalabras() {
 function anadirPalabra(palabra) {
     let palabra_array = palabra.split("");
     palabra_array = (Math.random()>0.5)?palabra_array:palabra_array.reverse();
-    return true;
+    let pos = {col:0, row:0};
+    pos.col = coordenada(palabra_array.length, game.c);
+
+}
+
+function coordenada(lon,c) {
+    return Math.floor(Math.random()*(c-lon+1));
 }
 
 function completarTablero() {
