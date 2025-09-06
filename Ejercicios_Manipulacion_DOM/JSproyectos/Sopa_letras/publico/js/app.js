@@ -138,10 +138,15 @@ function completarTablero() {
     for (let i = 0; i < game.letras.length; i++) {
        if(game.letras[i].letra == "*") {
         game.letras[i].letra = letraAleatoria();
-        id = "celda-"+game.letras[i].c+"-"+game.letras[i]+r;
+        id = "celda-"+game.letras[i].c+"-"+game.letras[i].r;
         document.getElementById(id).innerText =  game.letras[i].letra;
        }
     }
+}
+
+function letraAleatoria() {
+    let ascci = Math.floor(Math.random()*26)+65;
+    return String.fromCharCode(ascci);
 }
 
 function listarPalabras() {
