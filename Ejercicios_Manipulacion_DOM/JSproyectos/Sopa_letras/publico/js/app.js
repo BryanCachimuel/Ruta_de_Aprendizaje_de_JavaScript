@@ -150,7 +150,15 @@ function letraAleatoria() {
 }
 
 function listarPalabras() {
-
+    let d,a;
+    for (let i = 0; i < game.palabras.length; i++) {
+        d = document.createElement("div");
+        d.innerText = game.palabras[i].palabra;
+        a = document.createAttribute("id");
+        a.value = game.palabras[i].palabra;
+        d.setAttributeNode(a);
+        document.getElementById("palabras").appendChild(d); 
+    }
 }
 
 function encabezado() {
