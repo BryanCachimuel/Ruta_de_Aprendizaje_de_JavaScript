@@ -65,9 +65,18 @@ function anadirPalabra(palabra) {
     while(!ok && tope > 0) {
         tope--;
         let pos = { col: 0, row: 0 };
-        pos.col = coordenada(palabra_array.length, game.c);
-        pos.row = Math.floor(Math.random() * game.r);
-        ok = verificarPalabraX(pos, palabra_array);
+        let dir = (Math.random() > 0.5) ? true : false;
+        if(dir && palabra_array.length <= game.c) {
+            // palabras en horizontal
+            pos.col = coordenada(palabra_array.length, game.c);
+            pos.row = Math.floor(Math.random() * game.r);
+            ok = verificarPalabraX(pos, palabra_array);
+        }else if(!dir && palabra_array.length <= game.r){
+            // palabras en vertical
+            pos.row = coordenada(palabra_array.length, game.r);
+            pos.col = Math.floor(Math.random() * game.c);
+            ok = verificarPalabraY(pos, palabra_array);
+        }
     }  
     return ok;  
 }
