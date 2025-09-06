@@ -162,5 +162,16 @@ function listarPalabras() {
 }
 
 function encabezado() {
-
+    game.aciertos = 0;
+    game.palabras.forEach((w,i) => {
+        if(w.encontrada) {
+            game.aciertos++;
+        }
+    });
+    let faltan = game.palabras.length - game.aciertos;
+    if(faltan == 0) {
+        document.getElementById("mensaje").innerText = "Felicidades";
+    }else {
+        document.getElementById("mensaje").innerText = "Encuentre las siguientes "+ faltan + " palabras";
+    }
 }
