@@ -60,7 +60,20 @@ function anadirPalabra(palabra) {
     palabra_array = (Math.random()>0.5)?palabra_array:palabra_array.reverse();
     let pos = {col:0, row:0};
     pos.col = coordenada(palabra_array.length, game.c);
+    pos.row = Math.floor(Math.random()*game.r);
+    ok = verificarPalabraX(pos,palabra_array);
+}
 
+function verificarPalabraX(pos, palabra) {
+    let inicio = (pos.row*game.c)+pos.col;
+    let contador = 0;
+    let posicion = [];
+    // realizar la busqueda
+    for(let i = 0; i < palabras.length; i++){
+        if(game.letras[inicio+i].letra=="*") {
+            contador++;
+        }
+    }
 }
 
 function coordenada(lon,c) {
