@@ -81,6 +81,30 @@ function anadirPalabra(palabra) {
     return ok;  
 }
 
+function verificarPalabraY(pos, palabra) {
+    let inicio = (pos.row * game.c) + pos.col;
+    let contador = 0;
+    let posicion = [];
+    // realizar la busqueda
+    for (let i = 0; i < palabra.length; i++) {
+        if (game.letras[inicio + (i*game.c)].letra == "*") {
+            contador++;
+        }
+    }
+    if (contador == palabra.length) {
+        for (let i = 0; i < palabra.length; i++) {
+            if (game.letras[inicio + (i*game.c)].letra == "*") {
+               game.letras[inicio+(i*game.c)].letra = palabra[i];
+               let id = "celda-"+game.letras[inicio+(i*game.c)].c+"-"+game.letras[inicio+(i*game.c)].r;
+               document.getElementById(id).innerText = palabra[i];
+               posicion.push(inicio+(i*game.c));
+            }
+        }
+        return posicion;
+    }
+    return false;
+}
+
 function verificarPalabraX(pos, palabra) {
     let inicio = (pos.row * game.c) + pos.col;
     let contador = 0;
