@@ -134,7 +134,14 @@ function coordenada(lon, c) {
 }
 
 function completarTablero() {
-
+    let id;
+    for (let i = 0; i < game.letras.length; i++) {
+       if(game.letras[i].letra == "*") {
+        game.letras[i].letra = letraAleatoria();
+        id = "celda-"+game.letras[i].c+"-"+game.letras[i]+r;
+        document.getElementById(id).innerText =  game.letras[i].letra;
+       }
+    }
 }
 
 function listarPalabras() {
