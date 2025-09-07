@@ -38,7 +38,12 @@ function crearTablero() {
                         verifica.palabra = w.palabra;
                     }
                 });
-                
+                if(verifica.ok) {
+                    document.getElementById(id).style.backgroundColor = "yellow";
+                }else {
+                    document.getElementById(id).style.backgroundColor = "pink";
+                }
+                verificarPalabras();
             }, false);
             //
             document.getElementById("tablero").appendChild(b);
