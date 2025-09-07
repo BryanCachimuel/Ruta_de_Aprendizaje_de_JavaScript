@@ -13,46 +13,52 @@ window.onload = function () {
 
 /* funciones */
 function crearTablero() {
-    var i = 0;
+ 	var i = 0;
     for (var r = 0; r < game.r; r++) {
         for (var c = 0; c < game.c; c++) {
-            b = document.createElement("div");
-            b.innerText = "*";
-            a = document.createAttribute("id");
-            a.value = "celda-" + c + "-" + r;
-            b.setAttributeNode(a);
-            //
-            a = document.createAttribute("class");
-            a.value = "celda";
-            b.setAttributeNode(a);
-            //
-            b.addEventListener("click", (e) => {
-                var id = e.target.id;
-                let partes = id.split("-");
-                let i = parseInt(partes[2])*game.c+parent(partes[1]);
-                let verifica = {ok:0, palabra:""};
-                game.seleccionadas[i] = true;
-                game.palabras.forEach((w)=>{
-                    if(w.posicion.includes(i)) {
-                        verifica.ok++;
-                        verifica.palabra = w.palabra;
-                    }
-                });
-                if(verifica.ok) {
-                    document.getElementById(id).style.backgroundColor = "yellow";
-                }else {
-                    document.getElementById(id).style.backgroundColor = "pink";
-                }
-                verificarPalabras();
-            }, false);
-            //
-            document.getElementById("tablero").appendChild(b);
-            //
-            game.letras.push({ r: r, c: c, i: i, letra: "*" });
-            //
-            i++;
+           b = document.createElement("div");
+           b.innerText = "*";
+           a = document.createAttribute("id");
+           a.value = "celda-"+c+"-"+r;
+           b.setAttributeNode(a);
+           //
+           a = document.createAttribute("class");
+           a.value = "celda";
+           b.setAttributeNode(a);
+           //
+           b.addEventListener("click",(e)=>{
+            var id = e.target.id;
+            var partes = id.split("-");
+            var i = parseInt(partes[2])*game.c+parseInt(partes[1]);
+            var verifica = {ok:0, palabra:""};
+            game.seleccionadas[i] = true;
+            game.palabras.forEach((w)=>{
+               if(w.posicion.includes(i)){
+                  verifica.ok++;
+                  verifica.palabra = w.palabra;
+               }
+            });
+            if(verifica.ok){
+               document.getElementById(id).style.backgroundColor = "yellow";
+            } else {
+               document.getElementById(id).style.backgroundColor = "pink";
+            }
+            verificaPalabras();
+           },false);
+           //
+           document.getElementById("tablero").appendChild(b);
+           //
+           game.letras.push({r:r, c:c, i:i, letra:"*"});
+           //
+           i++;
         }
     }
+    console.log(game.letras);
+ }
+
+
+function verificarPalabras() {
+
 }
 
 function anexarPalabras() {
