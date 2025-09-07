@@ -58,7 +58,14 @@ function crearTablero() {
 
 
 function verificarPalabras() {
-
+    game.palabras.forEach((w,i) => {
+        let verifica = 0;
+        game.seleccionadas.forEach((val,ii)=>{
+            if(w.posicion.includes(ii)) {
+                verifica++;
+            }
+        }); 
+    });
 }
 
 function anexarPalabras() {
