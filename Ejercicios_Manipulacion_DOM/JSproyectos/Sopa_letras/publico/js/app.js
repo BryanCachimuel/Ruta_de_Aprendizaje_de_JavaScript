@@ -28,7 +28,17 @@ function crearTablero() {
             //
             b.addEventListener("click", (e) => {
                 var id = e.target.id;
-                console.log(id);
+                let partes = id.split("-");
+                let i = parseInt(partes[2])*game.c+parent(partes[1]);
+                let verifica = {ok:0, palabra:""};
+                game.seleccionadas[i] = true;
+                game.palabras.forEach((w)=>{
+                    if(w.posicion.includes(i)) {
+                        verifica.ok++;
+                        verifica.palabra = w.palabra;
+                    }
+                });
+                
             }, false);
             //
             document.getElementById("tablero").appendChild(b);
