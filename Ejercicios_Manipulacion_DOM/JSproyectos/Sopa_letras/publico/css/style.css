@@ -2,7 +2,7 @@ body {
     width: 580px;
     margin: 0 auto;
     text-align: center;
-    background-color: #ddd;
+    background-color: #e4eaeb;
 }
 
 .celda {
@@ -13,7 +13,17 @@ body {
     text-align: center;
 }
 
+#mensaje {
+    color: #006eff;
+    font-weight: bold;
+}
+
+#subtitulo {
+    color: #006eff;
+}
+
 #palabras {
     text-align: center;
     font-size: 2em;
+    margin-top: 650px;
 }
