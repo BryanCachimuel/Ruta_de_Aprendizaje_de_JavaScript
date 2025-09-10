@@ -5,6 +5,7 @@ const imgAtaquePc = document.getElementById("img-ataque-pc");
 const btnPiedra = document.getElementById("btn-piedra");
 const btnPapel = document.getElementById("btn-papel");
 const btnTijeras = document.getElementById("btn-tijeras");
+const seccion = document.getElementById("seccion-imagenes");
 
 let opcionJugador;
 let opcionPc;
@@ -46,7 +47,7 @@ btnTijeras.addEventListener("click", function () {
 });
 
 function opPc() {
-  var aleaorio = nAleatorio();
+  var aleaorio = imagenAleatoria();
 
   if (aleaorio == 0) {
     opcionPc = "Piedra";
@@ -61,7 +62,7 @@ function opPc() {
 
 function batalla() {
   if (opcionJugador == opcionPc) {
-    msjBatalla.innerHTML = "Empaste :|";
+    msjBatalla.innerHTML = "Empataste :|";
   } else if (opcionJugador == "Piedra" && opcionPc == "Tijeras") {
     msjBatalla.innerHTML = "Ganaste :)";
   } else if (opcionJugador == "Papel" && opcionPc == "Piedra") {
@@ -72,15 +73,15 @@ function batalla() {
     msjBatalla.innerHTML = "Perdiste :(";
   }
 
-  addImagenes();
+  agregarImagenes();
 }
 
-function nAleatorio() {
+function imagenAleatoria() {
   let n = Math.floor(Math.random() * 3);
   return n;
 }
 
-function addImagenes() {
+function agregarImagenes() {
   for (let i = 0; i < imagenes.length; i++) {
     if (opcionJugador == imagenes[i].name) {
       imgJugador = imagenes[i].url;
