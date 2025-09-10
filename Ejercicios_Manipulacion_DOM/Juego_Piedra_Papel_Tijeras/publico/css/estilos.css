@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 *{
-    background-color: #b6d6d6;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color: #b6d6d6;
 }
 
 body{
@@ -11,7 +12,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 20px solid #0062ff;
 }
 
 .titulo{
@@ -48,10 +48,11 @@ body{
     margin-right: 15px;
 }
 
-h2{
+.subtitulo{
     margin-top: 30px;
-    margin-bottom: 30px;
-
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 35px;
 }
 
 .img-batalla{
