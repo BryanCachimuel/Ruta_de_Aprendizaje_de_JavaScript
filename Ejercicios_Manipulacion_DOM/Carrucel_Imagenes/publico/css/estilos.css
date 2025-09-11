@@ -12,21 +12,20 @@ body{
     background: #283048;
     background: linear-gradient(to right, #859398, #283048);
     padding: 20px;
-    border: 20px outset #ec14ec;
 }
 
 .titulo{
     position: absolute;
     color: #ec14ec;
-    margin-bottom: 500px;
+    margin-bottom: 600px;
     font-style: italic;
     font-size: 50px;
 }
 
 .container-carousel{
     position: relative;
-    width: 500px;
-    height: 300px;
+    width: 700px;
+    height: 500px;
     background-color: #e0e0e0;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
     border-radius: 15px;
