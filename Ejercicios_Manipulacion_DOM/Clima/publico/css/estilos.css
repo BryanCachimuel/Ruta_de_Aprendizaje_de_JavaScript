@@ -3,7 +3,6 @@
 body{
     font-family: 'Montserrat', sans-serif;
     height: 92vh;
-    border: 20px solid #00bfff;
 }
 
 .weather-content {
@@ -86,6 +85,7 @@ form input[type="submit"]:hover{
 }
 
 .nueva_consulta{
+    box-shadow: inset 0 1px 3px #ddd;
     text-decoration: none;
     width: 100%;
     margin: 0 auto;
