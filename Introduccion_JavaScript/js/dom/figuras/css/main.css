@@ -109,7 +109,9 @@ body{
 }
 
 .box-main__btn:hover{
-    background-color: #1b2550;
+    background-color: #eeeff3;
+    color: #253062;
+    border: 1px solid #253062;
     cursor: pointer;
 }
 
@@ -126,10 +128,13 @@ body{
     color: #fff;
     border-style: none;
     border-radius: 10px;
+    transition: .5s;
 }
 
 .btn-limpiar:hover{
-    background-color: #1b2550;
+    background-color: #e9eaf0;
+    color: #253062;
+    border: 1px solid #253062;
     cursor: pointer;
 }
 
