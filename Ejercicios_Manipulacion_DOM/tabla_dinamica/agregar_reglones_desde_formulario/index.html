@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir renglones a una tabla denamicamente desde un formulario</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <label for="id">Id:</label>
+    <input type="text" name="id" id="id">
+
+    <label for="producto">Producto:</label>
+    <input type="text" name="producto" id="producto">
+
+    <label for="cantidad">Cantidad:</label>
+    <input type="text" name="cantidad" id="cantidad">
+
+    <label for="precio">Precio:</label>
+    <input type="text" name="precio" id="precio">
+
+    <button id="agregar">Agregar</button>
+
+    <table id="salida" border="1">
+        <tr>
+            <th>Id</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+        </tr>
+    </table>
+</body>
+</html>
