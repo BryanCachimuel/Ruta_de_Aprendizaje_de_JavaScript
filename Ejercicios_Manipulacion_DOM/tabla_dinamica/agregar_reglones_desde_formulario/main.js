@@ -1,4 +1,5 @@
 let agregar = document.getElementById("agregar");
+let table = document.getElementById("salida");
 
 window.onload = function() {
   
@@ -13,4 +14,26 @@ window.onload = function() {
 
     });
     
+}
+
+function agregarRegistro(id, producto, cantidad, precio) {
+    let r = document.createElement("tr");
+
+    let td = document.createElement("td");
+    td.innerText = id;
+    r.appendChild(td);
+
+    td = document.createElement("td");
+    td.innerText = producto;
+    r.appendChild(td);
+
+    td = document.createElement("td");
+    td.innerText = cantidad;
+    r.appendChild(td);
+
+    td = document.createElement("td");
+    td.innerText = precio;
+    r.appendChild(td);
+
+    table.appendChild(r);
 }
