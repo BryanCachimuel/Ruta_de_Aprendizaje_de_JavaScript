@@ -123,3 +123,11 @@ function borrarValores() {
     document.getElementById("cantidad").value = "";
     document.getElementById("precio").value = "";
 }
+
+function borrarRegistro(id) {
+    let m = "¿Desea borrar el producto "+datos[id].producto+"?";
+    if(confirm(m)) {
+        datos.splice(id,1);
+        agregarRegistro(datos);
+    }
+}
