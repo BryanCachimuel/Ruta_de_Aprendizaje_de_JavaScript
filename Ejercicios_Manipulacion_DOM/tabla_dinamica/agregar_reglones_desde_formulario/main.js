@@ -1,4 +1,9 @@
 let datos = new Array();
+const formato = new Intl.NumberFormat('es-ec', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+});
 
 window.onload = function () {
 
