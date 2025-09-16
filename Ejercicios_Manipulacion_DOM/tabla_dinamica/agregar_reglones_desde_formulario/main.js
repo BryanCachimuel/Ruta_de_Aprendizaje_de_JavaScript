@@ -32,7 +32,7 @@ window.onload = function () {
 function agregarRegistro(datos) {
     let tabla = document.getElementById("salida");
     let renglones = tabla.getElementsByTagName("tr");
-    let totalCantidad = totalTotal = 0;
+    let totalCantidad = totalTotal = i = 0;
 
     // limpiar la tabla
     for (let x = renglones.length - 1; x > 0; x--) {
@@ -60,17 +60,25 @@ function agregarRegistro(datos) {
         r.appendChild(td);
 
         td = document.createElement("td");
-        td.innerText = p;
+        td.innerText = formato.format(p);
         r.appendChild(td);
 
         td = document.createElement("td");
-        td.innerText = t;
+        td.innerText = formato.format(t);
         r.appendChild(td);
+
+        let button = document.createElement("button");
+        button.innerHTML = "Borrar";
+        button.setAttribute("id",i);
+        button.onclick = function() {
+            borrarRegistro(this.id);
+        }
 
         tabla.appendChild(r);
 
         totalCantidad += c;
         totalTotal += t;
+        i++;
     });
 
     r = document.createElement("tr");
