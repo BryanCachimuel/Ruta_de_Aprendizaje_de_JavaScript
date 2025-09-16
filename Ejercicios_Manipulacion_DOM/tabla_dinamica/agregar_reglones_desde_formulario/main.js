@@ -1,50 +1,69 @@
 let datos = new Array();
 
-window.onload = function() {
+window.onload = function () {
 
     let agregar = document.getElementById("agregar")
 
-    agregar.addEventListener("click", function() {
+    agregar.addEventListener("click", function () {
 
         let id = document.getElementById("id").value;
         let producto = document.getElementById("producto").value;
         let cantidad = document.getElementById("cantidad").value;
         let precio = document.getElementById("precio").value;
         let registro = {
-            id:id,
-            producto:producto,
-            cantidad:cantidad,
-            precio:precio
+            id: id,
+            producto: producto,
+            cantidad: cantidad,
+            precio: precio
         };
         datos.push(registro);
 
         agregarRegistro(datos);
 
     });
-    
+
 }
 
-function agregarRegistro(id, producto, cantidad, precio) {
+function agregarRegistro(datos) {
     let tabla = document.getElementById("salida");
-    let r = document.createElement("tr");
+    let renglones = tabla.getElementsByTagName("tr");
+    let totalCantidad = totalTotal = 0;
 
-    let td = document.createElement("td");
-    td.innerText = id;
-    r.appendChild(td);
+    // limpiar la tabla
+    for (let x = renglones.length - 1; x > 0; x--) {
+        tabla.removeChild(renglones[x]);
+    }
 
-    td = document.createElement("td");
-    td.innerText = producto;
-    r.appendChild(td);
+    // llenar tabla
+    datos.forEach(d => {
+        let c = parseInt(d.cantidad);
+        let p = parseInt(d.precio);
+        let t = c * p;
 
-    td = document.createElement("td");
-    td.innerText = cantidad;
-    r.appendChild(td);
+        let r = document.createElement("tr");
 
-    td = document.createElement("td");
-    td.innerText = precio;
-    r.appendChild(td);
+        let td = document.createElement("td");
+        td.innerText = d.id;
+        r.appendChild(td);
 
-    tabla.appendChild(r);
+        td = document.createElement("td");
+        td.innerText = d.producto;
+        r.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerText = c;
+        r.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerText = p;
+        r.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerText = t;
+        r.appendChild(td);
+
+        tabla.appendChild(r);
+    });
 
     borrarValores();
 }
