@@ -57,14 +57,17 @@ function agregarRegistro(datos) {
 
         td = document.createElement("td");
         td.innerText = c;
+        td.style.textAlign = "center";
         r.appendChild(td);
 
         td = document.createElement("td");
         td.innerText = formato.format(p);
+        td.style.textAlign = "right";
         r.appendChild(td);
 
         td = document.createElement("td");
         td.innerText = formato.format(t);
+        td.style.textAlign = "right";
         r.appendChild(td);
 
         let button = document.createElement("button");
@@ -73,6 +76,10 @@ function agregarRegistro(datos) {
         button.onclick = function() {
             borrarRegistro(this.id);
         }
+
+        td = document.createElement("td");
+        td.appendChild(button);
+        r.appendChild(td);
 
         tabla.appendChild(r);
 
@@ -93,6 +100,7 @@ function agregarRegistro(datos) {
 
     td = document.createElement("td");
     td.innerText = totalCantidad;
+    td.style.textAlign = "center";
     r.appendChild(td);
 
     td = document.createElement("td");
@@ -100,7 +108,8 @@ function agregarRegistro(datos) {
     r.appendChild(td);
 
     td = document.createElement("td");
-    td.innerText = totalTotal;
+    td.innerText = formato.format(totalTotal);
+    td.style.textAlign = "right";
     r.appendChild(td);
 
     tabla.appendChild(r);
