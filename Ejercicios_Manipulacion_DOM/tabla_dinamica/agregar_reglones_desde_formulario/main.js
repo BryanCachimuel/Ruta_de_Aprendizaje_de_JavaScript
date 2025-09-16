@@ -63,7 +63,34 @@ function agregarRegistro(datos) {
         r.appendChild(td);
 
         tabla.appendChild(r);
+
+        totalCantidad += c;
+        totalTotal += t;
     });
+
+    r = document.createElement("tr");
+
+    td = document.createElement("td");
+    td.innerText = "";
+    r.appendChild(td);
+
+    td = document.createElement("td");
+    td.innerText = "Total:";
+    r.appendChild(td);
+
+    td = document.createElement("td");
+    td.innerText = totalCantidad;
+    r.appendChild(td);
+
+    td = document.createElement("td");
+    td.innerText = "";
+    r.appendChild(td);
+
+    td = document.createElement("td");
+    td.innerText = totalTotal;
+    r.appendChild(td);
+
+    tabla.appendChild(r);
 
     borrarValores();
 }
