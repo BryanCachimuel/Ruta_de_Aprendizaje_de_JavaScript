@@ -1,3 +1,5 @@
+let datos = new Array();
+
 window.onload = function() {
 
     let agregar = document.getElementById("agregar")
@@ -8,8 +10,15 @@ window.onload = function() {
         let producto = document.getElementById("producto").value;
         let cantidad = document.getElementById("cantidad").value;
         let precio = document.getElementById("precio").value;
+        let registro = {
+            id:id,
+            producto:producto,
+            cantidad:cantidad,
+            precio:precio
+        };
+        datos.push(registro);
 
-        agregarRegistro(id, producto, cantidad, precio);
+        agregarRegistro(datos);
 
     });
     
