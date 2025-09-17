@@ -10,3 +10,25 @@
     padding: 12px 20px 12px 40px;
     border: 1px solid #000000;
 }
+
+#misLibros {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 20px;
+}
+
+#misLibros th, 
+#misLibros td {
+    text-align: left;
+    padding: 12px ;
+}
+
+#misLibros tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#misLibros tr.encabezado,
+#misLibros tr:hover {
+    background-color: #0de4d9;
+}
