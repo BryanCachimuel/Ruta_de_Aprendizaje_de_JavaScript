@@ -13,3 +13,34 @@ body {
 img {
     vertical-align: middle;
 }
+
+#contenedor {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.antes,
+.despues {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1em;
+    margin-top: -22px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.despues {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.antes:hover,
+.despues:hover {
+    background-color: #808080;
+}
