@@ -6,9 +6,9 @@ body {
     margin: 0;
 }
 
-/*.foto {
+.foto {
     display: none;
-}*/
+}
 
 img {
     vertical-align: middle;
@@ -105,6 +105,15 @@ img {
     }
     to {
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .antes,
+    .despues,
+    .texto,
+    .numero {
+        font-size: 10px;
     }
 }
 
