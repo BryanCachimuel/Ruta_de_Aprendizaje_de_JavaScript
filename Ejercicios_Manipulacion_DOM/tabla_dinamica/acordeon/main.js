@@ -8,3 +8,13 @@ window.onload = function() {
         acordeon_array[i].addEventListener("click",selecciona,false);
     }
 }
+
+function selecciona() {
+    this.classList.toggle("activo");
+    let panel = this.nextElementSibling;
+    if(panel.style.display === "block") {
+        panel.style.display = "none";
+    }else {
+        panel.style.display = "block";
+    }
+}
